@@ -1,12 +1,22 @@
-
-$h: em(2);
-
+$h: 2px;
 .toggle-menu-mobile {
+	@include mt();
+	@extend .btn;
+	@extend .btn-outline-gray;
+
+	padding: 0;
+	min-width: 34px;
+	min-height: 34px;
+	@include media-breakpoint-up(sm){
+		width: rem(45);
+		height: rem(45);
+	}
+
 	display: block;
 	height: $h* 12;
 	position: relative;
 	color: $primary;
-	font-size: 32px;
+	font-size: 20px;
 	width: 1em;
 	cursor: pointer;
 	&.on {
@@ -21,17 +31,15 @@ $h: em(2);
 	}
 
 	span {
-		@include a-cent(y);
+		@include a-cent(xy);
 	}
 
 	span:before {
-
-
-		top: $h * 2;
+		top: 6px;
 	}
 
 	span:after {
-		bottom: $h * 2;
+		bottom: 6px;
 	}
 
 	span { 
@@ -45,7 +53,6 @@ $h: em(2);
 		width: 1em;
 		height: $h;
 		background-color: currentColor;
-		transition: all 0.3s;
 		backface-visibility: hidden;
 		border-radius: 6px;
 		transform-origin: 50% 50%;

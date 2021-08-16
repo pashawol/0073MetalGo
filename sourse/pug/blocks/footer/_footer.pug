@@ -1,9 +1,53 @@
 mixin footer()
-	+b.FOOTER.footer
-		.container
-			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+	+b.FOOTER.footer.text-center.text-md-start
+		+e.top
+			.container
+				+e.top-row.row.align-items-center
+					.col-sm.col-lg-auto.col-xl-3
+						+e.logo(href="#")
+							img(loading="lazy" src="img/svg/logo.svg" alt="")
+					+e.menu-col.col-lg.d-none.d-lg-block
+						ul
+							li: a(href="#") Поиск
+							li: a(href="#") Заказы
+							li: a(href="#") Торги
+							li: a(href="#") Сделки
+							li: a(href="#") Тарифы
+							li: a(href="#") Реклама
+							li: a(href="#") Помощь
+							li: a(href="#") Контакты
+					.col-sm-auto.col-lg-auto.col-xl-3
+						+e.soc-row.row.justify-content-center.justify-content-lg-end
+							+footerSocItem('vk')
+							+footerSocItem('inst')
+							+footerSocItem('yt')
+		+e.bot
+			.container
+				+e.bot-row.row.align-items-center
+					.col-md-6.col-lg-4
+						+e.all-rights
+							| © MetalGo
+							|
+							span.set-curr-year-js 2020
+							|. Все права защищены.
+						+e.company-id ООО «МеталГо» ИНН 7814652255
+					.col.order-last.order-lg-0
+						+e.links-row.row.justify-content-center.justify-content-md-start.justify-content-lg-center
+							.col-sm-auto
+								a(href="#") Публичная оферта
+							.col-sm-auto
+								a(href="#") Правила пользования
+					.col-md-6.col-lg-4
+						+e.img-row.row.align-items-center.justify-content-center.justify-content-md-end
+							+footerSocImg(1)
+							+footerSocImg(2)
+
+mixin footerSocImg(imgNum)
+	.col-auto
+		+e.img(href="#")
+			img(loading="lazy" src=`img/svg/footer-img-${imgNum}.svg` alt="")
+
+mixin footerSocItem(imgName)
+	.col-auto
+		+e.soc-item(href="#")
+			img(loading="lazy" src=`img/svg/foot-soc-${imgName}.svg` alt="")

@@ -116,7 +116,9 @@ const JSCCommon = {
 
 			let link = event.target.closest(".menu-mobile .menu a"); // (1)
 
-			if (!container || link) this.closeMenu();
+			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
+
+			if (!container && !toggle) this.closeMenu();
 		}, {
 			passive: true
 		});
@@ -130,46 +132,46 @@ const JSCCommon = {
 	// /mobileMenu
 	// tabs  .
 	tabscostume(tab) {
-		const tabs = document.querySelectorAll(tab);
-
-		const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
-
-		tabs.forEach(element => {
-			let tabs = element;
-			const tabsCaption = tabs.querySelector(".tabs__caption");
-			const tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
-			const tabsWrap = tabs.querySelector(".tabs__wrap");
-			const tabsContent = tabsWrap.querySelectorAll(".tabs__content");
-			const random = Math.trunc(Math.random() * 1000);
-			tabsBtn.forEach((el, index) => {
-				const data = "tab-content-".concat(random, "-").concat(index);
-				el.dataset.tabBtn = data;
-				const content = tabsContent[index];
-				content.dataset.tabContent = data;
-				if (!content.dataset.tabContent == data) return;
-				const active = content.classList.contains('active') ? 'active' : ''; // console.log(el.innerHTML);
-
-				content.insertAdjacentHTML("beforebegin", "<div class=\"tabs__btn-accordion  btn btn-primary  mb-1 ".concat(active, "\" data-tab-btn=\"").concat(data, "\">").concat(el.innerHTML, "</div>"));
-			});
-			tabs.addEventListener('click', function (element) {
-				const btn = element.target.closest("[data-tab-btn]:not(.active)");
-				if (!btn) return;
-				const data = btn.dataset.tabBtn;
-				const tabsAllBtn = this.querySelectorAll("[data-tab-btn");
-				const content = this.querySelectorAll("[data-tab-content]");
-				tabsAllBtn.forEach(element => {
-					element.dataset.tabBtn == data ? element.classList.add('active') : element.classList.remove('active');
-				});
-				content.forEach(element => {
-					element.dataset.tabContent == data ? (element.classList.add('active'), element.previousSibling.classList.add('active')) : element.classList.remove('active');
-				});
-			});
-		}); // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
-		// });
+		// const tabs = document.querySelectorAll(tab);
+		// const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
+		// tabs.forEach(element => {
+		// 	let tabs = element;
+		// 	const tabsCaption = tabs.querySelector(".tabs__caption");
+		// 	const tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
+		// 	const tabsWrap = tabs.querySelector(".tabs__wrap");
+		// 	const tabsContent = tabsWrap.querySelectorAll(".tabs__content");
+		// 	const random = Math.trunc(Math.random() * 1000);
+		// 	tabsBtn.forEach((el, index) => {
+		// 		const data = `tab-content-${random}-${index}`;
+		// 		el.dataset.tabBtn = data;
+		// 		const content = tabsContent[index];
+		// 		content.dataset.tabContent = data;
+		// 		if (!content.dataset.tabContent == data) return;
+		// 		const active = content.classList.contains('active') ? 'active' : '';
+		// 		// console.log(el.innerHTML);
+		// 		content.insertAdjacentHTML("beforebegin", `<div class="tabs__btn-accordion  btn btn-primary  mb-1 ${active}" data-tab-btn="${data}">${el.innerHTML}</div>`)
+		// 	})
+		// 	tabs.addEventListener('click', function (element) {
+		// 		const btn = element.target.closest(`[data-tab-btn]:not(.active)`);
+		// 		if (!btn) return;
+		// 		const data = btn.dataset.tabBtn;
+		// 		const tabsAllBtn = this.querySelectorAll(`[data-tab-btn`);
+		// 		const content = this.querySelectorAll(`[data-tab-content]`);
+		// 		tabsAllBtn.forEach(element => {
+		// 			element.dataset.tabBtn == data
+		// 				? element.classList.add('active')
+		// 				: element.classList.remove('active')
+		// 		});
+		// 		content.forEach(element => {
+		// 			element.dataset.tabContent == data
+		// 				? (element.classList.add('active'), element.previousSibling.classList.add('active'))
+		// 				: element.classList.remove('active')
+		// 		});
+		// 	})
+		// })
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
+		});
 	},
 
 	// /tabs
@@ -187,51 +189,6 @@ const JSCCommon = {
 		if (isIE11) {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
-	},
-
-	sendForm() {
-		var gets = function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-
-			return b;
-		}(); // form
-
-
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data
-			}).done(function (data) {
-				fancybox.close();
-				Fancybox.show([{
-					src: "#modal-thanks",
-					type: "inline"
-				}]); // window.location.replace("/thanks.html");
-
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () {});
-		});
 	},
 
 	heightwindow() {
@@ -300,7 +257,8 @@ const $ = jQuery;
 
 function eventHandler() {
 	// JSCCommon.ifie();
-	JSCCommon.modalCall(); // JSCCommon.tabscostume('.tabs--js');
+	//JSCCommon.modalCall();
+	// JSCCommon.tabscostume('tabs');
 	// JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -308,7 +266,6 @@ function eventHandler() {
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 	// JSCCommon.CustomInputFile(); 
-
 	var x = window.location.host;
 	let screenName;
 	screenName = document.body.dataset.bg;
@@ -367,6 +324,30 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//luckyoneJs
+
+	let lc = document.querySelector('.lc--js');
+	lc.addEventListener('click', function () {
+		this.classList.toggle('active');
+	});
+	document.addEventListener('click', function () {
+		if (!event.target.closest('.lc--js')) {
+			lc.classList.remove('active');
+		}
+	}); //
+
+	let params = document.querySelector('.parameters-js');
+	let sSearchFilters = document.querySelector('.params--js');
+	params.addEventListener('click', function () {
+		sSearchFilters.classList.toggle('active');
+	}); //
+
+	let currYears = document.querySelectorAll('.set-curr-year-js');
+
+	for (let item of currYears) {
+		item.innerHTML = new Date().getFullYear();
+	} //end luckyoneJs
+
 }
 
 ;
@@ -375,10 +356,4 @@ if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
-} // window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
+}

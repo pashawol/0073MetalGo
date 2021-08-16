@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sTEst00/_sTEst00.pug
+include ../blocks/sSearch/_sSearch.pug
+
+block variables
+	- let  mainPage= '02'
+	- let  bg='02-320.png'
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent 
+	//-a.link-modal-js(href="#modal-call") sadasdsa
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.white-line.bg-white
+		.container
+			+e.row.row.align-items-center
+				.col-lg-4.col-xl-3
+					+e.H1.title поиск предложений
+				.col
+					+e.inp-row.row.flex-nowrap
+						.col
+							+input('Начните поиск', 'text')
+						.col-auto
+							+e.inp-btn(type="button")
+								+e.b-icon
+									img(loading='lazy' src="img/svg/zoom.svg" alt="")
+								+e.b-txt.d-none.d-sm-inline Поиск
+			+e.parameters.parameters-js.d-lg-none
+				+e.p-img
+					img(loading="lazy" src='img/svg/parameters.svg' alt="")
+				+e.p-txt Параметры поиска
+	+sSearch()
+	+footer()

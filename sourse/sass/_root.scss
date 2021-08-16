@@ -1,6 +1,5 @@
 :root {
   --animate-delay: 1.2s;
-  --bs-body-font-size: #{$em-base};
 
 	--sPT: #{rem(80 * .5)};
 	--sPB: #{rem(90 * .5)};
@@ -9,6 +8,14 @@
     --sPT: #{rem(80)};
     --sPB: #{rem(90)};
     --sTPB: #{rem(40)};
+  }
+
+  --bs-body-font-size: 14px;
+  @include media-breakpoint-up(lg){
+    --bs-body-font-size: 15px;
+  }
+  @include media-breakpoint-up(xxl){
+    --bs-body-font-size: #{$em-base};
   }
 
   --swiperArrowSize: #{rem(68)};

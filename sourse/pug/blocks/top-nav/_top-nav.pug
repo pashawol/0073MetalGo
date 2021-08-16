@@ -1,28 +1,76 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+mnu()
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col-auto.d-lg-none
+			+e.row.row.align-items-center
+				.col-auto
+					+e.logo(href="#")
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col-auto.d-none.d-xl-block
+					+mnu()
+				.col.d-none.d-lg-block
+					+e.sub-row.row.flex-nowrap
+						+topNavImgItem(1, 'Калькулятор металла')
+						+topNavImgItem(2, 'Калькулятор доставки')
+				.col-auto
+				.col-auto.d-none.d-md-block.ms-auto.ms-lg-0
+					+topNavLc()
+				.col-auto.ms-auto.ms-md-0
+					+e.message-btn
+						+icon('chat')
+						//img(loading="lazy" src='img/svg/chat.svg' alt="")
+				.col-auto.d-xl-none
 					+b.toggle-menu-mobile--js
 						span
-				.col.d-none.d-lg-block
-					+mnu()
-					
 	// end top-nav
+
+mixin topNavImgItem(imgNum, txt)
+	.col-auto
+		+e.item(href="#")
+			+e.i-img
+				img(loading="lazy" src=`img/svg/topNav-img-${imgNum}.svg` alt="")
+			+e.i-txt=txt
+
+mixin topNavStar()
+	.col-auto
+		+e.star
+			img(loading="lazy" src="img/svg/star.svg" alt="")
+
+mixin topNavLc()
+	+b.lc--js
+		+e.head-row.row.align-items-center
+			.col-auto
+				+e.user
+					img(loading='lazy' src='img/svg/user.svg' alt="")
+			.col
+				+e.name-row.row.align-items-center
+					+e.name.col-auto Поставщик
+					.col-auto
+						+e.stars-row.row
+							-for (var i = 0; i < 4; i++)
+								+topNavStar()
+				+e.company ооо «челябинская стальн...
+			+e.icon-col.col-auto
+				+icon('chevron-down')
+		+e.drop-down
+			+e.items
+				+topNavLcDDItem(1, 'Пользователь')
+				+topNavLcDDItem(2, 'Организация')
+				+topNavLcDDItem(3, 'Склад')
+				+topNavLcDDItem(4, 'Объявления')
+				+topNavLcDDItem(5, 'Тарифы')
+			+e.quit.text-center.text-danger(href="") Выйти из аккаунта
+
+mixin topNavLcDDItem(imgNum, txt)
+	+e.item(href="#")
+		+e.i-img
+			img(loading="lazy" src=`img/svg/top-nav-dd-${imgNum}.svg` alt="")
+		+e.i-txt=txt
