@@ -102,7 +102,10 @@ $h: 2px;
 	will-change: transform;
 
 	&__inner {
-		padding: rem(20) 0;
+		background-color: $body-color;
+		color: $white;
+
+		padding: rem(20);
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
@@ -111,6 +114,45 @@ $h: 2px;
 		transition-delay: .4s;
 		opacity: var(--opacity);
 	}
+	//
+	&__logo{
+		display: block;
+		width: 100%;
+
+		img{
+			width: auto;
+			max-width: 100%;
+		}
+	}
+	&__menu{
+		ul{
+			list-style: none;
+			li{
+				margin-bottom: rem(15);
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			a{
+				display: block;
+				font-size: 16px;
+
+				color: $gray-600;
+				&:hover{
+					color: $white;
+				}
+				&.active{
+					color: $white;
+					&:after{
+						opacity: 1;
+					}
+				}
+
+
+			}
+		}
+	}
+	//
 
 	&.active { 
 		.toggle-menu-mobile {
@@ -146,21 +188,7 @@ $h: 2px;
 		}
 	}
 
-	ul {
-		position: relative;
-	}
+	ul{
 
-	li {
-		display: block;
-		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
-
-		a {
-			// font-size: 16px;
-
-			padding: 10px;
-			display: block;
-
-		}
 	}
 }

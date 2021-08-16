@@ -1,9 +1,19 @@
 mixin mob-mnu()
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
+	+b.menu-mobile--js.d-xl-none
+		+b.toggle-menu-mobile--js.border-0
 			span
 		+e.inner
-			+mnu()
+			+e.logo.mb-5(href="#")
+				img(loading="lazy" src="img/svg/logo.svg" alt='')
+			+e.menu.mb-4
+				+mnu()
+			.mb-4.d-md-none
+				+topNavImgItem(1, 'Калькулятор металла', 'mb-2')
+				+topNavImgItem(2, 'Калькулятор доставки', '')
+			.d-sm-none
+				+topNavLc({
+					addClasses: 'in-mob-mnu',
+				})
 	//  мобильное меню
 
 mixin top-nav() 
@@ -18,11 +28,13 @@ mixin top-nav()
 					+mnu()
 				.col.d-none.d-lg-block
 					+e.sub-row.row.flex-nowrap
-						+topNavImgItem(1, 'Калькулятор металла')
-						+topNavImgItem(2, 'Калькулятор доставки')
+						.col-auto
+							+topNavImgItem(1, 'Калькулятор металла')
+						.col-auto
+							+topNavImgItem(2, 'Калькулятор доставки')
 				.col-auto
 				.col-auto.d-none.d-md-block.ms-auto.ms-lg-0
-					+topNavLc()
+					+topNavLc({})
 				.col-auto.ms-auto.ms-md-0
 					+e.message-btn
 						+icon('chat')
@@ -32,20 +44,19 @@ mixin top-nav()
 						span
 	// end top-nav
 
-mixin topNavImgItem(imgNum, txt)
-	.col-auto
-		+e.item(href="#")
-			+e.i-img
-				img(loading="lazy" src=`img/svg/topNav-img-${imgNum}.svg` alt="")
-			+e.i-txt=txt
+mixin topNavImgItem(imgNum, txt, addClasses="")
+	+b.tn-item(href="#" class=addClasses)
+		+e.img
+			img(loading="lazy" src=`img/svg/topNav-img-${imgNum}.svg` alt="")
+		+e.txt=txt
 
 mixin topNavStar()
 	.col-auto
 		+e.star
 			img(loading="lazy" src="img/svg/star.svg" alt="")
 
-mixin topNavLc()
-	+b.lc--js
+mixin topNavLc(data)
+	+b.lc--js(class=data.addClasses)
 		+e.head-row.row.align-items-center
 			.col-auto
 				+e.user

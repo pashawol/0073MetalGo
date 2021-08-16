@@ -12,17 +12,114 @@
 	</head>
 	<body class="02" data-bg="02-320.png">
 		<div class="main-wrapper">
-			<div class="menu-mobile menu-mobile--js d-lg-none">
-				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+			<div class="menu-mobile menu-mobile--js d-xl-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js border-0"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
-					<ul class="menu">
-						<li class="menu-item"><a class="active" href="#">Поиск</a></li>
-						<li class="menu-item"><a href="#">Заявки</a></li>
-						<li class="menu-item"><a href="#">Торги</a></li>
-						<li class="menu-item"><a href="#">Сделки</a></li>
-						<li class="menu-item"><a href="#">Под заказ</a></li>
-					</ul>
+					<a class="menu-mobile__logo mb-5" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
+					</a>
+					<div class="menu-mobile__menu mb-4">
+						<ul class="menu">
+							<li class="menu-item"><a class="active" href="#">Поиск</a></li>
+							<li class="menu-item"><a href="#">Заявки</a></li>
+							<li class="menu-item"><a href="#">Торги</a></li>
+							<li class="menu-item"><a href="#">Сделки</a></li>
+							<li class="menu-item"><a href="#">Под заказ</a></li>
+						</ul>
+					</div>
+					<div class="mb-4 d-md-none">
+						<a class="tn-item mb-2" href="#">
+							<div class="tn-item__img"><img loading="lazy" src="img/svg/topNav-img-1.svg" alt=""/>
+							</div>
+							<div class="tn-item__txt">Калькулятор металла
+							</div>
+						</a>
+						<a class="tn-item" href="#">
+							<div class="tn-item__img"><img loading="lazy" src="img/svg/topNav-img-2.svg" alt=""/>
+							</div>
+							<div class="tn-item__txt">Калькулятор доставки
+							</div>
+						</a>
+					</div>
+					<div class="d-sm-none">
+						<div class="lc lc--js in-mob-mnu">
+							<div class="lc__head-row row align-items-center">
+								<div class="col-auto">
+									<div class="lc__user"><img loading="lazy" src="img/svg/user.svg" alt=""/>
+									</div>
+								</div>
+								<div class="col">
+									<div class="lc__name-row row align-items-center">
+										<div class="lc__name col-auto">Поставщик
+										</div>
+										<div class="col-auto">
+											<div class="lc__stars-row row">
+												<div class="col-auto">
+													<div class="lc__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="lc__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="lc__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="lc__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="lc__company">ооо «челябинская стальн...
+									</div>
+								</div>
+								<div class="lc__icon-col col-auto">
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="lc__drop-down">
+								<div class="lc__items">
+									<a class="lc__item" href="#">
+										<div class="lc__i-img"><img loading="lazy" src="img/svg/top-nav-dd-1.svg" alt=""/>
+										</div>
+										<div class="lc__i-txt">Пользователь
+										</div>
+									</a>
+									<a class="lc__item" href="#">
+										<div class="lc__i-img"><img loading="lazy" src="img/svg/top-nav-dd-2.svg" alt=""/>
+										</div>
+										<div class="lc__i-txt">Организация
+										</div>
+									</a>
+									<a class="lc__item" href="#">
+										<div class="lc__i-img"><img loading="lazy" src="img/svg/top-nav-dd-3.svg" alt=""/>
+										</div>
+										<div class="lc__i-txt">Склад
+										</div>
+									</a>
+									<a class="lc__item" href="#">
+										<div class="lc__i-img"><img loading="lazy" src="img/svg/top-nav-dd-4.svg" alt=""/>
+										</div>
+										<div class="lc__i-txt">Объявления
+										</div>
+									</a>
+									<a class="lc__item" href="#">
+										<div class="lc__i-img"><img loading="lazy" src="img/svg/top-nav-dd-5.svg" alt=""/>
+										</div>
+										<div class="lc__i-txt">Тарифы
+										</div>
+									</a>
+								</div>
+								<div class="lc__quit text-center text-danger" href="">Выйти из аккаунта
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!--  мобильное меню-->
@@ -48,18 +145,18 @@
 							<div class="col d-none d-lg-block">
 								<div class="top-nav__sub-row row flex-nowrap">
 									<div class="col-auto">
-										<a class="top-nav__item" href="#">
-											<div class="top-nav__i-img"><img loading="lazy" src="img/svg/topNav-img-1.svg" alt=""/>
+										<a class="tn-item" href="#">
+											<div class="tn-item__img"><img loading="lazy" src="img/svg/topNav-img-1.svg" alt=""/>
 											</div>
-											<div class="top-nav__i-txt">Калькулятор металла
+											<div class="tn-item__txt">Калькулятор металла
 											</div>
 										</a>
 									</div>
 									<div class="col-auto">
-										<a class="top-nav__item" href="#">
-											<div class="top-nav__i-img"><img loading="lazy" src="img/svg/topNav-img-2.svg" alt=""/>
+										<a class="tn-item" href="#">
+											<div class="tn-item__img"><img loading="lazy" src="img/svg/topNav-img-2.svg" alt=""/>
 											</div>
-											<div class="top-nav__i-txt">Калькулятор доставки
+											<div class="tn-item__txt">Калькулятор доставки
 											</div>
 										</a>
 									</div>
@@ -171,20 +268,17 @@
 							</h1>
 						</div>
 						<div class="col">
-							<div class="white-line__inp-row row flex-nowrap">
-								<div class="col">
-									<div class="white-line__input-wrap form-group"><input class="white-line__input form-control" name="text" type="text" placeholder="Начните поиск"/>
+							<div class="form-wrap">
+								<form>
+									<div class="input-group"><input class="form-wrap__input form-control" placeholder="Начните поиск" type="text"/>
+										<button class="form-wrap__inp-btn" type="button">
+											<div class="form-wrap__b-icon"><img loading="lazy" src="img/svg/zoom.svg" alt="">
+											</div>
+											<div class="form-wrap__b-txt d-none d-sm-inline">Поиск
+											</div>
+										</button>
 									</div>
-									<!-- +e.input-wrap-->
-								</div>
-								<div class="col-auto">
-									<button class="white-line__inp-btn" type="button">
-										<div class="white-line__b-icon"><img loading="lazy" src="img/svg/zoom.svg" alt="">
-										</div>
-										<div class="white-line__b-txt d-none d-sm-inline">Поиск
-										</div>
-									</button>
-								</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -1355,14 +1449,10 @@
 		<!-- #modal-call-->
 		<!-- end modals-->
 		<!-- modal libs-->
-		<script src="libs/jquery/jquery.min.js"></script>
-		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
-		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<!-- /slider libs-->
-		<script src="libs/inputmask/inputmask.min.js"></script>
-		<script src="js/libs.js"></script>
+		<!--script(src="js/libs.js")-->
 		<script src="js/common.js"></script>
 	</body>
 </html>

@@ -1,4 +1,6 @@
 .top-nav {
+	position: relative;
+	z-index: 800;
 	background-color: $body-color;
 	color: $white;
 
@@ -95,42 +97,6 @@
 			--bs-gutter-x: #{rem(40)};
 		}
 	}
-	&__item{
-		display: flex;
-		align-items: center;
-
-		color: $white;
-		&:hover{
-			color: $yellow;
-		}
-	}
-	&__i-img{
-		width: auto;
-
-		max-width: rem(36);
-		margin-right: rem(15);
-		@include media-breakpoint-up(xl){
-			max-width: rem(30);
-			margin-right: rem(10);
-		}
-		@include media-breakpoint-up(xxl){
-			max-width: rem(36);
-			margin-right: rem(15);
-		}
-
-		img{
-			width: auto;
-			max-width: 100%;
-		}
-	}
-	&__i-txt{
-		max-width: rem(97);
-
-		font-size: 14px;
-		@include media-breakpoint-up(xxl){
-			font-size: rem(16);
-		}
-	}
 	//
 	&__message-btn{
 		@extend .btn;
@@ -188,6 +154,7 @@
 		--icon-rotate: 180deg;
 		--dd-scale: 1;
 		--company-col: #{$gray-610};
+		--in-mob-dd-h: auto;
 
 		.lc__company{
 			position: relative;
@@ -260,6 +227,19 @@
 	}
 
 	//
+	&.in-mob-mnu{
+		border-radius: rem(5);
+		.lc__drop-down{
+			transition: all ease-in-out 0s;
+			border: none;
+			border-top: 1px solid $gray-310;
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: var(--in-mob-dd-h, 0);
+		}
+	}
 	&__drop-down{
 		@include mt();
 		transform-origin: top center;
@@ -315,4 +295,43 @@
 	}
 	&__{}
 	&__{}
+}
+
+//
+.tn-item{
+	display: flex;
+	align-items: center;
+
+	color: $white;
+	&:hover{
+		color: $yellow;
+	}
+
+	&__img{
+		width: auto;
+
+		max-width: rem(36);
+		margin-right: rem(15);
+		@include media-breakpoint-up(xl){
+			max-width: rem(30);
+			margin-right: rem(10);
+		}
+		@include media-breakpoint-up(xxl){
+			max-width: rem(36);
+			margin-right: rem(15);
+		}
+
+		img{
+			width: auto;
+			max-width: 100%;
+		}
+	}
+	&__txt{
+		max-width: rem(97);
+
+		font-size: 14px;
+		@include media-breakpoint-up(xxl){
+			font-size: rem(16);
+		}
+	}
 }
