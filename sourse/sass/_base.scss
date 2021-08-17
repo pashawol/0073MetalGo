@@ -732,3 +732,35 @@ ul.page-numbers{
 .btn{
 	box-shadow: none!important;
 }
+
+//
+.rm-hidden-js{
+	//@include mt(.4s);
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+
+.rm-btn-js{
+	cursor: pointer;
+	display: inline-block;
+
+	span:first-child{
+		display: inline-block;
+	}
+
+	span:last-child{
+		display: none;
+	}
+
+	&.active{
+		span:first-child{
+			display: none;
+		}
+
+		span:last-child{
+			display: inline-block;
+		}
+	}
+}

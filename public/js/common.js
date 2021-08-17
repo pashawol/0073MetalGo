@@ -93,9 +93,27 @@ function eventHandler() {
 
 
 	let header = document.querySelector(".top-nav--js");
+	let headerH = 0;
+	let stickyElems = document.querySelectorAll('.sticky-js');
+	let stickyArr = [];
+
+	for (let el of stickyElems) {
+		let Sticky = new hcSticky(el, {
+			stickTo: '#sSearchContent',
+			top: 20 + header.offsetHeight
+		});
+		stickyArr.push(Sticky);
+	}
 
 	function calcCssVars() {
 		document.documentElement.style.setProperty('--header-h', "".concat(header.offsetHeight, "px"));
+		window.matchMedia("(min-width: 1200px)").matches ? headerH = 0 : headerH = header.offsetHeight;
+
+		for (let Sticky of stickyArr) {
+			Sticky.update({
+				top: 20 + headerH
+			});
+		}
 	}
 
 	if (header) {
@@ -106,7 +124,8 @@ function eventHandler() {
 			passive: true
 		});
 		calcCssVars();
-	}
+	} //-
+
 
 	let lcBtns = document.querySelectorAll('.lc--js');
 
@@ -138,15 +157,17 @@ function eventHandler() {
 
 	for (let item of currYears) {
 		item.innerHTML = new Date().getFullYear();
-	} //
+	} //cusrom read more
 
 
-	let stickyElems = document.querySelectorAll('.sticky-js');
+	let readMoreConts = document.querySelectorAll('.rm-cont-js');
 
-	for (let el of stickyElems) {
-		let Sticky = new hcSticky(el, {
-			stickTo: '#sSearchContent',
-			top: 20
+	for (let cont of readMoreConts) {
+		let btn = cont.querySelector('.rm-btn-js');
+		btn.addEventListener('click', function () {
+			this.classList.toggle('active');
+			let hidden = cont.querySelector('.rm-hidden-js');
+			slideToggle(hidden);
 		});
 	} //end luckyoneJs
 

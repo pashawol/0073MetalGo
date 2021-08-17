@@ -1,6 +1,5 @@
 extends layout/main.pug
 
-
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sTEst00/_sTEst00.pug
@@ -13,8 +12,7 @@ block variables
 block title
 	- let  title= 'title'
 	title= title
-block pagecontent 
-	//-a.link-modal-js(href="#modal-call") sadasdsa
+block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()

@@ -9,7 +9,7 @@ mixin mob-mnu()
 				+topNavLc({
 					addClasses: 'in-mob-mnu',
 				})
-			+e.menu.mb-4
+			+e.menu.mb-5
 				+mnu()
 			.d-md-none
 				+topNavImgItem(1, 'Калькулятор металла', 'mb-3')
@@ -47,8 +47,6 @@ mixin top-nav()
 mixin topNavImgItem(imgNum, txt, addClasses="")
 	+b.tn-item(href="#" class=addClasses)
 		+icon(`topNav-img-${imgNum}`)
-		//-+e.img
-			img(loading="lazy" src=`img/svg/topNav-img-${imgNum}.svg` alt="")
 		+e.txt=txt
 
 mixin topNavStar()
@@ -84,5 +82,5 @@ mixin topNavLc(data)
 mixin topNavLcDDItem(imgNum, txt)
 	+e.item(href="#")
 		+e.i-img
-			img(loading="lazy" src=`img/svg/top-nav-dd-${imgNum}.svg` alt="")
+			+icon(`top-nav-dd-${imgNum}`)
 		+e.i-txt=txt

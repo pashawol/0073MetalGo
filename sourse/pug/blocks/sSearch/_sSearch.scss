@@ -103,7 +103,14 @@
 			max-width: 100%;
 		}
 	}
+	&__txt-content-wrap{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
 	&__txt-content{
+		margin-bottom: 20px;
+
 		font-size: 10px;
 		line-height: 1.8;
 		@include media-breakpoint-up(sm){
@@ -186,6 +193,22 @@
 		}
 	}
 
+
+	//
+	&__read-more{
+		font-size: 14px;
+		margin-bottom: 20px;
+		font-weight: 500;
+
+		color: $secondary;
+		&:hover{
+			span{
+				text-decoration: underline!important;
+			}
+		}
+	}
+	&__{}
+	&__{}
 	&__{}
 } // end.sSearch
 
@@ -217,6 +240,7 @@
 		//top: calc(var(--sPT) + var(--header-h));
 		left: 0;
 		border-radius: rem(5);
+		margin-bottom: 20px;
 	}
 	//@include media-breakpoint-up(xl){
 	//	top: var(--sPT);
@@ -478,26 +502,13 @@
 	//
 	&__comp-link{
 		display: inline-block;
+
 		color: $body-color;
+		--text-dec: none;
 		&:hover{
 			color: $body-color;
-			//--after-o: 1;
-			text-decoration: underline;
+			--text-dec: underline;
 		}
-
-		//position: relative;
-		//&:after{
-		//	opacity: var(--after-o, 0);
-		//	content: '';
-		//	pointer-events: none;
-		//	position: absolute;
-		//	top: calc(100% + 5px);
-		//	left: 0;
-		//
-		//	width: 100%;
-		//	height: 1px;
-		//	background-color: $body-color;
-		//}
 
 		margin-bottom: 15px;
 		@include media-breakpoint-up(sm){
@@ -530,6 +541,7 @@
 	}
 	&__company{
 		display: block;
+		text-decoration: var(--text-dec, none);
 	}
 	&__rate{
 		background: $gray-220;
@@ -559,7 +571,7 @@
 	}
 	&__rate-val{
 		display: block;
-		text-decoration: none;
+
 	}
 	&__tooltip{
 		position: relative;

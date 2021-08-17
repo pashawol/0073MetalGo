@@ -82,8 +82,29 @@ function eventHandler() {
 
 	//luckyoneJs
 	let header = document.querySelector(".top-nav--js");
+	let headerH = 0;
+	let stickyElems = document.querySelectorAll('.sticky-js');
+	let stickyArr = [];
+	for (let el of stickyElems){
+		let Sticky = new hcSticky(el, {
+			stickTo: '#sSearchContent',
+			top: 20 + header.offsetHeight,
+		});
+
+		stickyArr.push(Sticky);
+	}
+
 	function calcCssVars() {
 		document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
+		window.matchMedia("(min-width: 1200px)").matches ?
+			headerH = 0:
+			headerH = header.offsetHeight;
+
+		for (let Sticky of stickyArr){
+			Sticky.update({
+				top: 20 + headerH,
+			});
+		}
 	}
 	if (header) {
 		window.addEventListener('resize', calcCssVars, {passive: true});
@@ -91,13 +112,13 @@ function eventHandler() {
 		calcCssVars();
 	}
 
+	//-
 	let lcBtns = document.querySelectorAll('.lc--js')
 	for (let lcBtn of lcBtns){
 		lcBtn.addEventListener('click', function (){
 			this.classList.toggle('active');
 		});
 	}
-
 	document.addEventListener('click', function (){
 		if (!event.target.closest('.lc--js')){
 			for (let lcBtn of lcBtns){
@@ -119,12 +140,16 @@ function eventHandler() {
 		item.innerHTML = new Date().getFullYear();
 	}
 
-	//
-	let stickyElems = document.querySelectorAll('.sticky-js');
-	for (let el of stickyElems){
-		let Sticky = new hcSticky(el, {
-			stickTo: '#sSearchContent',
-			top: 20
+	//cusrom read more
+	let readMoreConts = document.querySelectorAll('.rm-cont-js');
+	for (let cont of readMoreConts){
+		let btn = cont.querySelector('.rm-btn-js');
+
+		btn.addEventListener('click', function (){
+			this.classList.toggle('active');
+			let hidden = cont.querySelector('.rm-hidden-js');
+
+			slideToggle(hidden);
 		});
 	}
 
