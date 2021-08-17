@@ -108,13 +108,19 @@ function eventHandler() {
 		calcCssVars();
 	}
 
-	let lc = document.querySelector('.lc--js');
-	lc.addEventListener('click', function () {
-		this.classList.toggle('active');
-	});
+	let lcBtns = document.querySelectorAll('.lc--js');
+
+	for (let lcBtn of lcBtns) {
+		lcBtn.addEventListener('click', function () {
+			this.classList.toggle('active');
+		});
+	}
+
 	document.addEventListener('click', function () {
 		if (!event.target.closest('.lc--js')) {
-			lc.classList.remove('active');
+			for (let lcBtn of lcBtns) {
+				lcBtn.classList.remove('active');
+			}
 		}
 	}); //
 

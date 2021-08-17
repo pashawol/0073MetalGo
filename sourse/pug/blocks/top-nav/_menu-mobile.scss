@@ -112,7 +112,7 @@ $h: 2px;
 		height: 100%;
 		@include mt(.3s);
 		transition-delay: .4s;
-		opacity: var(--opacity);
+		//opacity: var(--opacity);
 	}
 	//
 	&__logo{
@@ -128,7 +128,7 @@ $h: 2px;
 		ul{
 			list-style: none;
 			li{
-				margin-bottom: rem(15);
+				margin-bottom: rem(20);
 				&:last-child{
 					margin-bottom: 0;
 				}

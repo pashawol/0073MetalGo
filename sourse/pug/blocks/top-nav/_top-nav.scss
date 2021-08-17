@@ -343,11 +343,6 @@
 		}
 	}
 
-	&:hover{
-		.icon{
-			color: $white;
-		}
-	}
 	.icon{
 		@include mt();
 		color: $gray-600;
