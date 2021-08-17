@@ -5,7 +5,7 @@ mixin sSearch(data)
 			+e.row.row
 				.col-lg-4.col-xl-3
 					+sSearchParams()
-				.col
+				.col#sSearchContent
 					+e.top-row.row
 						.col
 							+sSearchRowSelect('Сортировать:', 'Сперва с самым высоким рейтингом', 'd-none d-sm-block')
@@ -72,9 +72,9 @@ mixin sSearch(data)
 						.col-sm-auto
 							+pugin()
 						.col-auto.ms-auto
-							+sSearchRowSelect('Показать по:', '10')(class="sm")
+							+sSearchRowSelect('Показать по:', '10', 'd-xl-none d-xxl-block')(class="sm")
 				.col-xl-3.d-none.d-xl-block
-					+e.adv-items
+					+e.adv-items.sticky-js
 						+sSearchAdvItem(1)
 						+sSearchAdvItem(2)
 			+e.baner.d-none.d-xl-block
@@ -109,25 +109,29 @@ mixin sSearchItem(data)
 		+e.top-row.row.align-items-center
 			.col
 				+e.name
-					span.fw-500=data.name
-					span=data.price
+					a(href="#")
+						span.fw-500=data.name
+						span=data.price
 					span.text-secondary
 						|
 						| с НДС
 			.col-auto.d-none.d-xxl-block
-				+e.logo
-					img(loading="lazy" src=`img/svg/s-item-${data.imgNum}.svg` alt="")
-			.col-auto.d-none.d-xxl-block
-				+e.company ООО «Челябинская стальная к...
-			.col-auto.d-none.d-xxl-block
-				+e.rate
-					+e.star
-						img(loading="lazy" src="img/svg/star.svg" alt="")
-					+e.rate-val 4.9
+				+e.comp-link.mb-0(href="#")
+					+e.comp-row.row.d-flex.align-items-center
+						.col-auto.d-block
+							+e.logo
+								img(loading="lazy" src=`img/svg/s-item-${data.imgNum}.svg` alt="")
+						.col-auto.d-block
+							+e.company ООО «Челябинская стальная к...
+						.col-auto.d-block
+							+e.rate
+								+e.star
+									img(loading="lazy" src="img/svg/star.svg" alt="")
+								+e.rate-val 4.9
 			.col-auto
-				+e.tooltip
+				+e.tooltip.tooltip-btn
 					img(loading="lazy" src="img/svg/house.svg" alt="")
-					+b.tt-content Челябинск
+					+b.tt-content--w-auto Челябинск
 		+e.char-row.row
 			.col-xxl-auto
 				+e.main-char 34,7 тн
@@ -136,17 +140,19 @@ mixin sSearchItem(data)
 			+sSearchCharItem('Толщина стенки:', '18 мм')
 		if data.standart
 			+e.standart ГОСТ 8732-78
-		+e.logo-row.row.d-xxl-none.align-items-center
-			.col-auto
-				+e.logo
-					img(loading="lazy" src=`img/svg/s-item-${data.imgNum}.svg` alt="")
-			.col
-				+e.company ООО «Челябинская стальная к...
-			.col-auto
-				+e.rate
-					+e.star
-						img(loading="lazy" src="img/svg/star.svg" alt="")
-					+e.rate-val 4.9
+		.d-xxl-none
+			+e.comp-link(href="#")
+				+e.comp-row.row.d-flex.align-items-center
+					.col-auto.d-block
+						+e.logo
+							img(loading="lazy" src=`img/svg/s-item-${data.imgNum}.svg` alt="")
+					.col-auto.d-block
+						+e.company ООО «Челябинская стальная к...
+					.col-auto.d-block
+						+e.rate
+							+e.star
+								img(loading="lazy" src="img/svg/star.svg" alt="")
+							+e.rate-val 4.9
 		+e.foot-row.row.align-items-center
 			.col-sm.order-last.order-sm-0
 				+e.date-row.row.gy-1
@@ -184,7 +190,7 @@ mixin sSearchAdvItem(imgNum)
 		img(loading="lazy" src=`img/@2x/sSearch-${imgNum}.png` alt="")
 
 mixin sSearchParams()
-	+b.params--js
+	+b.params--js.sticky-js
 		+e.head.d-none.d-lg-block параметры поиска
 		+e.content
 			+input('Профильная труба', 'select')
@@ -213,8 +219,13 @@ mixin sSearchParams()
 			//-
 			+e.input-wrap
 				+e.INPUT.input.form-control(type="text" placeholder="Город")
-				+e.tooltip
-					img(loading="lazy" src="img/svg/tooltip.svg" alt="")
+				+e.tooltip.tooltip-btn
+					//img(loading="lazy" src="img/svg/tooltip.svg" alt="")
+					+icon('tooltip')
 					+b.tt-content Данные отсортируются от ближайшей к выбранному городу металлобазы до самой удаленной.
 			+input('Поставщик', 'text')
-			+e.discard(type='button') Сбросить
+			.row.align-items-center
+				.col
+					+e.discard(type='button') Сбросить
+				.col-auto.d-lg-none
+					+e.hide.parameters-js Свернуть

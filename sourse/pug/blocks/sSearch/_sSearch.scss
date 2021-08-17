@@ -1,10 +1,10 @@
 // start .sSearch
 .sSearch {
 	--sPT: #{rem(20)};
-	--sPB: 60px ;
+	--sPB: 40px;
 	@include media-breakpoint-up(sm){
 		--sPT: #{rem(20)};
-		--sPB: #{rem(90)};
+		--sPB: #{rem(50)};
 	}
 
 	padding-top: 0;
@@ -14,8 +14,8 @@
 	&__row{
 		--bs-gutter-y: 20px;
 		& > *{
-			position: relative;
-			z-index: 1;
+			//position: relative;
+			//z-index: 1;
 
 			&:nth-child(1){
 				z-index: 3;
@@ -32,8 +32,13 @@
 	}
 	//
 	&__adv-items{
-		position: sticky;
-		top: var(--sPT);
+		//position: sticky;
+		//
+		//top: calc(var(--sPT) + var(--header-h));
+		//@include media-breakpoint-up(xl){
+		//	top: var(--sPT);
+		//}
+
 		left: 0;
 	}
 	&__adv-item{
@@ -208,11 +213,16 @@
 	--padd-x: 0px;
 	@include media-breakpoint-up(lg){
 		--padd-x: #{rem(20)};
-		position: sticky;
-		top: var(--sPT);
+		//position: sticky;
+		//top: calc(var(--sPT) + var(--header-h));
 		left: 0;
 		border-radius: rem(5);
 	}
+	//@include media-breakpoint-up(xl){
+	//	top: var(--sPT);
+	//}
+
+
 	background: $white;
 
 	&__head{
@@ -274,7 +284,7 @@
 	}
 	//
 	&__tooltip{
-		position: absolute;
+		position: absolute!important;
 		z-index: 10;
 		top: 50%;
 		transform: translateY(-50%);
@@ -284,8 +294,19 @@
 		width: rem(20);
 		height: rem(20);
 		padding: rem(5);
-		background: $primary;
 		border-radius: rem(5);
+
+		@include mt();
+		background: $gray-220;
+		.icon{
+			color: $gray-610;
+		}
+		&:hover{
+			background: $primary;
+			.icon{
+				color: $body-color;
+			}
+		}
 
 		display: flex;
 		align-items: center;
@@ -309,24 +330,45 @@
 	}
 
 	//
-	//
-	&__{}
+	&__hide{
+		cursor: pointer;
+		color: $secondary;
+		&:hover{
+			color: $body-color;
+		}
+	}
 	&__{}
 }
+//
 
+.tooltip-btn{
+	cursor: pointer;
+	position: relative;
+	z-index: 10;
+}
 .tt-content{
 	@include mt();
 	position: absolute;
-	transform-origin: bottom center;
-	left: 50%;
-	transform: translateX(-50%) scale(var(--tt-content-scale, 0));
 	bottom: calc(100% + 10px);
+	border-radius: rem(3);
+
+	left: 100%;
+	transform: translateX(-100%) scale(var(--tt-content-scale, 0));
+	transform-origin: bottom right;
+	@include media-breakpoint-up(lg){
+		left: 50%;
+		transform: translateX(-50%) scale(var(--tt-content-scale, 0));
+		transform-origin: bottom center;
+	}
 
 	--this-bg: #{rgba($body-color, .7)};
 	background: var(--this-bg);
-	border-radius: rem(3);
 
 	width: rem(200);
+	&--w-auto{
+		width: auto;
+	}
+
 	padding: rem(10) rem(7);
 	font-size: rem(12);
 	line-height: calc(14/12);
@@ -335,9 +377,14 @@
 	&:after{
 		content: '';
 		position: absolute;
-		top: calc(100% - 0px);
-		left: 50%;
+		top: 100%;
+
+		left: calc(100% - 8px);
 		transform: translateX(-50%);
+		@include media-breakpoint-up(lg){
+			left: 50%;
+			transform: translateX(-50%);
+		}
 
 		width: 0;
 		height: 0;
@@ -368,9 +415,15 @@
 	background: $white;
 	border-radius: rem(5);
 
-	box-shadow: inset 0 0 0 2px rgba($primary, 0);
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0);
+	&:hover{
+		box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+	}
 	&.yellow{
 		box-shadow: inset 0 0 0 2px $primary;
+		&:hover{
+			box-shadow: inset 0 0 0 2px $primary, 0px 3px 10px rgba(0, 0, 0, 0.1);
+		}
 	}
 
 	margin-bottom: 10px;
@@ -405,8 +458,59 @@
 		& > *{
 			margin-right: 2px;
 		}
+
+		a{
+			color: inherit;
+
+			& > *{
+				margin-right: 2px;
+			}
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
 	}
+
+	//
+	&__comp-link{
+		display: inline-block;
+		color: $body-color;
+		&:hover{
+			color: $body-color;
+			--after-o: 1;
+		}
+
+		position: relative;
+		&:after{
+			opacity: var(--after-o, 0);
+			content: '';
+			pointer-events: none;
+			position: absolute;
+			top: calc(100% + 5px);
+			left: 0;
+
+			width: 100%;
+			height: 1px;
+			background-color: $body-color;
+		}
+
+		margin-bottom: 15px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(20);
+		}
+	}
+	&__comp-row{
+		--bs-gutter-y: 0;
+
+		--bs-gutter-x: 4px;
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: inherit;
+		}
+	}
+	//
 	&__logo{
+		display: block;
 		width: rem(24);
 		height: rem(24);
 
@@ -421,14 +525,13 @@
 		}
 	}
 	&__company{
-
+		display: block;
 	}
 	&__rate{
 		background: $gray-220;
 		border-radius: rem(5);
 
 		padding: rem(4);
-
 		display: flex;
 	}
 	&__star{
@@ -451,7 +554,7 @@
 		}
 	}
 	&__rate-val{
-
+		display: block;
 	}
 	&__tooltip{
 		position: relative;
@@ -525,14 +628,6 @@
 			margin-bottom: rem(20);
 		}
 	}
-	&__logo-row{
-		--bs-gutter-x: 4px;
-
-		padding-bottom: 15px;
-		@include media-breakpoint-up(sm){
-			padding-bottom: rem(20);
-		}
-	}
 	&__foot-row{
 		@include media-breakpoint-up(xxl){
 			--bs-gutter-x: #{rem(40)};
@@ -581,8 +676,6 @@
 			align-items: center;
 			justify-content: center;
 			text-align: center;
-
-
 		}
 		&--out-primary{
 			@extend .btn-outline-primary;

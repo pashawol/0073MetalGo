@@ -570,6 +570,7 @@ iframe {
 	&__parameters{
 		display: flex;
 		align-items: center;
+		cursor: pointer;
 	}
 	&__p-img{
 		display: flex;
@@ -715,5 +716,15 @@ ul.page-numbers{
 				}
 			}
 		}
+	}
+}
+
+//
+.btn-outline-light,
+.btn-light{
+	&:hover{
+		background-color: $body-bg!important;
+		border-color: $body-bg!important;
+		color: $body-color!important;
 	}
 }

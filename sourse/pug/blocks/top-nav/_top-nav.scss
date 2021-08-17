@@ -1,6 +1,14 @@
 .top-nav {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	@include media-breakpoint-up(xl){
+		position: relative;
+	}
+
+	width: 100%;
 	z-index: 800;
+
 	background-color: $body-color;
 	color: $white;
 
@@ -107,6 +115,12 @@
 		@include media-breakpoint-up(sm){
 			min-width: rem(45);
 			min-height: rem(45);
+		}
+
+		&:hover{
+			border-color: $primary!important;
+			background-color: transparent!important;
+			color: $primary!important;
 		}
 
 		color: $primary;
@@ -258,6 +272,7 @@
 	}
 
 	&__items{
+
 	}
 	&__item{
 		display: flex;
@@ -299,6 +314,7 @@
 
 //
 .tn-item{
+	@include mt();
 	display: flex;
 	align-items: center;
 
@@ -326,6 +342,29 @@
 			max-width: 100%;
 		}
 	}
+
+	&:hover{
+		.icon{
+			color: $white;
+		}
+	}
+	.icon{
+		@include mt();
+		color: $gray-600;
+
+		font-size: rem(30);
+		margin-right: rem(15);
+		@include media-breakpoint-up(xl){
+			font-size: rem(24);
+			margin-right: rem(10);
+		}
+		@include media-breakpoint-up(xxl){
+			font-size: rem(30);
+			margin-right: rem(15);
+		}
+	}
+
+
 	&__txt{
 		max-width: rem(97);
 

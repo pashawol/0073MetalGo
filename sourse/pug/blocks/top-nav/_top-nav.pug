@@ -18,7 +18,7 @@ mixin mob-mnu()
 
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav--js.block-with-lazy
 		.container
 			+e.row.row.align-items-center
 				.col-auto
@@ -46,7 +46,8 @@ mixin top-nav()
 
 mixin topNavImgItem(imgNum, txt, addClasses="")
 	+b.tn-item(href="#" class=addClasses)
-		+e.img
+		+icon(`topNav-img-${imgNum}`)
+		//-+e.img
 			img(loading="lazy" src=`img/svg/topNav-img-${imgNum}.svg` alt="")
 		+e.txt=txt
 

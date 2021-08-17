@@ -44,7 +44,7 @@ mixin footer()
 
 mixin footerSocImg(imgNum)
 	.col-auto
-		+e.img(href="#")
+		+e.img
 			img(loading="lazy" src=`img/svg/footer-img-${imgNum}.svg` alt="")
 
 mixin footerSocItem(imgName)

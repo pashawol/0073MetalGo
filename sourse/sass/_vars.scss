@@ -204,7 +204,7 @@ $position-values: (0: 0,
 //
 // Settings for the `<body>` element.
 
-$body-bg: #E5E5E5;
+$body-bg: $gray-220;
 $body-color: #161718;
 $body-text-align: null !default;
 
@@ -663,10 +663,10 @@ $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 
 $input-focus-bg: $input-bg !default;
-$input-focus-border-color: tint-color($component-active-bg, 50%) !default;
+$input-focus-border-color: $primary !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
-$input-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$input-focus-box-shadow: none;
 
 $input-placeholder-color: $gray-600 !default;
 $input-plaintext-color: $body-color !default;
@@ -777,7 +777,7 @@ $form-select-box-shadow: $box-shadow-inset !default;
 
 $form-select-focus-border-color: $input-focus-border-color !default;
 $form-select-focus-width: $input-focus-width !default;
-$form-select-focus-box-shadow: 0 0 0 $form-select-focus-width $input-btn-focus-color !default;
+$form-select-focus-box-shadow: none;
 
 $form-select-padding-y-sm: $input-padding-y-sm !default;
 $form-select-padding-x-sm: $input-padding-x-sm !default;

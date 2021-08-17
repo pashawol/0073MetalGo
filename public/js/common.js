@@ -92,6 +92,22 @@ function eventHandler() {
 	//luckyoneJs
 
 
+	let header = document.querySelector(".top-nav--js");
+
+	function calcCssVars() {
+		document.documentElement.style.setProperty('--header-h', "".concat(header.offsetHeight, "px"));
+	}
+
+	if (header) {
+		window.addEventListener('resize', calcCssVars, {
+			passive: true
+		});
+		window.addEventListener('scroll', calcCssVars, {
+			passive: true
+		});
+		calcCssVars();
+	}
+
 	let lc = document.querySelector('.lc--js');
 	lc.addEventListener('click', function () {
 		this.classList.toggle('active');
@@ -102,16 +118,30 @@ function eventHandler() {
 		}
 	}); //
 
-	let params = document.querySelector('.parameters-js');
+	let params = document.querySelectorAll('.parameters-js');
 	let sSearchFilters = document.querySelector('.params--js');
-	params.addEventListener('click', function () {
-		sSearchFilters.classList.toggle('active');
-	}); //
+
+	for (let item of params) {
+		item.addEventListener('click', function () {
+			sSearchFilters.classList.toggle('active');
+		});
+	} //
+
 
 	let currYears = document.querySelectorAll('.set-curr-year-js');
 
 	for (let item of currYears) {
 		item.innerHTML = new Date().getFullYear();
+	} //
+
+
+	let stickyElems = document.querySelectorAll('.sticky-js');
+
+	for (let el of stickyElems) {
+		let Sticky = new hcSticky(el, {
+			stickTo: '#sSearchContent',
+			top: 20
+		});
 	} //end luckyoneJs
 
 }
