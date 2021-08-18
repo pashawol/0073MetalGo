@@ -11,8 +11,8 @@
   }
 
   --bs-body-font-size: 14px;
-  @include media-breakpoint-up(lg){
-    --bs-body-font-size: 15px;
+  @include media-breakpoint-between(lg, xxl){
+    --bs-body-font-size: calc(16px * 0.8);
   }
   @include media-breakpoint-up(xxl){
     --bs-body-font-size: #{$em-base};

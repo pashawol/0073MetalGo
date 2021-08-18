@@ -291,18 +291,24 @@
 	}
 	&__i-img{
 		margin-right: rem(10);
-		@include media-breakpoint-up(xxl){
+		@include media-breakpoint-up(xl){
 			margin-right: rem(15);
 		}
+		min-width: rem(20);
+		min-height: rem(20);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		.icon{
 			@include mt();
 			color: $gray-310;
 
-			font-size: rem(24);
-			@include media-breakpoint-up(xxl){
-				font-size: rem(36);
-			}
+			font-size: rem(20);
+			//@include media-breakpoint-up(xxl){
+			//	font-size: rem(36);
+			//}
 		}
 	}
 	&__i-txt{

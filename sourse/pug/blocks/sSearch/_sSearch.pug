@@ -129,7 +129,7 @@ mixin sSearchItem(data)
 					span.text-secondary
 						|
 						| с НДС
-			.col-auto.d-none.d-xxl-block
+			.col-auto.d-none.d-md-block
 				+e.comp-link.mb-0(href="#")
 					+e.comp-row.row.d-flex.align-items-center
 						.col-auto.d-block
@@ -147,14 +147,14 @@ mixin sSearchItem(data)
 					img(loading="lazy" src="img/svg/house.svg" alt="")
 					+b.tt-content--w-auto Челябинск
 		+e.char-row.row
-			.col-xxl-auto
+			.col-md-auto
 				+e.main-char 34,7 тн
 			+sSearchCharItem('Марка:', '03Х21Н21М4ГБ')
 			+sSearchCharItem('Размер:', '360 мм')
 			+sSearchCharItem('Толщина стенки:', '18 мм')
 		if data.standart
 			+e.standart ГОСТ 8732-78
-		.d-xxl-none
+		.d-md-none
 			+e.comp-link(href="#")
 				+e.comp-row.row.d-flex.align-items-center
 					.col-auto.d-block

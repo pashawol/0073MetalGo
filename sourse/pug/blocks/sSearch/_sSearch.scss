@@ -597,13 +597,17 @@
 		--bs-gutter-x: #{rem(40)};
 		--bs-gutter-y: 9px;
 
-		@include media-breakpoint-up(xxl){
+		@include media-breakpoint-up(md){
 			& > *{
 				border-right: 1px solid $gray-220;
 
 				display: flex;
 				align-items: center;
 				min-height: rem(40);
+
+				&:last-child{
+					border-right: none;
+				}
 			}
 		}
 
@@ -654,9 +658,12 @@
 	}
 	&__date-row{
 		@include media-breakpoint-down(sm){
+			--bs-gutter-x: 10px;
 			font-size: 10px;
 			line-height: 1.5;
-			--bs-gutter-x: 10px;
+		}
+		@include media-breakpoint-between(xl, xxl){
+			--bs-gutter-x: 8px;
 		}
 	}
 	&__d-title{
@@ -676,8 +683,11 @@
 
 		min-width: 100%;
 		@include media-breakpoint-up(sm){
-			min-width: rem(166);
+			min-width: rem(140);
 			line-height: rem(20);
+		}
+		@include media-breakpoint-up(xxl){
+			min-width: rem(166);
 		}
 		color: $body-color!important;
 
