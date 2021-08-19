@@ -152,6 +152,34 @@ function eventHandler() {
 			slideToggle(hidden);
 		});
 	}
+	//.scroll-top--js
+	let scrollBtn = document.querySelector('.scroll-top--js');
+	scrollBtn.addEventListener('click', function (){
+
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+	});
+
+	document.addEventListener('scroll', function () {
+		let scrollTop = window.scrollY;
+		let footer = document.querySelector('.footer--js');
+		let footerTop = footer.getBoundingClientRect().top + scrollTop;
+
+		console.log(window.scrollY > vh(50));
+		if (window.scrollY > vh(50)  && footerTop > window.scrollY + vh(100)){
+			scrollBtn.classList.add('active');
+		}
+		else{
+			scrollBtn.classList.remove('active');
+		}
+	});
+
+	function vh(v) {
+		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		return (v * h) / 100;
+	}
 
 	//end luckyoneJs
 

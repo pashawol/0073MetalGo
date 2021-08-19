@@ -9,6 +9,10 @@ mixin sSearch(data)
 					+e.top-row.row
 						.col
 							+sSearchRowSelect('Сортировать:', 'Сперва с самым высоким рейтингом', 'd-none d-sm-block')
+								option выгодное предложение
+								option сначала новые
+								option Цена (по возрастанию)
+								option Цена (по убыванию)
 						.col-auto.d-none.d-xxl-block
 							+sSearchRowSelect('Показать по:', '10')(class="sm")
 					+e.items
@@ -89,32 +93,24 @@ mixin sSearch(data)
 					p Выпуск листового металла осуществляется двумя способами – холодной или горячей прокаткой на соответствующих станах. Изготовленный лист металла отличается качественными характеристиками, среди которых наиболее важными для производств считаются толщина листа, точность отделки и пластичность.
 				.rm-hidden-js
 					+e.txt-content
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque autem deserunt dicta molestias pariatur recusandae reprehenderit suscipit ullam unde?
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi cumque debitis delectus dicta expedita fugiat fugit, labore molestias neque nesciunt officia, officiis quaerat quasi quisquam sit ut. Dolore iusto nisi pariatur, perferendis quod saepe totam! Accusamus ad adipisci animi aperiam autem consectetur consequuntur dolor dolores ducimus ea enim eveniet exercitationem explicabo facere id illo illum incidunt ipsa ipsam iste itaque, iure iusto nam natus nemo nisi obcaecati odio, officia perspiciatis qui, quibusdam quidem reiciendis similique sunt temporibus vitae voluptatem. A corporis magnam nesciunt perferendis, quasi rerum unde voluptates. Ab aliquid aperiam cum dignissimos fugit, nobis omnis tempora vero voluptatem!
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque autem deserunt dicta molestias pariatur recusandae reprehenderit suscipit ullam unde?
-						ul
-							li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, est.
-							li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, est.
-							li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, est.
+						b Характеристики листового металла:
+							ul
+								li Толщина – при холоднокатаном прокате составляет от 3 до 5 мм, при горячекатаном достигает показателей от 4 до 160 мм;
+								li Точность изготовления – у листов холодного проката более ровная поверхность без погрешностей, у листов горячего проката из-за способа термической обработки металла меньшая точность изготовления с возможностью образования окалин и неровностей на поверхности;
+								li Прочность или пластичность – более высокой обладают листы холодного проката, так как после термической обработки сталь отличается неоднородностью состава.
+							.d-none.d-sm-block
+								p Листовой металл широко используется в строительстве – для производства кровельных и отделочных материалов, настилов и стеновых ограждений. Применяется на крупных предприятиях по производству автомобилей, в судостроении. Из данного материала изготавливают и различные виды тары в виде бочек, контейнеров и проч.
+								p При заказе листового металла учитываются законодательные требования, предъявляемые к производству конкретной продукции. Поэтому важнейшей характеристикой приобретаемого металла является его соответствие ГОСТ.
+								p Найти нужный объем листового металла требуемых характеристик проще всего, обратившись к услугам биржи металлопроката. Здесь собрано большое количество производителей подобной продукции, выбрать среди которых наиболее подходящего не составит труда.
+							//.small-sm for pp only, can be removed
+							h2.small-sm
+								| Все поставщики
+								|
+								span.text-primary листового металла на площадке MetalGo
+							p На площадке MetalGo содержатся сведения о всех закупках в области металлопроката. С помощью биржи предприятиям легко найти и купить требуемый объем листового и другого металла в кратчайшие сроки, договориться об удобных условиях поставки и завязать выгодное сотрудничество с крупнейшими российскими производителями. Узнать примерную стоимость предстоящей закупки несложно – стартовая цена торгов указывается производителями при размещении предложений. К тому же, на сайте доступен калькулятор металла.
 				+e.read-more.rm-btn-js
 					span Читать далее
 					span Свернуть
-				+e.txt-content
-					b Характеристики листового металла:
-					ul
-						li Толщина – при холоднокатаном прокате составляет от 3 до 5 мм, при горячекатаном достигает показателей от 4 до 160 мм;
-						li Точность изготовления – у листов холодного проката более ровная поверхность без погрешностей, у листов горячего проката из-за способа термической обработки металла меньшая точность изготовления с возможностью образования окалин и неровностей на поверхности;
-						li Прочность или пластичность – более высокой обладают листы холодного проката, так как после термической обработки сталь отличается неоднородностью состава.
-					.d-none.d-sm-block
-						p Листовой металл широко используется в строительстве – для производства кровельных и отделочных материалов, настилов и стеновых ограждений. Применяется на крупных предприятиях по производству автомобилей, в судостроении. Из данного материала изготавливают и различные виды тары в виде бочек, контейнеров и проч.
-						p При заказе листового металла учитываются законодательные требования, предъявляемые к производству конкретной продукции. Поэтому важнейшей характеристикой приобретаемого металла является его соответствие ГОСТ.
-						p Найти нужный объем листового металла требуемых характеристик проще всего, обратившись к услугам биржи металлопроката. Здесь собрано большое количество производителей подобной продукции, выбрать среди которых наиболее подходящего не составит труда.
-					//.small-sm for pp only, can be removed
-					h2.small-sm
-						| Все поставщики
-						|
-						span.text-primary листового металла на площадке MetalGo
-					p На площадке MetalGo содержатся сведения о всех закупках в области металлопроката. С помощью биржи предприятиям легко найти и купить требуемый объем листового и другого металла в кратчайшие сроки, договориться об удобных условиях поставки и завязать выгодное сотрудничество с крупнейшими российскими производителями. Узнать примерную стоимость предстоящей закупки несложно – стартовая цена торгов указывается производителями при размещении предложений. К тому же, на сайте доступен калькулятор металла.
 
 	// end sSearch
 
@@ -196,7 +192,16 @@ mixin sSearchRowSelect(txt,selectTxt, addTitleClasses)
 	+e.s-row.row.align-items-center&attributes(attributes)
 		.col-auto(class=addTitleClasses)=txt
 		.col
-			+input(selectTxt, 'select')
+			//-+input(selectTxt, 'select')
+			+e.SELECT.input.form-select(name=selectTxt)&attributes(attributes)
+				option(value=selectTxt)=selectTxt
+				if block
+					block
+				else
+					option 1
+					option 2
+					option 3
+					option 4
 
 
 mixin sSearchAdvItem(imgNum)
@@ -208,6 +213,26 @@ mixin sSearchParams()
 		+e.head.d-none.d-lg-block параметры поиска
 		+e.content
 			+input('Профильная труба', 'select')
+				+e.SELECT.input.form-select(name=selectTxt)&attributes(attributes)
+					option(value='1') Профильная труба
+					option(value='2') Арматура
+					option(value='3') Балка
+					option(value='5') Круг
+					option(value='6') Квадрат
+					option(value='8') Лента
+					option(value='9') Лист
+					option(value='10') Поковка
+					option(value='11') Полоса
+					option(value='12') Труба
+					option(value='13') Уголок
+					option(value='15') Швеллер
+					option(value='16') Шестигранник
+					option(value='17') Шайба
+					option(value='18') Проволока
+					option(value='19') Диск
+					option(value='20') Рельсы
+					option(value='22') Планка
+					option(value='23') Подкладка
 			+input('Марка', 'text')
 			//-
 			+e.input-wrap(data-add-ph="мм")

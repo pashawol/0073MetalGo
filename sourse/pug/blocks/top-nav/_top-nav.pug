@@ -20,19 +20,19 @@ mixin top-nav()
 	+b.top-nav--js.block-with-lazy
 		.container
 			+e.row.row.align-items-center
-				.col-auto
+				.col.col-xl-auto
 					+e.logo(href="#")
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
 				.col-auto.d-none.d-xl-block
 					+mnu()
-				.col.d-none.d-lg-block
+				.col-auto.col-xl.d-none.d-lg-block
 					+e.sub-row.row.flex-nowrap
 						.col-auto
 							+topNavImgItem(1, 'Калькулятор металла')
 						.col-auto
 							+topNavImgItem(2, 'Калькулятор доставки')
 				.col-auto
-				.col-auto.d-none.d-md-block.ms-auto.ms-lg-0
+				.col-auto.d-none.d-md-block
 					+topNavLc({})
 				.col-auto.ms-auto.ms-md-0
 					+e.message-btn

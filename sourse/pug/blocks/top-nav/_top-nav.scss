@@ -29,11 +29,10 @@
 		width: 180px;
 		@include media-breakpoint-up(lg){
 			width: rem(200);
-			margin-right: rem(10);
+			margin-right: rem(50);
 		}
 		@include media-breakpoint-up(xxl){
 			width: rem(235);
-			margin-right: rem(50);
 		}
 
 		img{
@@ -46,16 +45,13 @@
 		padding: 0;
 
 		margin: 0 rem(10) 0 0;
-		@include media-breakpoint-up(xxl){
+		@include media-breakpoint-up(lg){
 			margin: 0 rem(50) 0 0;
 		}
 		display: flex;
 
 		li{
-			margin-right: rem(20);
-			@include media-breakpoint-up(xxl){
-				margin-right: rem(40);
-			}
+			margin-right: rem(40);
 			&:last-child{
 				margin-right: 0;
 			}
@@ -98,7 +94,7 @@
 	}
 	&__sub-row{
 		--bs-gutter-x: #{rem(15)};
-		@include media-breakpoint-up(xxl){
+		@include media-breakpoint-up(lg){
 			--bs-gutter-x: #{rem(40)};
 		}
 	}

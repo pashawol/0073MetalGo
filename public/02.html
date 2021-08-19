@@ -6,7 +6,6 @@
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no initial-scale=1 maximum-scale=1">
-		<!--meta(name="viewport",  content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no")-->
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
@@ -144,7 +143,7 @@
 				<div class="top-nav top-nav--js block-with-lazy">
 					<div class="container">
 						<div class="top-nav__row row align-items-center">
-							<div class="col-auto">
+							<div class="col col-xl-auto">
 								<a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
 								</a>
 							</div>
@@ -157,7 +156,7 @@
 									<li class="menu-item"><a href="#">Под заказ</a></li>
 								</ul>
 							</div>
-							<div class="col d-none d-lg-block">
+							<div class="col-auto col-xl d-none d-lg-block">
 								<div class="top-nav__sub-row row flex-nowrap">
 									<div class="col-auto">
 										<a class="tn-item" href="#">
@@ -180,7 +179,7 @@
 								</div>
 							</div>
 							<div class="col-auto"></div>
-							<div class="col-auto d-none d-md-block ms-auto ms-lg-0">
+							<div class="col-auto d-none d-md-block">
 								<div class="lc lc--js">
 									<div class="lc__head-row row align-items-center">
 										<div class="col-auto">
@@ -302,7 +301,7 @@
 						<div class="col">
 							<div class="form-wrap">
 								<form>
-									<div class="input-group"><input class="form-wrap__input form-control" placeholder="Начните поиск" type="text"/>
+									<div class="input-group"><input class="form-wrap__input form-control" placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text"/>
 										<button class="form-wrap__inp-btn" type="button">
 											<div class="form-wrap__b-icon"><img loading="lazy" src="img/svg/zoom.svg" alt="">
 											</div>
@@ -338,6 +337,27 @@
 											<option value=" placeholder 2">placeholder 2</option>
 											<option value=" placeholder 3">placeholder 3</option>
 											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+										<select class="params__input form-select">
+											<option value="1">Профильная труба</option>
+											<option value="2">Арматура</option>
+											<option value="3">Балка</option>
+											<option value="5">Круг</option>
+											<option value="6">Квадрат</option>
+											<option value="8">Лента</option>
+											<option value="9">Лист</option>
+											<option value="10">Поковка</option>
+											<option value="11">Полоса</option>
+											<option value="12">Труба</option>
+											<option value="13">Уголок</option>
+											<option value="15">Швеллер</option>
+											<option value="16">Шестигранник</option>
+											<option value="17">Шайба</option>
+											<option value="18">Проволока</option>
+											<option value="19">Диск</option>
+											<option value="20">Рельсы</option>
+											<option value="22">Планка</option>
+											<option value="23">Подкладка</option>
 										</select>
 									</div>
 									<!-- +e.input-wrap-->
@@ -402,16 +422,13 @@
 									<div class="sSearch__s-row row align-items-center">
 										<div class="col-auto d-none d-sm-block">Сортировать:</div>
 										<div class="col">
-											<div class="sSearch__input-wrap form-group">
-												<select class="sSearch__input form-select" name="select">
-													<option value="Сперва с самым высоким рейтингом">Сперва с самым высоким рейтингом</option>
-													<option value=" placeholder 1">placeholder 1</option>
-													<option value=" placeholder 2">placeholder 2</option>
-													<option value=" placeholder 3">placeholder 3</option>
-													<option value=" placeholder 4">placeholder 4</option>
-												</select>
-											</div>
-											<!-- +e.input-wrap-->
+											<select class="sSearch__input form-select" name="Сперва с самым высоким рейтингом">
+												<option value="Сперва с самым высоким рейтингом">Сперва с самым высоким рейтингом</option>
+												<option>выгодное предложение</option>
+												<option>сначала новые</option>
+												<option>Цена (по возрастанию)</option>
+												<option>Цена (по убыванию)</option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -419,16 +436,13 @@
 									<div class="sSearch__s-row row align-items-center sm">
 										<div class="col-auto">Показать по:</div>
 										<div class="col">
-											<div class="sSearch__input-wrap form-group">
-												<select class="sSearch__input form-select" name="select">
-													<option value="10">10</option>
-													<option value=" placeholder 1">placeholder 1</option>
-													<option value=" placeholder 2">placeholder 2</option>
-													<option value=" placeholder 3">placeholder 3</option>
-													<option value=" placeholder 4">placeholder 4</option>
-												</select>
-											</div>
-											<!-- +e.input-wrap-->
+											<select class="sSearch__input form-select sm" name="10">
+												<option value="10">10</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -1438,16 +1452,13 @@
 									<div class="sSearch__s-row row align-items-center sm">
 										<div class="col-auto d-xl-none d-xxl-block">Показать по:</div>
 										<div class="col">
-											<div class="sSearch__input-wrap form-group">
-												<select class="sSearch__input form-select" name="select">
-													<option value="10">10</option>
-													<option value=" placeholder 1">placeholder 1</option>
-													<option value=" placeholder 2">placeholder 2</option>
-													<option value=" placeholder 3">placeholder 3</option>
-													<option value=" placeholder 4">placeholder 4</option>
-												</select>
-											</div>
-											<!-- +e.input-wrap-->
+											<select class="sSearch__input form-select sm" name="10">
+												<option value="10">10</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -1474,42 +1485,32 @@
 							<p>Выпуск листового металла осуществляется двумя способами – холодной или горячей прокаткой на соответствующих станах. Изготовленный лист металла отличается качественными характеристиками, среди которых наиболее важными для производств считаются толщина листа, точность отделки и пластичность.</p>
 						</div>
 						<div class="rm-hidden-js">
-							<div class="sSearch__txt-content">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque autem deserunt dicta molestias pariatur recusandae reprehenderit suscipit ullam unde?</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi cumque debitis delectus dicta expedita fugiat fugit, labore molestias neque nesciunt officia, officiis quaerat quasi quisquam sit ut. Dolore iusto nisi pariatur, perferendis quod saepe totam! Accusamus ad adipisci animi aperiam autem consectetur consequuntur dolor dolores ducimus ea enim eveniet exercitationem explicabo facere id illo illum incidunt ipsa ipsam iste itaque, iure iusto nam natus nemo nisi obcaecati odio, officia perspiciatis qui, quibusdam quidem reiciendis similique sunt temporibus vitae voluptatem. A corporis magnam nesciunt perferendis, quasi rerum unde voluptates. Ab aliquid aperiam cum dignissimos fugit, nobis omnis tempora vero voluptatem!</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque autem deserunt dicta molestias pariatur recusandae reprehenderit suscipit ullam unde?</p>
-								<ul>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, est.</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, est.</li>
-									<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, est.</li>
-								</ul>
+							<div class="sSearch__txt-content"><b>Характеристики листового металла:
+									<ul>
+										<li>Толщина – при холоднокатаном прокате составляет от 3 до 5 мм, при горячекатаном достигает показателей от 4 до 160 мм;</li>
+										<li>Точность изготовления – у листов холодного проката более ровная поверхность без погрешностей, у листов горячего проката из-за способа термической обработки металла меньшая точность изготовления с возможностью образования окалин и неровностей на поверхности;</li>
+										<li>Прочность или пластичность – более высокой обладают листы холодного проката, так как после термической обработки сталь отличается неоднородностью состава.</li>
+									</ul>
+									<div class="d-none d-sm-block">
+										<p>Листовой металл широко используется в строительстве – для производства кровельных и отделочных материалов, настилов и стеновых ограждений. Применяется на крупных предприятиях по производству автомобилей, в судостроении. Из данного материала изготавливают и различные виды тары в виде бочек, контейнеров и проч.</p>
+										<p>При заказе листового металла учитываются законодательные требования, предъявляемые к производству конкретной продукции. Поэтому важнейшей характеристикой приобретаемого металла является его соответствие ГОСТ.</p>
+										<p>Найти нужный объем листового металла требуемых характеристик проще всего, обратившись к услугам биржи металлопроката. Здесь собрано большое количество производителей подобной продукции, выбрать среди которых наиболее подходящего не составит труда.</p>
+									</div>
+									<!--.small-sm for pp only, can be removed-->
+									<h2 class="small-sm">
+										Все поставщики
+										<span class="text-primary">листового металла на площадке MetalGo</span>
+									</h2>
+									<p>На площадке MetalGo содержатся сведения о всех закупках в области металлопроката. С помощью биржи предприятиям легко найти и купить требуемый объем листового и другого металла в кратчайшие сроки, договориться об удобных условиях поставки и завязать выгодное сотрудничество с крупнейшими российскими производителями. Узнать примерную стоимость предстоящей закупки несложно – стартовая цена торгов указывается производителями при размещении предложений. К тому же, на сайте доступен калькулятор металла.</p></b>
 							</div>
 						</div>
 						<div class="sSearch__read-more rm-btn-js"><span>Читать далее</span><span>Свернуть</span>
-						</div>
-						<div class="sSearch__txt-content"><b>Характеристики листового металла:</b>
-							<ul>
-								<li>Толщина – при холоднокатаном прокате составляет от 3 до 5 мм, при горячекатаном достигает показателей от 4 до 160 мм;</li>
-								<li>Точность изготовления – у листов холодного проката более ровная поверхность без погрешностей, у листов горячего проката из-за способа термической обработки металла меньшая точность изготовления с возможностью образования окалин и неровностей на поверхности;</li>
-								<li>Прочность или пластичность – более высокой обладают листы холодного проката, так как после термической обработки сталь отличается неоднородностью состава.</li>
-							</ul>
-							<div class="d-none d-sm-block">
-								<p>Листовой металл широко используется в строительстве – для производства кровельных и отделочных материалов, настилов и стеновых ограждений. Применяется на крупных предприятиях по производству автомобилей, в судостроении. Из данного материала изготавливают и различные виды тары в виде бочек, контейнеров и проч.</p>
-								<p>При заказе листового металла учитываются законодательные требования, предъявляемые к производству конкретной продукции. Поэтому важнейшей характеристикой приобретаемого металла является его соответствие ГОСТ.</p>
-								<p>Найти нужный объем листового металла требуемых характеристик проще всего, обратившись к услугам биржи металлопроката. Здесь собрано большое количество производителей подобной продукции, выбрать среди которых наиболее подходящего не составит труда.</p>
-							</div>
-							<!--.small-sm for pp only, can be removed-->
-							<h2 class="small-sm">
-								Все поставщики
-								<span class="text-primary">листового металла на площадке MetalGo</span>
-							</h2>
-							<p>На площадке MetalGo содержатся сведения о всех закупках в области металлопроката. С помощью биржи предприятиям легко найти и купить требуемый объем листового и другого металла в кратчайшие сроки, договориться об удобных условиях поставки и завязать выгодное сотрудничество с крупнейшими российскими производителями. Узнать примерную стоимость предстоящей закупки несложно – стартовая цена торгов указывается производителями при размещении предложений. К тому же, на сайте доступен калькулятор металла.</p>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- end sSearch-->
-			<footer class="footer text-center text-md-start">
+			<footer class="footer footer--js text-center text-md-start">
 				<div class="footer__top">
 					<div class="container">
 						<div class="footer__top-row row align-items-center">
@@ -1581,6 +1582,11 @@
 					</div>
 				</div>
 			</footer>
+		</div>
+		<div class="scroll-top scroll-top--js">
+			<svg class="icon icon-chevron-top ">
+				<use xlink:href="img/svg/sprite.svg#chevron-top"></use>
+			</svg>
 		</div>
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
