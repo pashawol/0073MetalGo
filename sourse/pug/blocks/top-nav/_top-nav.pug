@@ -3,17 +3,16 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js.border-0
 			span
 		+e.inner
-			+e.logo.d-none.d-sm-block.mb-5(href="#")
+			+e.logo.mb-5(href="#")
 				img(loading="lazy" src="img/svg/logo.svg" alt='')
-			.d-sm-none.mb-5
+			.mb-5
 				+topNavLc({
 					addClasses: 'in-mob-mnu',
 				})
 			+e.menu.mb-5
 				+mnu()
-			.d-md-none
-				+topNavImgItem(1, 'Калькулятор металла', 'mb-3')
-				+topNavImgItem(2, 'Калькулятор доставки', '')
+			+topNavImgItem(1, 'Калькулятор металла', 'mb-3')
+			+topNavImgItem(2, 'Калькулятор доставки', '')
 	//  мобильное меню
 
 mixin top-nav() 
