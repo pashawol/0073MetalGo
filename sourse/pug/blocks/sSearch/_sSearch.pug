@@ -132,7 +132,7 @@ mixin sSearchItem(data)
 							+e.logo
 								img(loading="lazy" src=`img/svg/s-item-${data.imgNum}.svg` alt="")
 						.col-auto.d-block
-							+e.company ООО «Челябинская стальная к...
+							+e.company ООО «Челябинская стальная компания ООО «Челябинская стальная компания
 						.col-auto.d-block
 							+e.rate
 								+e.star
@@ -212,27 +212,26 @@ mixin sSearchParams()
 	+b.params--js.sticky-js
 		+e.head.d-none.d-lg-block параметры поиска
 		+e.content
-			+input('Профильная труба', 'select')
-				+e.SELECT.input.form-select(name=selectTxt)&attributes(attributes)
-					option(value='1') Профильная труба
-					option(value='2') Арматура
-					option(value='3') Балка
-					option(value='5') Круг
-					option(value='6') Квадрат
-					option(value='8') Лента
-					option(value='9') Лист
-					option(value='10') Поковка
-					option(value='11') Полоса
-					option(value='12') Труба
-					option(value='13') Уголок
-					option(value='15') Швеллер
-					option(value='16') Шестигранник
-					option(value='17') Шайба
-					option(value='18') Проволока
-					option(value='19') Диск
-					option(value='20') Рельсы
-					option(value='22') Планка
-					option(value='23') Подкладка
+			+e.SELECT.input.form-select(name=selectTxt)&attributes(attributes)
+				option(value='1') Профильная труба
+				option(value='2') Арматура
+				option(value='3') Балка
+				option(value='5') Круг
+				option(value='6') Квадрат
+				option(value='8') Лента
+				option(value='9') Лист
+				option(value='10') Поковка
+				option(value='11') Полоса
+				option(value='12') Труба
+				option(value='13') Уголок
+				option(value='15') Швеллер
+				option(value='16') Шестигранник
+				option(value='17') Шайба
+				option(value='18') Проволока
+				option(value='19') Диск
+				option(value='20') Рельсы
+				option(value='22') Планка
+				option(value='23') Подкладка
 			+input('Марка', 'text')
 			//-
 			+e.input-wrap(data-add-ph="мм")

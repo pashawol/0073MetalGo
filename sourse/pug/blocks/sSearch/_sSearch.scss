@@ -543,8 +543,13 @@
 		}
 	}
 	&__company{
-		display: block;
 		text-decoration: var(--text-dec, none);
+		width: rem(230);
+		@include media-breakpoint-up(base){
+			width: rem(230);
+		}
+
+		@extend .txt-crop;
 	}
 	&__rate{
 		background: $gray-220;

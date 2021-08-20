@@ -183,7 +183,6 @@ function eventHandler() {
 		let scrollTop = window.scrollY;
 		let footer = document.querySelector('.footer--js');
 		let footerTop = footer.getBoundingClientRect().top + scrollTop;
-		console.log(window.scrollY > vh(50));
 
 		if (window.scrollY > vh(50) && footerTop > window.scrollY + vh(100)) {
 			scrollBtn.classList.add('active');

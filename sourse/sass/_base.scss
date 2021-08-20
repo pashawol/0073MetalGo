@@ -817,3 +817,18 @@ ul.page-numbers{
 		box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 	}
 }
+
+.txt-crop{
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-ms-line-clamp: var(--lines-num, 1);
+	-webkit-line-clamp: var(--lines-num, 1);
+	line-clamp: var(--lines-num, 1);
+	display: -webkit-box;
+	display: box;
+	word-wrap: break-word;
+	-webkit-box-orient: vertical;
+	box-orient: vertical;
+}
