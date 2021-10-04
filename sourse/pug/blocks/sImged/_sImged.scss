@@ -1,0 +1,68 @@
+// start .sImged
+.sImged {
+	--sPT: 36px;
+	--sPB: 40px;
+	--sTPB: 34px;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(100)};
+		--sPB: #{rem(100)};
+		--sTPB: #{rem(48)};
+	}
+
+	&.reverse{
+		--row-dir: row-reverse;
+	}
+
+	&__row{
+		flex-direction: var(--row-dir, row);
+		justify-content: space-between;
+	}
+	.section-title{
+		h2{
+
+		}
+
+		p{
+			line-height: 1.5;
+		}
+	}
+	&__btns-row{
+		--bs-gutter-y: 12px;
+		--bs-gutter-x: #{rem(20)};
+	}
+	&__btn{
+		@extend .btn;
+		font-size: 16px;
+
+		min-width: 100%;
+		padding: 12.25px 10px;
+		@include media-breakpoint-up(lg){
+			min-width: rem(200);
+			padding: rem(13.5) rem(21.5);
+		}
+
+		&--dark{
+			@extend .btn-dark;
+		}
+		&--yellow{
+			@extend .btn-primary;
+		}
+	}
+	&__img{
+		display: block;
+		box-shadow: 0 rem(5) rem(25) rgba(22, 23, 24, 0.15);
+		border-radius: rem(8);
+		overflow: hidden;
+
+		margin-bottom: 34px;
+		@include media-breakpoint-up(lg){
+			margin-bottom: 0;
+		}
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__{}
+} // end.sImged

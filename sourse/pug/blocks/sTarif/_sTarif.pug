@@ -1,0 +1,73 @@
+mixin sTarif(data)
+	// start sTarif
+	+b.SECTION.sTarif.section#sTarif&attributes(attributes)
+		+e.container.container
+			+b.section-title--big.text-center
+				h2
+					| тарифы
+					|
+					span metalgo
+			+e.btns.input-group
+				+sTarifTabsBtn('Поставщику', 'active')
+				+sTarifTabsBtn('Покупателю')
+				+sTarifTabsBtn('Дополнительные услуги')
+				+sTarifTabsBtn('Рекламные баннеры')
+			+e.slider-wrap
+				.swiper-container.sTarif-slider-js
+					.swiper-wrapper
+						.swiper-slide
+							+sTarifItem({
+								imgNum: 1,
+								title: 'Склад',
+								descr: 'до 500 объявлений',
+								insert: '0',
+								top: '0',
+								price: '5 400 ₽',
+								perMonth: '1 800 ₽ в месяц',
+							})
+						.swiper-slide
+							+sTarifItem({
+								imgNum: 2,
+								title: 'база',
+								descr: 'до 5000 объявлений',
+								insert: '100',
+								top: '100',
+								price: '12 000 ₽',
+								perMonth: '4 000 ₽ в месяц',
+							})
+						.swiper-slide
+							+sTarifItem({
+								imgNum: 3,
+								title: 'холдинг',
+								descr: 'Свыше 5000 объявлений',
+								insert: '500',
+								top: '500',
+								price: '21 000 ₽',
+								perMonth: '7 000 ₽ в месяц',
+							})
+					.swiper-pagination.d-lg-none
+	// end sTarif
+
+mixin sTarifTabsBtn(txt, addClasses='')
+	+e.btn(type="button" class=addClasses)=txt
+
+mixin sTarifItem(data)
+	+b.t-item
+		+e.img(href="#")
+			img(loading="lazy" src=`img/svg/t-item-${data.imgNum}.svg` alt="")
+		+e.title=data.title
+		+e.descr=data.descr
+		+e.items.d-none.d-sm-block
+			+sTarifSubItem(1, `${data.insert} выделений объявлений`)
+			+sTarifSubItem(2, `${data.top} поднятий в ТОП`)
+		+e.time-title Период подписки:
+		+input('3 месяца', 'select')
+		+e.price=data.price
+		+e.per-month=data.perMonth
+		+e.btn(href="#") Подключить
+
+mixin sTarifSubItem(imgNum, txt)
+	+e.item
+		+e.icon
+			img(loading="lazy" src=`img/svg/t-sub-item-${imgNum}.svg` alt="")
+		+e.txt=txt

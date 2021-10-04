@@ -1,9 +1,34 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.SECTION.sForm.section.bg-white#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+b.section-title--big.text-center
+				h2
+					| остались
+					|
+					span вопросы?
+				p Оставьте свой номер и мы перезвоним Вам в течение 15 минут для уточнения деталей вопроса
+			+form-wrap
+				.row.justify-content-center
+					.col-xl-8
+						+e.row.row.align-items-end
+							.col-md
+								+input('Введите имя', 'text', 'Имя', 'name')
+							.col-md
+								+input('+7 (___) ___-__-__', 'tel', 'Телефон', 'tel')
+							.col-md-3
+								+e.btn(type="submit") Отправить
+			+e.txt.text-center Или свяжитесь с нами любым удобным для Вас способом:
+			+e.row.row.justify-content-center
+				+sFormItem('tell', 'tel:+73512160373', '+7 (351) 216-03-73', 'fw-700')
+				+sFormItem('mail', 'mailto:support@metalgo.ru', 'support@metalgo.ru')
+			//-tell
 	// end sForm
+
+mixin sFormItem(imgName, href, txt, addClasses='')
+	.col-sm-6.col-md-auto
+		+e.item-row.row.justify-content-center.align-items-center.d-flex(href=href)
+			.col-auto.d-block
+				+e.ball
+					img(loading="lazy" src=`img/svg/sForm-${imgName}.svg` alt="")
+			+e.i-txt.col-auto(class=addClasses)=txt

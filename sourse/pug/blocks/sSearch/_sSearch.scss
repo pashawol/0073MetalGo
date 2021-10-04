@@ -1,5 +1,7 @@
 // start .sSearch
 .sSearch {
+
+
 	--sPT: #{rem(20)};
 	--sPB: 40px;
 	@include media-breakpoint-up(sm){
@@ -210,6 +212,63 @@
 	&__{}
 	&__{}
 	&__{}
+
+	&--readmore{
+		padding-top: var(--sPT) !important;
+
+		--sPT: 40px!important;
+		--sPB: 40px!important;
+		@include media-breakpoint-up(sm){
+			--sPT: #{rem(90)} !important;
+			--sPB: #{rem(90)} !important;
+		}
+
+		.sSearch__txt-content {
+			margin-bottom: 20px;
+
+			font-size: 14px!important;
+			line-height: 1.8;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(16) !important;
+				line-height: 1.75;
+			}
+
+			& > *{
+				margin-bottom: 20px;
+				@include media-breakpoint-up(sm){
+					margin-bottom: 40px;
+				}
+			}
+
+			h2{
+				font-size: 20px;
+				line-height: calc(23/20);
+				@include media-breakpoint-up(sm){
+					font-size: 24px;
+					line-height: calc(28/24);
+				}
+			}
+		}
+
+		//-
+		.sSearch__read-more{
+			@include mt();
+			display: block;
+			position: relative;
+			font-size: inherit;
+
+			text-decoration-line: underline;
+			&:hover{
+				text-decoration: none;
+			}
+
+			//margin-top: rem(-20);
+			&.active{
+				margin-top: rem(0);
+			}
+		}
+
+	}
 } // end.sSearch
 
 .params{
@@ -554,7 +613,6 @@
 	&__rate{
 		background: $gray-220;
 		border-radius: rem(5);
-
 		padding: rem(4);
 		display: flex;
 	}

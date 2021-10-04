@@ -1,7 +1,19 @@
 // start .header
-.header {
+.header-wrap{
 	padding-top: var(--header-h);
 	@include media-breakpoint-up(xl){
 		padding-top: 0;
 	}
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	@include media-breakpoint-up(xl){
+		position: relative;
+	}
+
+	width: 100%;
+	z-index: 800;
 } // end.header

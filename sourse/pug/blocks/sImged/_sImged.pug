@@ -1,0 +1,22 @@
+mixin sImged(data)
+	// start sImged
+	+b.SECTION.sImged.section(class=`${data.addClasses || ''}`)#sImged&attributes(attributes)
+		.container
+			+e.row.row.align-items-center
+				.col-lg-5.text-center.text-lg-start
+					+b.section-title--big
+						h2=data.title
+						p=data.descr
+					+e.img.d-lg-none(href="#")
+						img(loading="lazy" src=`img/@2x/sImged-${data.imgNum}.png` alt="")
+					+e.btns-row.row
+						if data.blackBtn
+							.col-md-6.col-lg-auto
+								+e.btn--dark(href="#")=data.blackBtn
+						if data.orangeBtn
+							.col-md-6.col-lg-auto
+								+e.btn--yellow(href="#")=data.orangeBtn
+				.col-lg-6.d-none.d-lg-block
+					+e.img(href="#")
+						img(loading="lazy" src=`img/@2x/sImged-${data.imgNum}.png` alt="")
+	// end sImged

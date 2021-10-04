@@ -1,29 +1,128 @@
+// start .sForm
+.sForm {
+	--sPT: 35px;
+	--sPB: 25px;
+	--sTPB: 13px;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(92)};
+		--sTPB: #{rem(54)};
+	}
 
-	// start .sForm
-	.sForm {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	//-
+	.section-title{
+		h2{
+			margin-bottom: 12px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(26);
+			}
+		}
 
+		p{
+			color: $gray-610;
+		}
+	}
+	.form-wrap{
+		margin-bottom: 16px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(30);
+		}
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(56);
+		}
+		//-
+		&__row{
+			--bs-gutter-y: 17px;
+		}
+
+		&__input-title{
+			display: block;
+			font-weight: 500;
+
+			margin-bottom: 7px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(11);
+			}
+		}
+		&__input-wrap{
+
+		}
+		&__input{
+
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-primary;
+			width: 100%;
+
+			margin-top: 3px;
+			padding: 8px;
+			@include media-breakpoint-up(sm){
+				padding: $btn-padding-y $btn-padding-x;
+				margin-top: 0;
+			}
+		}
+		//
+		&__{}
+		&__{}
+	}
+	&__txt{
+
+		color: $gray-610;
+
+		margin-bottom: 17px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(36);
+		}
+	}
+	&__row{
+		--bs-gutter-y: 10px;
+		--bs-gutter-x: #{rem(40)};
+	}
+	&__item-row{
+		color: $body-color;
+
+
+		--bs-gutter-y: 10px;
+		--bs-gutter-x: 10px;
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(15)};
+		}
+	}
+	&__ball{
+		background-color: $primary;
+		width: 30px;
+		height: 30px;
+		@include media-breakpoint-up(sm){
+			width: rem(45);
+			height: rem(45);
+		}
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: 11px;
+			@include media-breakpoint-up(sm){
+				width: rem(16);
+			}
+			height: auto;
+			max-height: 80%;
+		}
+	}
+	&__i-txt{
+		font-size: 16px;
+		line-height: calc(19/16);
+
+		min-width: calc(var(--bs-gutter-x) + 147px);
+		@include media-breakpoint-up(sm){
+			min-width: 0;
+			font-size: rem(20);
+			line-height: calc(23/20);
+		}
+	}
+	&__{}
+	&__{}
 } // end.sForm

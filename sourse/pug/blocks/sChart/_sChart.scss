@@ -1,0 +1,109 @@
+// start .sChart
+.sChart {
+	overflow: hidden;
+
+	--sPT: 37px;
+	--sPB: 40px;
+	--sTPB: 15px;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(81)};
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(48)};
+	}
+	background-color: $white;
+
+	.section-title{
+
+		h2{
+
+		}
+	}
+	&__box{
+		position: relative;
+		z-index: 1;
+	}
+	&__bg{
+		pointer-events: none;
+		position: absolute;
+		z-index: -1;
+		top: rem(-58);
+		left: 0;
+		width: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	//-
+	&__chart-wrap{
+		max-width: 100% !important;
+
+		width: rem(1200)!important;
+
+		margin: 0 auto 16px;
+		height: 160px!important;
+		@include media-breakpoint-up(sm){
+			height: rem(350)!important;
+			margin: 0 auto rem(17);
+		}
+	}
+	&__chart{
+
+	}
+	&__dates{
+		color: $gray-610;
+
+		margin-bottom: 33px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(46);
+		}
+	}
+	&__info-row{
+		--bs-gutter-x: #{rem(60)};
+		padding: 0 18px;
+		@include media-breakpoint-up(sm){
+			padding: 0;
+		}
+	}
+	&__item-row{
+		--bs-gutter-y: 8px;
+
+		padding-bottom: 37px;
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(49);
+		}
+	}
+	&__num{
+		font-weight: bold;
+		text-transform: uppercase;
+
+		font-size: 24px;
+		line-height: calc(28/24);
+		@include media-breakpoint-up(sm){
+			font-size: rem(45);
+			line-height: calc(53/45);
+		}
+	}
+	&__txt{
+
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-lg;
+		@extend .btn-primary;
+
+		min-width: 220px;
+		@include media-breakpoint-up(sm){
+			min-width: rem(332);
+		}
+	}
+	&__{}
+} // end.sChart

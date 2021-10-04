@@ -1,0 +1,26 @@
+mixin sChart(data)
+	// start sChart
+	+b.SECTION.sChart.section#sChart&attributes(attributes)
+		.container
+			+b.section-title--big.text-center
+				h2
+					| статистика посещений
+					br
+					span за последние 30 дней
+			+e.box.text-center
+				+e.bg.d-none.d-md-block
+					img(loading="lazy" src="img/svg/sChart.svg" alt="")
+				+e.chart-wrap
+					+e.CANVAS.chart.visit-chart-js
+				+e.dates 28 ноября – 28 декабря 2020 г.
+				+e.info-row.row.justify-content-center
+					+sChartItem('14 234', 'пользователей в системе', '')
+					+sChartItem('237', 'пользователей онлайн', 'text-primary')
+				+e.btn(href="#") Регистрация
+	// end sChart
+
+mixin sChartItem(num, txt, addClasses='')
+	.col-6.col-md-auto
+		+e.item-row.row.align-items-center
+			+e.num.col-md-auto(class=addClasses)=num
+			+e.txt.col-md-auto=txt

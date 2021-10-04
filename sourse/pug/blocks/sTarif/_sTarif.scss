@@ -1,0 +1,256 @@
+// start .sTarif
+.sTarif {
+	--sPT: 36px;
+	--sPB: 21px;
+	--sTPB: 34px;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(87)};
+		--sTPB: #{rem(50)};
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			max-width: 1418px;
+		}
+	}
+	.section-title{
+
+	}
+	&__btns{
+		justify-content: center;
+		text-align: center;
+
+		padding-bottom: 40px;
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(60);
+		}
+
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-white;
+
+		width: 100%;
+		padding: 8px;
+		@include media-breakpoint-up(md){
+			width: 25%;
+			font-size: rem(14);
+			padding: rem(12.5) rem(8);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(16);
+			width: rem(230);
+		}
+
+		border-color: $gray-310!important;
+		color: $gray-610;
+		&.active{
+			border-color: $primary!important;
+			background-color: $primary!important;
+			color: $body-color!important;
+		}
+
+		@include media-breakpoint-down(md){
+			margin-bottom: -1px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+
+		&:first-child{
+			@include media-breakpoint-down(md){
+				border-radius: $btn-border-radius $btn-border-radius 0 0 !important;
+			}
+		}
+		&:last-child{
+			@include media-breakpoint-down(md){
+				border-radius: 0 0 $btn-border-radius $btn-border-radius!important;
+			}
+		}
+	}
+	&__slider-wrap{
+		.swiper-container{
+			padding: 20px;
+			margin: -20px;
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			&.swiper-slide-duplicate{
+				@include media-breakpoint-up(lg){
+					display: none;
+				}
+			}
+
+			height: auto;
+
+			width: 100%;
+			@include media-breakpoint-up(md){
+				width: calc(100%/2 - 20px*1/2);
+			}
+			@include media-breakpoint-up(lg){
+				width: calc(100%/3 - 20px*2/3);
+			}
+		}
+	}
+	.swiper-pagination{
+		padding: 15px 0;
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sTarif
+
+.t-item{
+	border-radius: 5px;
+	@include mt();
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0);
+	&:hover{
+		box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1)
+	}
+
+	text-align: center;
+
+	background: $white;
+	border: 1px solid $gray-310;
+	padding: 20px;
+	@include media-breakpoint-up(sm){
+		padding: rem(48) rem(32);
+	}
+	@include media-breakpoint-up(xxl){
+		padding: rem(60);
+	}
+
+	&__img{
+		width: 45px;
+		height: 45px;
+		margin: 0 auto 15px;
+		@include media-breakpoint-up(sm){
+			width: rem(60);
+			height: rem(60);
+			margin: 0 auto rem(34);
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__title{
+		font-weight: 500;
+		text-transform: uppercase;
+
+		font-size: 20px;
+		line-height: calc(23/20);
+		margin-bottom: 13px;
+		@include media-breakpoint-up(sm){
+			font-size: rem(30);
+			line-height: calc(35/30);
+			margin-bottom: 10px;
+		}
+	}
+	&__descr{
+		margin-bottom: 14px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(36);
+		}
+	}
+	&__items{
+		padding-bottom: 20px;
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(40);
+		}
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding-bottom: rem(20);
+		&:last-child{
+			padding-bottom: 0;
+		}
+	}
+	&__icon{
+		flex-shrink: 0;
+		width: rem(20);
+		height: rem(20);
+		margin-right: rem(10);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__txt{
+
+	}
+	&__time-title{
+		color: $gray-610;
+		margin-bottom: 17px;
+	}
+	&__input-wrap{
+		width: 100%;
+
+		margin-bottom: 14px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(34);
+		}
+	}
+	&__input{
+		width: 100%;
+		text-align: center;
+
+		padding-left: rem(40) !important;
+		padding-right: rem(40) !important;
+	}
+	&__price{
+		font-weight: 500;
+		text-transform: uppercase;
+
+		font-size: 20px;
+		line-height: calc(23/20);
+		margin-bottom: 12px;
+		@include media-breakpoint-up(sm){
+			font-size: rem(30);
+			line-height: calc(35/30);
+			margin-bottom: 9px;
+		}
+	}
+	&__per-month{
+		color: $gray-610;
+
+		margin-bottom: 18px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(36);
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-lg;
+		@extend .btn-primary;
+
+		width: 100%;
+	}
+	//
+	&__{}
+	&__{}
+}
