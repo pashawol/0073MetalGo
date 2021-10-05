@@ -317,7 +317,30 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true
 		}
-	}); //end luckyoneJs
+	}); //another readmore
+
+	let tBoxes = document.querySelectorAll('.t-box-js');
+
+	for (let box of tBoxes) {
+		let content = box.querySelector('.t-content-js');
+		let btn = box.querySelector('.t-btn-js');
+
+		if (multiLineOverflows(content)) {
+			btn.classList.remove('invisible');
+		} else {
+			content.classList.add('active');
+		}
+
+		btn.addEventListener('click', function () {
+			content.classList.toggle('active');
+			this.classList.toggle('active');
+		});
+	}
+
+	function multiLineOverflows(el) {
+		return el.scrollHeight > el.clientHeight;
+	} //end luckyoneJs
+
 }
 
 ;

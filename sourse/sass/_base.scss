@@ -1,6 +1,6 @@
 .pixel-perfect {
 	top: 0;
-	//top: 1167px;
+	//top: 4px;
 	//
 	display: block;
 	@include a-cent(x);
@@ -526,9 +526,22 @@ iframe {
 //
 .white-line{
 	padding: 20px 0 20px;
+	min-height: 51px;
 	@include media-breakpoint-up(sm){
 		padding: rem(17) 0;
+		min-height: rem(80);
 	}
+
+	&--pad-alt{
+		padding: 10px 0;
+		@include media-breakpoint-up(sm){
+			padding: rem(17) 0;
+		}
+	}
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	&__row{
 		--bs-gutter-y: 16px;
 
@@ -789,7 +802,7 @@ ul.page-numbers{
 		display: block;
 	}
 }
-.rm-btn-js{
+.rm-btn-js, .t-btn-js{
 	cursor: pointer;
 	display: inline-block;
 
@@ -809,6 +822,12 @@ ul.page-numbers{
 		span:last-child{
 			display: inline-block;
 		}
+	}
+}
+
+.t-content-js{
+	&:not(.active){
+		@include ell(4);
 	}
 }
 

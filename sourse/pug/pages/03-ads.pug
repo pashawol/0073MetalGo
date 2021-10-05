@@ -1,0 +1,26 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sAds/_sAds.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg='03.png'
+
+block title
+	- let  title= '03-ads'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.white-line--pad-alt.bg-white
+		.container
+			+e.row.row.align-items-center.pb-0
+				.col-lg-4.col-xl-3
+					+e.H1.title объявление
+	//-+sContact()
+	+sAds()
+	+footer()

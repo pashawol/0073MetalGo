@@ -2,8 +2,49 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			.row.gy-20
+				.col-lg-6
+					+titleBox({
+						title: 'контактная информация',
+					})
+						+e.items
+							+sContactItem('Адрес')
+								+e.address Россия, Санкт-Петербург, пр. Стачек, дом 37, литера А, офис 104
+							+sContactItem('Телефон')
+								+e.tell(href="tel:+73512160373") +7 (351) 216-03-73
+							+sContactItem('Электронная почта')
+								+e.mail(href="mailto:support@metalgo.ru") support@metalgo.ru
+							+sContactItem('Подпишитесь на нас')
+								+soc()
+				.col-lg-6
+					+titleBox({
+						title: 'задать вопрос',
+					})
+						+form-wrap()
+							+e.inputs
+								+input('E-mail', 'email', 'Электронная почта')
+								+input('Задайте вопрос', 'textarea', 'Ваше сообщение')
+							.text-sm-end
+								+e.btn(type="submit") Отправить
 	// end sContact
+
+mixin sContactItem(title)
+	+e.item
+		+e.i-row.row.align-items-center
+			.col-md-6
+				+e.i-title=title
+			.col-md-6
+				block
+
+mixin titleBox(data)
+	.t-box
+		.t-box__header
+			.t-box__row.row.align-items-center
+				.col
+					h2.t-box__title=data.title
+				if data.placed
+					+g.s-item
+						+sSearchDateItem('Размещено:', '24.12.2020')
+						+sSearchDateItem('Обновлено:', '24.12.2020')
+		.t-box__content
+			block

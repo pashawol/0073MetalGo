@@ -1,0 +1,36 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSearch/_sSearch.pug
+
+block variables
+	- let  mainPage= '04'
+	- let  bg='04-320.png'
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.white-line.bg-white
+		.container
+			+e.row.row.align-items-center
+				.col-lg-4.col-xl-3
+					+e.H1.title заявки покупателей
+				.col
+					+form-wrap
+						.input-group
+							+e.INPUT.input.form-control(placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text")
+							+e.inp-btn(type="button")
+								+e.b-icon
+									img(loading='lazy' src="img/svg/zoom.svg" alt="")
+								+e.b-txt.d-none.d-sm-inline Поиск
+			+e.parameters.parameters-js.d-lg-none
+				+e.p-img
+					img(loading="lazy" src='img/svg/parameters.svg' alt="")
+				+e.p-txt Параметры поиска
+	+sSearchOrders()
+	+footer()

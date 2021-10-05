@@ -1,29 +1,237 @@
+// start .sContact
+.sContact {
+	--sPT: 20px;
+	--sPB: 40px;
+	@include media-breakpoint-up(xxl){
+		--sPB: #{rem(130)};
+	}
 
-	// start .sContact
-	.sContact {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	&__items{
 
+	}
+	&__item{
+		border-bottom: 1px solid $gray-220;
+
+		min-height: 72px;
+		@include media-breakpoint-up(sm){
+			min-height: rem(92);
+		}
+
+		display: flex;
+		align-items: center;
+
+		&:first-child{
+			min-height: 0;
+
+			padding: 0 0 18px;
+			@include media-breakpoint-up(sm){
+				padding: 0 0 rem(36);
+			}
+		}
+		&:last-child{
+			min-height: 0;
+			border: none;
+
+			padding: 18px 0 0;
+			@include media-breakpoint-up(sm){
+				padding: rem(29) 0 0;
+			}
+		}
+	}
+	&__i-row{
+		width: calc(100% + var(--bs-gutter-x));
+		--bs-gutter-y: 4px;
+	}
+	&__i-title{
+		font-weight: 500;
+	}
+	&__address{
+
+	}
+	&__tell{
+		display: inline-block;
+		color: $body-color;
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__mail{
+		color: $gray-610;
+		text-decoration-line: underline;
+		&:hover{
+			color: $body-color;
+			text-decoration: none;
+		}
+	}
+
+	.soc{
+		padding-top: 13px;
+		@include media-breakpoint-up(sm){
+			padding-top: 0;
+		}
+	}
+
+	.form-wrap{
+
+		&__input-title{
+			font-weight: 500;
+			display: block;
+
+			margin-bottom: 12px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(11);
+			}
+		}
+		&__inputs{
+			margin-bottom: 20px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(40);
+			}
+		}
+		&__input-wrap{
+			textarea{
+				height: 68px;
+				@include media-breakpoint-up(sm){
+					height: rem(90);
+				}
+			}
+
+			margin-bottom: 18px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(17);
+			}
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		//-
+		&__btn{
+			@extend .btn;
+			@extend .btn-primary;
+
+			min-width: 140px;
+			@include media-breakpoint-up(sm){
+				min-width: rem(176);
+			}
+		}
+		&__{}
+		&__{}
+	}
+	&__{}
+	&__{}
 } // end.sContact
+
+.soc{
+	display: flex;
+	align-items: center;
+	@include roww(10px, m);
+
+	&__item{
+		@include mt();
+
+		width: 30px;
+		height: 30px;
+		@include media-breakpoint-up(sm){
+			width: rem(36);
+			height: rem(36);
+		}
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background-color: var(--bg-color, #{$primary});
+		&:hover{
+			opacity: .8;
+		}
+
+		&.soc-inst{
+			--bg-color: #{#F83765};
+		}
+		&.soc-vk{
+			--bg-color: #{#2787F5};
+		}
+		&.soc-yt{
+			--bg-color: #{#FF0000};
+		}
+
+		.icon{
+			color: $white;
+
+			font-size: 16px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(19.2);
+			}
+		}
+	}
+}
+//
+.t-box{
+	min-height: 100%;
+	background: $white;
+	border-radius: 5px;
+
+	//
+	--header-mh: 75px;
+	--content-py: 38px;
+	--header-shift: 0;
+	@include media-breakpoint-up(xl){
+		--header-mh: #{rem(95)};
+		--content-py: #{rem(56)};
+		--header-shift: #{rem(20)};
+	}
+
+	--box-px: 20px;
+	@include media-breakpoint-up(sm){
+		--box-px: #{rem(40)};
+	}
+	@include media-breakpoint-up(xl){
+		--box-px: #{rem(60)};
+	}
+	//
+
+	&__header{
+		display: flex;
+		align-items: center;
+
+		padding: rem(16) calc(var(--box-px) - var(--header-shift));
+
+		min-height: var(--header-mh);
+		border-bottom: 1px solid $gray-220;
+
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			left: calc(var(--box-px) - var(--header-shift));
+			bottom: 0;
+			height: 2px;
+			width: 40px;
+			background-color: $primary;
+		}
+	}
+	&__title{
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		text-transform: uppercase;
+
+		line-height: calc(23/20);
+		@include media-breakpoint-down(sm){
+			font-size: 14px;
+			line-height: calc(16/14);
+		}
+	}
+	&__content{
+		padding: var(--content-py) var(--box-px);
+	}
+
+	//
+	&__row{
+		width: calc(100% + var(--bs-gutter-x));
+	}
+	&__{}
+}

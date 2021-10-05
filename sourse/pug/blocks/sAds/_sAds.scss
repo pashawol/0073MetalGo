@@ -1,0 +1,13 @@
+// start .sAds
+.sAds {
+	--sPT: 20px;
+	--sPB: 40px;
+	@include media-breakpoint-up(xxl){
+		--sPB: #{rem(130)};
+	}
+
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sAds

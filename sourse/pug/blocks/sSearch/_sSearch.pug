@@ -1,3 +1,268 @@
+mixin sSearchBiddings(data)
+	// start sSearch
+	+b.SECTION.sSearch.section#sSearch&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-4.col-xl-3
+					+sSearchParams()
+						+e.inp-row.row
+							.col-6
+								+e.input-wrap(data-add-ph="₽")
+									+e.INPUT.input.form-control(type="text" placeholder="Цена от")
+							.col-6
+								+e.input-wrap(data-add-ph="₽")
+									+e.INPUT.input.form-control(type="text" placeholder="до")
+						+e.tags-row.row
+							+spTag('до 400 тыс.')
+							+spTag('400 тыс. – 1 млн.')
+							+spTag('1 – 5 млн')
+							+spTag('5 – 20 млн')
+							+spTag('20 – 100 млн')
+							+spTag('100 – 1 млрд')
+							+spTag('более 1 млрд')
+						+e.SELECT.input.form-select(name=selectTxt)&attributes(attributes)
+							option(value='1') Российский рубль
+							option(value='2') Арматура
+							option(value='3') Балка
+							option(value='5') Круг
+							option(value='6') Квадрат
+							option(value='8') Лента
+							option(value='9') Лист
+							option(value='10') Поковка
+							option(value='11') Полоса
+							option(value='12') Труба
+							option(value='13') Уголок
+							option(value='15') Швеллер
+							option(value='16') Шестигранник
+							option(value='17') Шайба
+							option(value='18') Проволока
+							option(value='19') Диск
+							option(value='20') Рельсы
+							option(value='22') Планка
+							option(value='23') Подкладка
+						+input('Город', 'text')
+						+input('Заказчик', 'text')
+						.row.align-items-center
+							.col
+								+e.discard(type='button') Сбросить
+							.col-auto.d-lg-none
+								+e.hide.parameters-js Свернуть
+				.col#sSearchContent
+					+e.top-row.row
+						.col
+						.col-auto
+							+sSearchRowSelect('Показать по:', '10')(class="sm")
+					+e.items
+						//-
+						-for(let i = 0; i < 6; i++)
+							+biddingItem({})
+					+e.pagin-row.row
+						.col-sm-auto
+							+pugin()
+						.col-auto.ms-auto
+							+sSearchRowSelect('Показать по:', '10', 'd-xl-none d-xxl-block')(class="sm")
+				.col-xl-3.d-none.d-xl-block
+					+e.adv-items.sticky-js
+						+sSearchAdvItem(1)
+						+sSearchAdvItem(3)
+			+e.baner.d-none.d-xl-block
+				img(loading="lazy" src="img/@2x/sSearch-baner2.png" alt="")
+mixin sSearchOrders(data)
+	// start sSearch
+	+b.SECTION.sSearch.section#sSearch&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-4.col-xl-3
+					+sSearchParams()
+						+e.SELECT.input.form-select(name=selectTxt)&attributes(attributes)
+							option(value='1') Труба
+							option(value='2') Арматура
+							option(value='3') Балка
+							option(value='5') Круг
+							option(value='6') Квадрат
+							option(value='8') Лента
+							option(value='9') Лист
+							option(value='10') Поковка
+							option(value='11') Полоса
+							option(value='12') Труба
+							option(value='13') Уголок
+							option(value='15') Швеллер
+							option(value='16') Шестигранник
+							option(value='17') Шайба
+							option(value='18') Проволока
+							option(value='19') Диск
+							option(value='20') Рельсы
+							option(value='22') Планка
+							option(value='23') Подкладка
+						+e.input-wrap
+							+e.INPUT.input.form-control(type="text" placeholder="Город")
+							+e.tooltip.tooltip-btn
+								//img(loading="lazy" src="img/svg/tooltip.svg" alt="")
+								+icon('tooltip')
+								+b.tt-content Данные отсортируются от ближайшей к выбранному городу металлобазы до самой удаленной.
+						+input('Покупатель', 'text')(disabled)
+						.row.align-items-center
+							.col
+								+e.discard(type='button') Сбросить
+							.col-auto.d-lg-none
+								+e.hide.parameters-js Свернуть
+				.col#sSearchContent
+					+e.top-row.row
+						.col
+							+sSearchRowSelect('Сортировать:', 'Сперва с самым высоким рейтингом', 'd-none d-sm-block')
+								option выгодное предложение
+								option сначала новые
+								option Цена (по возрастанию)
+								option Цена (по убыванию)
+						.col-auto.d-none.d-xxl-block
+							+sSearchRowSelect('Показать по:', '10')(class="sm")
+					+e.items
+						+sSearchItem({
+							imgNum: 1,
+							boldTitle: 'Куплю ряд позиций срочно, читайте описание',
+							noChars: true,
+							txtContent: true,
+							iconName: 'location',
+						})
+							p Добрый день, прошу Вас выставить счет на данные материалы:
+							ol
+								li Труба профильная 30х30х2 – 1360,2 метр.
+								li Труба профильная 40х25х2 - 224,5 метр.
+								li Труба профильная 40х40х3 - 128 метр.
+								li Труба профильная 20х20х2 – 1360,7 метр.
+								li Квадрат 20 - 105 метр.
+								li Полоса 30х4 - 378 метр.
+								li Арматура ф12 А240 - 20,5 метр.
+								li Арматура ф10 - 78,1 метр.
+								li Труба ДУ ф32х3,2 - 468 метр.
+						+sSearchItem({
+							imgNum: 1,
+							boldTitle: 'Нужна поставка',
+							noChars: true,
+							txtContent: true,
+							iconName: 'location',
+						})
+							p
+								| Прошу рассмотреть возможность поставки
+								br
+								| Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт
+								br
+								| Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт
+						+sSearchItem({
+							imgNum: 1,
+							boldTitle: 'Длинный заголовок заявки при длинном названии компании',
+							noChars: true,
+							txtContent: true,
+							iconName: 'location',
+						})
+							ol
+								li Проволока светлая, диаметр 1,1 мм т 0.0021
+								li Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм т 0.0759
+								li Прокат толстолистовой горячекатаный в листах, марка стали Ст3пс, толщина 13-20 мм
+								li Швеллеры № 40, марка стали Ст0 т 0.0054
+								li Швеллеры № 40, марка стали Ст0 т 0.0054
+						+sSearchItem({
+							imgNum: 1,
+							boldTitle: 'Нужна поставка',
+							noChars: true,
+							txtContent: true,
+							iconName: 'location',
+						})
+							p
+								| Прошу рассмотреть возможность поставки
+								br
+								| Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт
+								br
+								| Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт
+						+sSearchItem({
+							imgNum: 1,
+							boldTitle: 'Куплю ряд позиций срочно, читайте описание',
+							noChars: true,
+							txtContent: true,
+							txtContentClasses: 'active',
+							iconName: 'location',
+						})
+							p Добрый день, прошу Вас выставить счет на данные материалы:
+							ol
+								li Труба профильная 30х30х2 – 1360,2 метр.
+								li Труба профильная 40х25х2 - 224,5 метр.
+								li Труба профильная 40х40х3 - 128 метр.
+								li Труба профильная 20х20х2 – 1360,7 метр.
+								li Квадрат 20 - 105 метр.
+								li Полоса 30х4 - 378 метр.
+								li Арматура ф12 А240 - 20,5 метр.
+								li Арматура ф10 - 78,1 метр.
+								li Труба ДУ ф32х3,2 - 468 метр.
+						+sSearchItem({
+							imgNum: 1,
+							boldTitle: 'Куплю ряд позиций срочно, читайте описание',
+							noChars: true,
+							txtContent: true,
+							iconName: 'location',
+						})
+							p Добрый день, прошу Вас выставить счет на данные материалы:
+							ol
+								li Труба профильная 30х30х2 – 1360,2 метр.
+								li Труба профильная 40х25х2 - 224,5 метр.
+								li Труба профильная 40х40х3 - 128 метр.
+								li Труба профильная 20х20х2 – 1360,7 метр.
+								li Квадрат 20 - 105 метр.
+								li Полоса 30х4 - 378 метр.
+								li Арматура ф12 А240 - 20,5 метр.
+								li Арматура ф10 - 78,1 метр.
+								li Труба ДУ ф32х3,2 - 468 метр.
+						+sSearchItem({
+							imgNum: 1,
+							boldTitle: 'Нужна поставка',
+							noChars: true,
+							txtContent: true,
+							iconName: 'location',
+						})
+							p
+								| Прошу рассмотреть возможность поставки
+								br
+								| Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт
+								br
+								| Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт
+						//-
+						+sSearchItem({
+							imgNum: 1,
+							boldTitle: 'Длинный заголовок заявки при длинном названии компании',
+							noChars: true,
+							txtContent: true,
+							iconName: 'location',
+						})
+							ol
+								li Проволока светлая, диаметр 1,1 мм т 0.0021
+								li Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм т 0.0759
+								li Прокат толстолистовой горячекатаный в листах, марка стали Ст3пс, толщина 13-20 мм
+								li Швеллеры № 40, марка стали Ст0 т 0.0054
+								li Швеллеры № 40, марка стали Ст0 т 0.0054
+						+sSearchItem({
+							imgNum: 1,
+							boldTitle: 'Нужна поставка',
+							noChars: true,
+							txtContent: true,
+							iconName: 'location',
+						})
+							p
+								| Прошу рассмотреть возможность поставки
+								br
+								| Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт
+								br
+								| Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт
+					+e.pagin-row.row
+						.col-sm-auto
+							+pugin()
+						.col-auto.ms-auto
+							+sSearchRowSelect('Показать по:', '10', 'd-xl-none d-xxl-block')(class="sm")
+				.col-xl-3.d-none.d-xl-block
+					+e.adv-items.sticky-js
+						+sSearchAdvItem(1)
+						+sSearchAdvItem(3)
+			+e.baner.d-none.d-xl-block
+				img(loading="lazy" src="img/@2x/sSearch-baner2.png" alt="")
+
 mixin sSearch(data)
 	// start sSearch
 	+b.SECTION.sSearch.section#sSearch&attributes(attributes)
@@ -117,14 +382,18 @@ mixin sSearch(data)
 mixin sSearchItem(data)
 	+b.s-item(class=`${data.addClasses || ''}`)
 		+e.top-row.row.align-items-center
-			.col
-				+e.name
-					a(href="#")
-						span.fw-500=data.name
-						span=data.price
-					span.text-secondary
-						|
-						| с НДС
+			if data.price
+				.col
+					+e.name
+						a(href="#")
+							span.fw-500=data.name
+							span=data.price
+						span.text-secondary
+							|
+							| с НДС
+			if data.boldTitle
+				.col.pe-xl-0
+					+e.b-title=data.boldTitle
 			.col-auto.d-none.d-md-block
 				+e.comp-link.mb-0(href="#")
 					+e.comp-row.row.d-flex.align-items-center
@@ -140,14 +409,23 @@ mixin sSearchItem(data)
 								+e.rate-val 4.9
 			.col-auto
 				+e.tooltip.tooltip-btn
-					img(loading="lazy" src="img/svg/house.svg" alt="")
+					img(loading="lazy" src=`img/svg/${data.iconName || 'house'}.svg` alt="")
 					+b.tt-content--w-auto Челябинск
-		+e.char-row.row
-			.col-md-auto
-				+e.main-char 34,7 тн
-			+sSearchCharItem('Марка:', '03Х21Н21М4ГБ')
-			+sSearchCharItem('Размер:', '360 мм')
-			+sSearchCharItem('Толщина стенки:', '18 мм')
+		if !data.noChars
+			+e.char-row.row
+				.col-md-auto
+					+e.main-char 34,7 тн
+				+sSearchCharItem('Марка:', '03Х21Н21М4ГБ')
+				+sSearchCharItem('Размер:', '360 мм')
+				+sSearchCharItem('Толщина стенки:', '18 мм')
+		if data.txtContent
+			//another readmore with single content box => .t-content-js
+			+e.txt-wrap.t-box-js
+				+e.txt-content.t-content-js(class=`${data.txtContentClasses || ''}`)
+					block
+				+e.t-btn.t-btn-js(class=`${data.txtContentClasses || 'invisible'}`)
+					span Показать полностью...
+					span Свернуть
 		if data.standart
 			+e.standart ГОСТ 8732-78
 		.d-md-none
@@ -178,8 +456,38 @@ mixin sSearchItem(data)
 					.col-6.col-sm-auto
 						+e.btn--out-primary(type='button') Подробнее
 
+mixin biddingItem(data)
+	+b.s-item(class=`${data.addClasses || ''}`)
+		+e.data-items
+			+biddingDataItem('Предмет контракта', 'Техническое обслуживание стационарных металлообнаружителей в судах Сахалинской области на 2021 год')
+			+biddingDataItem('Начальная цена', '413 534.68 ₽')
+			+biddingDataItem('Заказчик', 'Управление судебного департамента в Сахалинской области')
+			+biddingDataItem('Способ закупки', 'Электронный аукцион')
+			+biddingDataItem('Регион', '123112, г. Москва, ул. Набережная Преснесенская, д. 10, эт. 15, пом. 20')
+		+e.foot-row.row.align-items-center.pb-1.pb-sm-0
+			.col-sm
+				+e.date-row--bidding.row
+					+biddingDateItem('Размещено:', '01.12.2020')
+					+biddingDateItem('Обновлено:', '02.12.2020')
+					+biddingDateItem('Окончание:', '25.12.2020')
+			.col-sm-auto
+				+e.btn--out-primary(type='button')
+					//-img(loading="lazy" src="img/svg/outsource.svg" alt="")
+					+icon('outsource')
+					span zakupki.gov.ru
+
+mixin biddingDataItem(title, val)
+	+e.data-item
+		+e.di-title=title
+		+e.di-val=val
+
 mixin sSearchDateItem(title,val)
 	.col-auto
+		+e.SPAN.d-title=title
+		+e.SPAN.d-val=val
+
+mixin biddingDateItem(title,val)
+	.col-sm-auto
 		+e.SPAN.d-title=title
 		+e.SPAN.d-val=val
 
@@ -212,58 +520,65 @@ mixin sSearchParams()
 	+b.params--js.sticky-js
 		+e.head.d-none.d-lg-block параметры поиска
 		+e.content
-			+e.SELECT.input.form-select(name=selectTxt)&attributes(attributes)
-				option(value='1') Профильная труба
-				option(value='2') Арматура
-				option(value='3') Балка
-				option(value='5') Круг
-				option(value='6') Квадрат
-				option(value='8') Лента
-				option(value='9') Лист
-				option(value='10') Поковка
-				option(value='11') Полоса
-				option(value='12') Труба
-				option(value='13') Уголок
-				option(value='15') Швеллер
-				option(value='16') Шестигранник
-				option(value='17') Шайба
-				option(value='18') Проволока
-				option(value='19') Диск
-				option(value='20') Рельсы
-				option(value='22') Планка
-				option(value='23') Подкладка
-			+input('Марка', 'text')
-			//-
-			+e.input-wrap(data-add-ph="мм")
-				+e.INPUT.input.form-control(type="text" placeholder="Высота")
-			+e.input-wrap(data-add-ph="мм")
-				+e.INPUT.input.form-control(type="text" placeholder="Толщина")
-			+e.input-wrap(data-add-ph="мм")
-				+e.INPUT.input.form-control(type="text" placeholder="Ширина стенки")
-			+e.inp-row.row
-				.col-6
-					+e.input-wrap(data-add-ph="тн")
-						+e.INPUT.input.form-control(type="text" placeholder="Вес от")
-				.col-6
-					+e.input-wrap(data-add-ph="тн")
-						+e.INPUT.input.form-control(type="text" placeholder="до")
-			+e.inp-row.row
-				.col-6
-					+e.input-wrap(data-add-ph="₽")
-						+e.INPUT.input.form-control(type="text" placeholder="Цена от")
-				.col-6
-					+e.input-wrap(data-add-ph="₽")
-						+e.INPUT.input.form-control(type="text" placeholder="до")
-			//-
-			+e.input-wrap
-				+e.INPUT.input.form-control(type="text" placeholder="Город")
-				+e.tooltip.tooltip-btn
-					//img(loading="lazy" src="img/svg/tooltip.svg" alt="")
-					+icon('tooltip')
-					+b.tt-content Данные отсортируются от ближайшей к выбранному городу металлобазы до самой удаленной.
-			+input('Поставщик', 'text')
-			.row.align-items-center
-				.col
-					+e.discard(type='button') Сбросить
-				.col-auto.d-lg-none
-					+e.hide.parameters-js Свернуть
+			if block
+				block
+			else
+				+e.SELECT.input.form-select(name=selectTxt)&attributes(attributes)
+					option(value='1') Профильная труба
+					option(value='2') Арматура
+					option(value='3') Балка
+					option(value='5') Круг
+					option(value='6') Квадрат
+					option(value='8') Лента
+					option(value='9') Лист
+					option(value='10') Поковка
+					option(value='11') Полоса
+					option(value='12') Труба
+					option(value='13') Уголок
+					option(value='15') Швеллер
+					option(value='16') Шестигранник
+					option(value='17') Шайба
+					option(value='18') Проволока
+					option(value='19') Диск
+					option(value='20') Рельсы
+					option(value='22') Планка
+					option(value='23') Подкладка
+				+input('Марка', 'text')
+				//-
+				+e.input-wrap(data-add-ph="мм")
+					+e.INPUT.input.form-control(type="text" placeholder="Высота")
+				+e.input-wrap(data-add-ph="мм")
+					+e.INPUT.input.form-control(type="text" placeholder="Толщина")
+				+e.input-wrap(data-add-ph="мм")
+					+e.INPUT.input.form-control(type="text" placeholder="Ширина стенки")
+				+e.inp-row.row
+					.col-6
+						+e.input-wrap(data-add-ph="тн")
+							+e.INPUT.input.form-control(type="text" placeholder="Вес от")
+					.col-6
+						+e.input-wrap(data-add-ph="тн")
+							+e.INPUT.input.form-control(type="text" placeholder="до")
+				+e.inp-row.row
+					.col-6
+						+e.input-wrap(data-add-ph="₽")
+							+e.INPUT.input.form-control(type="text" placeholder="Цена от")
+					.col-6
+						+e.input-wrap(data-add-ph="₽")
+							+e.INPUT.input.form-control(type="text" placeholder="до")
+				//-
+				+e.input-wrap
+					+e.INPUT.input.form-control(type="text" placeholder="Город")
+					+e.tooltip.tooltip-btn
+						//img(loading="lazy" src="img/svg/tooltip.svg" alt="")
+						+icon('tooltip')
+						+b.tt-content Данные отсортируются от ближайшей к выбранному городу металлобазы до самой удаленной.
+				+input('Поставщик', 'text')
+				.row.align-items-center
+					.col
+						+e.discard(type='button') Сбросить
+					.col-auto.d-lg-none
+						+e.hide.parameters-js Свернуть
+
+mixin spTag(txt)
+	.col-auto
+		+e.tag=txt

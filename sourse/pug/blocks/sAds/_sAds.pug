@@ -1,0 +1,102 @@
+mixin sAds(data)
+	// start sAds
+	+b.SECTION.sAds.section#sAds&attributes(attributes)
+		.container
+			.row.gy-20
+				.col
+					+titleBox({
+						title: 'информация об объявлении',
+						placed: true,
+					})
+						+e.items
+							+sAdsItem('Наименование:', 'Арматура')
+							+sAdsItem('Цена (с НДС):', '324 000 ₽')
+							+sAdsItem('Вес:', '34,7 тн')
+							+sAdsItem('Марка:', '03Х21Н21М4ГБ')
+							+sAdsItem('Размер:', '360 мм')
+							+sAdsItem('Толщина стенки:', '18 мм')
+							+sAdsItem('Стандарт:', 'ГОСТ 8732-78 ')
+							+sAdsItem('Склад:', 'Челябинск, улица Шоссе Металлургов 31Б')
+							//-+sAdsItem('', '')
+				.col-xl-3
+					+contactsBox({
+						title: '',
+					})
+	// end sAds
+
+mixin sAdsItem(title, val)
+	+e.item
+		+e.i-row.row
+			+e.i-title.col-md-6=title
+			+e.i-val.col-md-6=val
+
+mixin contactsBox(data)
+	.t-box.t-box--c-box
+		.t-box__header
+			h4.t-box__title--h4=data.title
+		.t-box__content
+			+b.c-box
+				+e.item
+					+e.top-row.row.align-items-center.gy-20
+						.col-auto
+							if data.logo
+								+e.logo(href="#" target="_blank")
+									img()
+							if data.hidden
+								+e.l-hidden Организация
+						.col
+							if data.name
+								+e.name=data.name
+							if data.hidden
+								+b.hid-alert Информация скрыта
+							+e.fb-row.row
+								.col-auto
+									+g.s-item
+										+e.rate
+											+e.star
+												img(loading="lazy" src="img/svg/star.svg" alt="")
+											+e.rate-val 4.9
+								.col-auto
+									+e.fb-amount 6 отзывов
+				+contactsBoxItem('Город')
+					if data.city
+						+e.txt-item=data.city
+					if data.hidden
+						+b.hid-alert Информация скрыта
+				+contactsBoxItem('Телефон')
+					if data.city
+						+e.txt-item=data.city
+					if data.hidden
+						+b.hid-alert Информация скрыта
+				+contactsBoxItem('E-mail')
+					if data.email
+						+e.txt-item--gray(href=`mailto:${data.email}`)=data.email
+					if data.hidden
+						+b.hid-alert Информация скрыта
+				+contactsBoxItem('Сайт')
+					if data.cite
+						+e.txt-item--gray(href=data.cite target="_blank")=data.cite
+					if data.hidden
+						+b.hid-alert Информация скрыта
+				+contactsBoxItem('ИНН')
+					if data.inn
+						+e.sub-row.row.align-items-center
+							.col-auto
+								+e.inn(href="#") 546458776976
+							.col-auto
+								+e.btn--img(href="#")
+									img(loading="lazy" src="img/svg/sbis.svg" alt="")
+					if data.hidden
+						+b.hid-alert Информация скрыта
+				+e.item
+					+e.btn--out-secondary(href="#")
+						+icon('soc-tg')
+						span Написать
+
+
+mixin contactsBoxItem(title)
+	+e.item
+		+e.i-row.row
+			+e.title.col-auto=title
+			.col
+				block

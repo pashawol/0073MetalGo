@@ -216,7 +216,7 @@
   // line-clamp: $n;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: $n;
+  -webkit-line-clamp: var(--lines, #{$n});
   position: relative;
   overflow: hidden;
 }
