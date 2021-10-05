@@ -176,7 +176,7 @@
 	//
 	--header-mh: 75px;
 	--content-py: 38px;
-	--header-shift: 0;
+	--header-shift: 0px;
 	@include media-breakpoint-up(xl){
 		--header-mh: #{rem(95)};
 		--content-py: #{rem(56)};
