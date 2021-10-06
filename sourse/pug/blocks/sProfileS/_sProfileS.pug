@@ -1,0 +1,39 @@
+mixin sProfileS(data)
+	// start sProfileS
+	+b.SECTION.sProfileS.section#sProfileS&attributes(attributes)
+		.container
+			+e.row.row.gy-20
+				.col.tabs__wrap
+					.tabs__content.active
+						+titleBox({
+							title: 'информация о поставщике',
+							placed: true,
+						})
+							+b.ads-bl
+								+e.items
+									+sAdsItem('Наименование:', 'ООО «МеталГо»')
+									+sAdsItem('Ответственное лицо:', 'Иванов Иван')
+									+sAdsItem('ИНН:', '')
+										+e.sub-row.row.align-items-center
+											.col-auto 7814652255
+											.col-auto
+												+b.btn-sbis(href="#")
+													img(loading="lazy" src="img/svg/sbis.svg" alt="")
+									+sAdsItem('Юридический адрес:', 'г. Санкт-Петербург, пр. Стачек, дом 37, литера А, офис 104')
+									+sAdsItem('Адрес офиса:', 'г. Санкт-Петербург, пр. Стачек, дом 37, литера А, офис 104')
+									+sAdsItem('Расчетный счет:', '40702810055000031738')
+									+sAdsItem('БИК банка:', '044030653')
+									//-+sAdsItem('', '')
+							+b.date-row.row.d-md-none
+								+g.s-item
+									+sSearchDateItem('Размещено:', '24.12.2020')
+									+sSearchDateItem('Обновлено:', '24.12.2020')
+					.tabs__content 2
+					.tabs__content 3
+					.tabs__content 4
+				.col-lg-4.col-xl-3
+					block
+			+g.sSearch
+				+e.baner.d-none.d-xl-block
+					img(loading="lazy" src="img/@2x/sSearch-baner2.png" alt="")
+	// end sProfileS

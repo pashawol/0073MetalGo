@@ -335,6 +335,35 @@ function eventHandler() {
 		return el.scrollHeight > el.clientHeight;
 	}
 
+	//tabs
+	let cTabs = document.querySelectorAll('.tabs');
+	for (let tab of cTabs){
+		let Btns = tab.querySelectorAll('.tabs__btn')
+		let contentGroups = tab.querySelectorAll('.tabs__wrap');
+
+		for (let btn of Btns){
+			btn.addEventListener('click', function (){
+
+				for (let btn of Btns){
+					btn.classList.remove('active');
+				}
+				this.classList.add('active');
+
+				let index = [...Btns].indexOf(this);
+				//-console.log(index);
+
+				for (let cGroup of contentGroups){
+					let contentItems = cGroup.querySelectorAll('.tabs__content');
+
+					for (let item of contentItems){
+						item.classList.remove('active');
+					}
+					contentItems[index].classList.add('active');
+				}
+			})
+		}
+	}
+
 	//end luckyoneJs
 
 };

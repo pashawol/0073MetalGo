@@ -1,0 +1,17 @@
+// start .sProfileS
+.sProfileS {
+	--sPT: 20px;
+	--sPB: 30px;
+
+	//-
+	&__row{
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(60);
+		}
+	}
+
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sProfileS

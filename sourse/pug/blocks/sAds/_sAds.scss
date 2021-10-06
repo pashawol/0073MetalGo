@@ -9,52 +9,6 @@
 			margin-bottom: rem(60);
 		}
 	}
-
-	&__items{
-
-	}
-	&__item{
-		padding: 16.5px 0;
-		@include media-breakpoint-up(sm){
-			min-height: rem(60);
-			padding: rem(18) 0;
-		}
-
-		&:first-child{
-			min-height: 0;
-
-			padding: 0 0 16.5px;
-			@include media-breakpoint-up(sm){
-				padding: 0 0 rem(22);
-			}
-		}
-		&:last-child{
-			@include media-breakpoint-up(md){
-				min-height: 0;
-				padding: rem(19) 0 0;
-				border-bottom: 0;
-			}
-		}
-
-		border-bottom: 1px solid $gray-220;
-	}
-	&__i-row{
-		--bs-gutter-y: 4px;
-	}
-	&__i-title{
-		font-weight: 500;
-	}
-	&__i-val{
-
-	}
-	&__date-row{
-		padding: 12px 0 0;
-		--bs-gutter-x: 10px;
-		@include media-breakpoint-up(sm){
-			padding: rem(22) 0 0;
-			--bs-gutter-x: #{rem(20)};
-		}
-	}
 	//-
 	.s-item{
 		&__d-title{
@@ -74,6 +28,15 @@
 	&__{}
 	&__{}
 } // end.sAds
+
+.date-row{
+	padding: 12px 0 0;
+	--bs-gutter-x: 10px;
+	@include media-breakpoint-up(sm){
+		padding: rem(22) 0 0;
+		--bs-gutter-x: #{rem(20)};
+	}
+}
 
 .c-box{
 
@@ -206,31 +169,7 @@
 	&__inn{
 		color: $body-color!important;
 	}
-	&__btn{
-		@extend .btn;
 
-		&--img{
-			@extend .btn-sm;
-			@extend .btn-outline-light;
-			border-radius: 5px;
-
-			@include media-breakpoint-down(sm){
-				padding: 3px 2px;
-			}
-
-			img{
-				height: auto;
-
-				width: 80%;
-				@include media-breakpoint-up(sm){
-					width: 100%;
-				}
-			}
-		}
-		&--out-secondary{
-
-		}
-	}
 	//
 	&__alert{
 
@@ -314,4 +253,73 @@
 		}
 	}
 	&__{}
+}
+//
+.ads-bl{
+	&__items{
+
+	}
+	&__item{
+		padding: 16.5px 0;
+		@include media-breakpoint-up(sm){
+			min-height: rem(60);
+			padding: rem(18) 0;
+		}
+
+		&:first-child{
+			min-height: 0;
+
+			padding: 0 0 16.5px;
+			@include media-breakpoint-up(sm){
+				padding: 0 0 rem(22);
+			}
+		}
+		&:last-child{
+			@include media-breakpoint-up(md){
+				min-height: 0;
+				padding: rem(19) 0 0;
+				border-bottom: 0;
+			}
+		}
+
+		border-bottom: 1px solid $gray-220;
+	}
+	&__i-row{
+		--bs-gutter-y: 4px;
+	}
+	&__sub-row{
+		--bs-gutter-y: 4px;
+
+		--bs-gutter-x: 10px;
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(10px)};
+		}
+	}
+	&__i-title{
+		font-weight: 500;
+	}
+	&__i-val{
+
+	}
+}
+
+//
+.btn-sbis{
+	@extend .btn;
+	@extend .btn-sm;
+	@extend .btn-outline-light;
+	border-radius: 5px;
+
+	@include media-breakpoint-down(sm){
+		padding: 3px 2px;
+	}
+
+	img{
+		height: auto;
+
+		width: 80%;
+		@include media-breakpoint-up(sm){
+			width: 100%;
+		}
+	}
 }

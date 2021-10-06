@@ -9,16 +9,17 @@ mixin sAds(data)
 						placed: true,
 					})
 						if data.isAds
-							+e.items
-								+sAdsItem('Наименование:', 'Арматура')
-								+sAdsItem('Цена (с НДС):', '324 000 ₽')
-								+sAdsItem('Вес:', '34,7 тн')
-								+sAdsItem('Марка:', '03Х21Н21М4ГБ')
-								+sAdsItem('Размер:', '360 мм')
-								+sAdsItem('Толщина стенки:', '18 мм')
-								+sAdsItem('Стандарт:', 'ГОСТ 8732-78 ')
-								+sAdsItem('Склад:', 'Челябинск, улица Шоссе Металлургов 31Б', data.hidden)
-								//-+sAdsItem('', '')
+							+b.ads-bl
+								+e.items
+									+sAdsItem('Наименование:', 'Арматура')
+									+sAdsItem('Цена (с НДС):', '324 000 ₽')
+									+sAdsItem('Вес:', '34,7 тн')
+									+sAdsItem('Марка:', '03Х21Н21М4ГБ')
+									+sAdsItem('Размер:', '360 мм')
+									+sAdsItem('Толщина стенки:', '18 мм')
+									+sAdsItem('Стандарт:', 'ГОСТ 8732-78 ')
+									+sAdsItem('Склад:', 'Челябинск, улица Шоссе Металлургов 31Б', data.hidden)
+									//-+sAdsItem('', '')
 						if data.isOrder
 							+b.order-bl
 								+e.items
@@ -39,7 +40,7 @@ mixin sAds(data)
 											+b.hid-alert Информация скрыта
 										else
 											p Челябинск, улица Шоссе Металлургов 31Б
-						+e.date-row.row.d-md-none
+						+b.date-row.row.d-md-none
 							+g.s-item
 								+sSearchDateItem('Размещено:', '24.12.2020')
 								+sSearchDateItem('Обновлено:', '24.12.2020')
@@ -77,7 +78,11 @@ mixin sAdsItem(title, val, hiiden)
 				+e.i-val.col-md-6.ps-xl-0
 					+b.hid-alert Информация скрыта
 			else
-				+e.i-val.col-md-6.ps-xl-0=val
+				if block
+					+e.i-val.col-md-6.ps-xl-0
+						block
+				else
+					+e.i-val.col-md-6.ps-xl-0=val
 
 mixin contactsBox(data)
 	.t-box.t-box--c-box
@@ -133,14 +138,13 @@ mixin contactsBox(data)
 							.col-auto
 								+e.inn(href="#") 546458776976
 							.col-auto
-								+e.btn--img(href="#")
+								+b.btn-sbis(href="#")
 									img(loading="lazy" src="img/svg/sbis.svg" alt="")
 					if data.hidden
 						+b.hid-alert Информация скрыта
 				+e.item
 					if data.hidden
 						+e.alert.alert.alert-primary Авторизуйтесь, чтобы увидеть контактную информацию.
-
 					+g.s-item
 						+e.btn--out-light(href="#")
 							+e.b-icon
