@@ -2,54 +2,103 @@ mixin sAds(data)
 	// start sAds
 	+b.SECTION.sAds.section#sAds&attributes(attributes)
 		.container
-			.row.gy-20
+			+e.row.row.gy-20
 				.col
 					+titleBox({
-						title: 'информация об объявлении',
+						title: data.title,
 						placed: true,
 					})
-						+e.items
-							+sAdsItem('Наименование:', 'Арматура')
-							+sAdsItem('Цена (с НДС):', '324 000 ₽')
-							+sAdsItem('Вес:', '34,7 тн')
-							+sAdsItem('Марка:', '03Х21Н21М4ГБ')
-							+sAdsItem('Размер:', '360 мм')
-							+sAdsItem('Толщина стенки:', '18 мм')
-							+sAdsItem('Стандарт:', 'ГОСТ 8732-78 ')
-							+sAdsItem('Склад:', 'Челябинск, улица Шоссе Металлургов 31Б')
-							//-+sAdsItem('', '')
-				.col-xl-3
-					+contactsBox({
-						title: '',
-					})
+						if data.isAds
+							+e.items
+								+sAdsItem('Наименование:', 'Арматура')
+								+sAdsItem('Цена (с НДС):', '324 000 ₽')
+								+sAdsItem('Вес:', '34,7 тн')
+								+sAdsItem('Марка:', '03Х21Н21М4ГБ')
+								+sAdsItem('Размер:', '360 мм')
+								+sAdsItem('Толщина стенки:', '18 мм')
+								+sAdsItem('Стандарт:', 'ГОСТ 8732-78 ')
+								+sAdsItem('Склад:', 'Челябинск, улица Шоссе Металлургов 31Б', data.hidden)
+								//-+sAdsItem('', '')
+						if data.isOrder
+							+b.order-bl
+								+e.items
+									+orderBlItem('Куплю ряд позиций срочно, читайте описание')
+										p Добрый день, прошу Вас выставить счет на данные материалы:
+										ol
+											li Труба профильная 30х30х2 – 1360,2 метр.
+											li Труба профильная 40х25х2 - 224,5 метр.
+											li Труба профильная 40х40х3 - 128 метр.
+											li Труба профильная 20х20х2 – 1360,7 метр.
+											li Квадрат 20 - 105 метр.
+											li Полоса 30х4 - 378 метр.
+											li Арматура ф12 А240 - 20,5 метр.
+											li Арматура ф10 - 78,1 метр.
+											li Труба ДУ ф32х3,2 - 468 метр.
+									+orderBlItem('Адрес доставки:')
+										if data.hidden
+											+b.hid-alert Информация скрыта
+										else
+											p Челябинск, улица Шоссе Металлургов 31Б
+						+e.date-row.row.d-md-none
+							+g.s-item
+								+sSearchDateItem('Размещено:', '24.12.2020')
+								+sSearchDateItem('Обновлено:', '24.12.2020')
+				.col-lg-4.col-xl-3
+					if block
+						block
+					else
+						+contactsBox({
+							title: 'контакты поставщика',
+							logo: true,
+							name: 'ООО «Челябинская стальная компания»',
+							city: 'Челябинск',
+							tell: '+7 (495) 000-55-25',
+							telHref: '+74950005525',
+							email: 'info@metalgo.biz',
+							cite: 'https://metalgo.biz',
+							inn: true,
+							hidden: false,
+						})
+			+g.sSearch
+				+e.baner.d-none.d-xl-block
+					img(loading="lazy" src="img/@2x/sSearch-baner2.png" alt="")
 	// end sAds
 
-mixin sAdsItem(title, val)
+mixin orderBlItem(title)
+	+e.item
+		+e.title=title
+		+e.content
+			block
+mixin sAdsItem(title, val, hiiden)
 	+e.item
 		+e.i-row.row
 			+e.i-title.col-md-6=title
-			+e.i-val.col-md-6=val
+			if hiiden
+				+e.i-val.col-md-6.ps-xl-0
+					+b.hid-alert Информация скрыта
+			else
+				+e.i-val.col-md-6.ps-xl-0=val
 
 mixin contactsBox(data)
 	.t-box.t-box--c-box
 		.t-box__header
-			h4.t-box__title--h4=data.title
+			h4.t-box__title.t-box__title--h4=data.title
 		.t-box__content
 			+b.c-box
 				+e.item
-					+e.top-row.row.align-items-center.gy-20
+					+e.top-row.row.gy-20(class=`${!data.hidden ? 'align-items-center' : ''}`)
 						.col-auto
 							if data.logo
 								+e.logo(href="#" target="_blank")
-									img()
+									img(loading="lazy" src="img/svg/big-logo.svg" alt="")
 							if data.hidden
 								+e.l-hidden Организация
 						.col
 							if data.name
 								+e.name=data.name
 							if data.hidden
-								+b.hid-alert Информация скрыта
-							+e.fb-row.row
+								+b.hid-alert.mb-1 Информация скрыта
+							+e.fb-row.row.align-items-center
 								.col-auto
 									+g.s-item
 										+e.rate
@@ -64,8 +113,8 @@ mixin contactsBox(data)
 					if data.hidden
 						+b.hid-alert Информация скрыта
 				+contactsBoxItem('Телефон')
-					if data.city
-						+e.txt-item=data.city
+					if data.tell
+						+e.txt-item(href=`tel:${data.telHref}`)=data.tell
 					if data.hidden
 						+b.hid-alert Информация скрыта
 				+contactsBoxItem('E-mail')
@@ -89,14 +138,18 @@ mixin contactsBox(data)
 					if data.hidden
 						+b.hid-alert Информация скрыта
 				+e.item
-					+e.btn--out-secondary(href="#")
-						+icon('soc-tg')
-						span Написать
+					if data.hidden
+						+e.alert.alert.alert-primary Авторизуйтесь, чтобы увидеть контактную информацию.
 
+					+g.s-item
+						+e.btn--out-light(href="#")
+							+e.b-icon
+								img(loading="lazy" src="img/svg/send-pr.svg" alt="")
+							span Написать
 
 mixin contactsBoxItem(title)
 	+e.item
-		+e.i-row.row
+		+e.i-row.row.align-items-center
 			+e.title.col-auto=title
 			.col
 				block

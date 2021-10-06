@@ -550,8 +550,8 @@ $input-btn-focus-blur: 0 !default;
 // $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
 $input-btn-focus-box-shadow: none !default;
 
-$input-btn-padding-y-sm: .25rem !default;
-$input-btn-padding-x-sm: .5rem !default;
+$input-btn-padding-y-sm: rem(5) !default;
+$input-btn-padding-x-sm: rem(10) !default;
 $input-btn-font-size-sm: $font-size-sm !default;
 
 $input-btn-padding-y-lg: .5rem !default;
@@ -1248,12 +1248,12 @@ $modal-scale-transform: scale(1.02) !default;
 // Define alert colors, border radius, and padding.
 
 // scss-docs-start alert-variables
-$alert-padding-y: $spacer !default;
-$alert-padding-x: $spacer !default;
-$alert-margin-bottom: 1rem !default;
-$alert-border-radius: $border-radius !default;
+$alert-padding-y: 14.5px;
+$alert-padding-x: 18px;
+$alert-margin-bottom: 20px;
+$alert-border-radius: 0;
 $alert-link-font-weight: $font-weight-bold !default;
-$alert-border-width: $border-width !default;
+$alert-border-width: 0;
 $alert-bg-scale: -80% !default;
 $alert-border-scale: -70% !default;
 $alert-color-scale: 40% !default;

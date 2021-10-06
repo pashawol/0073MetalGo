@@ -7,10 +7,10 @@ include ../blocks/sAds/_sAds.pug
 
 block variables
 	- let  mainPage= null
-	- let  bg='03.png'
+	- let  bg='03-1-320.png'
 
 block title
-	- let  title= '03-ads'
+	- let  title= '03-1-ads'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -25,6 +25,10 @@ block pagecontent
 	+sAds({
 		title: 'информация об объявлении',
 		isAds: true,
-		hidden: false,
+		hidden: true,
 	})
+		+contactsBox({
+			title: 'контакты поставщика',
+			hidden: true,
+		})
 	+footer()

@@ -44,7 +44,7 @@ mixin titleBox(data)
 					h2.t-box__title=data.title
 				if data.placed
 					+g.s-item
-						+sSearchDateItem('Размещено:', '24.12.2020')
-						+sSearchDateItem('Обновлено:', '24.12.2020')
+						+sSearchDateItem('Размещено:', '24.12.2020')(class="d-none d-md-block")
+						+sSearchDateItem('Обновлено:', '24.12.2020')(class="d-none d-md-block")
 		.t-box__content
 			block
