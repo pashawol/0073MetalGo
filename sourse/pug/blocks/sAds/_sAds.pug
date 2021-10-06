@@ -145,11 +145,21 @@ mixin contactsBox(data)
 				+e.item
 					if data.hidden
 						+e.alert.alert.alert-primary Авторизуйтесь, чтобы увидеть контактную информацию.
-					+g.s-item
-						+e.btn--out-light(href="#")
-							+e.b-icon
-								img(loading="lazy" src="img/svg/send-pr.svg" alt="")
-							span Написать
+					+e.btns-box
+						+g.s-item
+							+e.btn--out-light(href="#")
+								+e.b-icon
+									img(loading="lazy" src="img/svg/send-pr.svg" alt="")
+								span Написать
+							if data.feedback
+								+e.btn--out-light(href="#")
+									+e.b-icon
+										img(loading="lazy" src="img/svg/star-pr.svg" alt="")
+									span Оставить отзыв
+					if data.feedback
+						.text-center
+							+e.complain(href="#") Пожаловаться на пользователя
+
 
 mixin contactsBoxItem(title)
 	+e.item

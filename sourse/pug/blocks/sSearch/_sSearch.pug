@@ -397,11 +397,15 @@ mixin sSearchItem(data)
 			.col-auto.d-none.d-md-block
 				+e.comp-link.mb-0(href="#")
 					+e.comp-row.row.d-flex.align-items-center
-						.col-auto.d-block
-							+e.logo
-								img(loading="lazy" src=`img/svg/s-item-${data.imgNum}.svg` alt="")
-						.col-auto.d-block
-							+e.company ООО «Челябинская стальная компания ООО «Челябинская стальная компания
+						if !data.hidden
+							.col-auto.d-block
+								+e.logo
+									img(loading="lazy" src=`img/svg/s-item-${data.imgNum}.svg` alt="")
+							.col-auto.d-block
+								+e.company ООО «Челябинская стальная компания ООО «Челябинская стальная компания
+						else
+							.col-auto
+								+b.hid-alert Информация скрыта
 						.col-auto.d-block
 							+e.rate
 								+e.star
@@ -431,11 +435,15 @@ mixin sSearchItem(data)
 		.d-md-none
 			+e.comp-link(href="#")
 				+e.comp-row.row.d-flex.align-items-center
-					.col-auto.d-block
-						+e.logo
-							img(loading="lazy" src=`img/svg/s-item-${data.imgNum}.svg` alt="")
-					.col-auto.d-block
-						+e.company ООО «Челябинская стальная к...
+					if !data.hidden
+						.col-auto.d-block
+							+e.logo
+								img(loading="lazy" src=`img/svg/s-item-${data.imgNum}.svg` alt="")
+						.col-auto.d-block
+							+e.company ООО «Челябинская стальная к...
+					else
+						.col-auto
+							+b.hid-alert Информация скрыта
 					.col-auto.d-block
 						+e.rate
 							+e.star

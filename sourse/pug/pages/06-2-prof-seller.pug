@@ -8,10 +8,10 @@ include ../blocks/sProfileS/_sProfileS.pug
 
 block variables
 	- let  mainPage= null
-	- let  bg='06-4-320.png'
+	- let  bg='06-1-320.png'
 
 block title
-	- let  title= '06-prof-seller'
+	- let  title= '06-2-prof-seller'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -27,12 +27,12 @@ block pagecontent
 					.col
 						+e.tabs-btn-row.row
 							+tabsBtn('user', 'Информация')
-							+tabsBtn('warehouse', 'Склады')
+							+tabsBtn('warehouse', 'Склады', 'active')
 							+tabsBtn('list', 'Объявления')
-							+tabsBtn('star', 'Отзывы', 'active')
+							+tabsBtn('star', 'Отзывы')
 		+sProfileS({
-			showList: true,
-			markForm: true,
+			showMap: true,
+			markLeft: true,
 		})
 			+contactsBox({
 				title: 'контакты поставщика',

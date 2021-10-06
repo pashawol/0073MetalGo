@@ -37,14 +37,26 @@ mixin sContactItem(title)
 				block
 
 mixin titleBox(data)
-	.t-box
+	.t-box(class=`${data.addClasses || ''}`)
 		.t-box__header
 			.t-box__row.row.align-items-center
 				.col
-					h2.t-box__title=data.title
+					.t-box__title-row.row.flex-nowrap.align-items-center
+						.col-auto
+							h2.t-box__title=data.title
+						if data.amount
+							.col-auto
+								.t-box__amount=data.amount
 				if data.placed
 					+g.s-item
 						+sSearchDateItem('Размещено:', '24.12.2020')(class="d-none d-md-block")
 						+sSearchDateItem('Обновлено:', '24.12.2020')(class="d-none d-md-block")
+				if data.show
+					.col-auto.d-none.d-md-block
+						+b.show-row.row.align-items-center
+							+e.txt.col-auto=data.showTxt
+							.col-auto
+								+input(data.selectTxt, 'select')
+				if data.amount
 		.t-box__content
 			block

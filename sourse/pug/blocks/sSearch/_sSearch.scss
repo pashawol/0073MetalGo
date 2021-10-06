@@ -640,6 +640,21 @@
 		padding: rem(4);
 		display: flex;
 	}
+	.hid-alert{
+		font-size: 12px;
+		line-height: calc(14/12);
+		padding: 3.5px 5px;
+		@include media-breakpoint-up(xl){
+			padding: rem(2.5) rem(9);
+		}
+		@include media-breakpoint-up(xxl){
+			padding: rem(4) rem(9);
+			font-size: 14px;
+			line-height: calc(14/12);
+		}
+
+	}
+
 	&__star{
 		width: rem(14);
 		height: rem(14);

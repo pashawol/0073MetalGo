@@ -4,36 +4,173 @@ mixin sProfileS(data)
 		.container
 			+e.row.row.gy-20
 				.col.tabs__wrap
-					.tabs__content.active
+					.tabs__content
 						+titleBox({
 							title: 'информация о поставщике',
-							placed: true,
 						})
 							+b.ads-bl
-								+e.items
-									+sAdsItem('Наименование:', 'ООО «МеталГо»')
+								+e.items--lats-alt
+									+sAdsItem('Наименование:', 'ООО «МеталГо»', data.hidden)
 									+sAdsItem('Ответственное лицо:', 'Иванов Иван')
-									+sAdsItem('ИНН:', '')
+									+sAdsItem('ИНН:', '', data.hidden)
 										+e.sub-row.row.align-items-center
 											.col-auto 7814652255
 											.col-auto
 												+b.btn-sbis(href="#")
 													img(loading="lazy" src="img/svg/sbis.svg" alt="")
-									+sAdsItem('Юридический адрес:', 'г. Санкт-Петербург, пр. Стачек, дом 37, литера А, офис 104')
-									+sAdsItem('Адрес офиса:', 'г. Санкт-Петербург, пр. Стачек, дом 37, литера А, офис 104')
-									+sAdsItem('Расчетный счет:', '40702810055000031738')
-									+sAdsItem('БИК банка:', '044030653')
+									+sAdsItem('Юридический адрес:', 'г. Санкт-Петербург, пр. Стачек, дом 37, литера А, офис 104', data.hidden)
+									+sAdsItem('Адрес офиса:', 'г. Санкт-Петербург, пр. Стачек, дом 37, литера А, офис 104', data.hidden)
+									+sAdsItem('Расчетный счет:', '40702810055000031738', data.hidden)
+									+sAdsItem('БИК банка:', '044030653', data.hidden)
 									//-+sAdsItem('', '')
-							+b.date-row.row.d-md-none
-								+g.s-item
-									+sSearchDateItem('Размещено:', '24.12.2020')
-									+sSearchDateItem('Обновлено:', '24.12.2020')
-					.tabs__content 2
-					.tabs__content 3
-					.tabs__content 4
+					.tabs__content
+						+titleBox({
+							addClasses: 'pad-alt',
+							title: 'склады поставщика',
+							show: true,
+							showTxt: 'Показать:',
+							selectTxt: 'Список',
+							showList: data.showList,
+							showMap: data.showMap,
+						})
+							+b.show-row.row.align-items-center.d-md-none
+								+e.txt.col-auto Показать:
+								.col.col-sm-auto
+									+input('Список', 'select')
+							if data.hidden
+								.alert.alert-primary.alert-lg Авторизуйтесь, чтобы увидеть адреса складов.
+							else
+								if data.showList
+									+b.stocks-bl
+										+e.row.row
+											+stockItem(4, 1)
+											+stockItem(10, 2)
+											+stockItem(0, 2)
+											+stockItem(9, 3)
+											//-
+											+stockItem(0, 2)
+											+stockItem(9, 3)
+											+stockItem(4, 1)
+											+stockItem(10, 2)
+										.row
+											.col-sm-auto
+												+pugin()
+								if data.showMap
+									+b.map-bl
+										//replce img for map script
+										+e.map
+											img(loading="lazy" src="img/@2x/map-stab.png" alt="")
+					.tabs__content
+						+g.sSearch
+							+e.items
+								-for(let i = 0; i < 4; i++)
+									+sSearchItem({
+										imgNum: 1,
+										name: 'Труба',
+										standart: true,
+										price: '324 000 ₽',
+										hidden: data.hidden,
+									})
+							.row
+								.col-sm-auto
+									+pugin()
+					.tabs__content.active
+						//-addClasses: 'pad-alt',
+						+titleBox({
+							addClasses: 'pad-alt2',
+							title: 'отзывы поставщика',
+							amount: 6,
+							markForm: data.markForm,
+							markLeft: data.markLeft,
+						})
+							+b.feedback-bl
+								+e.top
+									if data.hidden
+										.alert.alert-primary.alert-lg Авторизуйтесь, чтобы оставить свой отзыв.
+									else
+										if data.markForm
+											+e.title Оставить свой отзыв
+											+e.star-row.row.align-items-center
+												.col-md-auto Ваша оценка пользователю:
+												.col-md-auto
+													+e.stars-sub-row.row
+														+starItem(1)
+														+starItem(2)
+														+starItem(3)
+														+starItem(4)
+														+starItem(4)
+											+input('Введите ваш отзыв', 'textarea')
+											+e.btn(type="submit") Отправить отзыв
+										if data.markLeft
+											+e.title Вы уже оставили свой отзыв
+											+e.star-row.row.align-items-center
+												.col-md-auto Ваша оценка пользователю:
+												.col-md-auto
+													+e.stars-sub-row.row
+														-for (let i = 0; i < 4; i++)
+															.col-auto
+																+e.star--big.active
+																	+icon('fb-star')
+														.col-auto
+															+e.star--big
+																+icon('fb-star')
+								+e.items
+									-for (var i = 0; i < 6; i++)
+										+feedbackItem()
+								.row
+									.col-sm-auto
+										+pugin()
 				.col-lg-4.col-xl-3
 					block
 			+g.sSearch
 				+e.baner.d-none.d-xl-block
 					img(loading="lazy" src="img/@2x/sSearch-baner2.png" alt="")
 	// end sProfileS
+
+mixin feedbackItem()
+	+e.item
+		+e.i-top-row.row.align-items-md-center
+			.col-auto
+				+e.logo(href="#")
+					img(loading="lazy" src=`img/svg/s-item-1.svg` alt="")
+			.col
+				+e.sub-row.row
+					.col-md-auto
+						+e.company(href="#") ООО «Челябинская стальная компания»
+					.col-auto
+						+e.name Иван Иванов
+					.col-auto.ms-md-auto
+						+e.i-stars.row
+							-for(let i = 0; i < 4; i++)
+								.col-auto
+									+e.star.active
+										+icon('fb-star')
+							.col-auto
+								+e.star
+									+icon('fb-star')
+		+e.txt Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
+		+e.date 16.12.2020
+
+mixin starItem(val)
+	.col-auto
+		+e.LABEL.star-lab.star-lab-js
+			input.star-radio-js(type="radio" name="star" value=val class="invisible")
+			+icon('fb-star')
+
+mixin stockItem(imgAmount, imgNum)
+	.col-sm-6.col-xl-3
+		+e.item
+			if imgAmount > 0
+				+e.slider-wrap
+					.swiper-container.stock-slider-js
+						.swiper-wrapper
+							-for(let i = 0; i < imgAmount; i++)
+								.swiper-slide
+									+e.img(href="#")
+										img(loading="lazy" src=`img/@2x/stockItem-${imgNum}.png` alt="")
+						.swiper-pagination
+			else
+				+e.slider-wrap
+					+e.img(href="#")
+						img(loading="lazy" src=`img/svg/stockItem-stab.svg` alt="")
+			+e.title(href="#") Челябинск, улица Шоссе Металлургов 31Б

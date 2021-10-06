@@ -11,7 +11,7 @@ block variables
 	- let  bg='06-4-320.png'
 
 block title
-	- let  title= '06-prof-seller'
+	- let  title= '06-hidden'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -32,19 +32,12 @@ block pagecontent
 							+tabsBtn('star', 'Отзывы', 'active')
 		+sProfileS({
 			showList: true,
-			markForm: true,
+			markLeft: true,
+			hidden: true,
 		})
 			+contactsBox({
 				title: 'контакты поставщика',
-				logo: true,
-				name: 'ООО «МеталГо»',
-				city: 'Челябинск',
-				tell: '+7 (495) 000-55-25',
-				telHref: '+74950005525',
-				email: 'info@metalgo.biz',
-				cite: 'https://metalgo.biz',
-				inn: true,
 				feedback: true,
-				hidden: false,
+				hidden: true,
 			})
 	+footer()

@@ -363,6 +363,40 @@ function eventHandler() {
 			})
 		}
 	}
+	//-
+	let stockSlider = new Swiper('.stock-slider-js', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		loop: true,
+
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
+	//-.star-radio-js
+	let stars = document.querySelectorAll('.star-radio-js');
+	for (let star of stars){
+		star.addEventListener('change', function (){
+			let thisIndex = [...stars].indexOf(this);
+
+			for (let star of stars){
+				let starIndex = [...stars].indexOf(star);
+				let label = star.closest('.star-lab-js');
+
+				if(starIndex <= thisIndex){
+					label.classList.add('active');
+				}
+				else{
+					label.classList.remove('active');
+				}
+			}
+		});
+	}
 
 	//end luckyoneJs
 
