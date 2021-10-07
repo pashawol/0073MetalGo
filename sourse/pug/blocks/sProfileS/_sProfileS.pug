@@ -1,3 +1,183 @@
+mixin sProfileBuyer(data)
+	// start sProfileS
+	+b.SECTION.sProfileS.section#sProfileS&attributes(attributes)
+		.container
+			+e.row.row.gy-20
+				.col.tabs__wrap
+					.tabs__content.active
+						+titleBox({
+							title: 'информация о покупателе',
+						})
+							+b.ads-bl
+								+e.items--lats-alt
+									+sAdsItem('Наименование:', 'ООО «МеталГо»', data.hidden)
+									+sAdsItem('Ответственное лицо:', 'Иванов Иван')
+									+sAdsItem('ИНН:', '', data.hidden)
+										+e.sub-row.row.align-items-center
+											.col-auto 7814652255
+											.col-auto
+												+b.btn-sbis(href="#")
+													img(loading="lazy" src="img/svg/sbis.svg" alt="")
+									+sAdsItem('Юридический адрес:', 'г. Санкт-Петербург, пр. Стачек, дом 37, литера А, офис 104', data.hidden)
+									+sAdsItem('Адрес офиса:', 'г. Санкт-Петербург, пр. Стачек, дом 37, литера А, офис 104', data.hidden)
+									+sAdsItem('Расчетный счет:', '40702810055000031738', data.hidden)
+									+sAdsItem('БИК банка:', '044030653', data.hidden)
+									//-+sAdsItem('', '')
+					.tabs__content
+						+g.sSearch
+							+e.items
+								+sSearchItem({
+									imgNum: 1,
+									boldTitle: 'Куплю ряд позиций срочно, читайте описание',
+									noChars: true,
+									txtContent: true,
+									iconName: 'location',
+								})
+									p Добрый день, прошу Вас выставить счет на данные материалы:
+									ol
+										li Труба профильная 30х30х2 – 1360,2 метр.
+										li Труба профильная 40х25х2 - 224,5 метр.
+										li Труба профильная 40х40х3 - 128 метр.
+										li Труба профильная 20х20х2 – 1360,7 метр.
+										li Квадрат 20 - 105 метр.
+										li Полоса 30х4 - 378 метр.
+										li Арматура ф12 А240 - 20,5 метр.
+										li Арматура ф10 - 78,1 метр.
+										li Труба ДУ ф32х3,2 - 468 метр.
+								+sSearchItem({
+									imgNum: 1,
+									boldTitle: 'Нужна поставка',
+									noChars: true,
+									txtContent: true,
+									iconName: 'location',
+								})
+									p
+										| Прошу рассмотреть возможность поставки
+										br
+										| Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт
+										br
+										| Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт
+								+sSearchItem({
+									imgNum: 1,
+									boldTitle: 'Куплю ряд позиций срочно, читайте описание',
+									noChars: true,
+									txtContent: true,
+									txtContentClasses: 'active',
+									iconName: 'location',
+								})
+									p Добрый день, прошу Вас выставить счет на данные материалы:
+									ol
+										li Труба профильная 30х30х2 – 1360,2 метр.
+										li Труба профильная 40х25х2 - 224,5 метр.
+										li Труба профильная 40х40х3 - 128 метр.
+										li Труба профильная 20х20х2 – 1360,7 метр.
+										li Квадрат 20 - 105 метр.
+										li Полоса 30х4 - 378 метр.
+										li Арматура ф12 А240 - 20,5 метр.
+										li Арматура ф10 - 78,1 метр.
+										li Труба ДУ ф32х3,2 - 468 метр.
+								//-
+								+sSearchItem({
+									imgNum: 1,
+									boldTitle: 'Нужна поставка',
+									noChars: true,
+									txtContent: true,
+									iconName: 'location',
+								})
+									p
+										| Прошу рассмотреть возможность поставки
+										br
+										| Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт
+										br
+										| Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт
+								+sSearchItem({
+									imgNum: 1,
+									boldTitle: 'Куплю ряд позиций срочно, читайте описание',
+									noChars: true,
+									txtContent: true,
+									txtContentClasses: 'active',
+									iconName: 'location',
+								})
+									p Добрый день, прошу Вас выставить счет на данные материалы:
+									ol
+										li Труба профильная 30х30х2 – 1360,2 метр.
+										li Труба профильная 40х25х2 - 224,5 метр.
+										li Труба профильная 40х40х3 - 128 метр.
+										li Труба профильная 20х20х2 – 1360,7 метр.
+										li Квадрат 20 - 105 метр.
+										li Полоса 30х4 - 378 метр.
+										li Арматура ф12 А240 - 20,5 метр.
+										li Арматура ф10 - 78,1 метр.
+										li Труба ДУ ф32х3,2 - 468 метр.
+								+sSearchItem({
+									imgNum: 1,
+									boldTitle: 'Нужна поставка',
+									noChars: true,
+									txtContent: true,
+									iconName: 'location',
+								})
+									p
+										| Прошу рассмотреть возможность поставки
+										br
+										| Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт
+										br
+										| Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт
+							.row
+								.col-sm-auto
+									+pugin()
+					.tabs__content
+						//-addClasses: 'pad-alt',
+						- var feedBackTxt = data.fbTabTxt || 'отзывы поставщика'
+						+titleBox({
+							addClasses: 'pad-alt2',
+							title: data.fbTabTxt || 'отзывы поставщика',
+							amount: 6,
+							markForm: data.markForm,
+							markLeft: data.markLeft,
+						})
+							+b.feedback-bl
+								+e.top
+									if data.hidden
+										.alert.alert-primary.alert-lg Авторизуйтесь, чтобы оставить свой отзыв.
+									else
+										if data.markForm
+											+e.title Оставить свой отзыв
+											+e.star-row.row.align-items-center
+												.col-md-auto Ваша оценка пользователю:
+												.col-md-auto
+													+e.stars-sub-row.row
+														+starItem(1)
+														+starItem(2)
+														+starItem(3)
+														+starItem(4)
+														+starItem(4)
+											+input('Введите ваш отзыв', 'textarea')
+											+e.btn(type="submit") Отправить отзыв
+										if data.markLeft
+											+e.title Вы уже оставили свой отзыв
+											+e.star-row.row.align-items-center
+												.col-md-auto Ваша оценка пользователю:
+												.col-md-auto
+													+e.stars-sub-row.row
+														-for (let i = 0; i < 4; i++)
+															.col-auto
+																+e.star--big.active
+																	+icon('fb-star')
+														.col-auto
+															+e.star--big
+																+icon('fb-star')
+								+e.items
+									-for (var i = 0; i < 6; i++)
+										+feedbackItem()
+								.row
+									.col-sm-auto
+										+pugin()
+				.col-lg-4.col-xl-3
+					block
+			+g.sSearch
+				+e.baner.d-none.d-xl-block
+					img(loading="lazy" src="img/@2x/sSearch-baner2.png" alt="")
+	// end sProfileS
 mixin sProfileS(data)
 	// start sProfileS
 	+b.SECTION.sProfileS.section#sProfileS&attributes(attributes)

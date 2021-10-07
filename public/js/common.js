@@ -21,6 +21,55 @@ const JSCCommon = {
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
+	modalCall() {
+		const link = ".link-modal-js";
+		Fancybox.bind(link, {
+			arrows: false,
+			infobar: false,
+			touch: false,
+			infinite: false,
+			dragToClose: false,
+			type: 'inline',
+			autoFocus: false,
+			l10n: {
+				Escape: "Закрыть",
+				NEXT: "Вперед",
+				PREV: "Назад"
+			}
+		});
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
+				Fancybox.close();
+			});
+		}); // fancybox.defaults.backFocus = false;
+
+		const linkModal = document.querySelectorAll(link);
+
+		function addData() {
+			linkModal.forEach(element => {
+				element.addEventListener('click', () => {
+					let modal = document.querySelector(element.getAttribute("href"));
+					const data = element.dataset;
+
+					function setValue(val, elem) {
+						if (elem && val) {
+							const el = modal.querySelector(elem);
+							el.tagName == "INPUT" ? el.value = val : el.innerHTML = val; // console.log(modal.querySelector(elem).tagName)
+						}
+					}
+
+					setValue(data.title, '.ttu');
+					setValue(data.text, '.after-headline');
+					setValue(data.btn, '.btn');
+					setValue(data.order, '.order');
+				});
+			});
+		}
+
+		if (linkModal) addData();
+	},
+
+	//-
 	toggleMenu() {
 		const toggle = this.btnToggleMenuMobile;
 		const menu = this.menuMobile;
@@ -87,6 +136,7 @@ const JSCCommon = {
 
 function eventHandler() {
 	JSCCommon.mobileMenu();
+	JSCCommon.modalCall();
 	JSCCommon.heightwindow();
 	var x = window.location.host;
 	let screenName;
@@ -324,17 +374,30 @@ function eventHandler() {
 	for (let box of tBoxes) {
 		let content = box.querySelector('.t-content-js');
 		let btn = box.querySelector('.t-btn-js');
-
-		if (multiLineOverflows(content)) {
-			btn.classList.remove('invisible');
-		} else {
-			content.classList.add('active');
-		}
-
+		checkTboxes();
 		btn.addEventListener('click', function () {
 			content.classList.toggle('active');
 			this.classList.toggle('active');
 		});
+	}
+
+	function checkTboxes() {
+		let tBoxes = document.querySelectorAll('.t-box-js');
+
+		for (let box of tBoxes) {
+			let content = box.querySelector('.t-content-js');
+			let btn = box.querySelector('.t-btn-js');
+			content.classList.remove('active');
+			btn.classList.remove('active');
+
+			if (multiLineOverflows(content)) {
+				btn.classList.remove('invisible');
+				content.classList.remove('active');
+			} else {
+				btn.classList.add('invisible');
+				content.classList.add('active');
+			}
+		}
 	}
 
 	function multiLineOverflows(el) {
@@ -365,7 +428,11 @@ function eventHandler() {
 					}
 
 					contentItems[index].classList.add('active');
-				}
+				} // its here because I dont want to catch apperance(display change) of tBoxes anotherWay, its can be done onClick on particular tab btn
+				// it has to happen after tab content shows, it means after "contentItems[index].classList.add('active');"
+
+
+				checkTboxes();
 			});
 		}
 	} //-

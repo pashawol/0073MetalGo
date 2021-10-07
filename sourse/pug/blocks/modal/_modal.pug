@@ -1,21 +1,24 @@
-
-mixin modal() 
+mixin modal()
 	//  start modals
-	
-	+b.modal-win(id="modal-call" class=" " style="display: none" )
+	+b.modal-complain.modal-win(id="modal-complain" style="display: none")
+		.mod-close-btn.modal-close-js
+			+icon('cross-sm')
 		+form-wrap
-			.text-center
-				+e.title.form-data.h3.ttu Обратный звонок
-				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-
-			+input("Ваше Имя")(required)  
-			+e.BUTTON.btn.btn(type="submit"  ) 
-			.p-5
-			.p-5
-			.p-5
-			.p-5
-			.p-5
-			+policy()
+			+e.title.text-center
+				h2 пожаловаться на пользователя
+			+e.content
+				+input("Ваше обращение", 'textarea', 'Напишите о причине жалобы')(required)
+				+e.btn(type="submit") Отправить
 	// #modal-call
+	+b.modal-complain--succ.modal-win(id="modal-comp-success"  style="display: none")
+		.mod-close-btn.modal-close-js
+			+icon('cross-sm')
+		+b.form-wrap
+			+e.title--success.text-center
+				h2 пожаловаться на пользователя
+				p Спасибо, что делаете платформу MetalGO еще лучше
+			.text-center
+				+e.btn--w-auto(type="submit") Закрыть
+	// #modal-comp-success
 	
 	// end modals

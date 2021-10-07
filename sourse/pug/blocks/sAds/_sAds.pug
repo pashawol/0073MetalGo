@@ -158,8 +158,7 @@ mixin contactsBox(data)
 									span Оставить отзыв
 					if data.feedback
 						.text-center
-							+e.complain(href="#") Пожаловаться на пользователя
-
+							+e.complain.link-modal-js(href="#modal-complain")=`${data.complainTxt || 'Пожаловаться на пользователя'}`
 
 mixin contactsBoxItem(title)
 	+e.item

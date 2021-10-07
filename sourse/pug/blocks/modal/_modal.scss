@@ -1,137 +1,137 @@
 .modal-win {
 	// display: block;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
 	width: 100%;
 	position: relative;
-	max-width: rem(500);
-	// min-height: 100%; 
+	max-width: rem(492);
+	// min-height: 100%;
 
-	.modal-content {
-		// max-width: 485px;
-		// padding-right: 40px 15px;
+	.carousel__button.is-close{
+		display: none;
 	}
+	.mod-close-btn{
+		@extend .btn;
+		@extend .btn-light;
+		border: none!important;
 
-	.mfp-close {
-		color: $primary;
-		font-size: 40px;
-		font-weight: 100;
-	}
-}
+		padding: 3px;
+		border-radius: 50%;
 
-a {
-	outline: 0 !important;
-}
+		background-color: $gray-220!important;
 
-.modal-form {
-	position: relative;
-}
+		position: absolute;
+		z-index: 10;
+		top: 10px;
+		right: 10px;
 
-#foot-dialog {
-	h3 {
-		font-size: em(36);
-	}
-}
+		width: 26px;
+		height: 26px;
+		@include media-breakpoint-up(sm){
+			width: rem(30);
+			height: rem(30);
+		}
 
-.mfp-close {
-	user-select: none; // width: 44px;
-	// height: 44px;
-	// line-height: 44px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	text-decoration: none;
-	text-align: center;
-	opacity: .65; // padding: 0 0 18px 10px;
-	// color: #fff;
-	font-style: normal;
-	font-size: 28px;
-	font-family: Arial, Baskerville, monospace;
-	overflow: visible;
-	cursor: pointer;
-	background: 0 0;
-	border: 0;
-	display: block;
-	outline: 0;
-	padding: 0;
-	z-index: 1046;
-	box-shadow: none;
-	color: $body-color;
-	opacity: 1;
-	font-size: 50px;
-	font-weight: 100;
-	width: 56px;
-	height: 56px; // box-shadow: 0 10px $h2-font-size rgba(0, 0, 0, 0.15);
-	// background-color: #fff;
-	border-radius: 50%;
-	line-height: 56px;
-	text-align: center;
-	margin-top: -5px;
-	margin-right: -5px;
-	@include mt;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-	&:hover {
-		// background-color: #e3f3f6;
-	}
-}
+		.icon{
+			color: $gray-600;
+			//stroke: $red;
 
-@include media-breakpoint-up(sm) {
-	.modal-text {
-		max-width: 1000px;
-	}
-}
-
-.polite {
-	.link {
-		color: $primary;
-		cursor: pointer;
-		text-decoration: underline;
-
-		:hover {
-			display: none;
+			font-size: 10.4px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(12);
+			}
 		}
 	}
 }
 
-
-// 
-@include media-breakpoint-up(xl) {}
-
-@include media-breakpoint-up(lg) {}
-
-@include media-breakpoint-up(md) {}
-
-@include media-breakpoint-up(sm) {}
-
-@include media-breakpoint-up(xs) {}
-
-// 
-@include media-breakpoint-between(md, xl) {}
-
-// 
-@include media-breakpoint-only(xs) {}
-
-@include media-breakpoint-only(sm) {}
-
-@include media-breakpoint-only(md) {}
-
-@include media-breakpoint-only(lg) {}
-
-@include media-breakpoint-only(xl) {}
-
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {
-
-	.fancybox__container {
-		width: 100% !important;
-		min-height: 100%; 
-		transform: none !important;
+.modal-complain{
+	padding: 57px 20px 40px!important;
+	@include media-breakpoint-up(sm){
+		padding: rem(56) rem(60) rem(50)!important;
 	}
-}
+	&--succ{
+		@include media-breakpoint-up(sm){
+			padding: rem(56) rem(46) rem(40)!important;
+		}
+	}
 
+	.form-wrap{
+		&__title{
+			h2{
+				font-weight: bold;
+
+				font-size: 16px;
+				line-height: calc(19/16);
+				margin-bottom: 14px;
+				@include media-breakpoint-up(sm){
+					font-size: rem(20);
+					line-height: calc(23/20);
+					margin-bottom: 11px;
+				}
+
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			p{
+
+			}
+
+			& > *:last-child{
+				margin-bottom: 0;
+			}
+
+			margin-bottom: 15px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(32);
+			}
+
+			&--success{
+				margin-bottom: 36px!important;
+			}
+		}
+
+		//-
+		&__input-title{
+			font-weight: 500;
+
+			display: block;
+			margin-bottom: 12px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(11);
+			}
+
+
+		}
+		&__input-wrap{
+			margin-bottom: 20px;
+			textarea{
+				height: 68px;
+				@include media-breakpoint-up(sm){
+					height: rem(90);
+				}
+			}
+		}
+		&__input{
+
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-primary;
+			min-width: 100%;
+
+			&--w-auto{
+				min-width: 100%;
+				@include media-breakpoint-up(sm){
+					min-width: rem(236);
+				}
+			}
+		}
+	}
+	&__{}
+	&__{}
+}

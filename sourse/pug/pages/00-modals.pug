@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSearch/_sSearch.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg='09-320.png'
+
+block title
+	- let  title= '09-contacts.html'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.white-line--pad-alt.bg-white
+		.container
+			+e.row.row.align-items-center.pb-0
+				.col-lg-4.col-xl-3
+					+e.H1.title Modals
+	.section
+		.container
+			.row
+				+modalBtn('#modal-complain', 'пожаловаться на пользователя')
+				+modalBtn('#modal-comp-success', 'Жалоба отправлена')
+				//-+modalBtn('#', '')
+	+footer()
+
+mixin modalBtn(href, txt)
+	.col-auto
+		a.btn.btn-primary.link-modal-js(href=href)=txt

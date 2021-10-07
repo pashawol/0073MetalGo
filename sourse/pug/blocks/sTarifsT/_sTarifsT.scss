@@ -1,0 +1,274 @@
+// start .sTarifsT
+.sTarifsT {
+	--sPT: 20px;
+	--sPB: 40px;
+	@include media-breakpoint-up(sm){
+		--sPB: #{rem(60px)};
+	}
+
+} // end.sTarifsT
+
+//-
+.add-serv{
+	border-radius: 5px;
+	@include mt();
+	min-height: 100%;
+
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0);
+	&:hover{
+		box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1)
+	}
+
+	background: $white;
+	border: 1px solid $gray-310;
+	padding: 20px;
+	@include media-breakpoint-up(sm){
+		padding: rem(48) rem(32);
+	}
+	@include media-breakpoint-up(xxl){
+		padding: rem(60);
+	}
+
+
+	&__row{
+		--bs-gutter-x: #{rem(30)};
+	}
+	&__img{
+		width: 45px;
+		height: 45px;
+		@include media-breakpoint-up(sm){
+			width: rem(60);
+			height: rem(60);
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__title-row{
+		padding-bottom: 17px;
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(16);
+		}
+	}
+	&__title{
+		font-weight: 500;
+
+		font-size: 16px;
+		line-height: calc(19/16);
+		@include media-breakpoint-up(sm){
+			font-size: rem(20);
+			line-height: calc(23/20);
+		}
+		@include media-breakpoint-up(xl){
+			position: relative;
+			top: -4px;
+		}
+	}
+	&__descr{
+		margin-bottom: 14px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(22);
+		}
+	}
+	&__price{
+		font-weight: 500;
+
+		font-size: 16px;
+		line-height: calc(19/16);
+		margin-bottom: 16px;
+		@include media-breakpoint-up(sm){
+			font-size: rem(20);
+			line-height: calc(23/20);
+			margin-bottom: rem(25);
+		}
+	}
+	&__a-row{
+		--bs-gutter-y: 19px;
+
+		--bs-gutter-x: 15px;
+		padding-bottom: rem(17);
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(30)};
+			padding-bottom: rem(30);
+		}
+	}
+	&__a-txt{
+		color: $gray-610;
+	}
+	&__inp-group{
+		& > *{
+			padding: 3px;
+			width: 34px!important;
+			height: 34px;
+			@include media-breakpoint-up(sm){
+				width: rem(45) !important;
+				height: rem(45);
+			}
+		}
+	}
+	&__sm-btn{
+		@extend .btn;
+		@extend .btn-outline-light;
+
+		position: relative;
+		&:before,
+		&:after{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			background-color: $primary;
+		}
+		&:before{
+			content: '';
+			width: 10px;
+			height: 2px;
+		}
+		&:after{
+			width: 2px;
+			height: 10px;
+		}
+
+		&--min{
+
+		}
+		&--plus{
+			&:after{
+				content: '';
+			}
+		}
+	}
+	&__input{
+		text-align: center;
+	}
+
+	&__btns-row{
+		--bs-gutter-y: 10px;
+	}
+	&__btn{
+		@extend .btn;
+		width: 100%;
+
+		@include media-breakpoint-down(sm){
+			padding: rem(9);
+		}
+		&--orange{
+			@extend .btn-primary;
+		}
+		&--out-orange{
+			@extend .btn-outline-primary;
+			color: $body-color!important;
+		}
+	}
+
+	//-
+	&__{}
+	&__{}
+}
+
+.img-baner{
+	border-radius: 5px;
+	@include mt();
+	min-height: 100%;
+
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0);
+	&:hover{
+		box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1)
+	}
+
+	background: $white;
+	border: 1px solid $gray-310;
+	padding: 20px;
+	@include media-breakpoint-up(sm){
+		padding: rem(48) rem(32);
+	}
+	@include media-breakpoint-up(xxl){
+		padding: rem(56) rem(60) rem(60);
+	}
+
+	&__row{
+		--bs-gutter-y: 13px;
+		@include media-breakpoint-up(sm){
+			--bs-gutter-y: #{rem(20)};
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(30)};
+		}
+	}
+	&__img{
+		width: 45px;
+		height: 45px;
+		@include media-breakpoint-up(sm){
+			width: rem(60);
+			height: rem(60);
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__title-row{
+		padding-bottom: 17px;
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(21);
+		}
+	}
+	&__title{
+		font-weight: 500;
+
+		font-size: 16px;
+		line-height: calc(19/16);
+		@include media-breakpoint-up(sm){
+			font-size: rem(20);
+			line-height: calc(23/20);
+		}
+	}
+	&__descr{}
+	&__per-month{
+		font-weight: 500;
+
+		font-size: 16px;
+		line-height: calc(19/16);
+		@include media-breakpoint-up(sm){
+			font-size: rem(20);
+			line-height: calc(23/20);
+		}
+		@include media-breakpoint-up(xxl){
+			margin-right: rem(10);
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+
+		width: 100%;
+		@include media-breakpoint-up(sm){
+			width: auto;
+		}
+		@include media-breakpoint-up(xl){
+			min-width: rem(229);
+		}
+
+		span{
+
+		}
+		.icon{
+			font-size: 10px;
+			margin-left: 5px;
+		}
+	}
+	&__{}
+}

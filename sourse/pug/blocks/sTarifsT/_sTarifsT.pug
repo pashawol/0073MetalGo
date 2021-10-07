@@ -1,0 +1,146 @@
+mixin sTarifsT(data)
+	// start sTarifsT
+	+b.SECTION.sTarifsT.section#sTarifsT&attributes(attributes)
+		.container.tabs__wrap
+			.tabs__content.active
+				//pad-alt3 is for pp, everywhere it diff, it can be removed(everywhere)...
+				+titleBox({
+					addClasses: 'pad-alt3',
+					title: 'тарифы для поставщиков',
+				})
+					.row.gy-20
+						.col-lg-4
+							+sTarifItem({
+								imgNum: 1,
+								title: 'Склад',
+								descr: 'до 500 объявлений',
+								insert: '0',
+								top: '0',
+								price: '5 400 ₽',
+								perMonth: '1 800 ₽ в месяц',
+							})
+						.col-lg-4
+							+sTarifItem({
+								imgNum: 2,
+								title: 'база',
+								descr: 'до 5000 объявлений',
+								insert: '100',
+								top: '100',
+								price: '12 000 ₽',
+								perMonth: '4 000 ₽ в месяц',
+							})
+						.col-lg-4
+							+sTarifItem({
+								imgNum: 3,
+								title: 'холдинг',
+								descr: 'Свыше 5000 объявлений',
+								insert: '500',
+								top: '500',
+								price: '21 000 ₽',
+								perMonth: '7 000 ₽ в месяц',
+							})
+			.tabs__content
+				+titleBox({
+					addClasses: 'pad-alt3',
+					title: 'тарифы для покупателей',
+				})
+					.row.gy-20
+						.col-lg-4
+							+tarifBuyerItem({
+								title: '3 месяца',
+								price: '4 500 ₽',
+								perMonth: '1 500 ₽ в месяц ',
+							})
+						.col-lg-4
+							+tarifBuyerItem({
+								title: '6 месяцев',
+								price: '6 000 ₽',
+								perMonth: '1100 ₽ в месяц ',
+							})
+						.col-lg-4
+							+tarifBuyerItem({
+								title: '12 месяцев',
+								price: '8 400 ₽',
+								perMonth: '700 ₽ в месяц',
+							})
+			.tabs__content
+				+titleBox({
+					addClasses: 'pad-alt3',
+					title: 'дополнительные услуги',
+				})
+					.row.gy-20.pt-xl-1
+						.col-xl-6
+							+tarifAddServ({
+								imgNum: 1,
+								title: 'Выделение объявлений',
+								descr: 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому.',
+								price: '200 ₽/шт.',
+								hasTxt: 'На счету: 17 шт.',
+							})
+						.col-xl-6
+							+tarifAddServ({
+								imgNum: 2,
+								title: 'Поднятие в ТОП',
+								descr: 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому.',
+								price: '300 ₽/шт.',
+								hasTxt: 'На счету: 0 шт.',
+							})
+			.tabs__content
+				+titleBox({
+					addClasses: 'pad-alt3',
+					title: 'рекламные баннеры',
+				})
+					+b.img-baner
+						+e.row.row.align-items-center
+							.col-auto.d-none.d-lg-block
+								+e.img
+									img(loading="lazy" src="img/svg/img-baner.svg" alt="")
+							.col
+								+e.title-row.row.align-items-center
+									.col-auto.d-lg-none
+										+e.img
+											img(loading="lazy" src="img/svg/img-baner.svg" alt="")
+									+e.title.col Рекламный баннер
+								+e.descr Размещение на всех страницах сайта компьютерной версии сбоку и внизу.
+							+e.per-month.col-lg-auto 3 000 ₽/мес.
+							.col-lg-auto
+								+e.btn(href="#")
+									span Подробнее
+									+icon('chevron-down2')
+	// end sTarifsT
+
+mixin tarifBuyerItem(data)
+	+b.t-buyer
+		+e.title=data.title
+		+e.price=data.price
+		+e.per-month=data.perMonth
+		+e.btn(href="#") Подключить
+
+mixin tarifAddServ(data)
+	+b.add-serv
+		+e.row.row
+			.col-auto.d-none.d-md-block
+				+e.img
+					img(loading="lazy" src=`img/svg/add-serv-${data.imgNum}.svg` alt="")
+			.col
+				+e.title-row.row.align-items-center
+					.col-auto.d-md-none
+						+e.img
+							img(loading="lazy" src=`img/svg/add-serv-${data.imgNum}.svg` alt="")
+					.col
+						+e.title=data.title
+				+e.descr=data.descr
+				+e.price=data.price
+				+e.a-row.row.align-items-center
+					+e.a-txt.col-auto Количество:
+					.col-auto
+						+e.inp-group.input-group
+							+e.sm-btn--min(type="button")
+							+e.INPUT.input.form-control(type="text" value="1")
+							+e.sm-btn--plus(type="button")
+					.col-sm-auto=data.hasTxt
+				+e.btns-row.row
+					.col-sm-6
+						+e.btn--orange(type="button") Оплатить
+					.col-sm-6
+						+e.btn--out-orange(type="button") Как это работает?

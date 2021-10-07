@@ -11,4 +11,9 @@
 9. <https://luckyone1221.github.io/0073MetalGo/public/06-5-prof-seller.html>
 9. <https://luckyone1221.github.io/0073MetalGo/public/06-6-hidden.html>
 <!--1. <https://luckyone1221.github.io/0073MetalGo/public/08-bidding.html>-->
+10. <https://luckyone1221.github.io/0073MetalGo/public/07-prof-buyer.html>
+10. <https://luckyone1221.github.io/0073MetalGo/public/07-1-prof-buyer.html>
 10. <https://luckyone1221.github.io/0073MetalGo/public/09-contacts.html>
+10. <https://luckyone1221.github.io/0073MetalGo/public/09-contacts.html>
+10. <https://luckyone1221.github.io/0073MetalGo/public/010-tarifs.html>
+10. <https://luckyone1221.github.io/0073MetalGo/public/00-modals.html>

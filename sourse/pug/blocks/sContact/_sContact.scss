@@ -186,6 +186,15 @@
 			}
 		}
 	}
+	&.pad-alt3{
+		--content-py: 20px!important;
+		@include media-breakpoint-up(sm){
+			--content-py: #{rem(40)} !important;
+		}
+		@include media-breakpoint-up(xl){
+			--content-py: #{rem(60)} !important;
+		}
+	}
 	//
 
 	//
