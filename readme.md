@@ -12,8 +12,13 @@
 9. <https://luckyone1221.github.io/0073MetalGo/public/06-6-hidden.html>
 <!--1. <https://luckyone1221.github.io/0073MetalGo/public/08-bidding.html>-->
 10. <https://luckyone1221.github.io/0073MetalGo/public/07-prof-buyer.html>
-10. <https://luckyone1221.github.io/0073MetalGo/public/07-1-prof-buyer.html>
-10. <https://luckyone1221.github.io/0073MetalGo/public/09-contacts.html>
-10. <https://luckyone1221.github.io/0073MetalGo/public/09-contacts.html>
-10. <https://luckyone1221.github.io/0073MetalGo/public/010-tarifs.html>
-10. <https://luckyone1221.github.io/0073MetalGo/public/00-modals.html>
+11. <https://luckyone1221.github.io/0073MetalGo/public/07-1-prof-buyer.html>
+12. <https://luckyone1221.github.io/0073MetalGo/public/09-contacts.html>
+13. <https://luckyone1221.github.io/0073MetalGo/public/09-contacts.html>
+14. <https://luckyone1221.github.io/0073MetalGo/public/010-tarifs.html>
+15. <https://luckyone1221.github.io/0073MetalGo/public/011-faq.html>
+15. <https://luckyone1221.github.io/0073MetalGo/public/018-1-not-found.html>
+
+
+//popup(18) and modals
+16. <https://luckyone1221.github.io/0073MetalGo/public/00-modals.html>

@@ -281,68 +281,80 @@ mixin sSearch(data)
 								option Цена (по убыванию)
 						.col-auto.d-none.d-xxl-block
 							+sSearchRowSelect('Показать по:', '10')(class="sm")
-					+e.items
-						+sSearchItem({
-							imgNum: 1,
-							name: 'Труба',
-							standart: true,
-							price: '324 000 ₽',
-						})
-						+sSearchItem({
-							imgNum: 0,
-							name: 'Трубопроводная арматура',
-							price: '999 000 ₽',
-						})
-						+sSearchItem({
-							addClasses: 'yellow',
-							imgNum: 1,
-							name: 'Трубопроводная арматура',
-							price: '999 000 ₽',
-						})
-						+sSearchItem({
-							imgNum: 0,
-							name: 'Труба',
-							standart: true,
-							price: '324 000 ₽',
-						})
-						+sSearchItem({
-							imgNum: 0,
-							name: 'Труба',
-							standart: true,
-							price: '324 000 ₽',
-						})
-						+sSearchItem({
-							imgNum: 1,
-							name: 'Трубопроводная арматура',
-							price: '999 000 ₽',
-						})
-						+sSearchItem({
-							imgNum: 1,
-							addClasses: 'yellow',
-							name: 'Трубопроводная арматура',
-							price: '999 000 ₽',
-						})
-						+sSearchItem({
-							imgNum: 0,
-							name: 'Труба',
-							standart: true,
-							price: '324 000 ₽',
-						})
-						+sSearchItem({
-							imgNum: 1,
-							name: 'Трубопроводная арматура',
-							price: '999 000 ₽',
-						})
-						+sSearchItem({
-							imgNum: 1,
-							name: 'Трубопроводная арматура',
-							price: '999 000 ₽',
-						})
-					+e.pagin-row.row
-						.col-sm-auto
-							+pugin()
-						.col-auto.ms-auto
-							+sSearchRowSelect('Показать по:', '10', 'd-xl-none d-xxl-block')(class="sm")
+					if !data.isEmpty
+						+e.items
+							+sSearchItem({
+								imgNum: 1,
+								name: 'Труба',
+								standart: true,
+								price: '324 000 ₽',
+							})
+							+sSearchItem({
+								imgNum: 0,
+								name: 'Трубопроводная арматура',
+								price: '999 000 ₽',
+							})
+							+sSearchItem({
+								addClasses: 'yellow',
+								imgNum: 1,
+								name: 'Трубопроводная арматура',
+								price: '999 000 ₽',
+							})
+							+sSearchItem({
+								imgNum: 0,
+								name: 'Труба',
+								standart: true,
+								price: '324 000 ₽',
+							})
+							+sSearchItem({
+								imgNum: 0,
+								name: 'Труба',
+								standart: true,
+								price: '324 000 ₽',
+							})
+							+sSearchItem({
+								imgNum: 1,
+								name: 'Трубопроводная арматура',
+								price: '999 000 ₽',
+							})
+							+sSearchItem({
+								imgNum: 1,
+								addClasses: 'yellow',
+								name: 'Трубопроводная арматура',
+								price: '999 000 ₽',
+							})
+							+sSearchItem({
+								imgNum: 0,
+								name: 'Труба',
+								standart: true,
+								price: '324 000 ₽',
+							})
+							+sSearchItem({
+								imgNum: 1,
+								name: 'Трубопроводная арматура',
+								price: '999 000 ₽',
+							})
+							+sSearchItem({
+								imgNum: 1,
+								name: 'Трубопроводная арматура',
+								price: '999 000 ₽',
+							})
+						+e.pagin-row.row
+							.col-sm-auto
+								+pugin()
+							.col-auto.ms-auto
+								+sSearchRowSelect('Показать по:', '10', 'd-xl-none d-xxl-block')(class="sm")
+					else
+						+b.search-nf
+							+e.ball
+								img(loading="lazy" src="img/svg/zoom-big.svg" alt="")
+							.text-center
+								+e.title по вашему запросу ничего не найдено
+								+e.descr
+									| Попробуйте скорректировать запрос или
+									|
+									b закажите расчет цены и сроков изготовления под заказ
+								+e.btn(href="#") Перейти
 				.col-xl-3.d-none.d-xl-block
 					+e.adv-items.sticky-js
 						+sSearchAdvItem(1)

@@ -20,5 +20,187 @@ mixin modal()
 			.text-center
 				+e.btn--w-auto(type="submit") Закрыть
 	// #modal-comp-success
-	
+	+b.modal-met.modal-win(id="modal-met"  style="display: none")
+		.mod-close-btn.modal-close-js
+			+icon('cross-sm')
+		.modal-win__header
+			.modal-win__title калькулятор металла
+		.modal-win__content
+			+e.row.row.gx-0
+				+e.col--left.col-lg-auto
+					+e.input-wrap.form-group
+						label
+							+e.SPAN.input-title Металл
+							+e.SELECT.input.form-select(name="lalala")
+								option(disabled selected hidden value="") Выберите металл
+								option(value="металл1") металл1
+								option(value="металл2") металл2
+								option(value="металл3") металл3
+					+e.input-wrap.form-group
+						label
+							+e.SPAN.input-title Марка
+							+e.SELECT.input.form-select(name="lalala")
+								option(disabled selected hidden value="") Выберите марку
+									option(value="металл1") металл1
+									option(value="металл2") металл2
+									option(value="металл3") металл3
+					+e.input-wrap
+						+e.input-title Тип проката
+						+e.radio-row.row
+							-for(var i = 1; i <= 10; i++)
+								+modalMetalRadio(i)
+				+e.col--right.col-lg
+					+e.body-items
+						+modalMetalBItem(1, 'Уголок', 'active')(checked)
+						+modalMetalBItem(2, 'Уголок 2')
+						+modalMetalBItem(3, 'Уголок 3')
+						+modalMetalBItem(4, 'Уголок 4')
+						+modalMetalBItem(5, 'Уголок 5')
+						+modalMetalBItem(6, 'Уголок 6')
+						+modalMetalBItem(7, 'Уголок 7')
+						+modalMetalBItem(8, 'Уголок 8')
+						+modalMetalBItem(9, 'Уголок 9')
+						+modalMetalBItem(10, 'Уголок 10')
+					+e.error.text-sm-start.text-center.text-danger Текст ошибки при заполнении размеров и веса металла.
+	// #modal-met
+	+b.modal-comp.modal-win(id="modal-comp"  style="display: none")
+		.mod-close-btn.modal-close-js
+			+icon('cross-sm')
+		.modal-win__header
+			.modal-win__title Выберите транспортную компанию
+		.modal-win__content
+			+e.items
+				+e.item(href="#")
+					img(loading="lazy" src=`img/svg/comp-logo.svg` alt="")
+	// #modal-comp
+	+modalLog({
+		id: 1,
+	})
 	// end modals
+
+mixin modalLog(data)
+	+b.modal-log.modal-win(id=`modal-log${data.id}`  style="display: none")
+		.mod-close-btn.modal-close-js
+			+icon('cross-sm')
+		.modal-win__header
+			.modal-win__title калькулятор логистики
+		.modal-win__content
+			+e.row.row.gx-0
+				+e.col--left.col-auto
+					+e.box--top
+						+e.title--top Данные о грузе
+						+e.items
+							+modalLogItem()
+						+e.add-btn(type="button")
+							+e.a-ball
+								+icon('add')
+							span Добавить
+					+e.box--bot
+						+e.title--bot Направление
+						+e.d-row.row.align-items-center
+							.col
+								+e.d-items
+									+modalLogDItem('A', 'Москва')
+									+modalLogDItem('Б', 'Санкт-Петербург')
+							.col-auto
+								+e.d-transfer
+									img(loading="lazy" src='img/svg/transfer.svg' alt="")
+				+e.col--right.col
+					+e.sub-box--dir
+						+e.val-items
+							+modalLogVItem('A', 'Введите адрес забора')
+							+modalLogVItem('Б', 'Введите адрес доставки')
+						+e.data-items
+							+e.data-item Груз: 0.01 м3, 0 кг, 1 место
+					+modalLogPItem('Автоперевозка')
+					+modalLogPItem('Сумма')
+					+e.sub-box--foot
+						+e.f-row.row.align-items-center
+							.col-auto
+								+e.f-img
+									img(loading="lazy" src="img/svg/lorry.svg" alt="")
+							.col
+								+e.SPAN.f-time--gray
+									| Ориентировочный срок доставки:
+									|
+								+e.SPAN.f-time--black 0 дней
+						+e.btn(type="button") Заказать доставку
+
+mixin modalLogPItem(title, val='0 ₽')
+	+e.sub-box--price
+		+e.p-row.row
+			+e.p-title.col
+			+e.p-val.col-auto=val
+
+
+mixin modalLogVItem(ballTxt, txt, addClasses)
+	+e.v-item
+		+e.d-sub-row.row.align-items-center
+			.col-auto
+				+e.d-ball--v=ballTxt
+			+e.v-txt.col(class=addClasses)=txt
+
+mixin modalLogDItem(ballTxt, placeholder)
+	+e.d-item
+		+e.d-sub-row.row.align-items-center
+			.col-auto
+				+e.d-ball=ballTxt
+			.col
+				+input(placeholder, 'text')
+
+mixin modalLogItem()
+	+e.item
+		+e.i-row.row.align-items-end
+			.col
+				+e.ig-title Габариты (ДхШхВ), м
+				+e.ig--size.input-group
+					+e.INPUT.input.form-control(type="number" min="0" max="10" value="0.1")
+					+e.x
+					+e.INPUT.input.form-control(type="number" min="0" max="10" value="0.1")
+					+e.x
+					+e.INPUT.input.form-control(type="number" min="0" max="10" value="0.1")
+					+e.val
+						span 0.01
+						span м3
+			.col-auto
+				+e.ig-title Вес, кг
+				+e.input-wrap(data-add-ph="мм")
+					+e.INPUT.input--weight(type="number" min="0" max="10")
+			.col-auto
+				+e.ig-title Вес, кг
+				+e.ig--place.input-group
+					+e.sm-btn--min(type="button")
+					+e.INPUT.input.form-control(type="text" value="1")
+					+e.sm-btn--plus(type="button")
+			.col-auto
+				+e.btn-box
+					+e.btn(type="button")
+						+icon('cross-sm')
+
+
+mixin modalMetalBItem(imgNum, name, addClasses='')
+	+e.b-item(class=addClasses)
+		+e.i-name=name
+		+e.sub-row.row
+			+e.s-col--img.col-sm-auto
+				+e.img
+					img(loading="lazy" src=`img/svg/modalMetal-${imgNum}.svg` alt="")
+			+e.s-col--inps.col-sm
+				+e.input-wrap(data-add-ph="мм")
+					+e.INPUT.input.form-control(type="text" placeholder="Высота (1)")
+				+e.input-wrap(data-add-ph="мм")
+					+e.INPUT.input.form-control(type="text" placeholder="Ширина (2)")
+				+e.input-wrap(data-add-ph="мм")
+					+e.INPUT.input.form-control(type="text" placeholder="Толщина стенки (3)")
+				+e.input-wrap(data-add-ph="м")
+					+e.INPUT.input.form-control(type="text" placeholder="Длина")
+				+e.input-wrap(data-add-ph="кг")
+					+e.INPUT.input.form-control(type="text" placeholder="Вес")
+
+mixin modalMetalRadio(imgNum)
+	+e.r-col.col-auto
+		+e.LABEL.rad-label
+			input.metal-radio-js(type="radio" name="metalRadio" value=imgNum class="invisible")&attributes(attributes)
+			.square
+				+icon(`modalMetalRadio-${imgNum}`)
+				//-img(loading="lazy" src=`img/svg/modalMetalRadio-${imgNum}.svg` alt="")

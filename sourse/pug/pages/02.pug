@@ -9,7 +9,7 @@ block variables
 	- let  bg='02-320.png'
 
 block title
-	- let  title= 'title'
+	- let  title= '02'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -32,5 +32,5 @@ block pagecontent
 				+e.p-img
 					img(loading="lazy" src='img/svg/parameters.svg' alt="")
 				+e.p-txt Параметры поиска
-	+sSearch()
+	+sSearch({})
 	+footer()

@@ -46,6 +46,46 @@
 			}
 		}
 	}
+
+	--mod-px: 20px;
+	@include media-breakpoint-up(sm){
+		--mod-px: #{rem(40)};
+	}
+
+	&__header{
+		padding: 30px var(--mod-px);
+		@include media-breakpoint-up(sm){
+			padding: rem(36) var(--mod-px);
+		}
+
+		border-bottom: 1px solid $gray-220;
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			left: var(--mod-px);
+			bottom: 0;
+			height: 2px;
+			width: 40px;
+			background-color: $primary;
+		}
+	}
+	&__title{
+		font-weight: bold;
+		text-transform: uppercase;
+
+		font-size: 14px;
+		line-height: calc(16/14);
+		@include media-breakpoint-up(sm){
+			font-size: rem(20);
+			line-height: calc(23/20);
+		}
+		//@include media-breakpoint-up(xl){
+		//	padding-left: 2px;
+		//}
+		max-width: calc(100% - 20px);
+	}
+	&__content{}
 }
 
 .modal-complain{
@@ -132,6 +172,255 @@
 			}
 		}
 	}
+	&__{}
+	&__{}
+}
+
+//
+.modal-met{
+	padding: 0!important;
+	max-width: rem(1004);
+
+	&__row{
+
+	}
+	label{
+		width: 100% !important;
+		display: block!important;
+	}
+	&__col{
+		padding: 40px var(--mod-px);
+		@include media-breakpoint-up(sm){
+			padding: rem(37) var(--mod-px);
+		}
+
+		&--left{
+			border-bottom: 1px solid $gray-220;
+			@include media-breakpoint-up(lg){
+				border: none;
+				border-right: 1px solid $gray-220;
+
+				width: calc(var(--mod-px)*2 + #{rem(265)});
+			}
+		}
+		&--right{
+
+		}
+	}
+	//
+	&__input-wrap{
+		margin-bottom: var(--inp-wr-mb, #{rem(17)});
+		@include media-breakpoint-up(sm){
+			margin-bottom: var(--inp-wr-mb, #{rem(20)});
+		}
+	}
+	&__input-title{
+		display: block!important;
+
+		margin-bottom: 12px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(17);
+		}
+	}
+	&__input{
+		width: 100%;
+	}
+	&__radio-row{
+		--bs-gutter-x: 5px;
+		--bs-gutter-y: 5px;
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(10)};
+			--bs-gutter-y: #{rem(10)};
+		}
+	}
+	&__r-col{
+		@include media-breakpoint-up(lg){
+			width: 20%;
+		}
+	}
+	&__rad-label{
+		cursor: pointer;
+
+		width: 100%;
+		input:checked + .square{
+			background: $primary;
+			border-color: $primary;
+
+			.icon{
+				color: $body-color;
+			}
+		}
+		.square{
+			@include mt();
+			background: $white;
+			border: 1px solid $gray-310;
+			border-radius: 5px;
+
+			max-width: 100%;
+
+			width: 34px;
+			height: 34px;
+			@include media-breakpoint-up(sm){
+				width: rem(45);
+				height: rem(45);
+			}
+			@include media-breakpoint-up(lg){
+				width: 100%;
+			}
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.icon{
+				color: $gray-610;
+				font-size: 15.1px;
+				@include media-breakpoint-up(sm){
+					font-size: rem(20);
+				}
+			}
+		}
+	}
+	&__body-items{
+
+	}
+	&__b-item{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	//
+	&__i-name{
+		font-weight: 500;
+
+		margin-bottom: 17px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(17);
+		}
+	}
+	&__sub-row{
+		--bs-gutter-y: 20px;
+		--bs-gutter-x: #{rem(40)};
+	}
+	&__s-col{
+		&--img{
+			@include media-breakpoint-up(sm){
+				width: calc(#{rem(284)} + var(--bs-gutter-x));
+			}
+		}
+		&--inps{
+			--inp-wr-mb: 10px;
+			@include media-breakpoint-up(sm){
+				--inp-wr-mb: #{rem(20)};
+			}
+		}
+	}
+	&__img{
+		width: 100%;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	//-
+	&__{}
+	&__{}
+	&__{}
+}
+
+.modal-comp{
+	padding: 0;
+
+	max-width: rem(620);
+	.modal-win{
+		&__content{
+			padding: var(--mod-px);
+		}
+		&__{}
+	}
+
+	&__items{}
+	&__item{
+		@extend .btn;
+		@extend .btn-light;
+		border-color: $gray-310!important;
+
+		background-color: transparent!important;
+		&:hover{
+			background-color: $gray-310!important;
+		}
+
+		padding: 10.5px;
+		@include media-breakpoint-up(sm){
+			padding: rem(15);
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-bottom: rem(10);
+		&:last-child{
+			margin-bottom: 0;
+		}
+		img{
+
+		}
+	}
+	&__{}
+}
+//
+.modal-log{
+	padding: 0!important;
+	max-width: rem(1004);
+
+	&__row{
+
+	}
+	&__col{
+		&--left{}
+		&--right{}
+	}
+	&__box{
+		&--top{}
+		&--bot{}
+	}
+	&__title{
+		&--top{}
+		&--bot{}
+	}
+	&__items{}
+	&__item{}
+	&__i-row{}
+	&__ig-title{}
+	&__ig{
+		&--size{
+
+		}
+		&--{}
+		&--{}
+	}
+	&__x{}
+	&__val{}
+	//
+	&__{}
+	&__{}
+	//
+	&__d-items{}
+	&__d-item{}
+	&__d-sub-row{}
+	&__d-ball{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
 	&__{}
 	&__{}
 }

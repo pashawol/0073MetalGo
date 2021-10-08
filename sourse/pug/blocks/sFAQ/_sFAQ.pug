@@ -1,0 +1,69 @@
+mixin sFAQ(data)
+	// start sFAQ
+	+b.SECTION.sFAQ.section#sFAQ&attributes(attributes)
+		.container
+			.row.gy-20
+				.col.tabs__wrap
+					.tabs__content.active
+						+titleBox({
+							addClasses: 'pad-alt3',
+							title: 'Ответы на вопросы',
+						})
+							+e.items.dd-group-js
+								+sFAQItem('Как использовать поиск?')
+								+sFAQItem('Как пользоваться фильтром?')
+								+sFAQItem('Как разместить объявления?')
+								+sFAQItem('Как разместить заявку?', 'active')
+								+sFAQItem('Как поднять объявление в ТОП?')
+								+sFAQItem('Как выделить объявление?')
+								+sFAQItem('Как найти нужный тендер?')
+								+sFAQItem('Как обновлять объявления?')
+					.tabs__content
+						+titleBox({
+							addClasses: 'pad-alt3',
+							title: 'видео-инструкции',
+						})
+							+e.v-row.row
+								+sFAQVideoItem(1, 'Как использовать поиск?')
+								+sFAQVideoItem(2, 'Как пользоваться фильтром?')
+								+sFAQVideoItem(3, 'Как разместить объявления?')
+								+sFAQVideoItem(4, 'Как использовать поиск?')
+								+sFAQVideoItem(5, 'Как пользоваться фильтром?')
+								+sFAQVideoItem(6, 'Как разместить объявления?')
+								+sFAQVideoItem(7, 'Как использовать поиск?')
+								+sFAQVideoItem(8, 'Как пользоваться фильтром?')
+								+sFAQVideoItem(9, 'Как разместить объявления?')
+				.col-lg-4.col-xl-3
+					block
+	// end sFAQ
+mixin sFAQVideoItem(id, title)
+	.col-sm-6.col-md-4
+		+e.video-item(href="https://www.youtube.com/watch?v=a0Wo7YME_Zg" data-fancybox=`video${id}`)
+			+e.v-img
+				img(loading="lazy" src='img/@2x/sFAQVideoItem.png' alt="")
+			+e.v-title=title
+			+e.v-length 2:31
+
+mixin sFAQItem(qTxt, activeClasses='')
+	+e.item(class=activeClasses)
+		+e.header.dd-head-js=qTxt
+		+e.content.dd-content-js(class=activeClasses)
+			p Перейдите в раздел «Мои заявки» и нажмите на кнопку «Новая заявка». Укажите все параметры, чтобы заявку было проще обработать. Рекомендуем составлять заявку на основании примера, приведённого на той же странице. Заполнив все данные, заявка отправляется на проверку, после успешной проверки ваша заявка будет опубликована.
+
+mixin faqBox(data)
+	.t-box.t-box--c-box
+		.t-box__header
+			h4.t-box__title.t-box__title--h4=data.title
+		.t-box__content
+			+b.faq-box
+				+e.logo
+					img(loading="lazy" src="img/svg/logo2.svg" alt="")
+				.text-center
+					+e.supp-txt Техническая поддержка
+					+e.gray MetalGo
+					+e.descr Задайте интересующий вопрос нашему менеджеру в техническую поддержку
+					+g.s-item
+						+e.btn--out-light(href="#")
+							+e.b-icon
+								img(loading="lazy" src="img/svg/send-pr.svg" alt="")
+							span Перейти в чат
