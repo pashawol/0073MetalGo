@@ -196,6 +196,17 @@
 		}
 	}
 	//
+	&.pad-alt4{
+		--content-py: 20px!important;
+		@include media-breakpoint-up(sm){
+			--content-py: #{rem(40)} !important;
+		}
+		@include media-breakpoint-up(xl){
+			--content-py: #{rem(40)} !important;
+		}
+	}
+
+	//
 
 	//
 	--header-mh: 75px;
@@ -303,6 +314,33 @@
 			padding: rem(4) rem(8);
 		}
 	}
+	//
+	//&__btn{
+	//	@extend .btn;
+	//	@extend .btn-outline-light;
+	//
+	//	display: flex;
+	//	align-items: center;
+	//
+	//	padding: rem(12) rem(14);
+	//	@include media-breakpoint-up(sm){
+	//		padding: rem(12) rem(14);
+	//	}
+	//
+	//	.icon{
+	//		color: $primary;
+	//
+	//		font-size: 16px;
+	//		@include media-breakpoint-up(sm){
+	//			font-size: rem(20);
+	//			margin-right: rem(10);
+	//		}
+	//	}
+	//
+	//}
+	&__{}
+	&__{}
+	&__{}
 }
 
 //

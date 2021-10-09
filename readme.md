@@ -17,8 +17,11 @@
 13. <https://luckyone1221.github.io/0073MetalGo/public/09-contacts.html>
 14. <https://luckyone1221.github.io/0073MetalGo/public/010-tarifs.html>
 15. <https://luckyone1221.github.io/0073MetalGo/public/011-faq.html>
-15. <https://luckyone1221.github.io/0073MetalGo/public/018-1-not-found.html>
+16. <https://luckyone1221.github.io/0073MetalGo/public/018-1-not-found.html>
+
+//personal area
+1. <https://luckyone1221.github.io/0073MetalGo/public/14-stat.html>
 
 
-//popup(18) and modals
+//popup(18) and modals(12, 13)
 16. <https://luckyone1221.github.io/0073MetalGo/public/00-modals.html>

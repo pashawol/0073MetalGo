@@ -348,6 +348,120 @@ function eventHandler() {
 		);
 	}
 
+	//-14-stat
+	let StatLabels = [];
+	let StatDataArr = [];
+	//put dates here
+	for (var i = 0; i < 200; i++){
+		StatLabels[i] = `${i+1} ноября 2021 г.`;
+		StatDataArr[i] = getRandomInt(0, 1500);
+	}
+	//!important to reduse them, I didnt figure out how make it via plugin
+	StatLabels = reduceArr(StatLabels, 25);
+	StatDataArr = reduceArr(StatDataArr, 25);
+
+	//--similar way(as a color here) u can give StatLabels and StatDataArr... probably, I hope so
+	function getStatConfig(color="#EDB021"){
+		let StatData = {
+			labels: StatLabels,
+			datasets: [{
+				label: ' посещений',
+				borderColor: color,
+				//put visitors amount here
+				data: StatDataArr,
+				pointStyle: 'circle',
+				pointRadius: 1,
+			}]
+		};
+		let StatConfig = {
+			type: 'line',
+			data: StatData,
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+
+				layout: {
+					padding: {
+						top: 60
+					}
+				},
+				interaction: {
+					mode: 'index',
+					intersect: false,
+				},
+
+				//disable grid
+				scales: {
+					x: {
+						display: false,
+						grid: {
+							borderColor: 'red',
+						},
+
+						ticks: {
+							maxTicksLimit: 2,
+						},
+					},
+					y: {
+						grid: {
+							//borderWidth: 0,
+							drawBorder: false,
+							//offset: true,
+							tickColor: 'transparent',
+							tickLength: 20,
+						},
+						ticks: {
+							maxTicksLimit: 4,
+							font: {
+								size: 11,
+								family: 'Roboto',
+								lineHeight: 16/14,
+							},
+						},
+					},
+				},
+				//
+				plugins: {
+					legend: {
+						display: false,
+					},
+					tooltip: {
+						cornerRadius: 3,
+						usePointStyle: true,
+						boxWidth: 4,
+						boxHeight: 4,
+
+						caretSize: 8,
+						caretPadding: 5,
+
+						backgroundColor: 'rgba(0,0,0, 0.75)',
+						padding:{
+							x: 10,
+							y: 8,
+						},
+
+						titleMarginBottom: 4,
+
+						xAlign: 'center',
+						yAlign: 'bottom',
+					},
+				},
+
+			},
+		};
+		return StatConfig;
+	}
+
+	let statCharts = document.querySelectorAll('.stat-chart-js');
+	for (let chart of statCharts){
+		let config = getStatConfig(chart.getAttribute('data-color'));
+		let myChart = new Chart(
+			chart,
+			config
+		);
+	}
+
+
 	//-
 	let sTarifSlider = new Swiper('.sTarif-slider-js', {
 		slidesPerView: 'auto',
@@ -499,10 +613,30 @@ function eventHandler() {
 		})
 	}
 	document.addEventListener('click', function (){
-		if (!event.target.closest('.nf-baner-item-js')){
+		if (!event.target.closest('.nf-baner-item-js') && nfBaner){
 			nfBaner.classList.remove('active');
 		}
 	});
+
+	function getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+	function reduceArr(arr, num){
+		let step = Math.floor(arr.length/num);
+		if (step > 1){
+			let resultArr = [];
+			for(let i = 0; i < num; i++){
+				if (arr[step*i]){
+					resultArr.push(arr[step*i]);
+				}
+			}
+
+			return resultArr
+		}
+		else{
+			return arr
+		}
+	}
 
 	//end luckyoneJs
 

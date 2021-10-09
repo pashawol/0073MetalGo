@@ -28,3 +28,8 @@ mixin tabsBtn(iconName, txt, addClasses="")
 			+icon(`tabs-${iconName}`, 'd-md-none')
 			+e.tabs-txt=txt
 
+mixin tabsBtn2(iconName, txt, addClasses="")
+	.col-12.col-md-auto&attributes(attributes)
+		+e.tabs-btn-alt.tabs__btn(class=addClasses)
+			+icon(`tabs-${iconName}`, 'd-md-none')
+			span=txt

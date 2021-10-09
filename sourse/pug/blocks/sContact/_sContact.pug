@@ -57,6 +57,14 @@ mixin titleBox(data)
 							+e.txt.col-auto=data.showTxt
 							.col-auto
 								+input(data.selectTxt, 'select')
-				if data.amount
+				if data.pdfBtn
+					.col-auto
+						+g.s-item
+							+e.btn--out-light(href="#")
+								+e.b-icon.me-0.me-sm-10
+									img(loading="lazy" src="img/svg/pdf.svg" alt="")
+								span.d-none.d-sm-inline Выгрузить в pdf
+						//-.t-box__btn(href="#")
+							span.d-none.d-sm-inline Выгрузить в pdf
 		.t-box__content
 			block

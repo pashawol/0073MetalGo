@@ -75,7 +75,50 @@ mixin modal()
 	// #modal-comp
 	+modalLog({
 		id: 1,
+		itemsAmount: 1,
+		fromInpVal: '',
+		toInpVal: '',
+		addressTake: 'Введите адрес забора',
+		addressTakeClass: 'gray',
+		addressDelivery: 'Введите адрес доставки',
+		addressDeliveryClass: 'gray',
 	})
+	+modalLog({
+		id: 2,
+		itemsAmount: 3,
+		fromInpVal: 'Тольятти',
+		toInpVal: 'Челябинск',
+		addressTake: 'Тольятти',
+		addressTakeClass: null,
+		addressDelivery: 'Челябинск',
+		addressDeliveryClass: null,
+	})
+	+modalLog({
+		id: 3,
+		itemsAmount: 3,
+		fromInpVal: '',
+		inpFromClass: 'border-danger',
+		toInpVal: 'Челябинск',
+		addressTake: 'Введите адрес забора',
+		addressTakeClass: 'text-danger',
+		addressDelivery: 'Челябинск',
+		addressDeliveryClass: null,
+		itemError: 'Текст ошибки при заполнении габаритов.',
+	})
+	//#modal-log
+	+b.modal-complain--succ.modal-win(id="modal-order-success"  style="display: none")
+		.mod-close-btn.modal-close-js
+			+icon('cross-sm')
+		+b.form-wrap
+			+e.title--success.text-center
+				h2 заявка на доставку отправлена
+				p
+					| Менеджер логистики свяжется с Вами
+					br
+					| в ближайшее время для согласования деталей.
+			.text-center
+				+e.btn--w-auto(type="submit") Закрыть
+	// #modal-comp-success
 	// end modals
 
 mixin modalLog(data)
@@ -86,11 +129,13 @@ mixin modalLog(data)
 			.modal-win__title калькулятор логистики
 		.modal-win__content
 			+e.row.row.gx-0
-				+e.col--left.col-auto
+				+e.col--left.col-lg-auto
 					+e.box--top
 						+e.title--top Данные о грузе
 						+e.items
-							+modalLogItem()
+							+modalLogItem(data.itemError)
+							-for(var i = 0; i < data.itemsAmount - 1; i++)
+								+modalLogItem()
 						+e.add-btn(type="button")
 							+e.a-ball
 								+icon('add')
@@ -100,18 +145,19 @@ mixin modalLog(data)
 						+e.d-row.row.align-items-center
 							.col
 								+e.d-items
-									+modalLogDItem('A', 'Москва')
-									+modalLogDItem('Б', 'Санкт-Петербург')
+									+modalLogDItem('A', 'Москва', data.fromInpVal, data.inpFromClass)
+									+modalLogDItem('Б', 'Санкт-Петербург', data.toInpVal)
 							.col-auto
 								+e.d-transfer
 									img(loading="lazy" src='img/svg/transfer.svg' alt="")
-				+e.col--right.col
+				+e.col--right.col-lg
 					+e.sub-box--dir
 						+e.val-items
-							+modalLogVItem('A', 'Введите адрес забора')
-							+modalLogVItem('Б', 'Введите адрес доставки')
+							+modalLogVItem('A', data.addressTake, data.addressTakeClass)
+							+modalLogVItem('Б', data.addressDelivery, data.addressDeliveryClass)
 						+e.data-items
-							+e.data-item Груз: 0.01 м3, 0 кг, 1 место
+							-for(var i = 0; i < data.itemsAmount; i++)
+								+e.data-item Груз: 0.01 м3, 0 кг, 1 место
 					+modalLogPItem('Автоперевозка')
 					+modalLogPItem('Сумма')
 					+e.sub-box--foot
@@ -124,34 +170,34 @@ mixin modalLog(data)
 									| Ориентировочный срок доставки:
 									|
 								+e.SPAN.f-time--black 0 дней
-						+e.btn(type="button") Заказать доставку
+						+e.btn-order(type="button") Заказать доставку
 
 mixin modalLogPItem(title, val='0 ₽')
 	+e.sub-box--price
 		+e.p-row.row
-			+e.p-title.col
+			+e.p-title.col=title
 			+e.p-val.col-auto=val
 
 
 mixin modalLogVItem(ballTxt, txt, addClasses)
-	+e.v-item
-		+e.d-sub-row.row.align-items-center
+	+e.d-item--val-item
+		+e.v-sub-row.row.align-items-center
 			.col-auto
 				+e.d-ball--v=ballTxt
 			+e.v-txt.col(class=addClasses)=txt
 
-mixin modalLogDItem(ballTxt, placeholder)
+mixin modalLogDItem(ballTxt, placeholder, val='', inpClasses='')
 	+e.d-item
 		+e.d-sub-row.row.align-items-center
 			.col-auto
 				+e.d-ball=ballTxt
 			.col
-				+input(placeholder, 'text')
+				+input(placeholder, 'text')(value=val class=inpClasses)
 
-mixin modalLogItem()
+mixin modalLogItem(error)
 	+e.item
 		+e.i-row.row.align-items-end
-			.col
+			+e.i-col--size.col-md
 				+e.ig-title Габариты (ДхШхВ), м
 				+e.ig--size.input-group
 					+e.INPUT.input.form-control(type="number" min="0" max="10" value="0.1")
@@ -159,23 +205,28 @@ mixin modalLogItem()
 					+e.INPUT.input.form-control(type="number" min="0" max="10" value="0.1")
 					+e.x
 					+e.INPUT.input.form-control(type="number" min="0" max="10" value="0.1")
-					+e.val
-						span 0.01
-						span м3
-			.col-auto
+			+e.i-col--volume.col-6.col-md-auto
+				+e.ig-title Объем, м3
+				+e.volume
+					span 0.01
+					span м3
+			+e.i-col--weight.col-6.col-md-auto
 				+e.ig-title Вес, кг
-				+e.input-wrap(data-add-ph="мм")
-					+e.INPUT.input--weight(type="number" min="0" max="10")
-			.col-auto
-				+e.ig-title Вес, кг
+				+e.input-wrap(data-add-ph="кг")
+					+e.INPUT.input--weight.form-control(type="number" min="0" max="10")
+			+e.i-col--place.col.col-md-auto
+				+e.ig-title Одинаковые места
 				+e.ig--place.input-group
 					+e.sm-btn--min(type="button")
 					+e.INPUT.input.form-control(type="text" value="1")
 					+e.sm-btn--plus(type="button")
-			.col-auto
+			+e.i-col--btn.col-auto
 				+e.btn-box
-					+e.btn(type="button")
+					+e.cross-btn(type="button")
 						+icon('cross-sm')
+			if error
+				.col-12
+					+e.i-error.text-danger=error
 
 
 mixin modalMetalBItem(imgNum, name, addClasses='')

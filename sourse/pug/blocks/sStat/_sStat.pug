@@ -1,0 +1,90 @@
+mixin sStat(data)
+	// start sStat
+	+b.SECTION.sStat.section#sStat&attributes(attributes)
+		.container.tabs__wrap
+			.tabs__content 1
+			.tabs__content 2
+			.tabs__content 3
+			.tabs__content 4
+			.tabs__content 5
+			.tabs__content 6
+			.tabs__content.active
+				+titleBox({
+					addClasses: 'pad-alt4',
+					title: 'статистика',
+					pdfBtn: true,
+				})
+					+e.top-row.row.align-items-center
+						.col-xl
+							+e.radio-row.row.align-items-center
+								.col-lg-auto Показать за:
+								.col-lg
+									+e.r-items-row.row.align-items-center
+										+sStatRadio('За все время')(checked)
+										+sStatRadio('Сегодня')
+										+sStatRadio('Вчера')
+										+sStatRadio('Неделя')
+										+sStatRadio('Месяц')
+										+sStatRadio('Квартал')
+										+sStatRadio('Год')
+						.col-xl-auto
+							+e.calendar-row.row.align-items-center
+								.col-12.d-lg-none.m-lg-0 Период
+								.col-auto
+									span.d-none.d-lg-block Период с:
+									span.d-lg-none с:
+								.col.col-sm-auto
+									+input('', 'date')
+								.col-auto по:
+								.col.col-sm-auto
+									+input('', 'date')
+					+e.box
+						+e.title общие сведения
+						+e.stat-row.row
+							+sStatItem('Нажатия на кнопку “Открыть номер”', '#EDB021')
+							+sStatItem('Переходы на сайт', '#97CC64')
+							+sStatItem('Нажатия на кнопку “E-mail”', '#A955B8')
+							+sStatItem('Просмотры объявлений', '#FD5A3E')
+							+sStatItem('Посещения профиля', '#77B6E7')
+					+e.box
+						+e.title объявления
+						+e.table
+							+e.tr--head
+								+e.tr-row.row
+									+e.t-col--id.head.col-auto ID
+									+e.t-col--title.head.col Объявление
+									+e.t-col--views.head.col-auto Просмотры
+							-for(var i = 0; i < 4; i++)
+								+sStatTr()
+						.row
+							.col-sm-auto
+								+pugin()
+	// end sStat
+mixin sStatTr()
+	+e.tr--body
+		+e.tr-row.row
+			+e.t-col--id.col-auto
+				+e.id(href="#") 324561
+			+e.t-col--title.col Трубопроводная арматура, 200, М11, 5 27 тонн, 3 464 900 ₽
+			+e.t-col--views.col-auto 1057
+
+mixin sStatItem(txt, ballColor='#EDB021')
+	.col-md-6.col-xl-4
+		+e.stat-item
+			+e.ch-row.row
+				.col-auto
+					+e.ball(style=`background-color: ${ballColor}`)
+				+e.ch-txt.col=txt
+				+e.ch-val.col-auto 1 345
+			+e.char-wrap
+				+e.CANVAS.chart.stat-chart-js(data-color=ballColor)
+			+e.ch-foot-row.row
+				.col 04.08.2019
+				.col-auto 04.08.2021
+
+
+mixin sStatRadio(txt)
+	.col-auto
+		+e.LABEL.radio
+			input(type="radio" class="invisible" name="sStatRadio" value=txt)&attributes(attributes)
+			.r-txt=txt

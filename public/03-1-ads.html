@@ -1026,14 +1026,14 @@
 			</div>
 			<div class="modal-win__content">
 				<div class="modal-log__row row gx-0">
-					<div class="modal-log__col modal-log__col--left col-auto">
+					<div class="modal-log__col modal-log__col--left col-lg-auto">
 						<div class="modal-log__box modal-log__box--top">
 							<div class="modal-log__title modal-log__title--top">Данные о грузе
 							</div>
 							<div class="modal-log__items">
 								<div class="modal-log__item">
 									<div class="modal-log__i-row row align-items-end">
-										<div class="col">
+										<div class="modal-log__i-col modal-log__i-col--size col-md">
 											<div class="modal-log__ig-title">Габариты (ДхШхВ), м
 											</div>
 											<div class="modal-log__ig modal-log__ig--size input-group"><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
@@ -1041,18 +1041,22 @@
 												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
 												<div class="modal-log__x">
 												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
-												<div class="modal-log__val"><span>0.01</span><span>м3</span>
-												</div>
 											</div>
 										</div>
-										<div class="col-auto">
-											<div class="modal-log__ig-title">Вес, кг
+										<div class="modal-log__i-col modal-log__i-col--volume col-6 col-md-auto">
+											<div class="modal-log__ig-title">Объем, м3
 											</div>
-											<div class="modal-log__input-wrap" data-add-ph="мм"><input class="modal-log__input modal-log__input--weight" type="number" min="0" max="10"/>
+											<div class="modal-log__volume"><span>0.01</span><span>м3</span>
 											</div>
 										</div>
-										<div class="col-auto">
+										<div class="modal-log__i-col modal-log__i-col--weight col-6 col-md-auto">
 											<div class="modal-log__ig-title">Вес, кг
+											</div>
+											<div class="modal-log__input-wrap" data-add-ph="кг"><input class="modal-log__input modal-log__input--weight form-control" type="number" min="0" max="10"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--place col col-md-auto">
+											<div class="modal-log__ig-title">Одинаковые места
 											</div>
 											<div class="modal-log__ig modal-log__ig--place input-group">
 												<button class="modal-log__sm-btn modal-log__sm-btn--min" type="button">
@@ -1061,9 +1065,9 @@
 												</button>
 											</div>
 										</div>
-										<div class="col-auto">
+										<div class="modal-log__i-col modal-log__i-col--btn col-auto">
 											<div class="modal-log__btn-box">
-												<button class="modal-log__btn" type="button">
+												<button class="modal-log__cross-btn" type="button">
 													<svg class="icon icon-cross-sm ">
 														<use xlink:href="img/svg/sprite.svg#cross-sm"></use>
 													</svg>
@@ -1094,7 +1098,7 @@
 													</div>
 												</div>
 												<div class="col">
-													<div class="modal-log__input-wrap form-group"><input class="modal-log__input form-control" name="text" type="text" placeholder="Москва"/>
+													<div class="modal-log__input-wrap form-group"><input class="modal-log__input form-control" name="text" type="text" placeholder="Москва" value=""/>
 													</div>
 													<!-- +e.input-wrap-->
 												</div>
@@ -1107,7 +1111,7 @@
 													</div>
 												</div>
 												<div class="col">
-													<div class="modal-log__input-wrap form-group"><input class="modal-log__input form-control" name="text" type="text" placeholder="Санкт-Петербург"/>
+													<div class="modal-log__input-wrap form-group"><input class="modal-log__input form-control" name="text" type="text" placeholder="Санкт-Петербург" value=""/>
 													</div>
 													<!-- +e.input-wrap-->
 												</div>
@@ -1122,26 +1126,26 @@
 							</div>
 						</div>
 					</div>
-					<div class="modal-log__col modal-log__col--right col">
+					<div class="modal-log__col modal-log__col--right col-lg">
 						<div class="modal-log__sub-box modal-log__sub-box--dir">
 							<div class="modal-log__val-items">
-								<div class="modal-log__v-item">
-									<div class="modal-log__d-sub-row row align-items-center">
+								<div class="modal-log__d-item modal-log__d-item--val-item">
+									<div class="modal-log__v-sub-row row align-items-center">
 										<div class="col-auto">
 											<div class="modal-log__d-ball modal-log__d-ball--v">A
 											</div>
 										</div>
-										<div class="modal-log__v-txt col">Введите адрес забора
+										<div class="modal-log__v-txt col gray">Введите адрес забора
 										</div>
 									</div>
 								</div>
-								<div class="modal-log__v-item">
-									<div class="modal-log__d-sub-row row align-items-center">
+								<div class="modal-log__d-item modal-log__d-item--val-item">
+									<div class="modal-log__v-sub-row row align-items-center">
 										<div class="col-auto">
 											<div class="modal-log__d-ball modal-log__d-ball--v">Б
 											</div>
 										</div>
-										<div class="modal-log__v-txt col">Введите адрес доставки
+										<div class="modal-log__v-txt col gray">Введите адрес доставки
 										</div>
 									</div>
 								</div>
@@ -1153,7 +1157,7 @@
 						</div>
 						<div class="modal-log__sub-box modal-log__sub-box--price">
 							<div class="modal-log__p-row row">
-								<div class="modal-log__p-title col">
+								<div class="modal-log__p-title col">Автоперевозка
 								</div>
 								<div class="modal-log__p-val col-auto">0 ₽
 								</div>
@@ -1161,7 +1165,7 @@
 						</div>
 						<div class="modal-log__sub-box modal-log__sub-box--price">
 							<div class="modal-log__p-row row">
-								<div class="modal-log__p-title col">
+								<div class="modal-log__p-title col">Сумма
 								</div>
 								<div class="modal-log__p-val col-auto">0 ₽
 								</div>
@@ -1178,13 +1182,572 @@
 									</span><span class="modal-log__f-time modal-log__f-time--black">0 дней</span>
 								</div>
 							</div>
-							<button class="modal-log__btn" type="button">Заказать доставку
+							<button class="modal-log__btn-order" type="button">Заказать доставку
 							</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="modal-log modal-win" id="modal-log2" style="display: none">
+			<div class="mod-close-btn modal-close-js">
+				<svg class="icon icon-cross-sm ">
+					<use xlink:href="img/svg/sprite.svg#cross-sm"></use>
+				</svg>
+			</div>
+			<div class="modal-win__header">
+				<div class="modal-win__title">калькулятор логистики</div>
+			</div>
+			<div class="modal-win__content">
+				<div class="modal-log__row row gx-0">
+					<div class="modal-log__col modal-log__col--left col-lg-auto">
+						<div class="modal-log__box modal-log__box--top">
+							<div class="modal-log__title modal-log__title--top">Данные о грузе
+							</div>
+							<div class="modal-log__items">
+								<div class="modal-log__item">
+									<div class="modal-log__i-row row align-items-end">
+										<div class="modal-log__i-col modal-log__i-col--size col-md">
+											<div class="modal-log__ig-title">Габариты (ДхШхВ), м
+											</div>
+											<div class="modal-log__ig modal-log__ig--size input-group"><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--volume col-6 col-md-auto">
+											<div class="modal-log__ig-title">Объем, м3
+											</div>
+											<div class="modal-log__volume"><span>0.01</span><span>м3</span>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--weight col-6 col-md-auto">
+											<div class="modal-log__ig-title">Вес, кг
+											</div>
+											<div class="modal-log__input-wrap" data-add-ph="кг"><input class="modal-log__input modal-log__input--weight form-control" type="number" min="0" max="10"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--place col col-md-auto">
+											<div class="modal-log__ig-title">Одинаковые места
+											</div>
+											<div class="modal-log__ig modal-log__ig--place input-group">
+												<button class="modal-log__sm-btn modal-log__sm-btn--min" type="button">
+												</button><input class="modal-log__input form-control" type="text" value="1"/>
+												<button class="modal-log__sm-btn modal-log__sm-btn--plus" type="button">
+												</button>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--btn col-auto">
+											<div class="modal-log__btn-box">
+												<button class="modal-log__cross-btn" type="button">
+													<svg class="icon icon-cross-sm ">
+														<use xlink:href="img/svg/sprite.svg#cross-sm"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-log__item">
+									<div class="modal-log__i-row row align-items-end">
+										<div class="modal-log__i-col modal-log__i-col--size col-md">
+											<div class="modal-log__ig-title">Габариты (ДхШхВ), м
+											</div>
+											<div class="modal-log__ig modal-log__ig--size input-group"><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--volume col-6 col-md-auto">
+											<div class="modal-log__ig-title">Объем, м3
+											</div>
+											<div class="modal-log__volume"><span>0.01</span><span>м3</span>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--weight col-6 col-md-auto">
+											<div class="modal-log__ig-title">Вес, кг
+											</div>
+											<div class="modal-log__input-wrap" data-add-ph="кг"><input class="modal-log__input modal-log__input--weight form-control" type="number" min="0" max="10"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--place col col-md-auto">
+											<div class="modal-log__ig-title">Одинаковые места
+											</div>
+											<div class="modal-log__ig modal-log__ig--place input-group">
+												<button class="modal-log__sm-btn modal-log__sm-btn--min" type="button">
+												</button><input class="modal-log__input form-control" type="text" value="1"/>
+												<button class="modal-log__sm-btn modal-log__sm-btn--plus" type="button">
+												</button>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--btn col-auto">
+											<div class="modal-log__btn-box">
+												<button class="modal-log__cross-btn" type="button">
+													<svg class="icon icon-cross-sm ">
+														<use xlink:href="img/svg/sprite.svg#cross-sm"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-log__item">
+									<div class="modal-log__i-row row align-items-end">
+										<div class="modal-log__i-col modal-log__i-col--size col-md">
+											<div class="modal-log__ig-title">Габариты (ДхШхВ), м
+											</div>
+											<div class="modal-log__ig modal-log__ig--size input-group"><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--volume col-6 col-md-auto">
+											<div class="modal-log__ig-title">Объем, м3
+											</div>
+											<div class="modal-log__volume"><span>0.01</span><span>м3</span>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--weight col-6 col-md-auto">
+											<div class="modal-log__ig-title">Вес, кг
+											</div>
+											<div class="modal-log__input-wrap" data-add-ph="кг"><input class="modal-log__input modal-log__input--weight form-control" type="number" min="0" max="10"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--place col col-md-auto">
+											<div class="modal-log__ig-title">Одинаковые места
+											</div>
+											<div class="modal-log__ig modal-log__ig--place input-group">
+												<button class="modal-log__sm-btn modal-log__sm-btn--min" type="button">
+												</button><input class="modal-log__input form-control" type="text" value="1"/>
+												<button class="modal-log__sm-btn modal-log__sm-btn--plus" type="button">
+												</button>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--btn col-auto">
+											<div class="modal-log__btn-box">
+												<button class="modal-log__cross-btn" type="button">
+													<svg class="icon icon-cross-sm ">
+														<use xlink:href="img/svg/sprite.svg#cross-sm"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button class="modal-log__add-btn" type="button">
+								<div class="modal-log__a-ball">
+									<svg class="icon icon-add ">
+										<use xlink:href="img/svg/sprite.svg#add"></use>
+									</svg>
+								</div><span>Добавить</span>
+							</button>
+						</div>
+						<div class="modal-log__box modal-log__box--bot">
+							<div class="modal-log__title modal-log__title--bot">Направление
+							</div>
+							<div class="modal-log__d-row row align-items-center">
+								<div class="col">
+									<div class="modal-log__d-items">
+										<div class="modal-log__d-item">
+											<div class="modal-log__d-sub-row row align-items-center">
+												<div class="col-auto">
+													<div class="modal-log__d-ball">A
+													</div>
+												</div>
+												<div class="col">
+													<div class="modal-log__input-wrap form-group"><input class="modal-log__input form-control" name="text" type="text" placeholder="Москва" value="Тольятти"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+										<div class="modal-log__d-item">
+											<div class="modal-log__d-sub-row row align-items-center">
+												<div class="col-auto">
+													<div class="modal-log__d-ball">Б
+													</div>
+												</div>
+												<div class="col">
+													<div class="modal-log__input-wrap form-group"><input class="modal-log__input form-control" name="text" type="text" placeholder="Санкт-Петербург" value="Челябинск"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="modal-log__d-transfer"><img loading="lazy" src="img/svg/transfer.svg" alt=""/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-log__col modal-log__col--right col-lg">
+						<div class="modal-log__sub-box modal-log__sub-box--dir">
+							<div class="modal-log__val-items">
+								<div class="modal-log__d-item modal-log__d-item--val-item">
+									<div class="modal-log__v-sub-row row align-items-center">
+										<div class="col-auto">
+											<div class="modal-log__d-ball modal-log__d-ball--v">A
+											</div>
+										</div>
+										<div class="modal-log__v-txt col">Тольятти
+										</div>
+									</div>
+								</div>
+								<div class="modal-log__d-item modal-log__d-item--val-item">
+									<div class="modal-log__v-sub-row row align-items-center">
+										<div class="col-auto">
+											<div class="modal-log__d-ball modal-log__d-ball--v">Б
+											</div>
+										</div>
+										<div class="modal-log__v-txt col">Челябинск
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-log__data-items">
+								<div class="modal-log__data-item">Груз: 0.01 м3, 0 кг, 1 место
+								</div>
+								<div class="modal-log__data-item">Груз: 0.01 м3, 0 кг, 1 место
+								</div>
+								<div class="modal-log__data-item">Груз: 0.01 м3, 0 кг, 1 место
+								</div>
+							</div>
+						</div>
+						<div class="modal-log__sub-box modal-log__sub-box--price">
+							<div class="modal-log__p-row row">
+								<div class="modal-log__p-title col">Автоперевозка
+								</div>
+								<div class="modal-log__p-val col-auto">0 ₽
+								</div>
+							</div>
+						</div>
+						<div class="modal-log__sub-box modal-log__sub-box--price">
+							<div class="modal-log__p-row row">
+								<div class="modal-log__p-title col">Сумма
+								</div>
+								<div class="modal-log__p-val col-auto">0 ₽
+								</div>
+							</div>
+						</div>
+						<div class="modal-log__sub-box modal-log__sub-box--foot">
+							<div class="modal-log__f-row row align-items-center">
+								<div class="col-auto">
+									<div class="modal-log__f-img"><img loading="lazy" src="img/svg/lorry.svg" alt=""/>
+									</div>
+								</div>
+								<div class="col"><span class="modal-log__f-time modal-log__f-time--gray">
+									Ориентировочный срок доставки:
+									</span><span class="modal-log__f-time modal-log__f-time--black">0 дней</span>
+								</div>
+							</div>
+							<button class="modal-log__btn-order" type="button">Заказать доставку
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-log modal-win" id="modal-log3" style="display: none">
+			<div class="mod-close-btn modal-close-js">
+				<svg class="icon icon-cross-sm ">
+					<use xlink:href="img/svg/sprite.svg#cross-sm"></use>
+				</svg>
+			</div>
+			<div class="modal-win__header">
+				<div class="modal-win__title">калькулятор логистики</div>
+			</div>
+			<div class="modal-win__content">
+				<div class="modal-log__row row gx-0">
+					<div class="modal-log__col modal-log__col--left col-lg-auto">
+						<div class="modal-log__box modal-log__box--top">
+							<div class="modal-log__title modal-log__title--top">Данные о грузе
+							</div>
+							<div class="modal-log__items">
+								<div class="modal-log__item">
+									<div class="modal-log__i-row row align-items-end">
+										<div class="modal-log__i-col modal-log__i-col--size col-md">
+											<div class="modal-log__ig-title">Габариты (ДхШхВ), м
+											</div>
+											<div class="modal-log__ig modal-log__ig--size input-group"><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--volume col-6 col-md-auto">
+											<div class="modal-log__ig-title">Объем, м3
+											</div>
+											<div class="modal-log__volume"><span>0.01</span><span>м3</span>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--weight col-6 col-md-auto">
+											<div class="modal-log__ig-title">Вес, кг
+											</div>
+											<div class="modal-log__input-wrap" data-add-ph="кг"><input class="modal-log__input modal-log__input--weight form-control" type="number" min="0" max="10"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--place col col-md-auto">
+											<div class="modal-log__ig-title">Одинаковые места
+											</div>
+											<div class="modal-log__ig modal-log__ig--place input-group">
+												<button class="modal-log__sm-btn modal-log__sm-btn--min" type="button">
+												</button><input class="modal-log__input form-control" type="text" value="1"/>
+												<button class="modal-log__sm-btn modal-log__sm-btn--plus" type="button">
+												</button>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--btn col-auto">
+											<div class="modal-log__btn-box">
+												<button class="modal-log__cross-btn" type="button">
+													<svg class="icon icon-cross-sm ">
+														<use xlink:href="img/svg/sprite.svg#cross-sm"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="modal-log__i-error text-danger">Текст ошибки при заполнении габаритов.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-log__item">
+									<div class="modal-log__i-row row align-items-end">
+										<div class="modal-log__i-col modal-log__i-col--size col-md">
+											<div class="modal-log__ig-title">Габариты (ДхШхВ), м
+											</div>
+											<div class="modal-log__ig modal-log__ig--size input-group"><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--volume col-6 col-md-auto">
+											<div class="modal-log__ig-title">Объем, м3
+											</div>
+											<div class="modal-log__volume"><span>0.01</span><span>м3</span>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--weight col-6 col-md-auto">
+											<div class="modal-log__ig-title">Вес, кг
+											</div>
+											<div class="modal-log__input-wrap" data-add-ph="кг"><input class="modal-log__input modal-log__input--weight form-control" type="number" min="0" max="10"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--place col col-md-auto">
+											<div class="modal-log__ig-title">Одинаковые места
+											</div>
+											<div class="modal-log__ig modal-log__ig--place input-group">
+												<button class="modal-log__sm-btn modal-log__sm-btn--min" type="button">
+												</button><input class="modal-log__input form-control" type="text" value="1"/>
+												<button class="modal-log__sm-btn modal-log__sm-btn--plus" type="button">
+												</button>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--btn col-auto">
+											<div class="modal-log__btn-box">
+												<button class="modal-log__cross-btn" type="button">
+													<svg class="icon icon-cross-sm ">
+														<use xlink:href="img/svg/sprite.svg#cross-sm"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-log__item">
+									<div class="modal-log__i-row row align-items-end">
+										<div class="modal-log__i-col modal-log__i-col--size col-md">
+											<div class="modal-log__ig-title">Габариты (ДхШхВ), м
+											</div>
+											<div class="modal-log__ig modal-log__ig--size input-group"><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+												<div class="modal-log__x">
+												</div><input class="modal-log__input form-control" type="number" min="0" max="10" value="0.1"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--volume col-6 col-md-auto">
+											<div class="modal-log__ig-title">Объем, м3
+											</div>
+											<div class="modal-log__volume"><span>0.01</span><span>м3</span>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--weight col-6 col-md-auto">
+											<div class="modal-log__ig-title">Вес, кг
+											</div>
+											<div class="modal-log__input-wrap" data-add-ph="кг"><input class="modal-log__input modal-log__input--weight form-control" type="number" min="0" max="10"/>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--place col col-md-auto">
+											<div class="modal-log__ig-title">Одинаковые места
+											</div>
+											<div class="modal-log__ig modal-log__ig--place input-group">
+												<button class="modal-log__sm-btn modal-log__sm-btn--min" type="button">
+												</button><input class="modal-log__input form-control" type="text" value="1"/>
+												<button class="modal-log__sm-btn modal-log__sm-btn--plus" type="button">
+												</button>
+											</div>
+										</div>
+										<div class="modal-log__i-col modal-log__i-col--btn col-auto">
+											<div class="modal-log__btn-box">
+												<button class="modal-log__cross-btn" type="button">
+													<svg class="icon icon-cross-sm ">
+														<use xlink:href="img/svg/sprite.svg#cross-sm"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button class="modal-log__add-btn" type="button">
+								<div class="modal-log__a-ball">
+									<svg class="icon icon-add ">
+										<use xlink:href="img/svg/sprite.svg#add"></use>
+									</svg>
+								</div><span>Добавить</span>
+							</button>
+						</div>
+						<div class="modal-log__box modal-log__box--bot">
+							<div class="modal-log__title modal-log__title--bot">Направление
+							</div>
+							<div class="modal-log__d-row row align-items-center">
+								<div class="col">
+									<div class="modal-log__d-items">
+										<div class="modal-log__d-item">
+											<div class="modal-log__d-sub-row row align-items-center">
+												<div class="col-auto">
+													<div class="modal-log__d-ball">A
+													</div>
+												</div>
+												<div class="col">
+													<div class="modal-log__input-wrap form-group"><input class="modal-log__input form-control border-danger" name="text" type="text" placeholder="Москва" value=""/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+										<div class="modal-log__d-item">
+											<div class="modal-log__d-sub-row row align-items-center">
+												<div class="col-auto">
+													<div class="modal-log__d-ball">Б
+													</div>
+												</div>
+												<div class="col">
+													<div class="modal-log__input-wrap form-group"><input class="modal-log__input form-control" name="text" type="text" placeholder="Санкт-Петербург" value="Челябинск"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="modal-log__d-transfer"><img loading="lazy" src="img/svg/transfer.svg" alt=""/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-log__col modal-log__col--right col-lg">
+						<div class="modal-log__sub-box modal-log__sub-box--dir">
+							<div class="modal-log__val-items">
+								<div class="modal-log__d-item modal-log__d-item--val-item">
+									<div class="modal-log__v-sub-row row align-items-center">
+										<div class="col-auto">
+											<div class="modal-log__d-ball modal-log__d-ball--v">A
+											</div>
+										</div>
+										<div class="modal-log__v-txt col text-danger">Введите адрес забора
+										</div>
+									</div>
+								</div>
+								<div class="modal-log__d-item modal-log__d-item--val-item">
+									<div class="modal-log__v-sub-row row align-items-center">
+										<div class="col-auto">
+											<div class="modal-log__d-ball modal-log__d-ball--v">Б
+											</div>
+										</div>
+										<div class="modal-log__v-txt col">Челябинск
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-log__data-items">
+								<div class="modal-log__data-item">Груз: 0.01 м3, 0 кг, 1 место
+								</div>
+								<div class="modal-log__data-item">Груз: 0.01 м3, 0 кг, 1 место
+								</div>
+								<div class="modal-log__data-item">Груз: 0.01 м3, 0 кг, 1 место
+								</div>
+							</div>
+						</div>
+						<div class="modal-log__sub-box modal-log__sub-box--price">
+							<div class="modal-log__p-row row">
+								<div class="modal-log__p-title col">Автоперевозка
+								</div>
+								<div class="modal-log__p-val col-auto">0 ₽
+								</div>
+							</div>
+						</div>
+						<div class="modal-log__sub-box modal-log__sub-box--price">
+							<div class="modal-log__p-row row">
+								<div class="modal-log__p-title col">Сумма
+								</div>
+								<div class="modal-log__p-val col-auto">0 ₽
+								</div>
+							</div>
+						</div>
+						<div class="modal-log__sub-box modal-log__sub-box--foot">
+							<div class="modal-log__f-row row align-items-center">
+								<div class="col-auto">
+									<div class="modal-log__f-img"><img loading="lazy" src="img/svg/lorry.svg" alt=""/>
+									</div>
+								</div>
+								<div class="col"><span class="modal-log__f-time modal-log__f-time--gray">
+									Ориентировочный срок доставки:
+									</span><span class="modal-log__f-time modal-log__f-time--black">0 дней</span>
+								</div>
+							</div>
+							<button class="modal-log__btn-order" type="button">Заказать доставку
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#modal-log-->
+		<div class="modal-complain modal-complain--succ modal-win" id="modal-order-success" style="display: none">
+			<div class="mod-close-btn modal-close-js">
+				<svg class="icon icon-cross-sm ">
+					<use xlink:href="img/svg/sprite.svg#cross-sm"></use>
+				</svg>
+			</div>
+			<div class="form-wrap">
+				<div class="form-wrap__title form-wrap__title--success text-center">
+					<h2>заявка на доставку отправлена</h2>
+					<p>Менеджер логистики свяжется с Вами<br/>в ближайшее время для согласования деталей.</p>
+				</div>
+				<div class="text-center">
+					<button class="form-wrap__btn form-wrap__btn--w-auto" type="submit">Закрыть
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-comp-success-->
 		<!-- end modals-->
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
 		<script src="libs/hc-sticky/hc-sticky.js"></script>
