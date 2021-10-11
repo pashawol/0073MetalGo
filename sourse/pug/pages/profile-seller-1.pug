@@ -25,14 +25,14 @@ block pagecontent
 					+e.title-col.col-md-4.col-xl-auto
 						+e.H1.title поставщик
 					.col
-						+e.tabs-btn-row.row
-							+tabsBtn('user', 'Информация')
-							+tabsBtn('warehouse', 'Склады')
-							+tabsBtn('list', 'Объявления')
-							+tabsBtn('star', 'Отзывы', 'active')
+						+e.tabs-btn-row--alt.row
+							+tabsBtn2('user', 'Информация', 'active')
+							+tabsBtn2('warehouse', 'Склады')
+							+tabsBtn2('list', 'Объявления')
+							+tabsBtn2('star', 'Отзывы')
 		+sProfileS({
 			showList: true,
-			markLeft: true,
+			markForm: true,
 		})
 			+contactsBox({
 				title: 'контакты поставщика',

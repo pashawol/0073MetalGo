@@ -8,10 +8,10 @@ include ../blocks/sProfileS/_sProfileS.pug
 
 block variables
 	- let  mainPage= null
-	- let  bg='06-1-320.png'
+	- let  bg='06-4-320.png'
 
 block title
-	- let  title= '06-2-prof-seller'
+	- let  title= '07-1-prof-buyer'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -23,26 +23,28 @@ block pagecontent
 			.container
 				+e.row.row.align-items-center.pb-0
 					+e.title-col.col-md-4.col-xl-auto
-						+e.H1.title поставщик
+						+e.H1.title покупатель
 					.col
-						+e.tabs-btn-row.row
-							+tabsBtn('user', 'Информация')
-							+tabsBtn('warehouse', 'Склады', 'active')
-							+tabsBtn('list', 'Объявления')
-							+tabsBtn('star', 'Отзывы')
-		+sProfileS({
-			showMap: true,
+						+e.tabs-btn-row--alt.row
+							+tabsBtn2('user', 'Информация', 'active')
+							+tabsBtn2('list', 'Заявки')
+							+tabsBtn2('star', 'Отзывы')
+		+sProfileBuyer({
+			showList: true,
+			markForm: false,
 			markLeft: true,
+			fbTabTxt: 'отзывы покупателя',
 		})
 			+contactsBox({
-				title: 'контакты поставщика',
+				title: 'контакты покупателя',
 				logo: true,
-				name: 'ООО «МеталГо»',
+				name: 'ООО «Челябинская стальная компания»',
 				city: 'Челябинск',
 				tell: '+7 (495) 000-55-25',
 				telHref: '+74950005525',
 				email: 'info@metalgo.biz',
 				cite: 'https://metalgo.biz',
+				complainTxt: 'Пожаловаться на пользователя',
 				inn: true,
 				feedback: true,
 				hidden: false,

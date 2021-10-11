@@ -184,7 +184,7 @@ mixin sProfileS(data)
 		.container
 			+e.row.row.gy-20
 				.col.tabs__wrap
-					.tabs__content
+					.tabs__content.active
 						+titleBox({
 							title: 'информация о поставщике',
 						})
@@ -254,7 +254,7 @@ mixin sProfileS(data)
 							.row
 								.col-sm-auto
 									+pugin()
-					.tabs__content.active
+					.tabs__content
 						//-addClasses: 'pad-alt',
 						+titleBox({
 							addClasses: 'pad-alt2',

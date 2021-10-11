@@ -2,14 +2,14 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>06-hidden</title>
+		<title>03-ads</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no initial-scale=1 maximum-scale=1">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="06-4-320.png">
+	<body data-bg="03.png">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-xl-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js border-0"><span></span>
@@ -106,8 +106,8 @@
 										</div>
 									</a>
 								</div>
-								<div class="lc__quit text-center text-danger" href="">Выйти из аккаунта
-								</div>
+								<a class="lc__quit text-center text-danger" href="#">Выйти из аккаунта
+								</a>
 							</div>
 						</div>
 					</div>
@@ -269,8 +269,8 @@
 													</div>
 												</a>
 											</div>
-											<div class="lc__quit text-center text-danger" href="">Выйти из аккаунта
-											</div>
+											<a class="lc__quit text-center text-danger" href="#">Выйти из аккаунта
+											</a>
 										</div>
 									</div>
 								</div>
@@ -293,1150 +293,222 @@
 				</header>
 			</div>
 			<!-- end header-->
-			<!-- tabs wrap required for js work only if u remove js, remove this wrap-->
-			<div class="tabs">
-				<div class="white-line white-line--pad-alt2 bg-white pb-0 p-md-0">
-					<div class="container">
-						<div class="white-line__row row align-items-center pb-0">
-							<div class="white-line__title-col col-md-4 col-xl-auto">
-								<h1 class="white-line__title">поставщик
-								</h1>
-							</div>
-							<div class="col">
-								<div class="white-line__tabs-btn-row row">
-									<div class="col col-md-auto">
-										<div class="white-line__tabs-btn tabs__btn">
-											<svg class="icon icon-tabs-user d-md-none">
-												<use xlink:href="img/svg/sprite.svg#tabs-user"></use>
-											</svg>
-											<div class="white-line__tabs-txt">Информация
-											</div>
-										</div>
-									</div>
-									<div class="col col-md-auto">
-										<div class="white-line__tabs-btn tabs__btn">
-											<svg class="icon icon-tabs-warehouse d-md-none">
-												<use xlink:href="img/svg/sprite.svg#tabs-warehouse"></use>
-											</svg>
-											<div class="white-line__tabs-txt">Склады
-											</div>
-										</div>
-									</div>
-									<div class="col col-md-auto">
-										<div class="white-line__tabs-btn tabs__btn">
-											<svg class="icon icon-tabs-list d-md-none">
-												<use xlink:href="img/svg/sprite.svg#tabs-list"></use>
-											</svg>
-											<div class="white-line__tabs-txt">Объявления
-											</div>
-										</div>
-									</div>
-									<div class="col col-md-auto">
-										<div class="white-line__tabs-btn tabs__btn active">
-											<svg class="icon icon-tabs-star d-md-none">
-												<use xlink:href="img/svg/sprite.svg#tabs-star"></use>
-											</svg>
-											<div class="white-line__tabs-txt">Отзывы
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+			<div class="white-line white-line--pad-alt bg-white">
+				<div class="container">
+					<div class="white-line__row row align-items-center pb-0">
+						<div class="col-lg-4 col-xl-3">
+							<h1 class="white-line__title">объявление
+							</h1>
 						</div>
 					</div>
 				</div>
-				<!-- start sProfileS-->
-				<section class="sProfileS section" id="sProfileS">
-					<div class="container">
-						<div class="sProfileS__row row gy-20">
-							<div class="col tabs__wrap">
-								<div class="tabs__content">
-									<div class="t-box">
-										<div class="t-box__header">
-											<div class="t-box__row row align-items-center">
-												<div class="col">
-													<div class="t-box__title-row row flex-nowrap align-items-center">
-														<div class="col-auto">
-															<h2 class="t-box__title">информация о поставщике</h2>
-														</div>
-													</div>
+			</div>
+			<!-- start sAds-->
+			<section class="sAds section" id="sAds">
+				<div class="container">
+					<div class="sAds__row row gy-20">
+						<div class="col">
+							<div class="t-box">
+								<div class="t-box__header">
+									<div class="t-box__row row align-items-center">
+										<div class="col">
+											<div class="t-box__title-row row flex-nowrap align-items-center">
+												<div class="col-auto">
+													<h2 class="t-box__title">информация об объявлении</h2>
 												</div>
 											</div>
 										</div>
-										<div class="t-box__content">
-											<div class="ads-bl">
-												<div class="ads-bl__items ads-bl__items--lats-alt">
-													<div class="ads-bl__item">
-														<div class="ads-bl__i-row row">
-															<div class="ads-bl__i-title col-md-6">Наименование:
-															</div>
-															<div class="ads-bl__i-val col-md-6 ps-xl-0">
-																<div class="hid-alert">Информация скрыта
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="ads-bl__item">
-														<div class="ads-bl__i-row row">
-															<div class="ads-bl__i-title col-md-6">Ответственное лицо:
-															</div>
-															<div class="ads-bl__i-val col-md-6 ps-xl-0">Иванов Иван
-															</div>
-														</div>
-													</div>
-													<div class="ads-bl__item">
-														<div class="ads-bl__i-row row">
-															<div class="ads-bl__i-title col-md-6">ИНН:
-															</div>
-															<div class="ads-bl__i-val col-md-6 ps-xl-0">
-																<div class="hid-alert">Информация скрыта
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="ads-bl__item">
-														<div class="ads-bl__i-row row">
-															<div class="ads-bl__i-title col-md-6">Юридический адрес:
-															</div>
-															<div class="ads-bl__i-val col-md-6 ps-xl-0">
-																<div class="hid-alert">Информация скрыта
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="ads-bl__item">
-														<div class="ads-bl__i-row row">
-															<div class="ads-bl__i-title col-md-6">Адрес офиса:
-															</div>
-															<div class="ads-bl__i-val col-md-6 ps-xl-0">
-																<div class="hid-alert">Информация скрыта
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="ads-bl__item">
-														<div class="ads-bl__i-row row">
-															<div class="ads-bl__i-title col-md-6">Расчетный счет:
-															</div>
-															<div class="ads-bl__i-val col-md-6 ps-xl-0">
-																<div class="hid-alert">Информация скрыта
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="ads-bl__item">
-														<div class="ads-bl__i-row row">
-															<div class="ads-bl__i-title col-md-6">БИК банка:
-															</div>
-															<div class="ads-bl__i-val col-md-6 ps-xl-0">
-																<div class="hid-alert">Информация скрыта
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+										<div class="col-auto d-none d-md-block"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">24.12.2020</span>
+										</div>
+										<div class="col-auto d-none d-md-block"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">24.12.2020</span>
 										</div>
 									</div>
 								</div>
-								<div class="tabs__content">
-									<div class="t-box pad-alt">
-										<div class="t-box__header">
-											<div class="t-box__row row align-items-center">
-												<div class="col">
-													<div class="t-box__title-row row flex-nowrap align-items-center">
-														<div class="col-auto">
-															<h2 class="t-box__title">склады поставщика</h2>
-														</div>
+								<div class="t-box__content">
+									<div class="ads-bl">
+										<div class="ads-bl__items">
+											<div class="ads-bl__item">
+												<div class="ads-bl__i-row row">
+													<div class="ads-bl__i-title col-md-6">Наименование:
 													</div>
-												</div>
-												<div class="col-auto d-none d-md-block">
-													<div class="show-row row align-items-center">
-														<div class="show-row__txt col-auto">Показать:
-														</div>
-														<div class="col-auto">
-															<div class="show-row__input-wrap form-group">
-																<select class="show-row__input form-select" name="select">
-																	<option value="Список">Список</option>
-																	<option value=" placeholder 1">placeholder 1</option>
-																	<option value=" placeholder 2">placeholder 2</option>
-																	<option value=" placeholder 3">placeholder 3</option>
-																	<option value=" placeholder 4">placeholder 4</option>
-																</select>
-															</div>
-															<!-- +e.input-wrap-->
-														</div>
+													<div class="ads-bl__i-val col-md-6 ps-xl-0">Арматура
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="t-box__content">
-											<div class="show-row row align-items-center d-md-none">
-												<div class="show-row__txt col-auto">Показать:
-												</div>
-												<div class="col col-sm-auto">
-													<div class="show-row__input-wrap form-group">
-														<select class="show-row__input form-select" name="select">
-															<option value="Список">Список</option>
-															<option value=" placeholder 1">placeholder 1</option>
-															<option value=" placeholder 2">placeholder 2</option>
-															<option value=" placeholder 3">placeholder 3</option>
-															<option value=" placeholder 4">placeholder 4</option>
-														</select>
+											<div class="ads-bl__item">
+												<div class="ads-bl__i-row row">
+													<div class="ads-bl__i-title col-md-6">Цена (с НДС):
 													</div>
-													<!-- +e.input-wrap-->
-												</div>
-											</div>
-											<div class="alert alert-primary alert-lg">Авторизуйтесь, чтобы увидеть адреса складов.</div>
-										</div>
-									</div>
-								</div>
-								<div class="tabs__content">
-									<div class="sSearch__items">
-										<div class="s-item">
-											<div class="s-item__top-row row align-items-center">
-												<div class="col">
-													<div class="s-item__name"><a href="#"><span class="fw-500">Труба</span><span>324 000 ₽</span></a><span class="text-secondary">
-															
-															с НДС</span>
-													</div>
-												</div>
-												<div class="col-auto d-none d-md-block">
-													<a class="s-item__comp-link mb-0" href="#">
-														<div class="s-item__comp-row row d-flex align-items-center">
-															<div class="col-auto">
-																<div class="hid-alert">Информация скрыта
-																</div>
-															</div>
-															<div class="col-auto d-block">
-																<div class="s-item__rate">
-																	<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-																	</div>
-																	<div class="s-item__rate-val">4.9
-																	</div>
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-auto">
-													<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/house.svg" alt=""/>
-														<div class="tt-content tt-content--w-auto">Челябинск
-														</div>
+													<div class="ads-bl__i-val col-md-6 ps-xl-0">324 000 ₽
 													</div>
 												</div>
 											</div>
-											<div class="s-item__char-row row">
-												<div class="col-md-auto">
-													<div class="s-item__main-char">34,7 тн
+											<div class="ads-bl__item">
+												<div class="ads-bl__i-row row">
+													<div class="ads-bl__i-title col-md-6">Вес:
 													</div>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Марка:</span><span class="s-item__val">03Х21Н21М4ГБ</span>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Размер:</span><span class="s-item__val">360 мм</span>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Толщина стенки:</span><span class="s-item__val">18 мм</span>
-												</div>
-											</div>
-											<div class="s-item__standart">ГОСТ 8732-78
-											</div>
-											<div class="d-md-none">
-												<a class="s-item__comp-link" href="#">
-													<div class="s-item__comp-row row d-flex align-items-center">
-														<div class="col-auto">
-															<div class="hid-alert">Информация скрыта
-															</div>
-														</div>
-														<div class="col-auto d-block">
-															<div class="s-item__rate">
-																<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-																</div>
-																<div class="s-item__rate-val">4.9
-																</div>
-															</div>
-														</div>
-													</div>
-												</a>
-											</div>
-											<div class="s-item__foot-row row align-items-center">
-												<div class="col-sm order-last order-sm-0">
-													<div class="s-item__date-row row gy-1">
-														<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-														</div>
-														<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-														</div>
-													</div>
-												</div>
-												<div class="col-sm-auto">
-													<div class="s-item__btns-row row">
-														<div class="col-6 col-sm-auto">
-															<button class="s-item__btn s-item__btn--out-light" type="button">
-																<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-																</div><span>Написать</span>
-															</button>
-														</div>
-														<div class="col-6 col-sm-auto">
-															<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-															</button>
-														</div>
+													<div class="ads-bl__i-val col-md-6 ps-xl-0">34,7 тн
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="s-item">
-											<div class="s-item__top-row row align-items-center">
-												<div class="col">
-													<div class="s-item__name"><a href="#"><span class="fw-500">Труба</span><span>324 000 ₽</span></a><span class="text-secondary">
-															
-															с НДС</span>
+											<div class="ads-bl__item">
+												<div class="ads-bl__i-row row">
+													<div class="ads-bl__i-title col-md-6">Марка:
 													</div>
-												</div>
-												<div class="col-auto d-none d-md-block">
-													<a class="s-item__comp-link mb-0" href="#">
-														<div class="s-item__comp-row row d-flex align-items-center">
-															<div class="col-auto">
-																<div class="hid-alert">Информация скрыта
-																</div>
-															</div>
-															<div class="col-auto d-block">
-																<div class="s-item__rate">
-																	<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-																	</div>
-																	<div class="s-item__rate-val">4.9
-																	</div>
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-auto">
-													<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/house.svg" alt=""/>
-														<div class="tt-content tt-content--w-auto">Челябинск
-														</div>
+													<div class="ads-bl__i-val col-md-6 ps-xl-0">03Х21Н21М4ГБ
 													</div>
 												</div>
 											</div>
-											<div class="s-item__char-row row">
-												<div class="col-md-auto">
-													<div class="s-item__main-char">34,7 тн
+											<div class="ads-bl__item">
+												<div class="ads-bl__i-row row">
+													<div class="ads-bl__i-title col-md-6">Размер:
 													</div>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Марка:</span><span class="s-item__val">03Х21Н21М4ГБ</span>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Размер:</span><span class="s-item__val">360 мм</span>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Толщина стенки:</span><span class="s-item__val">18 мм</span>
-												</div>
-											</div>
-											<div class="s-item__standart">ГОСТ 8732-78
-											</div>
-											<div class="d-md-none">
-												<a class="s-item__comp-link" href="#">
-													<div class="s-item__comp-row row d-flex align-items-center">
-														<div class="col-auto">
-															<div class="hid-alert">Информация скрыта
-															</div>
-														</div>
-														<div class="col-auto d-block">
-															<div class="s-item__rate">
-																<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-																</div>
-																<div class="s-item__rate-val">4.9
-																</div>
-															</div>
-														</div>
-													</div>
-												</a>
-											</div>
-											<div class="s-item__foot-row row align-items-center">
-												<div class="col-sm order-last order-sm-0">
-													<div class="s-item__date-row row gy-1">
-														<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-														</div>
-														<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-														</div>
-													</div>
-												</div>
-												<div class="col-sm-auto">
-													<div class="s-item__btns-row row">
-														<div class="col-6 col-sm-auto">
-															<button class="s-item__btn s-item__btn--out-light" type="button">
-																<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-																</div><span>Написать</span>
-															</button>
-														</div>
-														<div class="col-6 col-sm-auto">
-															<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-															</button>
-														</div>
+													<div class="ads-bl__i-val col-md-6 ps-xl-0">360 мм
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="s-item">
-											<div class="s-item__top-row row align-items-center">
-												<div class="col">
-													<div class="s-item__name"><a href="#"><span class="fw-500">Труба</span><span>324 000 ₽</span></a><span class="text-secondary">
-															
-															с НДС</span>
+											<div class="ads-bl__item">
+												<div class="ads-bl__i-row row">
+													<div class="ads-bl__i-title col-md-6">Толщина стенки:
 													</div>
-												</div>
-												<div class="col-auto d-none d-md-block">
-													<a class="s-item__comp-link mb-0" href="#">
-														<div class="s-item__comp-row row d-flex align-items-center">
-															<div class="col-auto">
-																<div class="hid-alert">Информация скрыта
-																</div>
-															</div>
-															<div class="col-auto d-block">
-																<div class="s-item__rate">
-																	<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-																	</div>
-																	<div class="s-item__rate-val">4.9
-																	</div>
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-auto">
-													<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/house.svg" alt=""/>
-														<div class="tt-content tt-content--w-auto">Челябинск
-														</div>
+													<div class="ads-bl__i-val col-md-6 ps-xl-0">18 мм
 													</div>
 												</div>
 											</div>
-											<div class="s-item__char-row row">
-												<div class="col-md-auto">
-													<div class="s-item__main-char">34,7 тн
+											<div class="ads-bl__item">
+												<div class="ads-bl__i-row row">
+													<div class="ads-bl__i-title col-md-6">Стандарт:
 													</div>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Марка:</span><span class="s-item__val">03Х21Н21М4ГБ</span>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Размер:</span><span class="s-item__val">360 мм</span>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Толщина стенки:</span><span class="s-item__val">18 мм</span>
-												</div>
-											</div>
-											<div class="s-item__standart">ГОСТ 8732-78
-											</div>
-											<div class="d-md-none">
-												<a class="s-item__comp-link" href="#">
-													<div class="s-item__comp-row row d-flex align-items-center">
-														<div class="col-auto">
-															<div class="hid-alert">Информация скрыта
-															</div>
-														</div>
-														<div class="col-auto d-block">
-															<div class="s-item__rate">
-																<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-																</div>
-																<div class="s-item__rate-val">4.9
-																</div>
-															</div>
-														</div>
-													</div>
-												</a>
-											</div>
-											<div class="s-item__foot-row row align-items-center">
-												<div class="col-sm order-last order-sm-0">
-													<div class="s-item__date-row row gy-1">
-														<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-														</div>
-														<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-														</div>
-													</div>
-												</div>
-												<div class="col-sm-auto">
-													<div class="s-item__btns-row row">
-														<div class="col-6 col-sm-auto">
-															<button class="s-item__btn s-item__btn--out-light" type="button">
-																<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-																</div><span>Написать</span>
-															</button>
-														</div>
-														<div class="col-6 col-sm-auto">
-															<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-															</button>
-														</div>
+													<div class="ads-bl__i-val col-md-6 ps-xl-0">ГОСТ 8732-78 
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="s-item">
-											<div class="s-item__top-row row align-items-center">
-												<div class="col">
-													<div class="s-item__name"><a href="#"><span class="fw-500">Труба</span><span>324 000 ₽</span></a><span class="text-secondary">
-															
-															с НДС</span>
+											<div class="ads-bl__item">
+												<div class="ads-bl__i-row row">
+													<div class="ads-bl__i-title col-md-6">Склад:
 													</div>
-												</div>
-												<div class="col-auto d-none d-md-block">
-													<a class="s-item__comp-link mb-0" href="#">
-														<div class="s-item__comp-row row d-flex align-items-center">
-															<div class="col-auto">
-																<div class="hid-alert">Информация скрыта
-																</div>
-															</div>
-															<div class="col-auto d-block">
-																<div class="s-item__rate">
-																	<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-																	</div>
-																	<div class="s-item__rate-val">4.9
-																	</div>
-																</div>
-															</div>
-														</div>
-													</a>
-												</div>
-												<div class="col-auto">
-													<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/house.svg" alt=""/>
-														<div class="tt-content tt-content--w-auto">Челябинск
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="s-item__char-row row">
-												<div class="col-md-auto">
-													<div class="s-item__main-char">34,7 тн
-													</div>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Марка:</span><span class="s-item__val">03Х21Н21М4ГБ</span>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Размер:</span><span class="s-item__val">360 мм</span>
-												</div>
-												<div class="col-sm-auto"><span class="s-item__key">Толщина стенки:</span><span class="s-item__val">18 мм</span>
-												</div>
-											</div>
-											<div class="s-item__standart">ГОСТ 8732-78
-											</div>
-											<div class="d-md-none">
-												<a class="s-item__comp-link" href="#">
-													<div class="s-item__comp-row row d-flex align-items-center">
-														<div class="col-auto">
-															<div class="hid-alert">Информация скрыта
-															</div>
-														</div>
-														<div class="col-auto d-block">
-															<div class="s-item__rate">
-																<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-																</div>
-																<div class="s-item__rate-val">4.9
-																</div>
-															</div>
-														</div>
-													</div>
-												</a>
-											</div>
-											<div class="s-item__foot-row row align-items-center">
-												<div class="col-sm order-last order-sm-0">
-													<div class="s-item__date-row row gy-1">
-														<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-														</div>
-														<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-														</div>
-													</div>
-												</div>
-												<div class="col-sm-auto">
-													<div class="s-item__btns-row row">
-														<div class="col-6 col-sm-auto">
-															<button class="s-item__btn s-item__btn--out-light" type="button">
-																<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-																</div><span>Написать</span>
-															</button>
-														</div>
-														<div class="col-6 col-sm-auto">
-															<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-															</button>
-														</div>
+													<div class="ads-bl__i-val col-md-6 ps-xl-0">Челябинск, улица Шоссе Металлургов 31Б
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="row">
-										<div class="col-sm-auto">
-											<div class="pagination-wrapper">
-												<ul class="page-numbers">
-															<li><span class="prev page-numbers muted" href="#">
-																	<svg class="icon icon-prev ">
-																		<use xlink:href="img/svg/sprite.svg#prev"></use>
-																	</svg></span>
-															</li>
-															<li><span class="page-numbers current"> 1</span>
-															</li>
-															<li><a class="page-numbers" href="#">2</a>
-															</li>
-															<li><a class="page-numbers" href="#">3</a>
-															</li>
-															<li><a class="page-numbers" href="#">...</a>
-															</li>
-															<li><a class="page-numbers" href="#">9</a>
-															</li>
-															<li><a class="page-numbers" href="#">10</a>
-															</li>
-															<li><a class="page-numbers" href="#">11</a>
-															</li>
-															<li><a class="next page-numbers" href="#">
-																	<svg class="icon icon-next ">
-																		<use xlink:href="img/svg/sprite.svg#next"></use>
-																	</svg></a>
-															</li>
-												</ul>
-											</div>
+									<div class="date-row row d-md-none">
+										<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">24.12.2020</span>
 										</div>
-									</div>
-								</div>
-								<div class="tabs__content active">
-									<div class="t-box pad-alt2">
-										<div class="t-box__header">
-											<div class="t-box__row row align-items-center">
-												<div class="col">
-													<div class="t-box__title-row row flex-nowrap align-items-center">
-														<div class="col-auto">
-															<h2 class="t-box__title">отзывы поставщика</h2>
-														</div>
-														<div class="col-auto">
-															<div class="t-box__amount">6</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="t-box__content">
-											<div class="feedback-bl">
-												<div class="feedback-bl__top">
-													<div class="alert alert-primary alert-lg">Авторизуйтесь, чтобы оставить свой отзыв.</div>
-												</div>
-												<div class="feedback-bl__items">
-													<div class="feedback-bl__item">
-														<div class="feedback-bl__i-top-row row align-items-md-center">
-															<div class="col-auto">
-																<a class="feedback-bl__logo" href="#"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-																</a>
-															</div>
-															<div class="col">
-																<div class="feedback-bl__sub-row row">
-																	<div class="col-md-auto">
-																		<a class="feedback-bl__company" href="#">ООО «Челябинская стальная компания»
-																		</a>
-																	</div>
-																	<div class="col-auto">
-																		<div class="feedback-bl__name">Иван Иванов
-																		</div>
-																	</div>
-																	<div class="col-auto ms-md-auto">
-																		<div class="feedback-bl__i-stars row">
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="feedback-bl__txt">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
-														</div>
-														<div class="feedback-bl__date">16.12.2020
-														</div>
-													</div>
-													<div class="feedback-bl__item">
-														<div class="feedback-bl__i-top-row row align-items-md-center">
-															<div class="col-auto">
-																<a class="feedback-bl__logo" href="#"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-																</a>
-															</div>
-															<div class="col">
-																<div class="feedback-bl__sub-row row">
-																	<div class="col-md-auto">
-																		<a class="feedback-bl__company" href="#">ООО «Челябинская стальная компания»
-																		</a>
-																	</div>
-																	<div class="col-auto">
-																		<div class="feedback-bl__name">Иван Иванов
-																		</div>
-																	</div>
-																	<div class="col-auto ms-md-auto">
-																		<div class="feedback-bl__i-stars row">
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="feedback-bl__txt">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
-														</div>
-														<div class="feedback-bl__date">16.12.2020
-														</div>
-													</div>
-													<div class="feedback-bl__item">
-														<div class="feedback-bl__i-top-row row align-items-md-center">
-															<div class="col-auto">
-																<a class="feedback-bl__logo" href="#"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-																</a>
-															</div>
-															<div class="col">
-																<div class="feedback-bl__sub-row row">
-																	<div class="col-md-auto">
-																		<a class="feedback-bl__company" href="#">ООО «Челябинская стальная компания»
-																		</a>
-																	</div>
-																	<div class="col-auto">
-																		<div class="feedback-bl__name">Иван Иванов
-																		</div>
-																	</div>
-																	<div class="col-auto ms-md-auto">
-																		<div class="feedback-bl__i-stars row">
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="feedback-bl__txt">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
-														</div>
-														<div class="feedback-bl__date">16.12.2020
-														</div>
-													</div>
-													<div class="feedback-bl__item">
-														<div class="feedback-bl__i-top-row row align-items-md-center">
-															<div class="col-auto">
-																<a class="feedback-bl__logo" href="#"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-																</a>
-															</div>
-															<div class="col">
-																<div class="feedback-bl__sub-row row">
-																	<div class="col-md-auto">
-																		<a class="feedback-bl__company" href="#">ООО «Челябинская стальная компания»
-																		</a>
-																	</div>
-																	<div class="col-auto">
-																		<div class="feedback-bl__name">Иван Иванов
-																		</div>
-																	</div>
-																	<div class="col-auto ms-md-auto">
-																		<div class="feedback-bl__i-stars row">
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="feedback-bl__txt">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
-														</div>
-														<div class="feedback-bl__date">16.12.2020
-														</div>
-													</div>
-													<div class="feedback-bl__item">
-														<div class="feedback-bl__i-top-row row align-items-md-center">
-															<div class="col-auto">
-																<a class="feedback-bl__logo" href="#"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-																</a>
-															</div>
-															<div class="col">
-																<div class="feedback-bl__sub-row row">
-																	<div class="col-md-auto">
-																		<a class="feedback-bl__company" href="#">ООО «Челябинская стальная компания»
-																		</a>
-																	</div>
-																	<div class="col-auto">
-																		<div class="feedback-bl__name">Иван Иванов
-																		</div>
-																	</div>
-																	<div class="col-auto ms-md-auto">
-																		<div class="feedback-bl__i-stars row">
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="feedback-bl__txt">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
-														</div>
-														<div class="feedback-bl__date">16.12.2020
-														</div>
-													</div>
-													<div class="feedback-bl__item">
-														<div class="feedback-bl__i-top-row row align-items-md-center">
-															<div class="col-auto">
-																<a class="feedback-bl__logo" href="#"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-																</a>
-															</div>
-															<div class="col">
-																<div class="feedback-bl__sub-row row">
-																	<div class="col-md-auto">
-																		<a class="feedback-bl__company" href="#">ООО «Челябинская стальная компания»
-																		</a>
-																	</div>
-																	<div class="col-auto">
-																		<div class="feedback-bl__name">Иван Иванов
-																		</div>
-																	</div>
-																	<div class="col-auto ms-md-auto">
-																		<div class="feedback-bl__i-stars row">
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star active">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="col-auto">
-																				<div class="feedback-bl__star">
-																					<svg class="icon icon-fb-star ">
-																						<use xlink:href="img/svg/sprite.svg#fb-star"></use>
-																					</svg>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="feedback-bl__txt">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
-														</div>
-														<div class="feedback-bl__date">16.12.2020
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-sm-auto">
-														<div class="pagination-wrapper">
-															<ul class="page-numbers">
-																		<li><span class="prev page-numbers muted" href="#">
-																				<svg class="icon icon-prev ">
-																					<use xlink:href="img/svg/sprite.svg#prev"></use>
-																				</svg></span>
-																		</li>
-																		<li><span class="page-numbers current"> 1</span>
-																		</li>
-																		<li><a class="page-numbers" href="#">2</a>
-																		</li>
-																		<li><a class="page-numbers" href="#">3</a>
-																		</li>
-																		<li><a class="page-numbers" href="#">...</a>
-																		</li>
-																		<li><a class="page-numbers" href="#">9</a>
-																		</li>
-																		<li><a class="page-numbers" href="#">10</a>
-																		</li>
-																		<li><a class="page-numbers" href="#">11</a>
-																		</li>
-																		<li><a class="next page-numbers" href="#">
-																				<svg class="icon icon-next ">
-																					<use xlink:href="img/svg/sprite.svg#next"></use>
-																				</svg></a>
-																		</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-xl-3">
-								<div class="t-box t-box--c-box">
-									<div class="t-box__header">
-										<h4 class="t-box__title t-box__title--h4">контакты поставщика</h4>
-									</div>
-									<div class="t-box__content">
-										<div class="c-box">
-											<div class="c-box__item">
-												<div class="c-box__top-row row gy-20">
-													<div class="col-auto">
-														<div class="c-box__l-hidden">Организация
-														</div>
-													</div>
-													<div class="col">
-														<div class="hid-alert mb-1">Информация скрыта
-														</div>
-														<div class="c-box__fb-row row align-items-center">
-															<div class="col-auto">
-																<div class="s-item__rate">
-																	<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-																	</div>
-																	<div class="s-item__rate-val">4.9
-																	</div>
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="c-box__fb-amount">6 отзывов
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="c-box__item">
-												<div class="c-box__i-row row align-items-center">
-													<div class="c-box__title col-auto">Город
-													</div>
-													<div class="col">
-														<div class="hid-alert">Информация скрыта
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="c-box__item">
-												<div class="c-box__i-row row align-items-center">
-													<div class="c-box__title col-auto">Телефон
-													</div>
-													<div class="col">
-														<div class="hid-alert">Информация скрыта
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="c-box__item">
-												<div class="c-box__i-row row align-items-center">
-													<div class="c-box__title col-auto">E-mail
-													</div>
-													<div class="col">
-														<div class="hid-alert">Информация скрыта
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="c-box__item">
-												<div class="c-box__i-row row align-items-center">
-													<div class="c-box__title col-auto">Сайт
-													</div>
-													<div class="col">
-														<div class="hid-alert">Информация скрыта
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="c-box__item">
-												<div class="c-box__i-row row align-items-center">
-													<div class="c-box__title col-auto">ИНН
-													</div>
-													<div class="col">
-														<div class="hid-alert">Информация скрыта
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="c-box__item">
-												<div class="c-box__alert alert alert-primary">Авторизуйтесь, чтобы увидеть контактную информацию.
-												</div>
-												<div class="c-box__btns-box">
-													<a class="s-item__btn s-item__btn--out-light" href="#">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-														</div><span>Написать</span>
-													</a>
-													<a class="s-item__btn s-item__btn--out-light" href="#">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/star-pr.svg" alt=""/>
-														</div><span>Оставить отзыв</span>
-													</a>
-												</div>
-												<div class="text-center">
-													<a class="c-box__complain link-modal-js" href="#modal-complain">Пожаловаться на пользователя
-													</a>
-												</div>
-											</div>
+										<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">24.12.2020</span>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="sSearch__baner d-none d-xl-block"><img loading="lazy" src="img/@2x/sSearch-baner2.png" alt=""/>
+						<div class="col-lg-4 col-xl-3">
+							<div class="t-box t-box--c-box">
+								<div class="t-box__header">
+									<h4 class="t-box__title t-box__title--h4">контакты поставщика</h4>
+								</div>
+								<div class="t-box__content">
+									<div class="c-box">
+										<div class="c-box__item">
+											<div class="c-box__top-row row gy-20 align-items-center">
+												<div class="col-auto">
+													<a class="c-box__logo" href="#" target="_blank"><img loading="lazy" src="img/svg/big-logo.svg" alt=""/>
+													</a>
+												</div>
+												<div class="col">
+													<div class="c-box__name">ООО «Челябинская стальная компания»
+													</div>
+													<div class="c-box__fb-row row align-items-center">
+														<div class="col-auto">
+															<div class="s-item__rate">
+																<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
+																</div>
+																<div class="s-item__rate-val">4.9
+																</div>
+															</div>
+														</div>
+														<div class="col-auto">
+															<div class="c-box__fb-amount">6 отзывов
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="c-box__item">
+											<div class="c-box__i-row row align-items-center">
+												<div class="c-box__title col-auto">Город
+												</div>
+												<div class="col">
+													<div class="c-box__txt-item">Челябинск
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="c-box__item">
+											<div class="c-box__i-row row align-items-center">
+												<div class="c-box__title col-auto">Телефон
+												</div>
+												<div class="col">
+													<a class="c-box__txt-item" href="tel:+74950005525">+7 (495) 000-55-25
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="c-box__item">
+											<div class="c-box__i-row row align-items-center">
+												<div class="c-box__title col-auto">E-mail
+												</div>
+												<div class="col">
+													<a class="c-box__txt-item c-box__txt-item--gray" href="mailto:info@metalgo.biz">info@metalgo.biz
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="c-box__item">
+											<div class="c-box__i-row row align-items-center">
+												<div class="c-box__title col-auto">Сайт
+												</div>
+												<div class="col">
+													<a class="c-box__txt-item c-box__txt-item--gray" href="https://metalgo.biz" target="_blank">https://metalgo.biz
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="c-box__item">
+											<div class="c-box__i-row row align-items-center">
+												<div class="c-box__title col-auto">ИНН
+												</div>
+												<div class="col">
+													<div class="c-box__sub-row row align-items-center">
+														<div class="col-auto">
+															<a class="c-box__inn" href="#">546458776976
+															</a>
+														</div>
+														<div class="col-auto">
+															<a class="btn-sbis" href="#"><img loading="lazy" src="img/svg/sbis.svg" alt=""/>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="c-box__item">
+											<div class="c-box__btns-box">
+												<a class="s-item__btn s-item__btn--out-light" href="#"><span class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/></span><span>Написать</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-				</section>
-				<!-- end sProfileS-->
-			</div>
+					<div class="sSearch__baner d-none d-xl-block"><img loading="lazy" src="img/@2x/sSearch-baner2.png" alt=""/>
+					</div>
+				</div>
+			</section>
+			<!-- end sAds-->
 			<footer class="footer footer--js text-center text-md-start">
 				<div class="footer__top">
 					<div class="container">
@@ -1583,11 +655,10 @@
 						<div class="modal-met__input-wrap form-group">
 							<label><span class="modal-met__input-title">Марка</span>
 								<select class="modal-met__input form-select" name="lalala">
-									<option disabled="disabled" selected="selected" hidden="hidden" value="">Выберите марку
-										<option value="металл1">металл1</option>
-										<option value="металл2">металл2</option>
-										<option value="металл3">металл3</option>
-									</option>
+									<option disabled="disabled" selected="selected" hidden="hidden" value="">Выберите марку</option>
+									<option value="металл1">металл1</option>
+									<option value="металл2">металл2</option>
+									<option value="металл3">металл3</option>
 								</select>
 							</label>
 						</div>
@@ -1597,102 +668,82 @@
 							<div class="modal-met__radio-row row">
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="1"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="1" checked="checked"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-1 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-1"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="2"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="2"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-2 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-2"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="3"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="3"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-3 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-3"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="4"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="4"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-4 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-4"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="5"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="5"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-5 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-5"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="6"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="6"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-6 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-6"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="7"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="7"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-7 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-7"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="8"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="8"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-8 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-8"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="9"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="9"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-9 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-9"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="10"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="10"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-10 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-10"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 							</div>
@@ -2007,12 +1058,10 @@
 									</div>
 								</div>
 							</div>
-							<button class="modal-log__add-btn" type="button">
-								<div class="modal-log__a-ball">
-									<svg class="icon icon-add ">
-										<use xlink:href="img/svg/sprite.svg#add"></use>
-									</svg>
-								</div><span>Добавить</span>
+							<button class="modal-log__add-btn" type="button"><span class="modal-log__a-ball">
+								<svg class="icon icon-add ">
+									<use xlink:href="img/svg/sprite.svg#add"></use>
+								</svg></span><span>Добавить</span>
 							</button>
 						</div>
 						<div class="modal-log__box modal-log__box--bot">
@@ -2271,12 +1320,10 @@
 									</div>
 								</div>
 							</div>
-							<button class="modal-log__add-btn" type="button">
-								<div class="modal-log__a-ball">
-									<svg class="icon icon-add ">
-										<use xlink:href="img/svg/sprite.svg#add"></use>
-									</svg>
-								</div><span>Добавить</span>
+							<button class="modal-log__add-btn" type="button"><span class="modal-log__a-ball">
+								<svg class="icon icon-add ">
+									<use xlink:href="img/svg/sprite.svg#add"></use>
+								</svg></span><span>Добавить</span>
 							</button>
 						</div>
 						<div class="modal-log__box modal-log__box--bot">
@@ -2543,12 +1590,10 @@
 									</div>
 								</div>
 							</div>
-							<button class="modal-log__add-btn" type="button">
-								<div class="modal-log__a-ball">
-									<svg class="icon icon-add ">
-										<use xlink:href="img/svg/sprite.svg#add"></use>
-									</svg>
-								</div><span>Добавить</span>
+							<button class="modal-log__add-btn" type="button"><span class="modal-log__a-ball">
+								<svg class="icon icon-add ">
+									<use xlink:href="img/svg/sprite.svg#add"></use>
+								</svg></span><span>Добавить</span>
 							</button>
 						</div>
 						<div class="modal-log__box modal-log__box--bot">

@@ -191,4 +191,13 @@ $h: 2px;
 	ul{
 
 	}
+
+	.tn-item{
+		.icon{
+			font-size: 30px;
+		}
+		&__txt{
+			font-size: 18px;
+		}
+	}
 }

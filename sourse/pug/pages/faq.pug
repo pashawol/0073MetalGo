@@ -7,13 +7,14 @@ include ../blocks/sAds/_sAds.pug
 include ../blocks/sProfileS/_sProfileS.pug
 include ../blocks/sTarif/_sTarif.pug
 include ../blocks/sTarifsT/_sTarifsT.pug
+include ../blocks/sFAQ/_sFAQ.pug
 
 block variables
 	- let  mainPage= null
-	- let  bg='10-3-320.png'
+	- let  bg='11-1.png'
 
 block title
-	- let  title= '010-tarifs'
+	- let  title= '011-faq'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -25,12 +26,14 @@ block pagecontent
 			.container
 				+e.row.row.align-items-center.pb-0
 					+e.title-col.col-md-4.col-xl-auto
-						+e.H1.title тарифы
+						+e.H1.title помощь
 					.col
-						+e.tabs-btn-row.row
-							+tabsBtn('warehouse', 'Поставщику', 'active')
-							+tabsBtn('user', 'Покупателю')
-							+tabsBtn('pen', 'Дополнительные услуги')
-							+tabsBtn('pic', 'Рекламные баннеры')
-		+sTarifsT()
+						+e.tabs-btn-row--alt.row
+							+tabsBtn2('warehouse', 'Ответы на вопросы', 'active')
+							+tabsBtn2('user', 'Видео-инструкции')
+		//-+sTarifsT()
+		+sFAQ()
+			+faqBox({
+				title: 'есть вопрос?',
+			})
 	+footer()

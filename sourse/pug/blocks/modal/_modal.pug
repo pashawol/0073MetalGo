@@ -41,13 +41,14 @@ mixin modal()
 							+e.SPAN.input-title Марка
 							+e.SELECT.input.form-select(name="lalala")
 								option(disabled selected hidden value="") Выберите марку
-									option(value="металл1") металл1
-									option(value="металл2") металл2
-									option(value="металл3") металл3
+								option(value="металл1") металл1
+								option(value="металл2") металл2
+								option(value="металл3") металл3
 					+e.input-wrap
 						+e.input-title Тип проката
 						+e.radio-row.row
-							-for(var i = 1; i <= 10; i++)
+							+modalMetalRadio(1)(checked)
+							-for(var i = 2; i <= 10; i++)
 								+modalMetalRadio(i)
 				+e.col--right.col-lg
 					+e.body-items
@@ -137,7 +138,7 @@ mixin modalLog(data)
 							-for(var i = 0; i < data.itemsAmount - 1; i++)
 								+modalLogItem()
 						+e.add-btn(type="button")
-							+e.a-ball
+							+e.SPAN.a-ball
 								+icon('add')
 							span Добавить
 					+e.box--bot
@@ -252,6 +253,6 @@ mixin modalMetalRadio(imgNum)
 	+e.r-col.col-auto
 		+e.LABEL.rad-label
 			input.metal-radio-js(type="radio" name="metalRadio" value=imgNum class="invisible")&attributes(attributes)
-			.square
+			span.square
 				+icon(`modalMetalRadio-${imgNum}`)
 				//-img(loading="lazy" src=`img/svg/modalMetalRadio-${imgNum}.svg` alt="")

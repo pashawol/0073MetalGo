@@ -6,10 +6,10 @@ include ../blocks/sSearch/_sSearch.pug
 
 block variables
 	- let  mainPage= null
-	- let  bg='04-320.png'
+	- let  bg='02-320.png'
 
 block title
-	- let  title= '04-orders'
+	- let  title= '02'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -19,18 +19,20 @@ block pagecontent
 		.container
 			+e.row.row.align-items-center
 				.col-lg-4.col-xl-3
-					+e.H1.title заявки покупателей
+					+e.H1.title поиск предложений
 				.col
 					+form-wrap
 						.input-group
 							+e.INPUT.input.form-control(placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text")
 							+e.inp-btn(type="button")
-								+e.b-icon
+								+e.SPAN.b-icon
 									img(loading='lazy' src="img/svg/zoom.svg" alt="")
-								+e.b-txt.d-none.d-sm-inline Поиск
+								+e.SPAN.b-txt.d-none.d-sm-inline Поиск
 			+e.parameters.parameters-js.d-lg-none
 				+e.p-img
 					img(loading="lazy" src='img/svg/parameters.svg' alt="")
 				+e.p-txt Параметры поиска
-	+sSearchOrders()
+	+sSearch({
+		isEmpty: true,
+	}) 
 	+footer()

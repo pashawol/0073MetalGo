@@ -2,14 +2,14 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>04-orders</title>
+		<title>09-contacts.html</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no initial-scale=1 maximum-scale=1">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="04-320.png">
+	<body data-bg="09-320.png">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-xl-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js border-0"><span></span>
@@ -106,8 +106,8 @@
 										</div>
 									</a>
 								</div>
-								<div class="lc__quit text-center text-danger" href="">Выйти из аккаунта
-								</div>
+								<a class="lc__quit text-center text-danger" href="#">Выйти из аккаунта
+								</a>
 							</div>
 						</div>
 					</div>
@@ -269,8 +269,8 @@
 													</div>
 												</a>
 											</div>
-											<div class="lc__quit text-center text-danger" href="">Выйти из аккаунта
-											</div>
+											<a class="lc__quit text-center text-danger" href="#">Выйти из аккаунта
+											</a>
 										</div>
 									</div>
 								</div>
@@ -293,1040 +293,143 @@
 				</header>
 			</div>
 			<!-- end header-->
-			<div class="white-line bg-white">
+			<div class="white-line white-line--pad-alt bg-white">
 				<div class="container">
-					<div class="white-line__row row align-items-center">
+					<div class="white-line__row row align-items-center pb-0">
 						<div class="col-lg-4 col-xl-3">
-							<h1 class="white-line__title">заявки покупателей
+							<h1 class="white-line__title">контакты
 							</h1>
-						</div>
-						<div class="col">
-							<div class="form-wrap">
-								<form>
-									<div class="input-group"><input class="form-wrap__input form-control" placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text"/>
-										<button class="form-wrap__inp-btn" type="button">
-											<div class="form-wrap__b-icon"><img loading="lazy" src="img/svg/zoom.svg" alt="">
-											</div>
-											<div class="form-wrap__b-txt d-none d-sm-inline">Поиск
-											</div>
-										</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="white-line__parameters parameters-js d-lg-none">
-						<div class="white-line__p-img"><img loading="lazy" src="img/svg/parameters.svg" alt="">
-						</div>
-						<div class="white-line__p-txt">Параметры поиска
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- start sSearch-->
-			<section class="sSearch section" id="sSearch">
+			<!-- start sContact-->
+			<section class="sContact section" id="sContact">
 				<div class="container">
-					<div class="sSearch__row row">
-						<div class="col-lg-4 col-xl-3">
-							<div class="params params--js sticky-js">
-								<div class="params__head d-none d-lg-block">параметры поиска
-								</div>
-								<div class="params__content">
-									<select class="params__input form-select">
-										<option value="1">Труба</option>
-										<option value="2">Арматура</option>
-										<option value="3">Балка</option>
-										<option value="5">Круг</option>
-										<option value="6">Квадрат</option>
-										<option value="8">Лента</option>
-										<option value="9">Лист</option>
-										<option value="10">Поковка</option>
-										<option value="11">Полоса</option>
-										<option value="12">Труба</option>
-										<option value="13">Уголок</option>
-										<option value="15">Швеллер</option>
-										<option value="16">Шестигранник</option>
-										<option value="17">Шайба</option>
-										<option value="18">Проволока</option>
-										<option value="19">Диск</option>
-										<option value="20">Рельсы</option>
-										<option value="22">Планка</option>
-										<option value="23">Подкладка</option>
-									</select>
-									<div class="params__input-wrap"><input class="params__input form-control" type="text" placeholder="Город"/>
-										<div class="params__tooltip tooltip-btn">
-											<!--img(loading="lazy" src="img/svg/tooltip.svg" alt="")-->
-											<svg class="icon icon-tooltip ">
-												<use xlink:href="img/svg/sprite.svg#tooltip"></use>
-											</svg>
-											<div class="tt-content">Данные отсортируются от ближайшей к выбранному городу металлобазы до самой удаленной.
+					<div class="row gy-20">
+						<div class="col-lg-6">
+							<div class="t-box">
+								<div class="t-box__header">
+									<div class="t-box__row row align-items-center">
+										<div class="col">
+											<div class="t-box__title-row row flex-nowrap align-items-center">
+												<div class="col-auto">
+													<h2 class="t-box__title">контактная информация</h2>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="params__input-wrap form-group"><input class="params__input form-control" name="text" type="text" placeholder="Покупатель" disabled="disabled"/>
-									</div>
-									<!-- +e.input-wrap-->
-									<div class="row align-items-center">
-										<div class="col">
-											<button class="params__discard" type="button">Сбросить
-											</button>
+								</div>
+								<div class="t-box__content">
+									<div class="sContact__items">
+										<div class="sContact__item">
+											<div class="sContact__i-row row align-items-center">
+												<div class="col-md-6">
+													<div class="sContact__i-title">Адрес
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="sContact__address">Россия, Санкт-Петербург, пр. Стачек, дом 37, литера А, офис 104
+													</div>
+												</div>
+											</div>
 										</div>
-										<div class="col-auto d-lg-none">
-											<div class="params__hide parameters-js">Свернуть
+										<div class="sContact__item">
+											<div class="sContact__i-row row align-items-center">
+												<div class="col-md-6">
+													<div class="sContact__i-title">Телефон
+													</div>
+												</div>
+												<div class="col-md-6">
+													<a class="sContact__tell" href="tel:+73512160373">+7 (351) 216-03-73
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="sContact__item">
+											<div class="sContact__i-row row align-items-center">
+												<div class="col-md-6">
+													<div class="sContact__i-title">Электронная почта
+													</div>
+												</div>
+												<div class="col-md-6">
+													<a class="sContact__mail" href="mailto:support@metalgo.ru">support@metalgo.ru
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="sContact__item">
+											<div class="sContact__i-row row align-items-center">
+												<div class="col-md-6">
+													<div class="sContact__i-title">Подпишитесь на нас
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="soc">
+														<a class="soc__item soc-inst" href="#" target="_blank">
+															<svg class="icon icon-soc-inst ">
+																<use xlink:href="img/svg/sprite.svg#soc-inst"></use>
+															</svg>
+														</a>
+														<a class="soc__item soc-vk" href="#" target="_blank">
+															<svg class="icon icon-soc-vk ">
+																<use xlink:href="img/svg/sprite.svg#soc-vk"></use>
+															</svg>
+														</a>
+														<a class="soc__item soc-yt" href="#" target="_blank">
+															<svg class="icon icon-soc-yt ">
+																<use xlink:href="img/svg/sprite.svg#soc-yt"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col" id="sSearchContent">
-							<div class="sSearch__top-row row">
-								<div class="col">
-									<div class="sSearch__s-row row align-items-center">
-										<div class="col-auto d-none d-sm-block">Сортировать:</div>
+						<div class="col-lg-6">
+							<div class="t-box">
+								<div class="t-box__header">
+									<div class="t-box__row row align-items-center">
 										<div class="col">
-											<select class="sSearch__input form-select" name="Сперва с самым высоким рейтингом">
-												<option value="Сперва с самым высоким рейтингом">Сперва с самым высоким рейтингом</option>
-												<option>выгодное предложение</option>
-												<option>сначала новые</option>
-												<option>Цена (по возрастанию)</option>
-												<option>Цена (по убыванию)</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="col-auto d-none d-xxl-block">
-									<div class="sSearch__s-row row align-items-center sm">
-										<div class="col-auto">Показать по:</div>
-										<div class="col">
-											<select class="sSearch__input form-select sm" name="10">
-												<option value="10">10</option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sSearch__items">
-								<div class="s-item">
-									<div class="s-item__top-row row align-items-center">
-										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Куплю ряд позиций срочно, читайте описание
-											</div>
-										</div>
-										<div class="col-auto d-none d-md-block">
-											<a class="s-item__comp-link mb-0" href="#">
-												<div class="s-item__comp-row row d-flex align-items-center">
-													<div class="col-auto d-block">
-														<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__company">ООО «Челябинская стальная компания ООО «Челябинская стальная компания
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__rate">
-															<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-															</div>
-															<div class="s-item__rate-val">4.9
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="col-auto">
-											<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/location.svg" alt=""/>
-												<div class="tt-content tt-content--w-auto">Челябинск
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--another readmore with single content box => .t-content-js-->
-									<div class="s-item__txt-wrap t-box-js">
-										<div class="s-item__txt-content t-content-js">
-											<p>Добрый день, прошу Вас выставить счет на данные материалы:</p>
-											<ol>
-												<li>Труба профильная 30х30х2 – 1360,2 метр.</li>
-												<li>Труба профильная 40х25х2 - 224,5 метр.</li>
-												<li>Труба профильная 40х40х3 - 128 метр.</li>
-												<li>Труба профильная 20х20х2 – 1360,7 метр.</li>
-												<li>Квадрат 20 - 105 метр.</li>
-												<li>Полоса 30х4 - 378 метр.</li>
-												<li>Арматура ф12 А240 - 20,5 метр.</li>
-												<li>Арматура ф10 - 78,1 метр.</li>
-												<li>Труба ДУ ф32х3,2 - 468 метр.</li>
-											</ol>
-										</div>
-										<div class="s-item__t-btn t-btn-js invisible"><span>Показать полностью...</span><span>Свернуть</span>
-										</div>
-									</div>
-									<div class="d-md-none">
-										<a class="s-item__comp-link" href="#">
-											<div class="s-item__comp-row row d-flex align-items-center">
-												<div class="col-auto d-block">
-													<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__company">ООО «Челябинская стальная к...
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__rate">
-														<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-														</div>
-														<div class="s-item__rate-val">4.9
-														</div>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="s-item__foot-row row align-items-center">
-										<div class="col-sm order-last order-sm-0">
-											<div class="s-item__date-row row gy-1">
-												<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-												</div>
-												<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-auto">
-											<div class="s-item__btns-row row">
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-light" type="button">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-														</div><span>Написать</span>
-													</button>
-												</div>
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-													</button>
+											<div class="t-box__title-row row flex-nowrap align-items-center">
+												<div class="col-auto">
+													<h2 class="t-box__title">задать вопрос</h2>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="s-item">
-									<div class="s-item__top-row row align-items-center">
-										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Нужна поставка
+								<div class="t-box__content">
+									<div class="form-wrap">
+										<form>
+											<div class="form-wrap__inputs">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Электронная почта</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Ваше сообщение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Задайте вопрос"></textarea>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
 											</div>
-										</div>
-										<div class="col-auto d-none d-md-block">
-											<a class="s-item__comp-link mb-0" href="#">
-												<div class="s-item__comp-row row d-flex align-items-center">
-													<div class="col-auto d-block">
-														<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__company">ООО «Челябинская стальная компания ООО «Челябинская стальная компания
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__rate">
-															<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-															</div>
-															<div class="s-item__rate-val">4.9
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="col-auto">
-											<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/location.svg" alt=""/>
-												<div class="tt-content tt-content--w-auto">Челябинск
-												</div>
+											<div class="text-sm-end">
+												<button class="form-wrap__btn" type="submit">Отправить
+												</button>
 											</div>
-										</div>
-									</div>
-									<!--another readmore with single content box => .t-content-js-->
-									<div class="s-item__txt-wrap t-box-js">
-										<div class="s-item__txt-content t-content-js">
-											<p>Прошу рассмотреть возможность поставки<br/>Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт<br/>Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт</p>
-										</div>
-										<div class="s-item__t-btn t-btn-js invisible"><span>Показать полностью...</span><span>Свернуть</span>
-										</div>
-									</div>
-									<div class="d-md-none">
-										<a class="s-item__comp-link" href="#">
-											<div class="s-item__comp-row row d-flex align-items-center">
-												<div class="col-auto d-block">
-													<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__company">ООО «Челябинская стальная к...
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__rate">
-														<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-														</div>
-														<div class="s-item__rate-val">4.9
-														</div>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="s-item__foot-row row align-items-center">
-										<div class="col-sm order-last order-sm-0">
-											<div class="s-item__date-row row gy-1">
-												<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-												</div>
-												<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-auto">
-											<div class="s-item__btns-row row">
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-light" type="button">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-														</div><span>Написать</span>
-													</button>
-												</div>
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="s-item">
-									<div class="s-item__top-row row align-items-center">
-										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Длинный заголовок заявки при длинном названии компании
-											</div>
-										</div>
-										<div class="col-auto d-none d-md-block">
-											<a class="s-item__comp-link mb-0" href="#">
-												<div class="s-item__comp-row row d-flex align-items-center">
-													<div class="col-auto d-block">
-														<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__company">ООО «Челябинская стальная компания ООО «Челябинская стальная компания
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__rate">
-															<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-															</div>
-															<div class="s-item__rate-val">4.9
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="col-auto">
-											<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/location.svg" alt=""/>
-												<div class="tt-content tt-content--w-auto">Челябинск
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--another readmore with single content box => .t-content-js-->
-									<div class="s-item__txt-wrap t-box-js">
-										<div class="s-item__txt-content t-content-js">
-											<ol>
-												<li>Проволока светлая, диаметр 1,1 мм т 0.0021</li>
-												<li>Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм т 0.0759</li>
-												<li>Прокат толстолистовой горячекатаный в листах, марка стали Ст3пс, толщина 13-20 мм</li>
-												<li>Швеллеры № 40, марка стали Ст0 т 0.0054</li>
-												<li>Швеллеры № 40, марка стали Ст0 т 0.0054</li>
-											</ol>
-										</div>
-										<div class="s-item__t-btn t-btn-js invisible"><span>Показать полностью...</span><span>Свернуть</span>
-										</div>
-									</div>
-									<div class="d-md-none">
-										<a class="s-item__comp-link" href="#">
-											<div class="s-item__comp-row row d-flex align-items-center">
-												<div class="col-auto d-block">
-													<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__company">ООО «Челябинская стальная к...
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__rate">
-														<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-														</div>
-														<div class="s-item__rate-val">4.9
-														</div>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="s-item__foot-row row align-items-center">
-										<div class="col-sm order-last order-sm-0">
-											<div class="s-item__date-row row gy-1">
-												<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-												</div>
-												<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-auto">
-											<div class="s-item__btns-row row">
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-light" type="button">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-														</div><span>Написать</span>
-													</button>
-												</div>
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="s-item">
-									<div class="s-item__top-row row align-items-center">
-										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Нужна поставка
-											</div>
-										</div>
-										<div class="col-auto d-none d-md-block">
-											<a class="s-item__comp-link mb-0" href="#">
-												<div class="s-item__comp-row row d-flex align-items-center">
-													<div class="col-auto d-block">
-														<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__company">ООО «Челябинская стальная компания ООО «Челябинская стальная компания
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__rate">
-															<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-															</div>
-															<div class="s-item__rate-val">4.9
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="col-auto">
-											<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/location.svg" alt=""/>
-												<div class="tt-content tt-content--w-auto">Челябинск
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--another readmore with single content box => .t-content-js-->
-									<div class="s-item__txt-wrap t-box-js">
-										<div class="s-item__txt-content t-content-js">
-											<p>Прошу рассмотреть возможность поставки<br/>Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт<br/>Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт</p>
-										</div>
-										<div class="s-item__t-btn t-btn-js invisible"><span>Показать полностью...</span><span>Свернуть</span>
-										</div>
-									</div>
-									<div class="d-md-none">
-										<a class="s-item__comp-link" href="#">
-											<div class="s-item__comp-row row d-flex align-items-center">
-												<div class="col-auto d-block">
-													<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__company">ООО «Челябинская стальная к...
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__rate">
-														<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-														</div>
-														<div class="s-item__rate-val">4.9
-														</div>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="s-item__foot-row row align-items-center">
-										<div class="col-sm order-last order-sm-0">
-											<div class="s-item__date-row row gy-1">
-												<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-												</div>
-												<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-auto">
-											<div class="s-item__btns-row row">
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-light" type="button">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-														</div><span>Написать</span>
-													</button>
-												</div>
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="s-item">
-									<div class="s-item__top-row row align-items-center">
-										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Куплю ряд позиций срочно, читайте описание
-											</div>
-										</div>
-										<div class="col-auto d-none d-md-block">
-											<a class="s-item__comp-link mb-0" href="#">
-												<div class="s-item__comp-row row d-flex align-items-center">
-													<div class="col-auto d-block">
-														<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__company">ООО «Челябинская стальная компания ООО «Челябинская стальная компания
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__rate">
-															<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-															</div>
-															<div class="s-item__rate-val">4.9
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="col-auto">
-											<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/location.svg" alt=""/>
-												<div class="tt-content tt-content--w-auto">Челябинск
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--another readmore with single content box => .t-content-js-->
-									<div class="s-item__txt-wrap t-box-js">
-										<div class="s-item__txt-content t-content-js active">
-											<p>Добрый день, прошу Вас выставить счет на данные материалы:</p>
-											<ol>
-												<li>Труба профильная 30х30х2 – 1360,2 метр.</li>
-												<li>Труба профильная 40х25х2 - 224,5 метр.</li>
-												<li>Труба профильная 40х40х3 - 128 метр.</li>
-												<li>Труба профильная 20х20х2 – 1360,7 метр.</li>
-												<li>Квадрат 20 - 105 метр.</li>
-												<li>Полоса 30х4 - 378 метр.</li>
-												<li>Арматура ф12 А240 - 20,5 метр.</li>
-												<li>Арматура ф10 - 78,1 метр.</li>
-												<li>Труба ДУ ф32х3,2 - 468 метр.</li>
-											</ol>
-										</div>
-										<div class="s-item__t-btn t-btn-js active"><span>Показать полностью...</span><span>Свернуть</span>
-										</div>
-									</div>
-									<div class="d-md-none">
-										<a class="s-item__comp-link" href="#">
-											<div class="s-item__comp-row row d-flex align-items-center">
-												<div class="col-auto d-block">
-													<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__company">ООО «Челябинская стальная к...
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__rate">
-														<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-														</div>
-														<div class="s-item__rate-val">4.9
-														</div>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="s-item__foot-row row align-items-center">
-										<div class="col-sm order-last order-sm-0">
-											<div class="s-item__date-row row gy-1">
-												<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-												</div>
-												<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-auto">
-											<div class="s-item__btns-row row">
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-light" type="button">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-														</div><span>Написать</span>
-													</button>
-												</div>
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="s-item">
-									<div class="s-item__top-row row align-items-center">
-										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Куплю ряд позиций срочно, читайте описание
-											</div>
-										</div>
-										<div class="col-auto d-none d-md-block">
-											<a class="s-item__comp-link mb-0" href="#">
-												<div class="s-item__comp-row row d-flex align-items-center">
-													<div class="col-auto d-block">
-														<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__company">ООО «Челябинская стальная компания ООО «Челябинская стальная компания
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__rate">
-															<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-															</div>
-															<div class="s-item__rate-val">4.9
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="col-auto">
-											<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/location.svg" alt=""/>
-												<div class="tt-content tt-content--w-auto">Челябинск
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--another readmore with single content box => .t-content-js-->
-									<div class="s-item__txt-wrap t-box-js">
-										<div class="s-item__txt-content t-content-js">
-											<p>Добрый день, прошу Вас выставить счет на данные материалы:</p>
-											<ol>
-												<li>Труба профильная 30х30х2 – 1360,2 метр.</li>
-												<li>Труба профильная 40х25х2 - 224,5 метр.</li>
-												<li>Труба профильная 40х40х3 - 128 метр.</li>
-												<li>Труба профильная 20х20х2 – 1360,7 метр.</li>
-												<li>Квадрат 20 - 105 метр.</li>
-												<li>Полоса 30х4 - 378 метр.</li>
-												<li>Арматура ф12 А240 - 20,5 метр.</li>
-												<li>Арматура ф10 - 78,1 метр.</li>
-												<li>Труба ДУ ф32х3,2 - 468 метр.</li>
-											</ol>
-										</div>
-										<div class="s-item__t-btn t-btn-js invisible"><span>Показать полностью...</span><span>Свернуть</span>
-										</div>
-									</div>
-									<div class="d-md-none">
-										<a class="s-item__comp-link" href="#">
-											<div class="s-item__comp-row row d-flex align-items-center">
-												<div class="col-auto d-block">
-													<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__company">ООО «Челябинская стальная к...
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__rate">
-														<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-														</div>
-														<div class="s-item__rate-val">4.9
-														</div>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="s-item__foot-row row align-items-center">
-										<div class="col-sm order-last order-sm-0">
-											<div class="s-item__date-row row gy-1">
-												<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-												</div>
-												<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-auto">
-											<div class="s-item__btns-row row">
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-light" type="button">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-														</div><span>Написать</span>
-													</button>
-												</div>
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="s-item">
-									<div class="s-item__top-row row align-items-center">
-										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Нужна поставка
-											</div>
-										</div>
-										<div class="col-auto d-none d-md-block">
-											<a class="s-item__comp-link mb-0" href="#">
-												<div class="s-item__comp-row row d-flex align-items-center">
-													<div class="col-auto d-block">
-														<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__company">ООО «Челябинская стальная компания ООО «Челябинская стальная компания
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__rate">
-															<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-															</div>
-															<div class="s-item__rate-val">4.9
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="col-auto">
-											<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/location.svg" alt=""/>
-												<div class="tt-content tt-content--w-auto">Челябинск
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--another readmore with single content box => .t-content-js-->
-									<div class="s-item__txt-wrap t-box-js">
-										<div class="s-item__txt-content t-content-js">
-											<p>Прошу рассмотреть возможность поставки<br/>Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт<br/>Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт</p>
-										</div>
-										<div class="s-item__t-btn t-btn-js invisible"><span>Показать полностью...</span><span>Свернуть</span>
-										</div>
-									</div>
-									<div class="d-md-none">
-										<a class="s-item__comp-link" href="#">
-											<div class="s-item__comp-row row d-flex align-items-center">
-												<div class="col-auto d-block">
-													<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__company">ООО «Челябинская стальная к...
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__rate">
-														<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-														</div>
-														<div class="s-item__rate-val">4.9
-														</div>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="s-item__foot-row row align-items-center">
-										<div class="col-sm order-last order-sm-0">
-											<div class="s-item__date-row row gy-1">
-												<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-												</div>
-												<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-auto">
-											<div class="s-item__btns-row row">
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-light" type="button">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-														</div><span>Написать</span>
-													</button>
-												</div>
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="s-item">
-									<div class="s-item__top-row row align-items-center">
-										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Длинный заголовок заявки при длинном названии компании
-											</div>
-										</div>
-										<div class="col-auto d-none d-md-block">
-											<a class="s-item__comp-link mb-0" href="#">
-												<div class="s-item__comp-row row d-flex align-items-center">
-													<div class="col-auto d-block">
-														<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__company">ООО «Челябинская стальная компания ООО «Челябинская стальная компания
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__rate">
-															<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-															</div>
-															<div class="s-item__rate-val">4.9
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="col-auto">
-											<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/location.svg" alt=""/>
-												<div class="tt-content tt-content--w-auto">Челябинск
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--another readmore with single content box => .t-content-js-->
-									<div class="s-item__txt-wrap t-box-js">
-										<div class="s-item__txt-content t-content-js">
-											<ol>
-												<li>Проволока светлая, диаметр 1,1 мм т 0.0021</li>
-												<li>Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм т 0.0759</li>
-												<li>Прокат толстолистовой горячекатаный в листах, марка стали Ст3пс, толщина 13-20 мм</li>
-												<li>Швеллеры № 40, марка стали Ст0 т 0.0054</li>
-												<li>Швеллеры № 40, марка стали Ст0 т 0.0054</li>
-											</ol>
-										</div>
-										<div class="s-item__t-btn t-btn-js invisible"><span>Показать полностью...</span><span>Свернуть</span>
-										</div>
-									</div>
-									<div class="d-md-none">
-										<a class="s-item__comp-link" href="#">
-											<div class="s-item__comp-row row d-flex align-items-center">
-												<div class="col-auto d-block">
-													<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__company">ООО «Челябинская стальная к...
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__rate">
-														<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-														</div>
-														<div class="s-item__rate-val">4.9
-														</div>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="s-item__foot-row row align-items-center">
-										<div class="col-sm order-last order-sm-0">
-											<div class="s-item__date-row row gy-1">
-												<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-												</div>
-												<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-auto">
-											<div class="s-item__btns-row row">
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-light" type="button">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-														</div><span>Написать</span>
-													</button>
-												</div>
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="s-item">
-									<div class="s-item__top-row row align-items-center">
-										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Нужна поставка
-											</div>
-										</div>
-										<div class="col-auto d-none d-md-block">
-											<a class="s-item__comp-link mb-0" href="#">
-												<div class="s-item__comp-row row d-flex align-items-center">
-													<div class="col-auto d-block">
-														<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__company">ООО «Челябинская стальная компания ООО «Челябинская стальная компания
-														</div>
-													</div>
-													<div class="col-auto d-block">
-														<div class="s-item__rate">
-															<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-															</div>
-															<div class="s-item__rate-val">4.9
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="col-auto">
-											<div class="s-item__tooltip tooltip-btn"><img loading="lazy" src="img/svg/location.svg" alt=""/>
-												<div class="tt-content tt-content--w-auto">Челябинск
-												</div>
-											</div>
-										</div>
-									</div>
-									<!--another readmore with single content box => .t-content-js-->
-									<div class="s-item__txt-wrap t-box-js">
-										<div class="s-item__txt-content t-content-js">
-											<p>Прошу рассмотреть возможность поставки<br/>Винт 30х110 ГОСТ 4762 ( внутренний шестигранник ) 24 шт<br/>Винт М 8х1 L-35 ( внутренний шестигранник ) 20 шт</p>
-										</div>
-										<div class="s-item__t-btn t-btn-js invisible"><span>Показать полностью...</span><span>Свернуть</span>
-										</div>
-									</div>
-									<div class="d-md-none">
-										<a class="s-item__comp-link" href="#">
-											<div class="s-item__comp-row row d-flex align-items-center">
-												<div class="col-auto d-block">
-													<div class="s-item__logo"><img loading="lazy" src="img/svg/s-item-1.svg" alt=""/>
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__company">ООО «Челябинская стальная к...
-													</div>
-												</div>
-												<div class="col-auto d-block">
-													<div class="s-item__rate">
-														<div class="s-item__star"><img loading="lazy" src="img/svg/star.svg" alt=""/>
-														</div>
-														<div class="s-item__rate-val">4.9
-														</div>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-									<div class="s-item__foot-row row align-items-center">
-										<div class="col-sm order-last order-sm-0">
-											<div class="s-item__date-row row gy-1">
-												<div class="col-auto"><span class="s-item__d-title">Размещено:</span><span class="s-item__d-val">01.12.2020</span>
-												</div>
-												<div class="col-auto"><span class="s-item__d-title">Обновлено:</span><span class="s-item__d-val">02.12.2020</span>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-auto">
-											<div class="s-item__btns-row row">
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-light" type="button">
-														<div class="s-item__b-icon"><img loading="lazy" src="img/svg/send-pr.svg" alt=""/>
-														</div><span>Написать</span>
-													</button>
-												</div>
-												<div class="col-6 col-sm-auto">
-													<button class="s-item__btn s-item__btn--out-primary" type="button">Подробнее
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sSearch__pagin-row row">
-								<div class="col-sm-auto">
-									<div class="pagination-wrapper">
-										<ul class="page-numbers">
-													<li><span class="prev page-numbers muted" href="#">
-															<svg class="icon icon-prev ">
-																<use xlink:href="img/svg/sprite.svg#prev"></use>
-															</svg></span>
-													</li>
-													<li><span class="page-numbers current"> 1</span>
-													</li>
-													<li><a class="page-numbers" href="#">2</a>
-													</li>
-													<li><a class="page-numbers" href="#">3</a>
-													</li>
-													<li><a class="page-numbers" href="#">...</a>
-													</li>
-													<li><a class="page-numbers" href="#">9</a>
-													</li>
-													<li><a class="page-numbers" href="#">10</a>
-													</li>
-													<li><a class="page-numbers" href="#">11</a>
-													</li>
-													<li><a class="next page-numbers" href="#">
-															<svg class="icon icon-next ">
-																<use xlink:href="img/svg/sprite.svg#next"></use>
-															</svg></a>
-													</li>
-										</ul>
-									</div>
-								</div>
-								<div class="col-auto ms-auto">
-									<div class="sSearch__s-row row align-items-center sm">
-										<div class="col-auto d-xl-none d-xxl-block">Показать по:</div>
-										<div class="col">
-											<select class="sSearch__input form-select sm" name="10">
-												<option value="10">10</option>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-											</select>
-										</div>
+										</form>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-3 d-none d-xl-block">
-							<div class="sSearch__adv-items sticky-js">
-								<a class="sSearch__adv-item" href="#"><img loading="lazy" src="img/@2x/sSearch-1.png" alt=""/>
-								</a>
-								<a class="sSearch__adv-item" href="#"><img loading="lazy" src="img/@2x/sSearch-3.png" alt=""/>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="sSearch__baner d-none d-xl-block"><img loading="lazy" src="img/@2x/sSearch-baner2.png" alt=""/>
 					</div>
 				</div>
 			</section>
+			<!-- end sContact-->
 			<footer class="footer footer--js text-center text-md-start">
 				<div class="footer__top">
 					<div class="container">
@@ -1473,11 +576,10 @@
 						<div class="modal-met__input-wrap form-group">
 							<label><span class="modal-met__input-title">Марка</span>
 								<select class="modal-met__input form-select" name="lalala">
-									<option disabled="disabled" selected="selected" hidden="hidden" value="">Выберите марку
-										<option value="металл1">металл1</option>
-										<option value="металл2">металл2</option>
-										<option value="металл3">металл3</option>
-									</option>
+									<option disabled="disabled" selected="selected" hidden="hidden" value="">Выберите марку</option>
+									<option value="металл1">металл1</option>
+									<option value="металл2">металл2</option>
+									<option value="металл3">металл3</option>
 								</select>
 							</label>
 						</div>
@@ -1487,102 +589,82 @@
 							<div class="modal-met__radio-row row">
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="1"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="1" checked="checked"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-1 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-1"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="2"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="2"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-2 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-2"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="3"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="3"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-3 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-3"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="4"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="4"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-4 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-4"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="5"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="5"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-5 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-5"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="6"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="6"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-6 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-6"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="7"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="7"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-7 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-7"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="8"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="8"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-8 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-8"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="9"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="9"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-9 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-9"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 								<div class="modal-met__r-col col-auto">
 									<label class="modal-met__rad-label">
-										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="10"/>
-										<div class="square">
+										<input class="metal-radio-js invisible" type="radio" name="metalRadio" value="10"/><span class="square">
 											<svg class="icon icon-modalMetalRadio-10 ">
 												<use xlink:href="img/svg/sprite.svg#modalMetalRadio-10"></use>
-											</svg>
-										</div>
+											</svg></span>
 									</label>
 								</div>
 							</div>
@@ -1897,12 +979,10 @@
 									</div>
 								</div>
 							</div>
-							<button class="modal-log__add-btn" type="button">
-								<div class="modal-log__a-ball">
-									<svg class="icon icon-add ">
-										<use xlink:href="img/svg/sprite.svg#add"></use>
-									</svg>
-								</div><span>Добавить</span>
+							<button class="modal-log__add-btn" type="button"><span class="modal-log__a-ball">
+								<svg class="icon icon-add ">
+									<use xlink:href="img/svg/sprite.svg#add"></use>
+								</svg></span><span>Добавить</span>
 							</button>
 						</div>
 						<div class="modal-log__box modal-log__box--bot">
@@ -2161,12 +1241,10 @@
 									</div>
 								</div>
 							</div>
-							<button class="modal-log__add-btn" type="button">
-								<div class="modal-log__a-ball">
-									<svg class="icon icon-add ">
-										<use xlink:href="img/svg/sprite.svg#add"></use>
-									</svg>
-								</div><span>Добавить</span>
+							<button class="modal-log__add-btn" type="button"><span class="modal-log__a-ball">
+								<svg class="icon icon-add ">
+									<use xlink:href="img/svg/sprite.svg#add"></use>
+								</svg></span><span>Добавить</span>
 							</button>
 						</div>
 						<div class="modal-log__box modal-log__box--bot">
@@ -2433,12 +1511,10 @@
 									</div>
 								</div>
 							</div>
-							<button class="modal-log__add-btn" type="button">
-								<div class="modal-log__a-ball">
-									<svg class="icon icon-add ">
-										<use xlink:href="img/svg/sprite.svg#add"></use>
-									</svg>
-								</div><span>Добавить</span>
+							<button class="modal-log__add-btn" type="button"><span class="modal-log__a-ball">
+								<svg class="icon icon-add ">
+									<use xlink:href="img/svg/sprite.svg#add"></use>
+								</svg></span><span>Добавить</span>
 							</button>
 						</div>
 						<div class="modal-log__box modal-log__box--bot">
