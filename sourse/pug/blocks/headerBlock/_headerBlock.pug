@@ -14,6 +14,6 @@ mixin headerBlock()
 mixin headerBlockSlide(imgNum)
 	.swiper-slide
 		+e.PICTURE.img
-			source(srcset=`img/@2x/headerBlock-${imgNum}.jpg`  media="(min-width:576px)")
-			source(srcset=`img/@2x/headerBlock-mob-${imgNum}.jpg`  media="(max-width:576px)")
-			img(loading="lazy" src=`img/@2x/headerBlock-${imgNum}.png` alt="")
+			source(srcset=`img/@2x/headerBlock-${imgNum}.jpg`  media="(min-width:480px)")
+			//-source(srcset=`img/@2x/headerBlock-mob-${imgNum}.jpg`  media="(max-width:576px)")
+			img(loading="lazy" src=`img/@2x/headerBlock-mob-${imgNum}.png` alt="")
