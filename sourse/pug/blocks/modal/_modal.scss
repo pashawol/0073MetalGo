@@ -467,6 +467,9 @@
 		&:last-child{
 			margin-bottom: 0;
 			padding-bottom: 0;
+			&:after{
+				content: none;
+			}
 		}
 
 		position: relative;
@@ -527,8 +530,14 @@
 			}
 
 			& > *{
-				padding-left: 4px;
-				padding-right: 4px;
+				padding: 8px 2px!important;
+				@include media-breakpoint-up(sm){
+					padding: $input-padding-y 3px!important;
+				}
+				line-height: $input-line-height!important;
+				font-size: $input-font-size!important;
+				//padding-left: 4px;
+				//padding-right: 4px;
 			}
 			& > *:last-child{
 				@include media-breakpoint-up(md){
@@ -553,24 +562,21 @@
 		&--{}
 	}
 	&__x{
-		flex-grow: 1!important;
 		@extend .btn;
 		@extend .btn-outline-light;
 		@extend .ba-cross;
-		padding-left: 0px;
-		padding-right: 0px;
+		flex-grow: 1!important;
+
+		max-width: 20%;
+		//padding-left: 0;
+		//padding-right: 0;
+		//max-width: 45px;
 
 		pointer-events: none;
 		//width: var(--sm-btn-w)!important;
 		width: auto;
-		height: var(--sm-btn-w);
+		//height: var(--sm-btn-w);
 		color: transparent!important;
-
-
-		min-height: 34px;
-		@include media-breakpoint-up(sm){
-			min-height: rem(45);
-		}
 
 		&:before,
 		&:after{
