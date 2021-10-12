@@ -40,6 +40,9 @@
 
 		padding-top: calc(187/320 * 100%);
 		@include media-breakpoint-up(sm){
+
+		}
+		@media (min-width: 480px) {
 			padding-top: calc(353/1516 * 100%);
 		}
 	}
