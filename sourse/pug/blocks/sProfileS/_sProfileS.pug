@@ -345,7 +345,16 @@ mixin stockItem(imgAmount, imgNum)
 				+e.slider-wrap
 					.swiper-container.stock-slider-js
 						.swiper-wrapper
-							-for(let i = 0; i < imgAmount; i++)
+							.swiper-slide
+								+e.img(href="#")
+									img(loading="lazy" src=`img/@2x/stockItem-1.png` alt="")
+							.swiper-slide
+								+e.img(href="#")
+									img(loading="lazy" src=`img/@2x/stockItem-2.png` alt="")
+							.swiper-slide
+								+e.img(href="#")
+									img(loading="lazy" src=`img/@2x/stockItem-3.png` alt="")
+							-for(let i = 3; i <= imgAmount; i++)
 								.swiper-slide
 									+e.img(href="#")
 										img(loading="lazy" src=`img/@2x/stockItem-${imgNum}.png` alt="")

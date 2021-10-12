@@ -1,3 +1,12 @@
+.fancybox{
+
+	&__slide{
+		@include media-breakpoint-down(md){
+			padding: 8px!important;
+		}
+	}
+}
+//-
 .modal-win {
 	// display: block;
 	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
@@ -258,9 +267,9 @@
 
 			max-width: 100%;
 
-			width: 34px;
-			height: 34px;
-			@include media-breakpoint-up(sm){
+			width: 45px;
+			height: 45px;
+			@include media-breakpoint-up(lg){
 				width: rem(45);
 				height: rem(45);
 			}
@@ -274,8 +283,9 @@
 
 			.icon{
 				color: $gray-610;
-				font-size: 15.1px;
-				@include media-breakpoint-up(sm){
+
+				font-size: 20px;
+				@include media-breakpoint-up(lg){
 					font-size: rem(20);
 				}
 			}
@@ -348,7 +358,7 @@
 
 		background-color: transparent!important;
 		&:hover{
-			background-color: $gray-310!important;
+			background-color: $body-bg!important;
 		}
 
 		padding: 10.5px;
@@ -552,6 +562,12 @@
 		//width: var(--sm-btn-w)!important;
 		width: auto;
 		height: var(--sm-btn-w);
+
+
+		min-height: 34px;
+		@include media-breakpoint-up(sm){
+			min-height: rem(45);
+		}
 
 		&:before,
 		&:after{

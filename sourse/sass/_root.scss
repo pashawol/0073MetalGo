@@ -10,6 +10,10 @@
     --sTPB: #{rem(40)};
   }
 
+  //
+  --fancybox-content-color: #{$body-color};
+  //--fancybox-content-color: #{$red};
+
   --bs-body-font-size: 14px;
   @include media-breakpoint-between(lg, xxl){
     --bs-body-font-size: calc(16px * 0.8);

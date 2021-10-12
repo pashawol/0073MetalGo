@@ -25,7 +25,7 @@ mixin modal()
 			+icon('cross-sm')
 		.modal-win__header
 			.modal-win__title калькулятор металла
-		.modal-win__content
+		.modal-win__content.tabs
 			+e.row.row.gx-0
 				+e.col--left.col-lg-auto
 					+e.input-wrap.form-group
@@ -47,21 +47,21 @@ mixin modal()
 					+e.input-wrap
 						+e.input-title Тип проката
 						+e.radio-row.row
-							+modalMetalRadio(1)(checked)
+							+modalMetalRadio(1, 'active')(checked)
 							-for(var i = 2; i <= 10; i++)
 								+modalMetalRadio(i)
 				+e.col--right.col-lg
-					+e.body-items
+					+e.body-items.tabs__wrap
 						+modalMetalBItem(1, 'Уголок', 'active')(checked)
-						+modalMetalBItem(2, 'Уголок 2')
-						+modalMetalBItem(3, 'Уголок 3')
-						+modalMetalBItem(4, 'Уголок 4')
-						+modalMetalBItem(5, 'Уголок 5')
-						+modalMetalBItem(6, 'Уголок 6')
-						+modalMetalBItem(7, 'Уголок 7')
-						+modalMetalBItem(8, 'Уголок 8')
-						+modalMetalBItem(9, 'Уголок 9')
-						+modalMetalBItem(10, 'Уголок 10')
+						+modalMetalBItem(2, 'Прямоугольник')
+						+modalMetalBItem(3, 'Круг')
+						+modalMetalBItem(4, 'Шайба')
+						+modalMetalBItem(5, 'Квадрат')
+						+modalMetalBItem(6, 'Квадрат')
+						+modalMetalBItem(7, 'Поковка')
+						+modalMetalBItem(8, 'Прямоугольник')
+						+modalMetalBItem(9, 'Рельсы')
+						+modalMetalBItem(10, 'Шестигранник')
 					+e.error.text-sm-start.text-center.text-danger Текст ошибки при заполнении размеров и веса металла.
 	// #modal-met
 	+b.modal-comp.modal-win(id="modal-comp"  style="display: none")
@@ -231,7 +231,7 @@ mixin modalLogItem(error)
 
 
 mixin modalMetalBItem(imgNum, name, addClasses='')
-	+e.b-item(class=addClasses)
+	+e.b-item.tabs__content(class=addClasses)
 		+e.i-name=name
 		+e.sub-row.row
 			+e.s-col--img.col-sm-auto
@@ -249,9 +249,9 @@ mixin modalMetalBItem(imgNum, name, addClasses='')
 				+e.input-wrap(data-add-ph="кг")
 					+e.INPUT.input.form-control(type="text" placeholder="Вес")
 
-mixin modalMetalRadio(imgNum)
+mixin modalMetalRadio(imgNum, addClasses='')
 	+e.r-col.col-auto
-		+e.LABEL.rad-label
+		+e.LABEL.rad-label.tabs__btn(class=addClasses)
 			input.metal-radio-js(type="radio" name="metalRadio" value=imgNum class="invisible")&attributes(attributes)
 			span.square
 				+icon(`modalMetalRadio-${imgNum}`)

@@ -544,18 +544,46 @@ function eventHandler() {
 	} //-
 
 
-	let stockSlider = new Swiper('.stock-slider-js', {
-		observer: true,
-		observeParents: true,
-		slidesPerView: 'auto',
-		spaceBetween: 10,
-		loop: true,
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
-			clickable: true
-		}
-	}); //-.star-radio-js
+	let stockSliders = document.querySelectorAll('.stock-slider-js');
+
+	for (let slider of stockSliders) {
+		//let wrap = slider.closest('.stock-wrap-js');
+		let stockSlider = new Swiper(slider, {
+			simulateTouch: false,
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			spaceBetween: 10,
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true
+			},
+			on: {
+				init: function () {}
+			}
+		});
+		slider.addEventListener('mousemove', function () {
+			let slidesAmount = 0;
+
+			for (let slide of stockSlider.slides) {
+				if (!slide.classList.contains('swiper-slide-duplicate')) {
+					slidesAmount++;
+				}
+			} //-
+
+
+			let rect = this.getBoundingClientRect();
+			let x = event.clientX - rect.left; //x position within the element.
+			//console.log(this.offsetWidth/x);
+
+			stockSlider.slideTo(Math.floor(x * slidesAmount / this.offsetWidth));
+		}, {
+			passive: true
+		});
+	} //-.star-radio-js
+
 
 	let stars = document.querySelectorAll('.star-radio-js');
 	let stLabels = new Array();
