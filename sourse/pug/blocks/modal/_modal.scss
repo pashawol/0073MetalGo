@@ -557,11 +557,14 @@
 		@extend .btn;
 		@extend .btn-outline-light;
 		@extend .ba-cross;
+		padding-left: 0px;
+		padding-right: 0px;
 
 		pointer-events: none;
 		//width: var(--sm-btn-w)!important;
 		width: auto;
 		height: var(--sm-btn-w);
+		color: transparent!important;
 
 
 		min-height: 34px;
