@@ -871,6 +871,14 @@
 
 	//04
 	&__b-title{
+		display: block;
+
+		color: $body-color!important;
+		&:hover{
+			//color: $primary;
+			text-decoration: underline;
+		}
+
 		font-weight: 500;
 		font-size: 14px;
 		line-height: calc(16/14);
@@ -921,6 +929,25 @@
 		margin-top: 3px;
 		color: $secondary;
 		font-weight: 500;
+
+		position: relative;
+		&:after{
+			content: '';
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			left: 0;
+			bottom: 0;
+			background-color: currentColor;
+		}
+
+		//-
+		&:hover{
+			&:after{
+				opacity: 1;
+			}
+		}
 	}
 
 	//bidding+

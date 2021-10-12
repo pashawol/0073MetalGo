@@ -1,7 +1,7 @@
 mixin sTarif(data)
 	// start sTarif
 	+b.SECTION.sTarif.section#sTarif&attributes(attributes)
-		+e.container.container
+		+e.container.container.tabs
 			+b.section-title--big.text-center
 				h2
 					| тарифы
@@ -12,48 +12,90 @@ mixin sTarif(data)
 				+sTarifTabsBtn('Покупателю')
 				+sTarifTabsBtn('Дополнительные услуги')
 				+sTarifTabsBtn('Рекламные баннеры')
-			+e.slider-wrap
-				.swiper-container.sTarif-slider-js
-					.swiper-wrapper
-						.swiper-slide
-							+sTarifItem({
+			.tabs__wrap
+				.tabs__content.active
+					+e.slider-wrap
+						.swiper-container.sTarif-slider-js
+							.swiper-wrapper
+								.swiper-slide
+									+sTarifItem({
+										imgNum: 1,
+										title: 'Склад',
+										descr: 'до 500 объявлений',
+										insert: '0',
+										top: '0',
+										price: '5 400 ₽',
+										perMonth: '1 800 ₽ в месяц',
+									})
+								.swiper-slide
+									+sTarifItem({
+										imgNum: 2,
+										title: 'база',
+										descr: 'до 5000 объявлений',
+										insert: '100',
+										top: '100',
+										price: '12 000 ₽',
+										perMonth: '4 000 ₽ в месяц',
+									})
+								.swiper-slide
+									+sTarifItem({
+										imgNum: 3,
+										title: 'холдинг',
+										descr: 'Свыше 5000 объявлений',
+										insert: '500',
+										top: '500',
+										price: '21 000 ₽',
+										perMonth: '7 000 ₽ в месяц',
+									})
+							.swiper-pagination.d-lg-none
+				.tabs__content
+					.row.gy-20
+						.col-lg-4
+							+tarifBuyerItem({
+								title: '3 месяца',
+								price: '4 500 ₽',
+								perMonth: '1 500 ₽ в месяц ',
+							})
+						.col-lg-4
+							+tarifBuyerItem({
+								title: '6 месяцев',
+								price: '6 000 ₽',
+								perMonth: '1100 ₽ в месяц ',
+							})
+						.col-lg-4
+							+tarifBuyerItem({
+								title: '12 месяцев',
+								price: '8 400 ₽',
+								perMonth: '700 ₽ в месяц',
+							})
+				.tabs__content
+					.row.gy-20
+						.col-xl-6
+							+tarifAddServ({
 								imgNum: 1,
-								title: 'Склад',
-								descr: 'до 500 объявлений',
-								insert: '0',
-								top: '0',
-								price: '5 400 ₽',
-								perMonth: '1 800 ₽ в месяц',
+								title: 'Выделение объявлений',
+								descr: 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому.',
+								price: '200 ₽/шт.',
+								hasTxt: 'На счету: 17 шт.',
 							})
-						.swiper-slide
-							+sTarifItem({
+						.col-xl-6
+							+tarifAddServ({
 								imgNum: 2,
-								title: 'база',
-								descr: 'до 5000 объявлений',
-								insert: '100',
-								top: '100',
-								price: '12 000 ₽',
-								perMonth: '4 000 ₽ в месяц',
+								title: 'Поднятие в ТОП',
+								descr: 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому.',
+								price: '300 ₽/шт.',
+								hasTxt: 'На счету: 0 шт.',
 							})
-						.swiper-slide
-							+sTarifItem({
-								imgNum: 3,
-								title: 'холдинг',
-								descr: 'Свыше 5000 объявлений',
-								insert: '500',
-								top: '500',
-								price: '21 000 ₽',
-								perMonth: '7 000 ₽ в месяц',
-							})
-					.swiper-pagination.d-lg-none
+				.tabs__content
+					+sTarifsTImgBnaer()
 	// end sTarif
 
 mixin sTarifTabsBtn(txt, addClasses='')
-	+e.btn(type="button" class=addClasses)=txt
+	+e.btn.tabs__btn(type="button" class=addClasses)=txt
 
 mixin sTarifItem(data)
 	+b.t-item
-		+e.img(href="#")
+		+e.img
 			img(loading="lazy" src=`img/svg/t-item-${data.imgNum}.svg` alt="")
 		+e.title=data.title
 		+e.descr=data.descr
@@ -61,7 +103,12 @@ mixin sTarifItem(data)
 			+sTarifSubItem(1, `${data.insert} выделений объявлений`)
 			+sTarifSubItem(2, `${data.top} поднятий в ТОП`)
 		+e.time-title Период подписки:
-		+input('3 месяца', 'select')
+		//-+input('3 месяца', 'select')
+		+e.input-wrap
+			+e.SELECT.input.form-select(name="time")
+				option 3 месяца
+				option 6 месяцев
+				option 9 месяцев
 		+e.price=data.price
 		+e.per-month=data.perMonth
 		+e.btn(href="#") Подключить

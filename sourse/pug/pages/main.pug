@@ -6,6 +6,7 @@ include ../blocks/sSearch/_sSearch.pug
 include ../blocks/topBaner/_topBaner.pug
 include ../blocks/sImged/_sImged.pug
 include ../blocks/sChart/_sChart.pug
+include ../blocks/sTarifsT/_sTarifsT.pug
 include ../blocks/sTarif/_sTarif.pug
 
 block variables
@@ -20,9 +21,9 @@ block pagecontent
 	+header()
 		+topBaner()
 		+top-nav()
-	+b.white-line.bg-white
+	+b.white-line--mh-0.bg-white
 		.container
-			+e.row.row.align-items-center
+			+e.row.row.align-items-center.pb-0
 				.col-12
 					+form-wrap
 						.input-group
@@ -30,16 +31,14 @@ block pagecontent
 								option Категория
 								option Категория 2
 								option Категория 2
-							+e.INPUT.input.form-control(placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text")
+							//change ph on mob(remove d- classes and make responsive placeholder)
+							+e.INPUT.input.form-control.d-none.d-sm-block(placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text")
+							+e.INPUT.input.form-control.d-sm-none(placeholder="Начните поиск" type="text")
+							//
 							+e.inp-btn(type="button")
 								+e.SPAN.b-icon
 									img(loading='lazy' src="img/svg/zoom.svg" alt="")
 								+e.SPAN.b-txt.d-none.d-sm-inline Поиск
-			//-+e.parameters.parameters-js.d-lg-none
-				+e.p-img
-					img(loading="lazy" src='img/svg/parameters.svg' alt="")
-				+e.p-txt Параметры поиска
-	//-+sSearch()
 	+headerBlock()
 	+sImged({
 		addClasses: '',

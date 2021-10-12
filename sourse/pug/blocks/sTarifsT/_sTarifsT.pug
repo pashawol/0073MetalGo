@@ -90,24 +90,27 @@ mixin sTarifsT(data)
 					addClasses: 'pad-alt3',
 					title: 'рекламные баннеры',
 				})
-					+b.img-baner
-						+e.row.row.align-items-center
-							.col-auto.d-none.d-lg-block
-								+e.img
-									img(loading="lazy" src="img/svg/img-baner.svg" alt="")
-							.col
-								+e.title-row.row.align-items-center
-									.col-auto.d-lg-none
-										+e.img
-											img(loading="lazy" src="img/svg/img-baner.svg" alt="")
-									+e.title.col Рекламный баннер
-								+e.descr Размещение на всех страницах сайта компьютерной версии сбоку и внизу.
-							+e.per-month.col-lg-auto 3 000 ₽/мес.
-							.col-lg-auto
-								+e.btn(href="#")
-									span Подробнее
-									+icon('chevron-down2')
+					+sTarifsTImgBnaer()
 	// end sTarifsT
+
+mixin sTarifsTImgBnaer()
+	+b.img-baner
+		+e.row.row.align-items-center
+			.col-auto.d-none.d-lg-block
+				+e.img
+					img(loading="lazy" src="img/svg/img-baner.svg" alt="")
+			.col
+				+e.title-row.row.align-items-center
+					.col-auto.d-lg-none
+						+e.img
+							img(loading="lazy" src="img/svg/img-baner.svg" alt="")
+					+e.title.col Рекламный баннер
+				+e.descr Размещение на всех страницах сайта компьютерной версии сбоку и внизу.
+			+e.per-month.col-lg-auto 3 000 ₽/мес.
+			.col-lg-auto
+				+e.btn(href="#")
+					span Подробнее
+					+icon('chevron-down2')
 
 mixin tarifBuyerItem(data)
 	+b.t-buyer

@@ -30,7 +30,8 @@
 			--chevron-rot: #{180deg};
 
 			&:hover{
-				--num-bg: #{rgba($gray-600, .4)};
+				//---num-bg: #{rgba($gray-600, .4)};
+				--num-bg: #{rgba($primary, 1)};
 			}
 		}
 

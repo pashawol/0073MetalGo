@@ -106,6 +106,8 @@ body {
 	flex-direction: column;
 	min-width: 0;
 	min-height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .section {
@@ -537,6 +539,9 @@ iframe {
 			padding: rem(17) 0;
 		}
 	}
+	&--mh-0{
+		min-height: 0!important;
+	}
 
 	display: flex;
 	flex-direction: column;
@@ -557,6 +562,8 @@ iframe {
 			}
 		}
 	}
+
+	//calc(100% - 8px)
 	&__title{
 		font-size: 16px;
 		@include media-breakpoint-up(md){
@@ -593,6 +600,13 @@ iframe {
 			@include media-breakpoint-up(md){
 				max-width: rem(200);
 			}
+
+			background-position-x: calc(100% - 8px);
+			//&--shift-sm{
+			//	@include media-breakpoint-down(sm){
+			//
+			//	}
+			//}
 		}
 		&__inp-btn{
 			@extend .btn;
@@ -751,7 +765,7 @@ iframe {
 		&:hover{
 			color: $body-color;
 			&:after{
-				opacity: .5;
+				opacity: 1;
 			}
 		}
 	}
@@ -824,7 +838,7 @@ iframe {
 		&:hover{
 			color: $body-color;
 			&:after{
-				opacity: .5;
+				opacity: 1;
 			}
 		}
 	}

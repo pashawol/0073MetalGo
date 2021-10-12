@@ -88,9 +88,9 @@
 			height: auto;
 
 			width: 100%;
-			@include media-breakpoint-up(md){
-				width: calc(100%/2 - 20px*1/2);
-			}
+			//@include media-breakpoint-up(md){
+			//	width: calc(100%/2 - 20px*1/2);
+			//}
 			@include media-breakpoint-up(lg){
 				width: calc(100%/3 - 20px*2/3);
 			}
@@ -217,10 +217,20 @@
 	}
 	&__input{
 		width: 100%;
-		text-align: center;
+		//text-align: center;
 
 		padding-left: rem(40) !important;
 		padding-right: rem(40) !important;
+
+		text-align: center;
+		text-align-last: center;
+		-moz-text-align-last: center;
+
+		//text-align-last:center;
+		//option{
+		//	text-align: center;
+		//	padding: 2px;
+		//}
 	}
 	&__price{
 		font-weight: 500;
@@ -247,6 +257,7 @@
 		@extend .btn;
 		@extend .btn-lg;
 		@extend .btn-primary;
+		font-size: inherit!important;
 
 		width: 100%;
 	}

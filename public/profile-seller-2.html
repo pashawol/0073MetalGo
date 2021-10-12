@@ -5,7 +5,7 @@
 		<title>06-2-prof-seller</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, shrink-to-fit=no initial-scale=1 maximum-scale=1">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no initial-scale=1 maximum-scale=1 user-scalable=0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
@@ -442,16 +442,12 @@
 														<div class="show-row__txt col-auto">Показать:
 														</div>
 														<div class="col-auto">
-															<div class="show-row__input-wrap form-group">
-																<select class="show-row__input form-select" name="select">
-																	<option value="Список">Список</option>
-																	<option value=" placeholder 1">placeholder 1</option>
-																	<option value=" placeholder 2">placeholder 2</option>
-																	<option value=" placeholder 3">placeholder 3</option>
-																	<option value=" placeholder 4">placeholder 4</option>
+															<div class="show-row__input-wrap">
+																<select class="show-row__input form-select" name="showType">
+																	<option>На карте</option>
+																	<option>Список</option>
 																</select>
 															</div>
-															<!-- +e.input-wrap-->
 														</div>
 													</div>
 												</div>
@@ -476,7 +472,7 @@
 											</div>
 											<div class="map-bl">
 												<!--replce img for map script-->
-												<div class="map-bl__map"><img loading="lazy" src="img/@2x/map-stab.png" alt=""/>
+												<div class="map-bl__map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A08195ddc952fbcc8edcab9f4989379c10ec920c35d9ff800993023c7de3e194b&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 												</div>
 											</div>
 										</div>
@@ -1391,10 +1387,10 @@
 									<div class="t-box__content">
 										<div class="c-box">
 											<div class="c-box__item">
-												<div class="c-box__top-row row gy-20 align-items-center">
+												<a class="c-box__top-row row gy-20 align-items-center" href="#" target="_blank">
 													<div class="col-auto">
-														<a class="c-box__logo" href="#" target="_blank"><img loading="lazy" src="img/svg/big-logo.svg" alt=""/>
-														</a>
+														<div class="c-box__logo"><img loading="lazy" src="img/svg/big-logo.svg" alt=""/>
+														</div>
 													</div>
 													<div class="col">
 														<div class="c-box__name">ООО «МеталГо»
@@ -1414,7 +1410,7 @@
 															</div>
 														</div>
 													</div>
-												</div>
+												</a>
 											</div>
 											<div class="c-box__item">
 												<div class="c-box__i-row row align-items-center">

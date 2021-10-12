@@ -33,7 +33,15 @@
 		padding-bottom: var(--bs-gutter-y);
 	}
 	&__item{
+		--txt-col: #{$body-color};
+		&:hover{
+			--txt-col: #{$primary};
+		}
+	}
 
+	--slider-mb: 15px;
+	@include media-breakpoint-up(sm){
+		--slider-mb: #{rem(17.5)};
 	}
 	&__slider-wrap{
 		background: $gray-220;
@@ -41,11 +49,6 @@
 		border-radius: 5px;
 		overflow: hidden;
 		border: 1px solid $gray-310;
-
-		margin-bottom: 15px;
-		@include media-breakpoint-up(sm){
-			margin-bottom: rem(17.5);
-		}
 
 		.swiper-container{
 
@@ -114,8 +117,13 @@
 		}
 	}
 	&__title{
+		padding-top: var(--slider-mb);
+		&:first-child{
+			padding-top: 0;
+		}
+
 		display: block;
-		color: $body-color;
+		color: var(--txt-col) !important;
 
 		@include media-breakpoint-down(sm){
 			line-height: 1.5;
@@ -186,6 +194,10 @@
 		//input:checked + .icon{
 		//	color: $primary;
 		//}
+
+
+
+
 		.icon{
 			@include mt();
 			color: $gray-220;
@@ -200,15 +212,19 @@
 			.icon{
 				color: $primary;
 			}
-		}
-		//&:not(.active){
-		//	&:hover{
-		//		.icon{
-		//			color: rgba($primary, .5);
-		//		}
-		//	}
-		//}
 
+			&.hover{
+				.icon{
+					color: $primary;
+				}
+			}
+		}
+
+		&.hover{
+			.icon{
+				color: darken($gray-220, 10);
+			}
+		}
 	}
 	//-
 	&__input-wrap{
@@ -290,7 +306,10 @@
 		}
 	}
 	&__company{
-		color: $body-color;
+		color: $body-color!important;
+		&:hover{
+			text-decoration: underline;
+		}
 		font-weight: 500;
 	}
 	&__name{

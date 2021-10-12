@@ -283,6 +283,9 @@ function eventHandler() {
 
 
 	let headerBlockSlider = new Swiper('.headerBlock-slide-js', {
+		autoplay: {
+			delay: 3500
+		},
 		slidesPerView: 'auto',
 		spaceBetween: 20,
 		pagination: {
@@ -555,6 +558,11 @@ function eventHandler() {
 	}); //-.star-radio-js
 
 	let stars = document.querySelectorAll('.star-radio-js');
+	let stLabels = new Array();
+
+	for (let star of stars) {
+		stLabels.push(star.closest('.star-lab-js'));
+	}
 
 	for (let star of stars) {
 		star.addEventListener('change', function () {
@@ -569,6 +577,25 @@ function eventHandler() {
 				} else {
 					label.classList.remove('active');
 				}
+			}
+		});
+	}
+
+	for (let label of stLabels) {
+		label.addEventListener('mouseenter', function () {
+			let thisIndex = [...stLabels].indexOf(this);
+
+			for (let label of stLabels) {
+				let LabelIndex = [...stLabels].indexOf(label);
+
+				if (LabelIndex <= thisIndex) {
+					label.classList.add('hover');
+				}
+			}
+		});
+		label.addEventListener('mouseleave', function () {
+			for (let label of stLabels) {
+				label.classList.remove('hover');
 			}
 		});
 	} //-

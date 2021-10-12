@@ -38,6 +38,7 @@
 			background-color: $primary;
 		}
 		.r-txt{
+			display: block;
 			@include mt();
 			border-radius: rem(60);
 
@@ -66,6 +67,10 @@
 	&__input{
 		min-width: 100%;
 		width: 99px;
+
+		@include media-breakpoint-down(sm){
+			font-size: 10px;
+		}
 		@include media-breakpoint-up(sm){
 			min-width: 0;
 			width: rem(180);
@@ -96,6 +101,7 @@
 		}
 	}
 	&__stat-item{
+		@include mt();
 		display: flex;
 		flex-direction: column;
 		min-height: 100%;
@@ -106,6 +112,11 @@
 		padding: 19px 19px 21px;
 		@include media-breakpoint-up(xxl){
 			padding: rem(39);
+		}
+
+		box-shadow: 0px 3px 10px rgba(0, 0, 0, 0);
+		&:hover{
+			box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 		}
 	}
 	&__ch-row{

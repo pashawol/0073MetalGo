@@ -5,7 +5,7 @@
 		<title>04-orders</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, shrink-to-fit=no initial-scale=1 maximum-scale=1">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no initial-scale=1 maximum-scale=1 user-scalable=0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
@@ -303,7 +303,9 @@
 						<div class="col">
 							<div class="form-wrap">
 								<form>
-									<div class="input-group"><input class="form-wrap__input form-control" placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text"/>
+									<div class="input-group">
+										<!--change ph on mob(remove d- classes and make responsive placeholder)--><input class="form-wrap__input form-control d-none d-sm-block" placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text"/><input class="form-wrap__input form-control d-sm-none" placeholder="Начните поиск" type="text"/>
+										<!---->
 										<button class="form-wrap__inp-btn" type="button"><span class="form-wrap__b-icon"><img loading="lazy" src="img/svg/zoom.svg" alt=""></span><span class="form-wrap__b-txt d-none d-sm-inline">Поиск</span>
 										</button>
 									</div>
@@ -410,8 +412,8 @@
 								<div class="s-item">
 									<div class="s-item__top-row row align-items-center">
 										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Куплю ряд позиций срочно, читайте описание
-											</div>
+											<a class="s-item__b-title" href="#">Куплю ряд позиций срочно, читайте описание
+											</a>
 										</div>
 										<div class="col-auto d-none d-md-block">
 											<a class="s-item__comp-link mb-0" href="#">
@@ -509,8 +511,8 @@
 								<div class="s-item">
 									<div class="s-item__top-row row align-items-center">
 										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Нужна поставка
-											</div>
+											<a class="s-item__b-title" href="#">Нужна поставка
+											</a>
 										</div>
 										<div class="col-auto d-none d-md-block">
 											<a class="s-item__comp-link mb-0" href="#">
@@ -597,8 +599,8 @@
 								<div class="s-item">
 									<div class="s-item__top-row row align-items-center">
 										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Длинный заголовок заявки при длинном названии компании
-											</div>
+											<a class="s-item__b-title" href="#">Длинный заголовок заявки при длинном названии компании
+											</a>
 										</div>
 										<div class="col-auto d-none d-md-block">
 											<a class="s-item__comp-link mb-0" href="#">
@@ -691,8 +693,8 @@
 								<div class="s-item">
 									<div class="s-item__top-row row align-items-center">
 										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Нужна поставка
-											</div>
+											<a class="s-item__b-title" href="#">Нужна поставка
+											</a>
 										</div>
 										<div class="col-auto d-none d-md-block">
 											<a class="s-item__comp-link mb-0" href="#">
@@ -779,8 +781,8 @@
 								<div class="s-item">
 									<div class="s-item__top-row row align-items-center">
 										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Куплю ряд позиций срочно, читайте описание
-											</div>
+											<a class="s-item__b-title" href="#">Куплю ряд позиций срочно, читайте описание
+											</a>
 										</div>
 										<div class="col-auto d-none d-md-block">
 											<a class="s-item__comp-link mb-0" href="#">
@@ -878,8 +880,8 @@
 								<div class="s-item">
 									<div class="s-item__top-row row align-items-center">
 										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Куплю ряд позиций срочно, читайте описание
-											</div>
+											<a class="s-item__b-title" href="#">Куплю ряд позиций срочно, читайте описание
+											</a>
 										</div>
 										<div class="col-auto d-none d-md-block">
 											<a class="s-item__comp-link mb-0" href="#">
@@ -977,8 +979,8 @@
 								<div class="s-item">
 									<div class="s-item__top-row row align-items-center">
 										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Нужна поставка
-											</div>
+											<a class="s-item__b-title" href="#">Нужна поставка
+											</a>
 										</div>
 										<div class="col-auto d-none d-md-block">
 											<a class="s-item__comp-link mb-0" href="#">
@@ -1065,8 +1067,8 @@
 								<div class="s-item">
 									<div class="s-item__top-row row align-items-center">
 										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Длинный заголовок заявки при длинном названии компании
-											</div>
+											<a class="s-item__b-title" href="#">Длинный заголовок заявки при длинном названии компании
+											</a>
 										</div>
 										<div class="col-auto d-none d-md-block">
 											<a class="s-item__comp-link mb-0" href="#">
@@ -1156,11 +1158,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="s-item">
+								<div class="s-item yellow">
 									<div class="s-item__top-row row align-items-center">
 										<div class="col pe-xl-0">
-											<div class="s-item__b-title">Нужна поставка
-											</div>
+											<a class="s-item__b-title" href="#">Нужна поставка
+											</a>
 										</div>
 										<div class="col-auto d-none d-md-block">
 											<a class="s-item__comp-link mb-0" href="#">

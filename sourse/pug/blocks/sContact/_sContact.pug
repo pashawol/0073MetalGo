@@ -56,7 +56,19 @@ mixin titleBox(data)
 						+b.show-row.row.align-items-center
 							+e.txt.col-auto=data.showTxt
 							.col-auto
-								+input(data.selectTxt, 'select')
+								if data.showList
+									//-+input(data.selectTxt, 'select')
+									+e.input-wrap
+										+e.SELECT.input.form-select(name="showType")
+											option Список
+											option На карте
+								else if data.showMap
+									+e.input-wrap
+										+e.SELECT.input.form-select(name="showType")
+											option На карте
+											option Список
+								else
+									+input(data.selectTxt, 'select')
 				if data.pdfBtn
 					.col-auto
 						+g.s-item

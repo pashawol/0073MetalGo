@@ -5,15 +5,15 @@ mixin headerBlock()
 			+e.slider-wrap
 				.swiper-container.headerBlock-slide-js
 					.swiper-wrapper
-						-for(let i = 0; i < 4; i++)
-							+headerBlockSlide()
+						-for(var i = 1; i <= 4; i++)
+							+headerBlockSlide(i)
 					.swiper-pagination
 			//-+pic('headerBlock-1.png')
 	// end headerBlock
 
-mixin headerBlockSlide()
+mixin headerBlockSlide(imgNum)
 	.swiper-slide
 		+e.PICTURE.img
-			source(srcset="img/@2x/headerBlock-1.png"  media="(min-width:576px)")
-			source(srcset="img/@2x/headerBlock-mob-1.png"  media="(max-width:576px)")
-			img(loading="lazy" src="img/@2x/headerBlock-1.png" alt="")
+			source(srcset=`img/@2x/headerBlock-${imgNum}.jpg`  media="(min-width:576px)")
+			source(srcset=`img/@2x/headerBlock-mob-${imgNum}.jpg`  media="(max-width:576px)")
+			img(loading="lazy" src=`img/@2x/headerBlock-${imgNum}.png` alt="")

@@ -5,7 +5,7 @@
 		<title>01-main</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, shrink-to-fit=no initial-scale=1 maximum-scale=1">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no initial-scale=1 maximum-scale=1 user-scalable=0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
@@ -311,9 +311,9 @@
 				</header>
 			</div>
 			<!-- end header-->
-			<div class="white-line bg-white">
+			<div class="white-line white-line--mh-0 bg-white">
 				<div class="container">
-					<div class="white-line__row row align-items-center">
+					<div class="white-line__row row align-items-center pb-0">
 						<div class="col-12">
 							<div class="form-wrap">
 								<form>
@@ -322,7 +322,9 @@
 											<option>Категория</option>
 											<option>Категория 2</option>
 											<option>Категория 2</option>
-										</select><input class="form-wrap__input form-control" placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text"/>
+										</select>
+										<!--change ph on mob(remove d- classes and make responsive placeholder)--><input class="form-wrap__input form-control d-none d-sm-block" placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text"/><input class="form-wrap__input form-control d-sm-none" placeholder="Начните поиск" type="text"/>
+										<!---->
 										<button class="form-wrap__inp-btn" type="button"><span class="form-wrap__b-icon"><img loading="lazy" src="img/svg/zoom.svg" alt=""></span><span class="form-wrap__b-txt d-none d-sm-inline">Поиск</span>
 										</button>
 									</div>
@@ -340,26 +342,26 @@
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<picture class="headerBlock__img">
-										<source srcset="img/@2x/headerBlock-1.png" media="(min-width:576px)"/>
-										<source srcset="img/@2x/headerBlock-mob-1.png" media="(max-width:576px)"/><img loading="lazy" src="img/@2x/headerBlock-1.png" alt=""/>
+										<source srcset="img/@2x/headerBlock-1.jpg" media="(min-width:576px)"/>
+										<source srcset="img/@2x/headerBlock-mob-1.jpg" media="(max-width:576px)"/><img loading="lazy" src="img/@2x/headerBlock-1.png" alt=""/>
 									</picture>
 								</div>
 								<div class="swiper-slide">
 									<picture class="headerBlock__img">
-										<source srcset="img/@2x/headerBlock-1.png" media="(min-width:576px)"/>
-										<source srcset="img/@2x/headerBlock-mob-1.png" media="(max-width:576px)"/><img loading="lazy" src="img/@2x/headerBlock-1.png" alt=""/>
+										<source srcset="img/@2x/headerBlock-2.jpg" media="(min-width:576px)"/>
+										<source srcset="img/@2x/headerBlock-mob-2.jpg" media="(max-width:576px)"/><img loading="lazy" src="img/@2x/headerBlock-2.png" alt=""/>
 									</picture>
 								</div>
 								<div class="swiper-slide">
 									<picture class="headerBlock__img">
-										<source srcset="img/@2x/headerBlock-1.png" media="(min-width:576px)"/>
-										<source srcset="img/@2x/headerBlock-mob-1.png" media="(max-width:576px)"/><img loading="lazy" src="img/@2x/headerBlock-1.png" alt=""/>
+										<source srcset="img/@2x/headerBlock-3.jpg" media="(min-width:576px)"/>
+										<source srcset="img/@2x/headerBlock-mob-3.jpg" media="(max-width:576px)"/><img loading="lazy" src="img/@2x/headerBlock-3.png" alt=""/>
 									</picture>
 								</div>
 								<div class="swiper-slide">
 									<picture class="headerBlock__img">
-										<source srcset="img/@2x/headerBlock-1.png" media="(min-width:576px)"/>
-										<source srcset="img/@2x/headerBlock-mob-1.png" media="(max-width:576px)"/><img loading="lazy" src="img/@2x/headerBlock-1.png" alt=""/>
+										<source srcset="img/@2x/headerBlock-4.jpg" media="(min-width:576px)"/>
+										<source srcset="img/@2x/headerBlock-mob-4.jpg" media="(max-width:576px)"/><img loading="lazy" src="img/@2x/headerBlock-4.png" alt=""/>
 									</picture>
 								</div>
 							</div>
@@ -380,7 +382,7 @@
 							</div>
 							<a class="sImged__img d-lg-none" href="#"><img loading="lazy" src="img/@2x/sImged-1.png" alt=""/>
 							</a>
-							<div class="sImged__btns-row row">
+							<div class="sImged__btns-row row justify-content-center justify-content-lg-start">
 								<div class="col-md-6 col-lg-auto">
 									<a class="sImged__btn sImged__btn--dark" href="#">Перейти в раздел
 									</a>
@@ -392,8 +394,8 @@
 							</div>
 						</div>
 						<div class="col-lg-6 d-none d-lg-block">
-							<a class="sImged__img" href="#"><img loading="lazy" src="img/@2x/sImged-1.png" alt=""/>
-							</a>
+							<div class="sImged__img"><img loading="lazy" src="img/@2x/sImged-1.png" alt=""/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -410,7 +412,7 @@
 							</div>
 							<a class="sImged__img d-lg-none" href="#"><img loading="lazy" src="img/@2x/sImged-2.png" alt=""/>
 							</a>
-							<div class="sImged__btns-row row">
+							<div class="sImged__btns-row row justify-content-center justify-content-lg-start">
 								<div class="col-md-6 col-lg-auto">
 									<a class="sImged__btn sImged__btn--dark" href="#">Перейти в раздел
 									</a>
@@ -422,8 +424,8 @@
 							</div>
 						</div>
 						<div class="col-lg-6 d-none d-lg-block">
-							<a class="sImged__img" href="#"><img loading="lazy" src="img/@2x/sImged-2.png" alt=""/>
-							</a>
+							<div class="sImged__img"><img loading="lazy" src="img/@2x/sImged-2.png" alt=""/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -440,7 +442,7 @@
 							</div>
 							<a class="sImged__img d-lg-none" href="#"><img loading="lazy" src="img/@2x/sImged-3.png" alt=""/>
 							</a>
-							<div class="sImged__btns-row row">
+							<div class="sImged__btns-row row justify-content-center justify-content-lg-start">
 								<div class="col-md-6 col-lg-auto">
 									<a class="sImged__btn sImged__btn--yellow" href="#">Зарегистрироваться как поставщик
 									</a>
@@ -448,8 +450,8 @@
 							</div>
 						</div>
 						<div class="col-lg-6 d-none d-lg-block">
-							<a class="sImged__img" href="#"><img loading="lazy" src="img/@2x/sImged-3.png" alt=""/>
-							</a>
+							<div class="sImged__img"><img loading="lazy" src="img/@2x/sImged-3.png" alt=""/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -506,7 +508,7 @@
 			<!-- end sChart-->
 			<!-- start sTarif-->
 			<section class="sTarif section" id="sTarif">
-				<div class="sTarif__container container">
+				<div class="sTarif__container container tabs">
 					<div class="section-title section-title--big text-center">
 						<h2>
 							тарифы
@@ -514,146 +516,314 @@
 						</h2>
 					</div>
 					<div class="sTarif__btns input-group">
-						<button class="sTarif__btn active" type="button">Поставщику
+						<button class="sTarif__btn tabs__btn active" type="button">Поставщику
 						</button>
-						<button class="sTarif__btn" type="button">Покупателю
+						<button class="sTarif__btn tabs__btn" type="button">Покупателю
 						</button>
-						<button class="sTarif__btn" type="button">Дополнительные услуги
+						<button class="sTarif__btn tabs__btn" type="button">Дополнительные услуги
 						</button>
-						<button class="sTarif__btn" type="button">Рекламные баннеры
+						<button class="sTarif__btn tabs__btn" type="button">Рекламные баннеры
 						</button>
 					</div>
-					<div class="sTarif__slider-wrap">
-						<div class="swiper-container sTarif-slider-js">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="t-item">
-										<a class="t-item__img" href="#"><img loading="lazy" src="img/svg/t-item-1.svg" alt=""/>
-										</a>
-										<div class="t-item__title">Склад
-										</div>
-										<div class="t-item__descr">до 500 объявлений
-										</div>
-										<div class="t-item__items d-none d-sm-block">
-											<div class="t-item__item">
-												<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-1.svg" alt=""/>
+					<div class="tabs__wrap">
+						<div class="tabs__content active">
+							<div class="sTarif__slider-wrap">
+								<div class="swiper-container sTarif-slider-js">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="t-item">
+												<div class="t-item__img"><img loading="lazy" src="img/svg/t-item-1.svg" alt=""/>
 												</div>
-												<div class="t-item__txt">0 выделений объявлений
+												<div class="t-item__title">Склад
 												</div>
+												<div class="t-item__descr">до 500 объявлений
+												</div>
+												<div class="t-item__items d-none d-sm-block">
+													<div class="t-item__item">
+														<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-1.svg" alt=""/>
+														</div>
+														<div class="t-item__txt">0 выделений объявлений
+														</div>
+													</div>
+													<div class="t-item__item">
+														<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-2.svg" alt=""/>
+														</div>
+														<div class="t-item__txt">0 поднятий в ТОП
+														</div>
+													</div>
+												</div>
+												<div class="t-item__time-title">Период подписки:
+												</div>
+												<div class="t-item__input-wrap">
+													<select class="t-item__input form-select" name="time">
+														<option>3 месяца</option>
+														<option>6 месяцев</option>
+														<option>9 месяцев</option>
+													</select>
+												</div>
+												<div class="t-item__price">5 400 ₽
+												</div>
+												<div class="t-item__per-month">1 800 ₽ в месяц
+												</div>
+												<a class="t-item__btn" href="#">Подключить
+												</a>
 											</div>
-											<div class="t-item__item">
-												<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-2.svg" alt=""/>
+										</div>
+										<div class="swiper-slide">
+											<div class="t-item">
+												<div class="t-item__img"><img loading="lazy" src="img/svg/t-item-2.svg" alt=""/>
 												</div>
-												<div class="t-item__txt">0 поднятий в ТОП
+												<div class="t-item__title">база
 												</div>
+												<div class="t-item__descr">до 5000 объявлений
+												</div>
+												<div class="t-item__items d-none d-sm-block">
+													<div class="t-item__item">
+														<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-1.svg" alt=""/>
+														</div>
+														<div class="t-item__txt">100 выделений объявлений
+														</div>
+													</div>
+													<div class="t-item__item">
+														<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-2.svg" alt=""/>
+														</div>
+														<div class="t-item__txt">100 поднятий в ТОП
+														</div>
+													</div>
+												</div>
+												<div class="t-item__time-title">Период подписки:
+												</div>
+												<div class="t-item__input-wrap">
+													<select class="t-item__input form-select" name="time">
+														<option>3 месяца</option>
+														<option>6 месяцев</option>
+														<option>9 месяцев</option>
+													</select>
+												</div>
+												<div class="t-item__price">12 000 ₽
+												</div>
+												<div class="t-item__per-month">4 000 ₽ в месяц
+												</div>
+												<a class="t-item__btn" href="#">Подключить
+												</a>
 											</div>
 										</div>
-										<div class="t-item__time-title">Период подписки:
+										<div class="swiper-slide">
+											<div class="t-item">
+												<div class="t-item__img"><img loading="lazy" src="img/svg/t-item-3.svg" alt=""/>
+												</div>
+												<div class="t-item__title">холдинг
+												</div>
+												<div class="t-item__descr">Свыше 5000 объявлений
+												</div>
+												<div class="t-item__items d-none d-sm-block">
+													<div class="t-item__item">
+														<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-1.svg" alt=""/>
+														</div>
+														<div class="t-item__txt">500 выделений объявлений
+														</div>
+													</div>
+													<div class="t-item__item">
+														<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-2.svg" alt=""/>
+														</div>
+														<div class="t-item__txt">500 поднятий в ТОП
+														</div>
+													</div>
+												</div>
+												<div class="t-item__time-title">Период подписки:
+												</div>
+												<div class="t-item__input-wrap">
+													<select class="t-item__input form-select" name="time">
+														<option>3 месяца</option>
+														<option>6 месяцев</option>
+														<option>9 месяцев</option>
+													</select>
+												</div>
+												<div class="t-item__price">21 000 ₽
+												</div>
+												<div class="t-item__per-month">7 000 ₽ в месяц
+												</div>
+												<a class="t-item__btn" href="#">Подключить
+												</a>
+											</div>
 										</div>
-										<div class="t-item__input-wrap form-group">
-											<select class="t-item__input form-select" name="select">
-												<option value="3 месяца">3 месяца</option>
-												<option value=" placeholder 1">placeholder 1</option>
-												<option value=" placeholder 2">placeholder 2</option>
-												<option value=" placeholder 3">placeholder 3</option>
-												<option value=" placeholder 4">placeholder 4</option>
-											</select>
+									</div>
+									<div class="swiper-pagination d-lg-none"></div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs__content">
+							<div class="row gy-20">
+								<div class="col-lg-4">
+									<div class="t-buyer">
+										<div class="t-buyer__title">3 месяца
 										</div>
-										<!-- +e.input-wrap-->
-										<div class="t-item__price">5 400 ₽
+										<div class="t-buyer__price">4 500 ₽
 										</div>
-										<div class="t-item__per-month">1 800 ₽ в месяц
+										<div class="t-buyer__per-month">1 500 ₽ в месяц 
 										</div>
-										<a class="t-item__btn" href="#">Подключить
+										<a class="t-buyer__btn" href="#">Подключить
 										</a>
 									</div>
 								</div>
-								<div class="swiper-slide">
-									<div class="t-item">
-										<a class="t-item__img" href="#"><img loading="lazy" src="img/svg/t-item-2.svg" alt=""/>
-										</a>
-										<div class="t-item__title">база
+								<div class="col-lg-4">
+									<div class="t-buyer">
+										<div class="t-buyer__title">6 месяцев
 										</div>
-										<div class="t-item__descr">до 5000 объявлений
+										<div class="t-buyer__price">6 000 ₽
 										</div>
-										<div class="t-item__items d-none d-sm-block">
-											<div class="t-item__item">
-												<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-1.svg" alt=""/>
-												</div>
-												<div class="t-item__txt">100 выделений объявлений
-												</div>
-											</div>
-											<div class="t-item__item">
-												<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-2.svg" alt=""/>
-												</div>
-												<div class="t-item__txt">100 поднятий в ТОП
-												</div>
-											</div>
+										<div class="t-buyer__per-month">1100 ₽ в месяц 
 										</div>
-										<div class="t-item__time-title">Период подписки:
-										</div>
-										<div class="t-item__input-wrap form-group">
-											<select class="t-item__input form-select" name="select">
-												<option value="3 месяца">3 месяца</option>
-												<option value=" placeholder 1">placeholder 1</option>
-												<option value=" placeholder 2">placeholder 2</option>
-												<option value=" placeholder 3">placeholder 3</option>
-												<option value=" placeholder 4">placeholder 4</option>
-											</select>
-										</div>
-										<!-- +e.input-wrap-->
-										<div class="t-item__price">12 000 ₽
-										</div>
-										<div class="t-item__per-month">4 000 ₽ в месяц
-										</div>
-										<a class="t-item__btn" href="#">Подключить
+										<a class="t-buyer__btn" href="#">Подключить
 										</a>
 									</div>
 								</div>
-								<div class="swiper-slide">
-									<div class="t-item">
-										<a class="t-item__img" href="#"><img loading="lazy" src="img/svg/t-item-3.svg" alt=""/>
-										</a>
-										<div class="t-item__title">холдинг
+								<div class="col-lg-4">
+									<div class="t-buyer">
+										<div class="t-buyer__title">12 месяцев
 										</div>
-										<div class="t-item__descr">Свыше 5000 объявлений
+										<div class="t-buyer__price">8 400 ₽
 										</div>
-										<div class="t-item__items d-none d-sm-block">
-											<div class="t-item__item">
-												<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-1.svg" alt=""/>
-												</div>
-												<div class="t-item__txt">500 выделений объявлений
-												</div>
-											</div>
-											<div class="t-item__item">
-												<div class="t-item__icon"><img loading="lazy" src="img/svg/t-sub-item-2.svg" alt=""/>
-												</div>
-												<div class="t-item__txt">500 поднятий в ТОП
-												</div>
-											</div>
+										<div class="t-buyer__per-month">700 ₽ в месяц
 										</div>
-										<div class="t-item__time-title">Период подписки:
-										</div>
-										<div class="t-item__input-wrap form-group">
-											<select class="t-item__input form-select" name="select">
-												<option value="3 месяца">3 месяца</option>
-												<option value=" placeholder 1">placeholder 1</option>
-												<option value=" placeholder 2">placeholder 2</option>
-												<option value=" placeholder 3">placeholder 3</option>
-												<option value=" placeholder 4">placeholder 4</option>
-											</select>
-										</div>
-										<!-- +e.input-wrap-->
-										<div class="t-item__price">21 000 ₽
-										</div>
-										<div class="t-item__per-month">7 000 ₽ в месяц
-										</div>
-										<a class="t-item__btn" href="#">Подключить
+										<a class="t-buyer__btn" href="#">Подключить
 										</a>
 									</div>
 								</div>
 							</div>
-							<div class="swiper-pagination d-lg-none"></div>
+						</div>
+						<div class="tabs__content">
+							<div class="row gy-20">
+								<div class="col-xl-6">
+									<div class="add-serv">
+										<div class="add-serv__row row">
+											<div class="col-auto d-none d-md-block">
+												<div class="add-serv__img"><img loading="lazy" src="img/svg/add-serv-1.svg" alt=""/>
+												</div>
+											</div>
+											<div class="col">
+												<div class="add-serv__title-row row align-items-center">
+													<div class="col-auto d-md-none">
+														<div class="add-serv__img"><img loading="lazy" src="img/svg/add-serv-1.svg" alt=""/>
+														</div>
+													</div>
+													<div class="col">
+														<div class="add-serv__title">Выделение объявлений
+														</div>
+													</div>
+												</div>
+												<div class="add-serv__descr">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому.
+												</div>
+												<div class="add-serv__price">200 ₽/шт.
+												</div>
+												<div class="add-serv__a-row row align-items-center">
+													<div class="add-serv__a-txt col-auto">Количество:
+													</div>
+													<div class="col-auto">
+														<div class="add-serv__inp-group input-group">
+															<button class="add-serv__sm-btn add-serv__sm-btn--min" type="button">
+															</button><input class="add-serv__input form-control" type="text" value="1"/>
+															<button class="add-serv__sm-btn add-serv__sm-btn--plus" type="button">
+															</button>
+														</div>
+													</div>
+													<div class="col-sm-auto">На счету: 17 шт.</div>
+												</div>
+												<div class="add-serv__btns-row row">
+													<div class="col-sm-6">
+														<button class="add-serv__btn add-serv__btn--orange" type="button">Оплатить
+														</button>
+													</div>
+													<div class="col-sm-6">
+														<button class="add-serv__btn add-serv__btn--out-orange" type="button">Как это работает?
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-6">
+									<div class="add-serv">
+										<div class="add-serv__row row">
+											<div class="col-auto d-none d-md-block">
+												<div class="add-serv__img"><img loading="lazy" src="img/svg/add-serv-2.svg" alt=""/>
+												</div>
+											</div>
+											<div class="col">
+												<div class="add-serv__title-row row align-items-center">
+													<div class="col-auto d-md-none">
+														<div class="add-serv__img"><img loading="lazy" src="img/svg/add-serv-2.svg" alt=""/>
+														</div>
+													</div>
+													<div class="col">
+														<div class="add-serv__title">Поднятие в ТОП
+														</div>
+													</div>
+												</div>
+												<div class="add-serv__descr">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому.
+												</div>
+												<div class="add-serv__price">300 ₽/шт.
+												</div>
+												<div class="add-serv__a-row row align-items-center">
+													<div class="add-serv__a-txt col-auto">Количество:
+													</div>
+													<div class="col-auto">
+														<div class="add-serv__inp-group input-group">
+															<button class="add-serv__sm-btn add-serv__sm-btn--min" type="button">
+															</button><input class="add-serv__input form-control" type="text" value="1"/>
+															<button class="add-serv__sm-btn add-serv__sm-btn--plus" type="button">
+															</button>
+														</div>
+													</div>
+													<div class="col-sm-auto">На счету: 0 шт.</div>
+												</div>
+												<div class="add-serv__btns-row row">
+													<div class="col-sm-6">
+														<button class="add-serv__btn add-serv__btn--orange" type="button">Оплатить
+														</button>
+													</div>
+													<div class="col-sm-6">
+														<button class="add-serv__btn add-serv__btn--out-orange" type="button">Как это работает?
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs__content">
+							<div class="img-baner">
+								<div class="img-baner__row row align-items-center">
+									<div class="col-auto d-none d-lg-block">
+										<div class="img-baner__img"><img loading="lazy" src="img/svg/img-baner.svg" alt=""/>
+										</div>
+									</div>
+									<div class="col">
+										<div class="img-baner__title-row row align-items-center">
+											<div class="col-auto d-lg-none">
+												<div class="img-baner__img"><img loading="lazy" src="img/svg/img-baner.svg" alt=""/>
+												</div>
+											</div>
+											<div class="img-baner__title col">Рекламный баннер
+											</div>
+										</div>
+										<div class="img-baner__descr">Размещение на всех страницах сайта компьютерной версии сбоку и внизу.
+										</div>
+									</div>
+									<div class="img-baner__per-month col-lg-auto">3 000 ₽/мес.
+									</div>
+									<div class="col-lg-auto">
+										<a class="img-baner__btn" href="#"><span>Подробнее</span>
+											<svg class="icon icon-chevron-down2 ">
+												<use xlink:href="img/svg/sprite.svg#chevron-down2"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -81,7 +81,9 @@
 	}
 	&__item-row{
 		color: $body-color;
-
+		&:hover{
+			color: $primary;
+		}
 
 		--bs-gutter-y: 10px;
 		--bs-gutter-x: 10px;

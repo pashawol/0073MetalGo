@@ -91,10 +91,10 @@ mixin contactsBox(data)
 		.t-box__content
 			+b.c-box
 				+e.item
-					+e.top-row.row.gy-20(class=`${!data.hidden ? 'align-items-center' : ''}`)
+					+e.top-row.row.gy-20(class=`${!data.hidden ? 'align-items-center' : ''}` href="#" target="_blank")
 						.col-auto
 							if data.logo
-								+e.logo(href="#" target="_blank")
+								+e.logo
 									img(loading="lazy" src="img/svg/big-logo.svg" alt="")
 							if data.hidden
 								+e.l-hidden Организация

@@ -240,6 +240,7 @@ mixin sSearchOrders(data)
 								li Швеллеры № 40, марка стали Ст0 т 0.0054
 								li Швеллеры № 40, марка стали Ст0 т 0.0054
 						+sSearchItem({
+							addClasses: 'yellow',
 							imgNum: 1,
 							boldTitle: 'Нужна поставка',
 							noChars: true,
@@ -406,7 +407,7 @@ mixin sSearchItem(data)
 							| с НДС
 			if data.boldTitle
 				.col.pe-xl-0
-					+e.b-title=data.boldTitle
+					+e.b-title(href="#")=data.boldTitle
 			.col-auto.d-none.d-md-block
 				+e.comp-link.mb-0(href="#")
 					+e.comp-row.row.d-flex.align-items-center

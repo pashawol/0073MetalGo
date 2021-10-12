@@ -23,7 +23,10 @@ block pagecontent
 				.col
 					+form-wrap
 						.input-group
-							+e.INPUT.input.form-control(placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text")
+							//change ph on mob(remove d- classes and make responsive placeholder)
+							+e.INPUT.input.form-control.d-none.d-sm-block(placeholder="Введите стандарт, диаметр и толщину стенки, например" type="text")
+							+e.INPUT.input.form-control.d-sm-none(placeholder="Начните поиск" type="text")
+							//
 							+e.inp-btn(type="button")
 								+e.SPAN.b-icon
 									img(loading='lazy' src="img/svg/zoom.svg" alt="")

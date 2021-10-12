@@ -32,7 +32,8 @@
 	}
 	&__btn{
 		@extend .btn;
-		font-size: 16px;
+		//font-size: 16px;
+		font-size: inherit;
 
 		min-width: 100%;
 		padding: 12.25px 10px;

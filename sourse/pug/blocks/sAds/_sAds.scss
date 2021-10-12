@@ -11,18 +11,18 @@
 	}
 	//-
 	.s-item{
-		&__d-title{
-			@include media-breakpoint-down(sm){
-				font-size: 10px;
-				line-height: 1.2;
-			}
-		}
-		&__d-val{
-			@include media-breakpoint-down(sm){
-				font-size: 10px;
-				line-height: 1.2;
-			}
-		}
+		//&__d-title{
+		//	@include media-breakpoint-down(sm){
+		//		font-size: 10px;
+		//		line-height: 1.2;
+		//	}
+		//}
+		//&__d-val{
+		//	@include media-breakpoint-down(sm){
+		//		font-size: 10px;
+		//		line-height: 1.2;
+		//	}
+		//}
 	}
 	&__{}
 	&__{}
@@ -63,7 +63,10 @@
 		}
 	}
 	&__top-row{
-
+		color: $body-color!important;
+		&:hover{
+			--txt-dec: underline;
+		}
 	}
 	&__logo{
 		display: block;
@@ -88,9 +91,13 @@
 	&__l-hidden{
 		color: $gray-610;
 		margin-right: calc(var(--bs-gutter-x) / -2);
+
+		padding: 4px 0;
+		line-height: 16px;//!!!
 	}
 	&__name{
 		margin-bottom: rem(15);
+		text-decoration: var(--txt-dec, none);
 	}
 	//
 	&__fb-row{
