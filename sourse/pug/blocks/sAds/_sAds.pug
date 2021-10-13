@@ -91,27 +91,39 @@ mixin contactsBox(data)
 		.t-box__content
 			+b.c-box
 				+e.item
-					+e.top-row.row.gy-20(class=`${!data.hidden ? 'align-items-center' : ''}` href="#" target="_blank")
-						.col-auto
-							if data.logo
-								+e.logo
-									img(loading="lazy" src="img/svg/big-logo.svg" alt="")
-							if data.hidden
+					if data.hidden
+						+e.top-row.row.gy-20(class=`${!data.hidden ? 'align-items-center' : ''}`)
+							.col-auto
 								+e.l-hidden Организация
-						.col
-							if data.name
-								+e.name=data.name
-							if data.hidden
+							.col
 								+b.hid-alert.mb-1 Информация скрыта
-							+e.fb-row.row.align-items-center
-								.col-auto
-									+g.s-item
-										+e.rate
-											+e.star
-												img(loading="lazy" src="img/svg/star.svg" alt="")
-											+e.rate-val 4.9
-								.col-auto
-									+e.fb-amount 6 отзывов
+								+e.fb-row.row.align-items-center
+									.col-auto
+										+g.s-item
+											+e.rate
+												+e.star
+													img(loading="lazy" src="img/svg/star.svg" alt="")
+												+e.rate-val 4.9
+									.col-auto
+										+e.fb-amount 6 отзывов
+					else
+						+e.top-row.row.gy-20(class=`${!data.hidden ? 'align-items-center' : ''}` href="#" target="_blank")
+							.col-auto
+								if data.logo
+									+e.logo
+										img(loading="lazy" src="img/svg/big-logo.svg" alt="")
+							.col
+								if data.name
+									+e.name=data.name
+								+e.fb-row.row.align-items-center
+									.col-auto
+										+g.s-item
+											+e.rate
+												+e.star
+													img(loading="lazy" src="img/svg/star.svg" alt="")
+												+e.rate-val 4.9
+									.col-auto
+										+e.fb-amount 6 отзывов
 				+contactsBoxItem('Город')
 					if data.city
 						+e.txt-item=data.city
