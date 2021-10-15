@@ -35,17 +35,17 @@
 	}
 
 	//-
-	&__img{
-		@extend .accept-ratio-frame-nh;
+	// &__img{
+	// 	// @extend .accept-ratio-frame-nh;
 
-		padding-top: calc(187/320 * 100%);
-		@include media-breakpoint-up(sm){
+	// 	padding-top: calc(187/320 * 100%);
+	// 	// @include media-breakpoint-up(sm){
 
-		}
-		@media (min-width: 480px) {
-			padding-top: calc(353/1516 * 100%);
-		}
-	}
+	// 	}
+	// 	@media (min-width: 480px) {
+	// 		// padding-top: calc(353/1516 * 100%);
+	// 	}
+	// }
 	&__{}
 	&__{}
 }
