@@ -8,7 +8,7 @@ mixin sImged(data)
 						h2=data.title
 						p=data.descr
 					+e.img.d-lg-none(href="#")
-						img(loading="lazy" src=`img/@2x/sImged-${data.imgNum}.png` alt="")
+						+pic(`sImged-${data.imgNum}.png`,'',0)
 					+e.btns-row.row.justify-content-center.justify-content-lg-start
 						if data.blackBtn
 							.col-md-6.col-lg-auto
@@ -18,5 +18,6 @@ mixin sImged(data)
 								+e.btn--yellow(href="#")=data.orangeBtn
 				.col-lg-6.d-none.d-lg-block
 					+e.img
-						img(loading="lazy" src=`img/@2x/sImged-${data.imgNum}.png` alt="")
+						+pic(`sImged-${data.imgNum}.png`,'',0)
+						//- img(loading="lazy" src=`img/@2x/sImged-${data.imgNum}.png` alt="")
 	// end sImged

@@ -320,6 +320,7 @@ function eventHandler() {
 		options: {
 			responsive: true,
 			maintainAspectRatio: false,
+			barPercentage: .6,
 			//disable grid
 			scales: {
 				x: {
