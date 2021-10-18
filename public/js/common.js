@@ -695,7 +695,9 @@ function eventHandler() {
 		} else {
 			return arr;
 		}
-	} //end luckyoneJs
+	} //
+	//check intite
+	//end luckyoneJs
 
 }
 
