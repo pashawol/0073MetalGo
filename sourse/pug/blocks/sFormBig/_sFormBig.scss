@@ -1,0 +1,265 @@
+// start .sFormBig
+.sFormBig {
+	--sPT: 41px;
+	--sPB: 40px;
+	--sTPB: 39px;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(49)};
+	}
+
+	.section-title{
+		margin: 0 auto;
+		max-width: 250px;
+		@include media-breakpoint-up(sm){
+			max-width: 100%;
+		}
+	}
+	&__items{
+
+	}
+
+	.t-box{
+		--header-mh: 75px;
+		--content-py: 38px;
+		--header-shift: 0px;
+		@include media-breakpoint-up(xl){
+			--header-mh: #{rem(95)};
+			--content-py: #{rem(56)};
+			--header-shift: #{rem(20)};
+		}
+		&__header{
+			padding: 0 var(--box-px);
+			@include media-breakpoint-down(sm){
+				&:after{
+					content: none;
+				}
+			}
+
+			&--smaller{
+				@include media-breakpoint-up(xl){
+					--header-mh: #{rem(90)};
+				}
+			}
+		}
+
+		//-
+		.t-box__title{
+			min-height: var(--header-mh);
+			position: relative;
+
+			display: flex;
+			align-items: center;
+			&:after{
+				content: '';
+				@include media-breakpoint-up(sm){
+					content: none;
+				}
+
+				width: 100%;
+				height: 2px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				background-color: $primary;
+
+			}
+		}
+
+
+		&__content{
+			border-bottom: 1px solid $gray-220;
+			&:last-child{
+				border-bottom: none;
+			}
+
+			padding: 36px var(--box-px) 40px;
+			@include media-breakpoint-up(sm){
+				padding: rem(36) var(--box-px) rem(40);
+			}
+
+			&:last-child{
+				padding: 20px var(--box-px);
+				@include media-breakpoint-up(sm){
+					padding: rem(41) var(--box-px);
+				}
+			}
+
+			//-
+		}
+	}
+	&__item{
+		margin-bottom: 37px;
+		padding-bottom: 39px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(37);
+			padding-bottom: rem(39);
+		}
+		border-bottom: 1px dashed $gray-310;
+
+		&:last-child{
+			margin-bottom: rem(40);
+		}
+	}
+	//-
+	&__title{
+		font-weight: 500;
+
+		margin-bottom: 34px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(32);
+		}
+	}
+	&__i-row{
+		padding-bottom: var(--bs-gutter-y);
+
+		--bs-gutter-x: 20px;
+		--bs-gutter-y: 20px;
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(24)};
+			--bs-gutter-y: #{rem(24)};
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(40)};
+			--bs-gutter-y: #{rem(40)};
+		}
+	}
+
+	--inp-mb: 17px;
+	@include media-breakpoint-up(sm){
+		--inp-mb: #{rem(17)};
+	}
+	&__col{
+		&--shift-top{
+			--inp-mb: 20px;
+			@include media-breakpoint-up(sm){
+				--inp-mb: #{rem(20)};
+			}
+
+			//-
+			@include media-breakpoint-up(lg){
+				padding-top: calc(var(--inp-t-mb) + #{$font-size-base * $line-height-base});
+			}
+		}
+
+		&--smaller{
+			@include media-breakpoint-up(xl){
+				width: 33% !important;
+			}
+		}
+	}
+	&__input-wrap{
+		width: 100%;
+		label{
+			display: block!important;
+		}
+
+		margin-bottom: var(--inp-mb, 0);
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		//-
+		textarea{
+			resize: none;
+
+			height: 68px;
+			@include media-breakpoint-up(sm){
+				height: rem(240);
+			}
+		}
+	}
+
+	//-
+	--inp-t-mb: 13px;
+	@include media-breakpoint-up(sm){
+		--inp-t-mb: #{rem(17px)};
+	}
+
+	&__input-title{
+		display: block;
+		margin-bottom: var(--inp-t-mb);
+	}
+
+	//-
+	&__input{
+
+	}
+	&__del-box{
+
+	}
+	&__ball-btn{
+		@include mt();
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+
+		color: $gray-610;
+		&:hover{
+			--icon-col: #{$body-color};
+			color: $body-color;
+		}
+
+		&--orange{
+			--icon-col: #{$body-color};
+			--bal-bg: #{$primary};
+		}
+	}
+	&__ball{
+		@include mt();
+		border-radius: 50%;
+
+		background: var(--bal-bg, #{$gray-220});
+
+		width: 24px;
+		height: 24px;
+		margin-right: 10px;
+		@include media-breakpoint-up(sm){
+			width: rem(30);
+			height: rem(30);
+			margin-right: rem(10);
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			@include mt();
+			font-size: 9.6px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(12);
+			}
+
+			color: var(--icon-col, #{$gray-600});
+		}
+		//-$gray-600
+	}
+
+	//-
+	&__data-row{
+
+		--bs-gutter-x: 20px;
+		--bs-gutter-y: 17px;
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(24)};
+			--bs-gutter-y: #{rem(17)};
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(40)};
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-lg;
+		@extend .btn-primary;
+
+		min-width: 220px;
+		@include media-breakpoint-up(md){
+			min-width: rem(332);
+		}
+	}
+	&__{}
+	&__{}
+} // end.sFormBig

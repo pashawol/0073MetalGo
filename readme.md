@@ -20,6 +20,7 @@
 14. <https://pashawol.github.io/0073MetalGo/public/faq.html>
 15. <https://pashawol.github.io/0073MetalGo/public/popups.html>
 16. <https://pashawol.github.io/0073MetalGo/public/not-found.html>
+17. <https://pashawol.github.io/0073MetalGo/public/for-order.html>
 
 /////////////////////////////// personal area
 1. <https://pashawol.github.io/0073MetalGo/public/lk-stat.html>

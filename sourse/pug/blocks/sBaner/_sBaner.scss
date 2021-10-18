@@ -1,0 +1,60 @@
+// start .sBaner
+.sBaner {
+	position: relative;
+	z-index: 1;
+	--sPT: 0px!important;
+	--sPB: 0px!important;
+	--sTPB: 0px!important;
+
+	&__bg{
+		display: block;
+		img{
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+
+			@media (min-width: 480px) {
+				min-height: 200px;
+				object-fit: cover;
+			}
+		}
+	}
+	.section-title{
+		@media (max-width: 480px) {
+			padding: 0 0 rem(62);
+		}
+
+		width: calc(100% - 10px);
+		padding: rem(40) 0;
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+
+		h1{
+			font-weight: bold;
+
+			font-size: 28px;
+			line-height: calc(33/28);
+			@include media-breakpoint-up(md){
+				font-size: rem(40);
+				line-height: calc(53/45);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: rem(60);
+				line-height: calc(70/60);
+			}
+			text-transform: uppercase;
+
+			color: $white;
+			span{
+				display: block;
+				color: $primary;
+			}
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sBaner

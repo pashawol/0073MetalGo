@@ -1,0 +1,16 @@
+mixin sList(data)
+	// start sList
+	+b.SECTION.sList.section.bg-white#sList&attributes(attributes)
+		.container
+			+b.section-title--big.text-center
+				h2 список заводов
+			+e.row.row.justify-content-center
+				-for (var i = 1; i <= 5; i++)
+					+sListCol(i)
+
+	// end sList
+
+mixin sListCol(imgNum)
+	+e.col.col-6.col-sm-4.col-xl-auto
+		+e.item
+			img(loading="lazy" src=`img/@2x/sList-${imgNum}.png` alt="")

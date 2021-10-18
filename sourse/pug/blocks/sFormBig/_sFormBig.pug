@@ -1,0 +1,100 @@
+mixin sFormBig(data)
+	// start sFormBig
+	+b.SECTION.sFormBig.section#sFormBig&attributes(attributes)
+		.container
+			+b.section-title--big.text-center
+				h2 форма приема заказа
+			.t-box.t-box--big-form
+				.t-box__header
+					h2.t-box__title данные о заказе
+				.t-box__content
+					+e.items
+						+sFormBigItem({
+							itemNum: 1,
+							procTypeTxt: 'Труба',
+						})
+						+sFormBigItem({
+							itemNum: 2,
+							procTypeTxt: 'Круг',
+						})
+							+e.input-wrap(data-add-ph="мм")
+								+e.INPUT.input.form-control(type="text" placeholder="Диаметр")
+							+e.input-wrap(data-add-ph="м")
+								+e.INPUT.input.form-control(type="text" placeholder="Длина")
+							+e.input-wrap(data-add-ph="кг")
+								+e.INPUT.input.form-control(type="text" placeholder="Вес")
+					+e.ball-btn--orange
+						+e.ball
+							+icon('plus')
+						span Добавить позицию
+				.t-box__header.t-box__header--smaller
+					h2.t-box__title данные о заказчике
+				.t-box__content
+					+e.data-row.row
+						.col-md-6.col-lg-4
+							+input('Введите имя', 'text', 'Имя')
+						.col-md-6.col-lg-4
+							+input('+7 (___)-___-__-__', 'tel', 'Контактный номер телефона')
+						.col-md-6.col-lg-4
+							+input('Введите эл. почту', 'email', 'Email')
+						.col-md-6.col-lg-4
+							+e.input-wrap
+								label
+									+e.input-title Предпочтительный способ связи
+									+e.SELECT.input.form-select(name="select")
+										option Чат MetalGo
+										option Чат MetalGo 2
+										option Чат MetalGo 3
+						.col-md-6.col-lg-4
+							+input('Введите наименование организации', 'text', 'Организация')
+						.col-md-6.col-lg-4
+							+input('Введите ИНН', 'text', 'ИНН')
+				.t-box__content
+					.text-center.text-md-start
+						+e.btn(type="submit") Отправить запрос
+	// end sFormBig
+
+mixin sFormBigItem(data)
+	+e.item
+		+e.title=`Позиция ${data.itemNum}`
+		+e.i-row.row
+			.col-lg-4
+				+e.input-wrap
+					label
+						+e.input-title Тип металла:
+						+e.SELECT.input.form-select(name="select")
+							option(selected value="" hidden) Выберите тип метала
+							option Метал 1
+							option Метал 2
+							option Метал 3
+				+e.input-wrap
+					label
+						+e.input-title Тип проката
+						+e.SELECT.input.form-select(name="select")
+							option=data.procTypeTxt
+							option Труба 2
+							option Труба 3
+				//-+input('Выберите тип метала', 'select', 'Тип металла:')
+				//-+input('Труба', 'select', 'Тип проката:')
+				+input('Введите марку', 'text', 'Марка')
+			+e.col--shift-top.col-lg-4
+				if block
+					block
+				else
+					+e.input-wrap(data-add-ph="мм")
+						+e.INPUT.input.form-control(type="text" placeholder="Высота")
+					+e.input-wrap(data-add-ph="мм")
+						+e.INPUT.input.form-control(type="text" placeholder="Ширина")
+					+e.input-wrap(data-add-ph="мм")
+						+e.INPUT.input.form-control(type="text" placeholder="Толщина стенки")
+					+e.input-wrap(data-add-ph="м")
+						+e.INPUT.input.form-control(type="text" placeholder="Длина")
+					+e.input-wrap(data-add-ph="кг")
+						+e.INPUT.input.form-control(type="text" placeholder="Вес")
+			.col-lg-4
+				+input('ГОСТ, ТУ, Отжиг, Авиатехприемка, мерная длина и т.д', 'textarea', 'Технические требования')
+		+e.del-box
+			+e.ball-btn
+				+e.ball
+					+icon('cross-sm')
+				span Удалить позицию

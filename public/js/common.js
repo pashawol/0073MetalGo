@@ -178,6 +178,7 @@ function eventHandler() {
 	})); //luckyoneJs
 
 	let header = document.querySelector(".header--js");
+	let logoCol = document.querySelector('.logo-col-js');
 	let headerH = 0;
 	let stickyElems = document.querySelectorAll('.sticky-js');
 	let stickyArr = [];
@@ -198,6 +199,11 @@ function eventHandler() {
 			Sticky.update({
 				top: 20 + headerH
 			});
+		} //
+
+
+		if (logoCol) {
+			document.documentElement.style.setProperty('--logo-col-w', "".concat(logoCol.offsetWidth, "px"));
 		}
 	}
 
@@ -209,6 +215,7 @@ function eventHandler() {
 			passive: true
 		});
 		calcCssVars();
+		window.setTimeout(calcCssVars, 100);
 	} //-
 
 

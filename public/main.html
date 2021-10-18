@@ -11,8 +11,9 @@
 			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 			if (is_safari) {
 				//- alert(navigator.userAgent);
+				//-480
 				function w() {
-					this.outerWidth > 480 
+					this.outerWidth > 319
 						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
 						:  viewport.content = "width=480,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
 					//- alert(this.outerWidth + ', '+  viewport.content);
@@ -179,7 +180,7 @@
 					<div class="top-nav top-nav--js block-with-lazy">
 						<div class="container">
 							<div class="top-nav__row row align-items-center">
-								<div class="col col-xl-auto">
+								<div class="col col-xl-auto logo-col-js">
 									<a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
 									</a>
 								</div>

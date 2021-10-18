@@ -1,0 +1,20 @@
+mixin sHowWork(data)
+	// start sHowWork
+	+b.SECTION.sHowWork.section#sHowWork&attributes(attributes)
+		.container
+			+b.section-title--big.text-center
+				h2 как это работает
+			+e.row.row
+				+sHowWorkItem(1, 'Заполняете форму – указываете позиции металла и контактные данные')
+				+sHowWorkItem(2, 'Наш менеджер обрабатывает запрос и отправляет вам информацию')
+				+sHowWorkItem(3, 'В случае положительного решения оформляется договор и спецификация')
+				+sHowWorkItem(4, 'Размер предоплаты и сроки рассчитываются индивидуально, в зависимости от состава заказа и на каком заводе он будет размещен. При длительном сотрудничестве возможна отсрочка платежа.')
+				//-sHowWork-
+	// end sHowWork
+
+mixin sHowWorkItem(imgNum, txt)
+	.col-sm-6.col-lg-3
+		+e.item.text-center
+			+e.img
+				img(loading="lazy" src=`img/svg/sHowWork-${imgNum}.svg` alt="")
+			+e.txt=txt

@@ -1,0 +1,12 @@
+mixin sBaner(data)
+	// start sBaner
+	+b.SECTION.sBaner.section#sBaner&attributes(attributes)
+		+e.PICTURE.bg
+			source(srcset=`img/banner/baner-1920.png` type=`image/png` media="(min-width:480px)")
+			img(loading="lazy" src=`img/banner/baner-480.png` alt="")
+		+b.section-title.text-center
+			h1
+				| поставки металла
+				|
+				span под заказ
+	// end sBaner
