@@ -5,10 +5,28 @@ mixin headerBlock()
 			+e.slider-wrap
 				.swiper-container.headerBlock-slide-js
 					.swiper-wrapper
-						+headerBlockSlide(4)
 						+headerBlockSlide(1)
 						+headerBlockSlide(2)
 						+headerBlockSlide(3)
+						+headerBlockSlide(4)
+						//- -for(var i = 1; i <= 3; i++)
+						//- 	+headerBlockSlide(i)
+					.swiper-pagination
+			//-+pic('headerBlock-1.png')
+	// end headerBlock
+	br
+	br
+	br
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+e.container.container
+			+e.slider-wrap
+				.swiper-container.headerBlock-slide-js
+					.swiper-wrapper
+						+headerBlockSlidePic(1)
+						+headerBlockSlidePic(2)
+						+headerBlockSlidePic(3)
+						+headerBlockSlidePic(4)
 						//- -for(var i = 1; i <= 3; i++)
 						//- 	+headerBlockSlide(i)
 					.swiper-pagination
@@ -23,3 +41,10 @@ mixin headerBlockSlide(imgNum)
 			//- source(srcset=`img/@2x/webp/headerBlock-mob-${imgNum}.webp` type=`image/webp`  )
 			//-source(srcset=`img/@2x/headerBlock-mob-${imgNum}.png`  media="(max-width:576px)")
 			img(loading="lazy" src=`img/banner/headerBlock-mob-${imgNum}.png` alt="")
+mixin headerBlockSlidePic(imgNum)
+	.swiper-slide
+		+e.PICTURE.img
+			source(srcset=`img/@2x/webp/headerBlock-${imgNum}.webp` type=`image/webp`  media="(min-width:560px)")
+			//- source(srcset=`img/banner/headerBlock-${imgNum}.png` type=`image/png`   media="(min-width:560px)")
+			source(srcset=`img/@2x/webp/headerBlock-mob-${imgNum}.webp` type=`image/webp`  )
+			img(loading="lazy" src=`img/@2x/headerBlock-mob-${imgNum}.png` alt="")
