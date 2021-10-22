@@ -8,6 +8,9 @@
 	}
 
 	&__container{
+		picture{
+			background-color: $body-bg;
+		}
 		@include media-breakpoint-down(md){
 			padding: 0;
 		}
