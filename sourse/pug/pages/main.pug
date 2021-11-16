@@ -17,10 +17,14 @@ block title
 	- let  title= '01-main'
 	title= title
 block pagecontent
-	+mob-mnu()
+	+mob-mnu({
+		enterBtn: true,
+	})
 	+header()
 		+topBaner()
-		+top-nav()
+		+top-nav({
+			enterBtn: true,
+		})
 	+b.white-line--mh-0.bg-white
 		.container
 			+e.row.row.align-items-center.pb-0

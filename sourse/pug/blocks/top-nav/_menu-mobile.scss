@@ -188,6 +188,46 @@ $h: 2px;
 		}
 	}
 
+	//
+	&__enter-btn{
+		@extend .btn;
+		@extend .btn-outline-primary;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background: transparent;
+		border: 1px solid $primary;
+		border-radius: rem(5);
+
+		min-width: 34px;
+		min-height: 34px;
+		@include media-breakpoint-up(sm){
+			min-width: rem(45);
+			min-height: rem(45);
+		}
+
+		padding: rem(11.5) rem(15);
+		font-size: rem(16);
+
+
+		color: $white;
+		&:hover{
+			color: $body-color;
+			.icon{
+				color: $body-color;
+			}
+		}
+
+		.icon{
+			@include mt();
+			font-size: rem(20);
+			margin-right: rem(10);
+			color: $primary;
+		}
+
+	}
+
 	ul{
 
 	}

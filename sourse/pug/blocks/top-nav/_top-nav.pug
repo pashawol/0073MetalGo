@@ -1,4 +1,4 @@
-mixin mob-mnu()
+mixin mob-mnu(data)
 	+b.menu-mobile--js.d-xl-none
 		+b.toggle-menu-mobile--js.border-0
 			span
@@ -6,16 +6,21 @@ mixin mob-mnu()
 			+e.logo.mb-5(href="#")
 				img(loading="lazy" src="img/svg/logo.svg" alt='')
 			.mb-5
-				+topNavLc({
-					addClasses: 'in-mob-mnu',
-				})
+				if data && data.enterBtn
+					+e.enter-btn(href="#")
+						+icon('user')
+						span Войти
+				else
+					+topNavLc({
+						addClasses: 'in-mob-mnu',
+					})
 			+e.menu.mb-5
 				+mnu()
 			+topNavImgItem(1, 'Калькулятор металла', 'mb-3')
 			+topNavImgItem(2, 'Калькулятор доставки', '')
 	//  мобильное меню
 
-mixin top-nav() 
+mixin top-nav(data)
 	// start top-nav
 	+b.top-nav--js.block-with-lazy
 		.container
@@ -31,9 +36,15 @@ mixin top-nav()
 							+topNavImgItem(1, 'Калькулятор металла')
 						.col-auto
 							+topNavImgItem(2, 'Калькулятор доставки')
-				.col-auto
-				.col-auto.d-none.d-md-block
-					+topNavLc({})
+				//-.col-auto
+				if data && data.enterBtn
+					.col-auto
+						+e.enter-btn(href="#")
+							+icon('user')
+							span.d-none.d-md-inline Войти
+				else
+					.col-auto.d-none.d-md-block
+						+topNavLc({})
 				.col-auto.ms-auto.ms-md-0
 					+e.message-btn
 						+icon('chat')
