@@ -94,7 +94,7 @@ mixin sTarifsT(data)
 	// end sTarifsT
 
 mixin sTarifsTImgBnaer()
-	+b.img-baner
+	+b.img-baner.active
 		+e.row.row.align-items-center
 			.col-auto.d-none.d-lg-block
 				+e.img
@@ -111,7 +111,8 @@ mixin sTarifsTImgBnaer()
 				+e.btn(href="#")
 					span Подробнее
 					+icon('chevron-down2')
-
+		+e.img-baner-body
+			+pic("sImged-1.png")
 mixin tarifBuyerItem(data)
 	+b.t-buyer
 		+e.title=data.title

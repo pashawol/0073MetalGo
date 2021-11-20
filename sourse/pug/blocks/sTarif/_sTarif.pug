@@ -8,12 +8,12 @@ mixin sTarif(data)
 					|
 					span metalgo
 			+e.btns.input-group
-				+sTarifTabsBtn('Поставщику', 'active')
+				+sTarifTabsBtn('Поставщику')
 				+sTarifTabsBtn('Покупателю')
 				+sTarifTabsBtn('Дополнительные услуги')
-				+sTarifTabsBtn('Рекламные баннеры')
+				+sTarifTabsBtn('Рекламные баннеры', 'active')
 			.tabs__wrap
-				.tabs__content.active
+				.tabs__content
 					+e.slider-wrap
 						.swiper-container.sTarif-slider-js
 							.swiper-wrapper
@@ -86,7 +86,7 @@ mixin sTarif(data)
 								price: '300 ₽/шт.',
 								hasTxt: 'На счету: 0 шт.',
 							})
-				.tabs__content
+				.tabs__content.active
 					+sTarifsTImgBnaer()
 	// end sTarif
 
